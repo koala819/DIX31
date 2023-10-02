@@ -1,5 +1,6 @@
 "use client";
 import { Chip } from "@nextui-org/react";
+import Link from "next/link";
 export default function Page() {
   return (
     <>
@@ -127,9 +128,11 @@ export default function Page() {
                 </div>
               </div>
 
-              <button className='w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600'>
-                Demander un devis
-              </button>
+              <Link href='/contact'>
+                <button className='w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600'>
+                  Demander un devis
+                </button>
+              </Link>
             </section>
             <section className='px-6 py-4 transition-colors duration-200 transform rounded-lg hover:bg-gray-300 dark:hover:bg-gray-900 bg-gray-200 dark:bg-gray-700'>
               <p className='text-lg font-medium text-gray-800 dark:text-gray-100'>
@@ -241,10 +244,11 @@ export default function Page() {
                   </span>
                 </div>
               </div>
-
-              <button className='w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600'>
-                Demander un devis
-              </button>
+              <Link href='/contact'>
+                <button className='w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600'>
+                  Demander un devis
+                </button>
+              </Link>
             </section>
             <div className='relative'>
               <div className='absolute -top-5 right-2 z-10'>
@@ -354,10 +358,11 @@ export default function Page() {
                     </span>
                   </div>
                 </div>
-
-                <button className='w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600'>
-                  Demander un devis
-                </button>
+                <Link href='/contact'>
+                  <button className='w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600'>
+                    Demander un devis
+                  </button>
+                </Link>
               </section>
             </div>
           </div>
