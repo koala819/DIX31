@@ -18,17 +18,21 @@ export function Top() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const path = usePathname();
 
+  // const menuItems = [
+  //   "Home",
+  //   "Services",
+  //   "Projets",
+  //   "Compétences",
+  //   "Contact",
+  //   "Blog",
+  // ];
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Projets", path: "/projets" },
+    { name: "Compétences", path: "/competences" },
+    { name: "Contact", path: "/contact" },
+    { name: "Blog", path: "/" },
   ];
 
   return (
@@ -38,7 +42,7 @@ export function Top() {
       classNames={{
         item: [
           "flex",
-          "relative",
+          // "relative",
           "h-full",
           "items-center",
           "data-[active=true]:after:content-['']",
@@ -65,7 +69,7 @@ export function Top() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className='hidden sm:flex gap-4' justify='center'>
+      <NavbarContent className='hidden sm:flex ' justify='center'>
         <NavbarItem isActive={path.includes("/services")}>
           <Link href='/services' aria-current='page' color='foreground'>
             Services
@@ -88,31 +92,30 @@ export function Top() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify='end'>
-        {/* <NavbarItem className='hidden lg:flex' /> */}
-
         <NavbarItem>
-          {/* <Button as={Link} color='primary' href='#' variant='flat'>
-            Sign Up
-          </Button> */}
           <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className='mt-8'>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem
+            key={`${item}-${index}`}
+            // className='space-y-2'
+          >
             <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              className='w-full'
-              href='#'
+              color={"foreground"}
+              // color={
+              //   index === 2
+              //     ? "primary"
+              //     : index === menuItems.length - 1
+              //     ? "danger"
+              //     : "foreground"
+              // }
+              className='w-full hover:bg-rose-500 hover:text-white p-2 hover:rounded-xl hover:w-1/2 '
+              href={item.path}
               size='lg'
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
