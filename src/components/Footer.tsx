@@ -1,8 +1,12 @@
+"use client";
 import { AiFillChrome } from "react-icons/ai";
 import { LuCopyleft } from "react-icons/lu";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import Malt from "../../public/images/malt-logo.svg";
+import Image from "next/image";
+import { Tooltip } from "@nextui-org/react";
 
 export function Footer() {
   return (
@@ -58,21 +62,34 @@ export function Footer() {
             <p> 2023 by Xavier</p>
           </Link>
           <div className='ml-auto'>
-            <span className='inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start'>
-              <Link
-                href='https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390/'
-                target='_blank'
-                className='text-gray-500 dark:text-gray-200 dark:hover:text-blue-500'
-              >
-                <FaLinkedin size={24} />
-              </Link>
-              <Link
-                href='https://github.com/koala819/'
-                target='_blank'
-                className='ml-3 text-gray-500 dark:text-gray-200 dark:hover:text-yellow-500'
-              >
-                <FaGithub size={24} />
-              </Link>
+            <span className='inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start space-x-8'>
+              <Tooltip showArrow={true} color='primary' content='Linkedin'>
+                <Link
+                  href='https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390/'
+                  target='_blank'
+                  className='text-gray-500 dark:text-gray-200 dark:hover:text-blue-500'
+                >
+                  <FaLinkedin size={24} />
+                </Link>
+              </Tooltip>
+              <Tooltip showArrow={true} color='danger' content='Malt'>
+                <Link
+                  href='https://www.malt.fr/profile/xaviergenolhac'
+                  target='_blank'
+                  className='text-gray-500 dark:text-gray-200 dark:hover:text-blue-500'
+                >
+                  <Image src={Malt} alt='Malt' width={24} height={24} />
+                </Link>
+              </Tooltip>
+              <Tooltip showArrow={true} color='default' content='Github'>
+                <Link
+                  href='https://github.com/koala819/'
+                  target='_blank'
+                  className='ml-3 text-gray-500 dark:text-gray-200 dark:hover:text-yellow-500'
+                >
+                  <FaGithub size={24} />
+                </Link>
+              </Tooltip>
             </span>
           </div>
         </div>
