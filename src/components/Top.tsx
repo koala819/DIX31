@@ -18,14 +18,6 @@ export function Top() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const path = usePathname();
 
-  // const menuItems = [
-  //   "Home",
-  //   "Services",
-  //   "Projets",
-  //   "Compétences",
-  //   "Contact",
-  //   "Blog",
-  // ];
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
@@ -42,7 +34,7 @@ export function Top() {
       classNames={{
         item: [
           "flex",
-          // "relative",
+          "relative",
           "h-full",
           "items-center",
           "data-[active=true]:after:content-['']",
@@ -90,6 +82,11 @@ export function Top() {
             Contact
           </Link>
         </NavbarItem>
+        <NavbarItem isActive={path.includes("/blog")}>
+          <Link href='/blog' aria-current='page' color='foreground'>
+            Blog
+          </Link>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify='end'>
         <NavbarItem>
@@ -98,10 +95,7 @@ export function Top() {
       </NavbarContent>
       <NavbarMenu className='mt-8'>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem
-            key={`${item}-${index}`}
-            // className='space-y-2'
-          >
+          <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={"foreground"}
               // color={
