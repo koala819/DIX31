@@ -38,15 +38,17 @@ export default function Page() {
             <p className='text-tiny text-gray-600 dark:text-gray-200'>
               Gîtes de Thouy
             </p>
-            <Button
-              className='text-tiny text-gray-600 dark:text-gray-200 bg-black/20 dark:bg-gray-600'
-              variant='flat'
-              color='default'
-              radius='lg'
-              size='sm'
-            >
-              Découvrir
-            </Button>
+            <Link href='/projets/Thouy'>
+              <Button
+                className='text-tiny text-gray-600 dark:text-gray-200 bg-black/20 dark:bg-gray-600'
+                variant='flat'
+                color='default'
+                radius='lg'
+                size='sm'
+              >
+                Découvrir
+              </Button>
+            </Link>
           </CardFooter>
         </Card>
         <Card isFooterBlurred radius='lg' className='border-none'>
@@ -61,15 +63,17 @@ export default function Page() {
           />
           <CardFooter className='justify-between before:bg-white dark:bg-gray-800 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10'>
             <p className='text-tiny text-gray-200'>Cumuler les aides</p>
-            <Button
-              className='text-tiny text-gray-200 bg-black/60 dark:bg-gray-600'
-              variant='flat'
-              color='default'
-              radius='lg'
-              size='sm'
-            >
-              Découvrir
-            </Button>
+            <Link href='/projets/CumulerAides'>
+              <Button
+                className='text-tiny text-gray-200 bg-black/60 dark:bg-gray-600'
+                variant='flat'
+                color='default'
+                radius='lg'
+                size='sm'
+              >
+                Découvrir
+              </Button>
+            </Link>
           </CardFooter>
         </Card>
         <Card isFooterBlurred radius='lg' className='border-none'>
@@ -84,15 +88,17 @@ export default function Page() {
           />
           <CardFooter className='justify-between before:bg-white dark:bg-gray-800 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10'>
             <p className='text-tiny text-gray-200'>Club 306</p>
-            <Button
-              className='text-tiny text-gray-200 bg-black/60 dark:bg-gray-600'
-              variant='flat'
-              color='default'
-              radius='lg'
-              size='sm'
-            >
-              Découvrir
-            </Button>
+            <Link href='/projets/Club306'>
+              <Button
+                className='text-tiny text-gray-200 bg-black/60 dark:bg-gray-600'
+                variant='flat'
+                color='default'
+                radius='lg'
+                size='sm'
+              >
+                Découvrir
+              </Button>
+            </Link>
           </CardFooter>
         </Card>
       </section>
