@@ -19,15 +19,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang='fr'>
-      <body className={`h-screen w-full ${inter.className}`}>
+      <body className={`${inter.className}`}>
         <ThemeProviders>
-          <div className='w-full lg:w-8/12 px-4 mx-auto mt-6 '>
-            <div className='flex flex-col min-w-0 break-words w-full mb-6rounded-lg bg-gray-50 dark:bg-slate-800 border-0'>
+          <div className='min-h-screen min-w-screen'>
+            <div className=' flex flex-col h-screen'>
               <nav>
                 <Top />
               </nav>
-              <main className='flex-1'>{children}</main>
+              <main className='flex-1'>
+                <div className='w-full lg:w-8/12 px-4 mx-auto mt-6'>
+                  <div className='flex flex-col min-w-0 break-words w-full mb-6rounded-lg bg-gray-50 dark:bg-slate-800 border-0'>
+                    {children}
+                  </div>
+                </div>
+              </main>
+              {/* <div className='mt-auto'> */}
               <Footer />
+              {/* </div> */}
             </div>
           </div>
         </ThemeProviders>
