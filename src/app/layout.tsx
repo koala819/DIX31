@@ -33,9 +33,7 @@ export default function RootLayout({
                   </div>
                 </div>
               </main>
-              {/* <div className='mt-auto'> */}
               <Footer />
-              {/* </div> */}
             </div>
           </div>
         </ThemeProviders>
