@@ -1,7 +1,8 @@
 "use client";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { Button, Input, Textarea } from "@nextui-org/react";
 
 export default function Page() {
   const schema = yup.object().shape({
@@ -18,7 +19,7 @@ export default function Page() {
   });
 
   const {
-    register,
+    control,
     handleSubmit,
     formState: { errors },
   } = useForm({
@@ -59,7 +60,6 @@ export default function Page() {
             filter: "grayscale(1) contrast(1.2) opacity(0.4)",
           }}
           title='map'
-          scrolling='no'
           src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d54970.122924033974!2d1.489419400498161!3d43.60630826308362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1605604684663!5m2!1sfr!2sfr'
           width='100%'
           height='100%'
@@ -82,22 +82,22 @@ export default function Page() {
           </p>
 
           <div className='relative mb-4'>
-            <label
-              htmlFor='first_name'
-              className={`leading-7 text-sm${
-                errors.first_name ? "text-red-500 font-mono text-sm" : ""
-              }`}
-            >
-              Nom
-            </label>
-            <input
-              type='text'
-              id='first_name'
-              placeholder='Al'
-              {...register("first_name")}
-              className={`w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${
-                errors.first_name ? "border-red-600" : ""
-              }`}
+            <Controller
+              name='first_name'
+              control={control}
+              render={({ field: { onChange, value } }) => (
+                <Input
+                  type='text'
+                  color='primary'
+                  label='Nom'
+                  id='first_name'
+                  placeholder='Entrez votre nom'
+                  defaultValue='Al'
+                  onChange={onChange}
+                  value={value}
+                  className='max-w-[280px]'
+                />
+              )}
             />
 
             {errors.first_name && (
@@ -108,22 +108,22 @@ export default function Page() {
           </div>
 
           <div className='relative mb-4'>
-            <label
-              htmlFor='email'
-              className={`leading-7 text-sm${
-                errors.email ? "text-red-500 font-mono text-sm" : ""
-              }`}
-            >
-              Email
-            </label>
-            <input
-              type='text'
-              id='email'
-              placeholder='al.gorythme@dix31.org'
-              {...register("email")}
-              className={`w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${
-                errors.email ? "border-red-600" : ""
-              }`}
+            <Controller
+              name='email'
+              control={control}
+              render={({ field: { onChange, value } }) => (
+                <Input
+                  type='email'
+                  color='primary'
+                  label='Email'
+                  id='email'
+                  placeholder='Entrez votre email'
+                  defaultValue='al.gorythme@dix31.org'
+                  onChange={onChange}
+                  value={value}
+                  className='max-w-[280px]'
+                />
+              )}
             />
 
             {errors.email && (
@@ -134,23 +134,22 @@ export default function Page() {
           </div>
 
           <div className='relative mb-4'>
-            <label
-              htmlFor='message'
-              className={`leading-7 text-sm${
-                errors.msg ? "text-red-500 font-mono text-sm" : ""
-              }`}
-            >
-              Message
-            </label>
-            <textarea
-              typeof='text'
-              id='msg'
-              placeholder='Veuillez saisir votre message ici...'
-              {...register("msg")}
-              className={`w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${
-                errors.msg ? "border-red-600" : ""
-              }`}
-            ></textarea>
+            <Controller
+              name='msg'
+              control={control}
+              defaultValue=''
+              render={({ field: { onChange, value } }) => (
+                <Textarea
+                  type='text'
+                  color='primary'
+                  value={value}
+                  onChange={onChange}
+                  label='Veuillez saisir votre message'
+                  autoFocus
+                  className='max-w-xs'
+                />
+              )}
+            />
 
             {errors.msg && (
               <div className='text-red-500 font-mono text-xs'>
@@ -160,12 +159,9 @@ export default function Page() {
           </div>
 
           <div className='flex justify-center items-center'>
-            <button
-              className='flex items-center px-4 py-2 text-white bg-blue-600 rounded-lg duration-150 hover:bg-blue-500 active:shadow-lg'
-              type='submit'
-            >
+            <Button color='primary' type='submit' variant='shadow'>
               Envoyer
-            </button>
+            </Button>
           </div>
 
           <p className='text-xs text-gray-500 mt-3'>
