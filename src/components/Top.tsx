@@ -22,7 +22,7 @@ export function Top() {
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
     { name: "Projets", path: "/projets" },
-    { name: "Compétences", path: "/competences" },
+    { name: "Recommandations", path: "/recommandations" },
     { name: "Contact", path: "/contact" },
     { name: "Blog", path: "/" },
   ];
@@ -72,9 +72,9 @@ export function Top() {
             Projets
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={path.includes("/competences")}>
-          <Link href='/competences' aria-current='page' color='foreground'>
-            Compétences
+        <NavbarItem isActive={path.includes("/recommandations")}>
+          <Link href='/recommandations' aria-current='page' color='foreground'>
+            Recommandations
           </Link>
         </NavbarItem>
         <NavbarItem isActive={path.includes("/contact")}>
