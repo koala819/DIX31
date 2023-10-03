@@ -1,6 +1,5 @@
 "use client";
 import { Chip, Button, Tooltip } from "@nextui-org/react";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Page() {

@@ -44,7 +44,7 @@ export default function Page() {
       .then((response: any) => {
         console.log("response or Not", response);
         response.status === 200 && console.log("Send mail with SUCCESS :)");
-        setConfirmationSend(true);
+        // setConfirmationSend(true);
       })
       .catch((error: any) => {
         console.log("ERROR to send the mail in contact.tsx", error);
