@@ -2,8 +2,11 @@
 import { Chip, Button, Tooltip } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+  const router = useRouter();
+
   return (
     <>
       <section className='text-gray-600 dark:text-gray-300 md:flex items-center justify-center p-4 '>
@@ -98,6 +101,15 @@ export default function Page() {
           <Chip color='primary'>Tailwind</Chip>
           <Chip color='primary'>Vercel</Chip>
         </div>
+      </section>
+      <section className='w-full p-4 flex flex-col my-32'>
+        <Button
+          variant='shadow'
+          color='primary'
+          onClick={() => router.push("/projets")}
+        >
+          Retour
+        </Button>
       </section>
     </>
   );

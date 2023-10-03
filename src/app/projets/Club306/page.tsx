@@ -10,10 +10,12 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [imageSrc, setImageSrc] = useState<string>("");
+  const router = useRouter();
 
   function displayBigPicture(picture: string) {
     onOpen();
@@ -236,6 +238,15 @@ export default function Page() {
             </div>
           </div>
         </>
+      </section>
+      <section className='w-full p-4 flex flex-col my-32'>
+        <Button
+          variant='shadow'
+          color='primary'
+          onClick={() => router.push("/projets")}
+        >
+          Retour
+        </Button>
       </section>
     </>
   );

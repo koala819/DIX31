@@ -51,7 +51,7 @@ export default function Page() {
         </Card>
         <Card isFooterBlurred radius='lg' className='border-none'>
           <Image
-            alt='Cumuler les aides website'
+            alt='First memory game'
             priority
             className='object-cover w-full h-full'
             height={400}

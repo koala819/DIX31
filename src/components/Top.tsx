@@ -9,14 +9,23 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
   Link,
+  DropdownItem,
+  DropdownTrigger,
+  Dropdown,
+  DropdownMenu,
+  Button,
 } from "@nextui-org/react";
+import { FiChevronDown } from "react-icons/fi";
 import { AiFillChrome } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export function Top() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const path = usePathname();
+  const router = useRouter();
 
   const menuItems = [
     { name: "Home", path: "/" },
@@ -67,11 +76,114 @@ export function Top() {
             Services
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={path.includes("/projets")}>
-          <Link href='/projets' aria-current='page' color='foreground'>
-            Projets
-          </Link>
-        </NavbarItem>
+        <Dropdown>
+          <NavbarItem isActive={path.includes("/projets")}>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className={` ${
+                  path.includes("/projets")
+                    ? "font-bold text-base data-[hover=true]:bg-transparent"
+                    : "p-0 text-base data-[hover=true]:bg-transparent hover:text-gray-600"
+                }`}
+                endContent={<FiChevronDown />}
+                radius='sm'
+                variant='light'
+              >
+                Projets
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu
+            aria-label='My realisations'
+            className='w-[340px]'
+            itemClasses={{
+              base: "gap-4",
+            }}
+          >
+            <DropdownItem
+              key='thouy'
+              description='Site de location de gîtes personnalisé'
+              startContent={
+                <Image
+                  alt='Gîtes de Thouy website'
+                  className='object-cover w-full h-full'
+                  height={100}
+                  src='/images/Thouy.jpg'
+                  width={100}
+                />
+              }
+              onClick={() => router.push("/projets/Thouy")}
+            >
+              Gîtes de Thouy
+            </DropdownItem>
+            <DropdownItem
+              key='usage_metrics'
+              description='Jeu créé avec passion pour renforcer mes compétences en JavaScript.'
+              startContent={
+                <Image
+                  alt='First memory game'
+                  priority
+                  className='object-cover w-full h-full'
+                  height={100}
+                  src='/images/gameMemory.jpg'
+                  width={100}
+                />
+              }
+              onClick={() => router.push("/projets/memoryGame")}
+            >
+              Memory Game
+            </DropdownItem>
+            <DropdownItem
+              key='production_ready'
+              description='Site pour guider les propriétaires dans la rénovation de leurs habitations.'
+              startContent={
+                <Image
+                  alt='Cumuler les aides website'
+                  className='object-cover w-full h-full'
+                  height={100}
+                  src='/images/CumulerAides.jpg'
+                  width={100}
+                />
+              }
+              onClick={() => router.push("/projets/CumulerAides")}
+            >
+              Cumuler les aides
+            </DropdownItem>
+            <DropdownItem
+              key='99_uptime'
+              description='Réunir les passionnés de la Peugeot 306.'
+              startContent={
+                <Image
+                  alt='Club306 website'
+                  className='object-cover w-full h-full'
+                  height={100}
+                  src='/images/Club306.jpg'
+                  width={100}
+                />
+              }
+              onClick={() => router.push("/projets/Club306")}
+            >
+              Club 306
+            </DropdownItem>
+            <DropdownItem
+              key='supreme_support'
+              description='Vitrine de mes compétences et réalisations professionnelles.'
+              startContent={
+                <Image
+                  alt='My portfolio website'
+                  className='object-cover w-full h-full'
+                  height={100}
+                  src='/images/Portfolio.jpg'
+                  width={100}
+                />
+              }
+              onClick={() => router.push("/projets/portfolio")}
+            >
+              Mon Portfolio
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
         <NavbarItem isActive={path.includes("/recommandations")}>
           <Link href='/recommandations' aria-current='page' color='foreground'>
             Recommandations
