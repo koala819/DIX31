@@ -1,6 +1,7 @@
 "use client";
-import { Chip, Button, Tooltip } from "@nextui-org/react";
+import { Chip, Button } from "@nextui-org/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -8,25 +9,25 @@ export default function Page() {
       <section className='text-gray-600 dark:text-gray-300 md:flex items-center justify-center p-4 '>
         <div className='w-full md:w-1/2 p-4'>
           <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 dark:text-gray-200'>
-            Cumuler les aides
+            Memory Game
           </h1>
           <p className='mb-8 leading-relaxed'>
-            Création d&apos;un site informatif pour guider les propriétaires
-            dans la rénovation de leurs habitations en présentant les aides
-            disponibles.
+            J&apos;ai créé ce jeu avec passion pour renforcer mes compétences en
+            JavaScript tout en offrant à mon fils une expérience ludique pour
+            maîtriser l&apos;utilisation de la souris.
           </p>
           <div className='md:flex items-center space-x-4 mt-12 justify-center space-y-2 md:space-y-0'>
-            <Chip color='primary'>Projet d&apos;équipe</Chip>
-            <Chip color='primary'>Web App</Chip>
-            <Chip color='primary'>Site de Leads</Chip>
+            <Chip color='primary'>Projet Solo</Chip>
+            <Chip color='primary'>Jeux Educatif</Chip>
+            <Chip color='primary'>Projet Perso</Chip>
           </div>
         </div>
         <div className='flex justify-center w-full md:w-1/2 p-6'>
           <Image
-            alt='Cumuler les aides website'
+            alt='Memory Game project'
             className='object-cover'
             height={400}
-            src='/images/CumulerAides.jpg'
+            src='/images/gameMemory.jpg'
             width={400}
           />
         </div>
@@ -34,38 +35,35 @@ export default function Page() {
       <section className='w-full mx-auto grid md:grid-cols-4 gap-x-4 p-4 space-y-12 md:space-y-0'>
         <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
           <p className='font-bold text-lg'>Secteur</p>
-          <p>Rénovation Immobilière</p>
+          <p>Familiale</p>
         </div>
         <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
           <p className='font-bold text-lg'>Type de projet</p>
-          <p>Application Web</p>
+          <p>JavaScript</p>
         </div>
         <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
           <p className='font-bold text-lg'>Date de livraison</p>
-          <p>2021</p>
+          <p>2020</p>
         </div>
         <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
           <p className='font-bold text-lg'>Consulter le projet</p>
           <div className='space-x-2'>
-            <Tooltip
-              content='Code non disponible'
-              className='cursor-not-allowed'
-            >
-              <Button className='cursor-not-allowed' size='sm' variant='shadow'>
+            <Link href='https://github.com/koala819/MemoryGame' target='_blank'>
+              <Button size='sm' variant='shadow'>
                 Github
               </Button>
-            </Tooltip>
+            </Link>
 
-            <Tooltip content="Le projet n'est plus en ligne">
+            <Link href='https://memorygame819.netlify.app/' target='_blank'>
               <Button
                 size='sm'
-                color='danger'
-                className='mt-2 md:mt-0 cursor-not-allowed'
+                color='primary'
+                className='mt-2 md:mt-0'
                 variant='shadow'
               >
                 Visiter
               </Button>
-            </Tooltip>
+            </Link>
           </div>
         </div>
       </section>
@@ -73,23 +71,24 @@ export default function Page() {
         <div className='md:w-1/2 space-y-8 text-justify'>
           <h1 className='text-3xl font-bold'>Challenge technique</h1>
           <p>
-            Le défi consistait à développer une application web robuste et
-            évolutive pour accompagner les locataires ou les propriétaires dans
-            la rénovation de leurs habitations. La collecte, le traitement et la
-            présentation d&apos;informations actualisées sur les aides
-            financières nécessitaient une architecture de base de données
-            complexe et une interface utilisateur conviviale.
+            Le défi de ce projet réside dans sa nature d&apos;être mon premier
+            projet JavaScript. Il nécessitait la maîtrise des concepts
+            fondamentaux de programmation, la gestion des événements souris, et
+            la création d&apos;une expérience interactive convaincante pour
+            aider mon fils à apprendre tout en consolidant mes compétences en
+            développement web.
           </p>
         </div>
         <div className='md:w-1/2 space-y-8 text-justify'>
           <h1 className='text-3xl font-bold'>Stratégie</h1>
           <p>
-            Approche de développement agile, avec une étroite collaboration
-            entre l&apos;équipe de développement et les experts en rénovation.
-            Nous avons mis en place une base de données dynamique pour gérer les
-            informations et axé notre communication sur les médias sociaux pour
-            attirer les utilisateurs en quête d&apos;informations sur les aides
-            à la rénovation.
+            Mon approche pour ce projet en solitaire a débuté par une solide
+            compréhension des bases de JavaScript. J&apos;ai ensuite exploré
+            GitHub pour la gestion de versions et utilisé Netlify pour le
+            déploiement. Ma stratégie consistait à suivre des tutoriels,
+            résoudre des problèmes pratiques, et à m&apos;appuyer sur des
+            ressources en ligne pour acquérir les compétences nécessaires à la
+            réussite du projet.
           </p>
         </div>
       </section>
@@ -99,7 +98,7 @@ export default function Page() {
           <Chip color='primary'>HTML</Chip>
           <Chip color='primary'>CSS</Chip>
           <Chip color='primary'>JavaScript</Chip>
-          <Chip color='primary'>Google Cloud Platform</Chip>
+          <Chip color='primary'>Netlify</Chip>
         </div>
       </section>
     </>

@@ -67,13 +67,18 @@ export default function Page() {
               content='Le repo est privé, mais contactez moi si vous souhaitez consulter le code'
               className='cursor-progress'
             >
-              <Button className='cursor-progress' size='sm'>
+              <Button className='cursor-progress' size='sm' variant='shadow'>
                 Github
               </Button>
             </Tooltip>
 
             <Link href='https://www.club306.fr/' target='_blank'>
-              <Button size='sm' color='primary' className='mt-2 md:mt-0'>
+              <Button
+                size='sm'
+                color='primary'
+                className='mt-2 md:mt-0'
+                variant='shadow'
+              >
                 Visiter
               </Button>
             </Link>

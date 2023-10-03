@@ -1,7 +1,7 @@
 "use client";
-import { Card, CardFooter, Button, Image } from "@nextui-org/react";
+import { Card, CardFooter, Button } from "@nextui-org/react";
 import Link from "next/link";
-import NextImage from "next/image";
+import Image from "next/image";
 
 export default function Page() {
   return (
@@ -23,16 +23,14 @@ export default function Page() {
           </Button>
         </Link>
       </section>
-      <section className='flex flex-col space-y-8 md:space-y-0 md:flex-row items-center justify-center md:space-x-8 mb-8 p-8'>
+      <section className='grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-32 mb-8 p-8 '>
         <Card isFooterBlurred radius='lg' className='border-none'>
           <Image
-            as={NextImage}
-            isZoomed
             alt='Gîtes de Thouy website'
-            className='object-cover'
-            height={400}
+            className='object-cover w-full h-full'
+            height={1000}
             src='/images/Thouy.jpg'
-            width={400}
+            width={1000}
           />
           <CardFooter className='justify-between before:bg-white/10 dark:bg-gray-800 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10'>
             <p className='text-tiny text-gray-600 dark:text-gray-200'>
@@ -53,10 +51,32 @@ export default function Page() {
         </Card>
         <Card isFooterBlurred radius='lg' className='border-none'>
           <Image
-            as={NextImage}
-            isZoomed
             alt='Cumuler les aides website'
-            className='object-cover'
+            priority
+            className='object-cover w-full h-full'
+            height={400}
+            src='/images/gameMemory.jpg'
+            width={400}
+          />
+          <CardFooter className='justify-between before:bg-gray-800 dark:bg-gray-800 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10'>
+            <p className='text-tiny text-gray-800'>Memory Game</p>
+            <Link href='/projets/memoryGame'>
+              <Button
+                className='text-tiny text-gray-200 bg-black/60 dark:bg-gray-600'
+                variant='flat'
+                color='default'
+                radius='lg'
+                size='sm'
+              >
+                Découvrir
+              </Button>
+            </Link>
+          </CardFooter>
+        </Card>
+        <Card isFooterBlurred radius='lg' className='border-none'>
+          <Image
+            alt='Cumuler les aides website'
+            className='object-cover w-full h-full'
             height={400}
             src='/images/CumulerAides.jpg'
             width={400}
@@ -78,10 +98,8 @@ export default function Page() {
         </Card>
         <Card isFooterBlurred radius='lg' className='border-none'>
           <Image
-            as={NextImage}
-            isZoomed
             alt='Club306 website'
-            className='object-cover'
+            className='object-cover w-full h-full'
             height={400}
             src='/images/Club306.jpg'
             width={400}
@@ -91,6 +109,31 @@ export default function Page() {
             <Link href='/projets/Club306'>
               <Button
                 className='text-tiny text-gray-200 bg-black/60 dark:bg-gray-600'
+                variant='flat'
+                color='default'
+                radius='lg'
+                size='sm'
+              >
+                Découvrir
+              </Button>
+            </Link>
+          </CardFooter>
+        </Card>
+        <Card isFooterBlurred radius='lg' className='border-none'>
+          <Image
+            alt='My portfolio website'
+            className='object-cover w-full h-full'
+            height={1000}
+            src='/images/Portfolio.jpg'
+            width={1000}
+          />
+          <CardFooter className='justify-between before:bg-white/10 dark:bg-gray-800 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10'>
+            <p className='text-tiny text-gray-600 dark:text-gray-200'>
+              DIX31 Portfolio
+            </p>
+            <Link href='/projets/portfolio'>
+              <Button
+                className='text-tiny text-gray-600 dark:text-gray-200 bg-black/20 dark:bg-gray-600'
                 variant='flat'
                 color='default'
                 radius='lg'

@@ -59,12 +59,12 @@ export function Home() {
           </div>
           <div className='flex items-center justify-center mt-8 space-x-4'>
             <Link href='/contact'>
-              <Button color='primary' variant='ghost' className='uppercase'>
+              <Button color='primary' variant='shadow' className='uppercase'>
                 me contacter
               </Button>
             </Link>
             <Link href='/projets'>
-              <Button color='primary' variant='ghost' className='uppercase'>
+              <Button color='primary' variant='shadow' className='uppercase'>
                 mes projets
               </Button>
             </Link>

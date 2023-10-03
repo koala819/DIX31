@@ -52,7 +52,7 @@ export default function Page() {
               content='Code non disponible'
               className='cursor-not-allowed'
             >
-              <Button className='cursor-not-allowed' size='sm'>
+              <Button className='cursor-not-allowed' size='sm' variant='shadow'>
                 Github
               </Button>
             </Tooltip>
@@ -61,7 +61,12 @@ export default function Page() {
               target='_blank'
             >
               <Tooltip content='Archive du site de 2011'>
-                <Button size='sm' color='primary' className='mt-2 md:mt-0'>
+                <Button
+                  size='sm'
+                  color='primary'
+                  className='mt-2 md:mt-0'
+                  variant='shadow'
+                >
                   Visiter
                 </Button>
               </Tooltip>

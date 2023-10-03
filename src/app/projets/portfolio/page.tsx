@@ -1,6 +1,7 @@
 "use client";
 import { Chip, Button, Tooltip } from "@nextui-org/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -8,25 +9,24 @@ export default function Page() {
       <section className='text-gray-600 dark:text-gray-300 md:flex items-center justify-center p-4 '>
         <div className='w-full md:w-1/2 p-4'>
           <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 dark:text-gray-200'>
-            Cumuler les aides
+            DIX31 Portfolio
           </h1>
           <p className='mb-8 leading-relaxed'>
-            Création d&apos;un site informatif pour guider les propriétaires
-            dans la rénovation de leurs habitations en présentant les aides
-            disponibles.
+            Mon portfolio : une vitrine de mes compétences et réalisations
+            professionnelles pour une présentation complète de mon parcours.
           </p>
           <div className='md:flex items-center space-x-4 mt-12 justify-center space-y-2 md:space-y-0'>
-            <Chip color='primary'>Projet d&apos;équipe</Chip>
-            <Chip color='primary'>Web App</Chip>
-            <Chip color='primary'>Site de Leads</Chip>
+            <Chip color='primary'>Projet Solo</Chip>
+            <Chip color='primary'>Site Vitrine</Chip>
+            <Chip color='primary'>Software Craftsmanship</Chip>
           </div>
         </div>
         <div className='flex justify-center w-full md:w-1/2 p-6'>
           <Image
-            alt='Cumuler les aides website'
+            alt='Memory Game project'
             className='object-cover'
             height={400}
-            src='/images/CumulerAides.jpg'
+            src='/images/Portfolio.jpg'
             width={400}
           />
         </div>
@@ -34,29 +34,26 @@ export default function Page() {
       <section className='w-full mx-auto grid md:grid-cols-4 gap-x-4 p-4 space-y-12 md:space-y-0'>
         <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
           <p className='font-bold text-lg'>Secteur</p>
-          <p>Rénovation Immobilière</p>
+          <p>Tech</p>
         </div>
         <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
           <p className='font-bold text-lg'>Type de projet</p>
-          <p>Application Web</p>
+          <p>Portfolio</p>
         </div>
         <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
           <p className='font-bold text-lg'>Date de livraison</p>
-          <p>2021</p>
+          <p>2023</p>
         </div>
         <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
           <p className='font-bold text-lg'>Consulter le projet</p>
           <div className='space-x-2'>
-            <Tooltip
-              content='Code non disponible'
-              className='cursor-not-allowed'
-            >
-              <Button className='cursor-not-allowed' size='sm' variant='shadow'>
+            <Link href='https://github.com/koala819/myWebSite' target='_blank'>
+              <Button size='sm' variant='shadow'>
                 Github
               </Button>
-            </Tooltip>
+            </Link>
 
-            <Tooltip content="Le projet n'est plus en ligne">
+            <Tooltip content='Vous le visitez en ce moment ^^'>
               <Button
                 size='sm'
                 color='danger'
@@ -73,33 +70,33 @@ export default function Page() {
         <div className='md:w-1/2 space-y-8 text-justify'>
           <h1 className='text-3xl font-bold'>Challenge technique</h1>
           <p>
-            Le défi consistait à développer une application web robuste et
-            évolutive pour accompagner les locataires ou les propriétaires dans
-            la rénovation de leurs habitations. La collecte, le traitement et la
-            présentation d&apos;informations actualisées sur les aides
-            financières nécessitaient une architecture de base de données
-            complexe et une interface utilisateur conviviale.
+            Le défi technique résidait dans la création d&apos;un site web
+            complet pour mon portfolio, en mettant en œuvre des compétences
+            variées en conception web, développement front-end et intégration de
+            contenu. La personnalisation, l&apos;optimisation des performances
+            et l&apos;adaptabilité à divers dispositifs étaient également des
+            défis clés à relever pour offrir une expérience utilisateur
+            exceptionnelle.
           </p>
         </div>
         <div className='md:w-1/2 space-y-8 text-justify'>
           <h1 className='text-3xl font-bold'>Stratégie</h1>
           <p>
-            Approche de développement agile, avec une étroite collaboration
-            entre l&apos;équipe de développement et les experts en rénovation.
-            Nous avons mis en place une base de données dynamique pour gérer les
-            informations et axé notre communication sur les médias sociaux pour
-            attirer les utilisateurs en quête d&apos;informations sur les aides
-            à la rénovation.
+            La stratégie incluait l&apos;utilisation de Next.js pour la rapidité
+            de développement, Vercel pour le déploiement continu, Tailwind CSS
+            pour une conception efficace, et TypeScript pour la sécurité du
+            code. Cette combinaison a permis de créer un site web robuste,
+            performant et maintenable.
           </p>
         </div>
       </section>
       <section className='w-full p-4 flex flex-col space-y-8'>
         <h1 className='text-3xl font-bold'>Stacks utilisées</h1>
         <div className='flex items-center justify-center space-x-4'>
-          <Chip color='primary'>HTML</Chip>
-          <Chip color='primary'>CSS</Chip>
-          <Chip color='primary'>JavaScript</Chip>
-          <Chip color='primary'>Google Cloud Platform</Chip>
+          <Chip color='primary'>Next.JS</Chip>
+          <Chip color='primary'>TypeScript</Chip>
+          <Chip color='primary'>Tailwind</Chip>
+          <Chip color='primary'>Vercel</Chip>
         </div>
       </section>
     </>
