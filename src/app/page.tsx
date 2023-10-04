@@ -7,9 +7,12 @@ import { SiPostgresql } from "react-icons/si";
 import { FaHandshake } from "react-icons/fa";
 import { PiHandHeartFill } from "react-icons/pi";
 import { MdOutlineBalance } from "react-icons/md";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function Page() {
+  const router = useRouter();
+
   return (
     <>
       <section className='flex flex-col-reverse md:flex-row items-center mt-8 p-8'>
@@ -40,7 +43,7 @@ export default function Page() {
             </Link>{" "}
             pour en savoir plus sur mon travail.
           </p>
-          <div className='flex items-center space-x-4 mt-12 justify-center'>
+          <div className='sm:flex items-center sm:space-x-4 mt-12 justify-center space-y-4 sm:space-y-0'>
             <div className='flex items-center'>
               <GrReactjs size={24} className='text-[#0480a6]' />
               <span className='ml-2'>React</span>
@@ -58,18 +61,28 @@ export default function Page() {
               <span className='ml-2'>PostgreSQL</span>
             </div>
           </div>
-          <div className='flex items-center justify-center mt-8 space-x-4'>
-            <Link href='/contact'>
-              <Button color='primary' variant='shadow' className='uppercase'>
-                me contacter
+          <section className='sm:flex  items-center justify-center mt-8 sm:space-x-4 space-y-4 sm:space-y-0'>
+            <div className='flex items-center justify-center'>
+              <Button
+                color='primary'
+                variant='shadow'
+                className='uppercase'
+                onClick={() => router.push("/contact")}
+              >
+                Me contacter
               </Button>
-            </Link>
-            <Link href='/projets'>
-              <Button color='primary' variant='shadow' className='uppercase'>
-                mes projets
+            </div>
+            <div className='flex items-center justify-center'>
+              <Button
+                color='primary'
+                variant='shadow'
+                className='uppercase'
+                onClick={() => router.push("/projets")}
+              >
+                Mes projets
               </Button>
-            </Link>
-          </div>
+            </div>
+          </section>
         </div>
 
         <div className='w-full md:w-1/3 flex items-center justify-center'>
@@ -79,18 +92,22 @@ export default function Page() {
             width={240}
             src='https://avatars.githubusercontent.com/u/70317658?v=4'
             alt='Tête de Xavier Genolhac'
-            //   className='m-5'
           />
         </div>
       </section>
-      <section className='flex flex-col items-center justify-center p-8'>
+      <section className='sm:flex sm:flex-col sm:items-center sm:justify-center sm:p-8'>
         <Tabs aria-label='Options'>
           <Tab
             key='ecoute'
             title={
-              <div className='flex items-center space-x-2'>
+              <div className='flex flex-row items-center sm:space-x-2 space-x-1'>
                 <FaHandshake size={24} />
-                <span>Répondre à vos besoins</span>
+                <span className='text-xs text-center sm:text-left hidden sm:block'>
+                  Répondre à vos besoins
+                </span>
+                <span className='text-xs text-center sm:text-left sm:hidden'>
+                  Assistance
+                </span>
               </div>
             }
           >
@@ -111,9 +128,14 @@ export default function Page() {
           <Tab
             key='accompagnement'
             title={
-              <div className='flex items-center space-x-2'>
+              <div className='flex flex-row items-center sm:space-x-2 space-x-1'>
                 <PiHandHeartFill size={24} />
-                <span>Partenaire dévoué</span>
+                <span className='text-xs text-center sm:text-left hidden sm:block'>
+                  Partenaire dévoué
+                </span>
+                <span className='text-xs text-center sm:text-left sm:hidden'>
+                  Allié
+                </span>
               </div>
             }
           >
@@ -131,9 +153,14 @@ export default function Page() {
           <Tab
             key='adpatabilite'
             title={
-              <div className='flex items-center space-x-2'>
+              <div className='flex flex-row items-center sm:space-x-2 space-x-1'>
                 <MdOutlineBalance size={24} />
-                <span>Accessibilité financière</span>
+                <span className='text-xs text-center sm:text-left hidden sm:block'>
+                  Accessibilité financière
+                </span>
+                <span className='text-xs text-center sm:text-left sm:hidden'>
+                  Abordable
+                </span>
               </div>
             }
           >
