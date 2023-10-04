@@ -1,7 +1,7 @@
 ---
 title: ublock Origin et les publicités sur Youtube
 date: "2023-09-23"
-picture: /images/Club306.jpg
+picture: /images/posts/230923-ublockYT/00.svg
 slug: ublock-origin-les-publicites-sur-youtube
 ---
 
@@ -12,13 +12,12 @@ Je souhaite exprimer ma grande reconnaissance envers l'extension [**uBlock Origi
 (vérifier d'avoir la version min 1.52.0)
 
 Ouvrir les **Options** de uBlock
-![alt](../../public/images/posts/230923-ublockYT/01.jpg "Ublock Options")
-![alt](/public/images/posts/230923-ublockYT/01.jpg "Ublock Options")
+![alt](/images/posts/230923-ublockYT/01.jpg "Ublock Options")
 
 Puis cliquer sur **Vider tous les caches**
-![alt](../../public/images/posts/230923-ublockYT/02.jpg "Vider Caches")
+![alt](/images/posts/230923-ublockYT/02.jpg "Vider Caches")
 
 Pour finir cliquer sur **Mettre à jour maintenant**
-![alt](../../public/images/posts/230923-ublockYT/03.jpg "Mettre à jour maintenant")
+![alt](/images/posts/230923-ublockYT/03.jpg "Mettre à jour maintenant")
 
 YouTube est à nouveau dépourvu de toute publicité.

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+
 const { nextui } = require("@nextui-org/react");
 
 const config: Config = {
@@ -8,12 +9,12 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
-  theme: {
+  theme: {    
     extend: {
       colors: {},
     },
   },
-  plugins: [nextui()],
+  plugins: [nextui(), require('@tailwindcss/typography')],
 };
 
 module.exports = config;

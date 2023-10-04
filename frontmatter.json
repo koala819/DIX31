@@ -4,6 +4,7 @@
     {
       "name": "default",
       "pageBundle": false,
+      "previewPath": null,
       "fields": [
         {
           "title": "Title",
@@ -18,7 +19,7 @@
         {
           "title": "Publishing date",
           "name": "date",
-          "type": "string",
+          "type": "datetime",
           "default": "{{now}}",
           "isPublishDate": true
         },
@@ -30,7 +31,7 @@
         {
           "title": "Is in draft",
           "name": "draft",
-          "type": "boolean"
+          "type": "draft"
         },
         {
           "title": "Tags",
@@ -41,13 +42,11 @@
           "title": "Categories",
           "name": "categories",
           "type": "categories"
-        },
-        {
-          "title": "picture",
-          "name": "picture",
-          "type": "string"
         }
       ]
     }
-  ]
+  ],
+  "frontMatter.framework.id": "next",
+  "frontMatter.content.publicFolder": "public",
+  "frontMatter.preview.host": "http://localhost:3000"
 }
