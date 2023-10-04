@@ -13,9 +13,11 @@ export default function Page() {
   return (
     <>
       <section className='flex flex-col-reverse md:flex-row items-center mt-8 p-8'>
-        <div className='w-full md:w-2/3 bg-gradient-to-r shadow-lg rounded-lg p-2 text-justify'>
+        <div className='w-full md:w-2/3 bg-gradient-to-r shadow-lg rounded-lg p-12 text-justify'>
           <h1 className='text-4xl font-bold mb-2'>Xavier Genolhac</h1>
-          <h2 className='text-lg text-gray-600 mb-4'>Software Craftsmanship</h2>
+          <h2 className='text-lg text-gray-600 dark:text-gray-400 mb-4'>
+            Software Craftsmanship
+          </h2>
           <p className='text-base leading-relaxed mb-8'>
             Je m&apos;appelle Xavier, et je suis un passionné du web depuis le
             début des années 2000. En tant que développeur web freelance depuis

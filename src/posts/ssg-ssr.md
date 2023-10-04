@@ -1,6 +1,6 @@
 ---
 title: "Win to Use Static Generation v.s. Server-side Rendering"
-date: "2020-01-02"
+date: "2020-02-23"
 picture: "/images/Club306.jpg"
 ---
 

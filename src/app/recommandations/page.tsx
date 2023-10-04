@@ -75,11 +75,11 @@ export default function Page() {
         {shuffledSections.map((section, index) => (
           <section
             key={index}
-            className='max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20'
+            className='max-w-md py-4 px-8 bg-white dark:bg-slate-600 shadow-lg rounded-lg my-20'
           >
             <div className='flex justify-center md:justify-end -mt-16'>
               <Image
-                className='w-20 h-20 object-cover rounded-full border-2 border-indigo-500'
+                className='w-20 h-20 object-cover rounded-full border-2 border-indigo-500 dark:border-cyan-400'
                 alt={`avatar ${section.name}`}
                 src={section.imageSrc}
                 width={100}
@@ -87,15 +87,17 @@ export default function Page() {
               />
             </div>
             <div>
-              <h2 className='text-gray-800 text-3xl font-semibold'>
+              <h2 className='text-gray-800 dark:text-sky-500 text-3xl font-semibold'>
                 {section.title}
               </h2>
-              <p className='mt-2 text-gray-600'>{section.description}</p>
+              <p className='mt-2 text-gray-600 dark:text-gray-200'>
+                {section.description}
+              </p>
             </div>
             <div className='flex justify-end mt-4'>
               <Link
                 href={section.link}
-                className='text-xl font-medium text-indigo-500'
+                className='text-xl font-medium text-indigo-500 dark:text-cyan-400'
                 target='_blank'
               >
                 {section.name}

@@ -54,7 +54,7 @@ export default function Page() {
 
   return (
     <section className='flex-grow text-gray-700 body-font relative'>
-      <div className='absolute inset-0 bg-gray-300'>
+      <div className='absolute inset-0 bg-gray-300 dark:bg-gray-800'>
         <iframe
           style={{
             filter: "grayscale(1) contrast(1.2) opacity(0.4)",
@@ -69,14 +69,14 @@ export default function Page() {
         onSubmit={handleSubmit(handleSendMail)}
         className='container px-5 py-24 mx-auto flex'
       >
-        <div className='lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10'>
-          <h2 className='text-gray-900 text-lg font-medium title-font text-center pb-2 mb-2'>
+        <div className='lg:w-1/3 md:w-1/2 bg-white dark:bg-gray-600 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10'>
+          <h2 className='text-gray-900 dark:text-gray-200 text-lg font-medium title-font text-center pb-2 mb-2'>
             Contactez moi
           </h2>
-          <div className='h-1 bg-gray-200 rounded overflow-hidden'>
+          <div className='h-1 bg-gray-200 dark:bg-gray-400 rounded overflow-hidden'>
             <div className='w-24 h-full bg-blue-500'></div>
           </div>
-          <p className='leading-relaxed mb-5 text-gray-600 mt-2'>
+          <p className='leading-relaxed mb-5 text-gray-600 dark:text-gray-200 mt-2'>
             Transformez votre vision en réalité avec mon développement sur
             mesure.
           </p>
@@ -164,7 +164,7 @@ export default function Page() {
             </Button>
           </div>
 
-          <p className='text-xs text-gray-500 mt-3'>
+          <p className='text-xs text-gray-500 dark:text-gray-300 mt-3'>
             Mon engagement : vous apporter une réponse en moins de 24h.
           </p>
         </div>

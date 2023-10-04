@@ -32,7 +32,7 @@ export default async function Blog() {
               //   </small>
               // </li>
               <div className='p-4 md:w-1/3' key={id}>
-                <div className='h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden dark:bg-gray-800'>
+                <div className='h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden dark:bg-gray-600'>
                   <div className='relative aspect-video'>
                     <Image
                       className='object-cover rounded-md'
@@ -46,7 +46,7 @@ export default async function Blog() {
                     <h2 className='tracking-widest text-xs title-font font-medium text-gray-400 dark:text-gray-200 mb-1'>
                       <Date dateString={date} />
                     </h2>
-                    <div className='title-font text-lg font-medium text-gray-900 mb-3 dark:text-gray-400'>
+                    <div className='title-font text-lg font-medium text-gray-900 mb-3 dark:text-gray-300'>
                       {title}
                     </div>
                     {/* <div className='leading-relaxed mb-3 dark:text-gray-200'>
@@ -54,7 +54,7 @@ export default async function Blog() {
                   </div> */}
                     <div className='flex items-center flex-wrap '>
                       <Link
-                        className='text-blue-500 inline-flex items-center md:mb-2 lg:mb-0 hover:underline hover:text-[#DB2323] dark:text-orange-600 dark:hover:text-orange-300'
+                        className='text-blue-500 inline-flex items-center md:mb-2 lg:mb-0 hover:underline hover:text-[#DB2323] dark:text-orange-400 dark:hover:text-orange-300'
                         href={`/blog/${id}`}
                       >
                         Lire Plus
