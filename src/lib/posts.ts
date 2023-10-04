@@ -3,7 +3,6 @@
 
 import fs from "fs";
 import path from "path";
-
 // Import 'gray-matter', library for parsing the metadata in each markdown file
 import matter from "gray-matter";
 

@@ -23,14 +23,6 @@ export default async function Blog() {
         <div className='container px-5 py-24 mx-auto'>
           <div className='flex flex-wrap -m-4'>
             {allPostsData.map(({ id, date, title, picture }) => (
-              // <li className='mb-5' key={id}>
-              //   <div className='font-medium mb-1 mt-5'>
-              //     <Link href={`/blog/${id}`}>{title}</Link>
-              //   </div>
-              //   <small className='text-gray-500 font-medium'>
-              //     <Date dateString={date} />
-              //   </small>
-              // </li>
               <div className='p-4 md:w-1/3' key={id}>
                 <div className='h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden dark:bg-gray-600'>
                   <div className='relative aspect-video'>
