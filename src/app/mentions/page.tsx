@@ -28,7 +28,7 @@ export default function Page() {
             sites web sur mesure et développement de logiciels spécifiques
           </p>
           <p>
-            <span className='font-bold underline'>URL :</span> www.dix31.org
+            <span className='font-bold underline'>URL :</span> www.dix31.com
           </p>
           <p>
             <span className='font-bold underline'>Localisation :</span> 31300
@@ -41,11 +41,7 @@ export default function Page() {
         </h1>
         <div className='flex flex-col space-y-4'>
           <p>
-            <span className='font-bold underline'>Nom :</span> O2switch
-          </p>
-          <p>
-            <span className='font-bold underline'>Adresse :</span> 222-224
-            Boulevard Gustave Flaubert 63000 Clermont-Ferrand
+            <span className='font-bold underline'>Nom :</span> Vercel
           </p>
         </div>
 

@@ -34,9 +34,9 @@ export default function Page() {
             responsable du traitement :
           </p>
           <div className='flex flex-col space-y-4'>
-            <p>dix31</p>
+            <p>DIX31</p>
             <p>31300 Toulouse FRANCE</p>
-            <p>contact@dix31.org</p>
+            <p>contact@dix31.com</p>
           </div>
         </div>
 
@@ -106,15 +106,16 @@ export default function Page() {
         </p>
         <ul className='list-disc' role='list'>
           <li className='mx-12' role='listitem'>
-            O2switch en qualité d&apos;hébergeur du site web (localisation des
-            données : France),
+            Vercel en qualité d&apos;hébergeur du site web (localisation des
+            données : monde),
           </li>
           <li className='mx-12' role='listitem'>
             Google Analytics (analytics.google.com) en tant qu&apos;outil de
             suivi d&apos;audience (localisation des données : Monde),
           </li>
           <li className='mx-12' role='listitem'>
-            SmtpJS (smtpjs.com) utilisé pour le formulaire de contact.
+            nodemailer (nodemailer.com) utilisé pour l&apos;envoi du formulaire
+            de contact.
           </li>
         </ul>
         <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-400 mt-8'>
@@ -127,7 +128,7 @@ export default function Page() {
         </p>
         <ul className='list-disc' role='list'>
           <li className='mx-12' role='listitem'>
-            en écrivant à contact@dix31.org pour le retrait de données que vous
+            en écrivant à contact@dix31.com pour le retrait de données que vous
             m&apos;auriez communiqué par{" "}
             <Link href='/contact' className='underline hover:text-blue-700'>
               le biais du formulaire
