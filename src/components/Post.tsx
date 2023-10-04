@@ -1,10 +1,11 @@
 "use client";
 import { Button } from "@nextui-org/react";
 import Date from "@/components/Date";
-import { PostData } from "@/types/models";
+// import { PostData } from "@/types/models";
 import { useRouter } from "next/navigation";
+import Markdown from "markdown-to-jsx";
 
-export function PostDisplay({ postData }: { postData: PostData }) {
+export function Post({ post }: any) {
   const router = useRouter();
 
   return (
@@ -19,33 +20,26 @@ export function PostDisplay({ postData }: { postData: PostData }) {
               }
             `}
       </style>
-      {/* Post Title */}
-      <div className='p-4'>
-        <h1 className='font-extrabold text-3xl mb-1'>{postData.title}</h1>
+      <div className='flex flex-col justify-center items-center'>
+        <div className='p-4'>
+          <h1 className='font-extrabold text-3xl mb-1'>{post.data.title}</h1>
 
-        <div className='text-gray-500 font-medium mb-5'>
-          <Date dateString={postData.date} />
+          <div className='text-gray-500 font-medium mb-5'>
+            <Date dateString={post.data.date} />
+          </div>
         </div>
-      </div>
-
-      {/* Post Content */}
-      <div
-        className='text-gray-600 space-y-8 px-12'
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-        // dangerouslySetInnerHTML={{
-        //   __html: postData.contentHtml.replace(/href/g, "target='_blank' href"),
-        // }}
-      />
-      {/* TIP: dangerouslySetInnerHTML is a React feature that allows you to render HTML that comes from an external source as if it were regular JSX. It replaces innerHTML used by Javascript.
-Here we are rendering the HTML that comes from the markdown file thanks to remark (remark converted the markdown into HTML)*/}
-      <div className='flex items-center justify-center p-8'>
-        <Button
-          color='primary'
-          variant='shadow'
-          onClick={() => router.push("/blog")}
-        >
-          <span>Retour</span>
-        </Button>
+        <Markdown className='prose px-12 text-justify space-y-8 '>
+          {post.content}
+        </Markdown>
+        <div className='flex items-center justify-center p-8'>
+          <Button
+            color='primary'
+            variant='shadow'
+            onClick={() => router.push("/blog")}
+          >
+            <span>Retour</span>
+          </Button>
+        </div>
       </div>
     </>
   );
