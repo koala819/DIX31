@@ -11,22 +11,56 @@ import { Tooltip } from "@nextui-org/react";
 export function Footer() {
   return (
     <footer className='text-gray-900 bg-gray-200 dark:bg-slate-700 dark:text-slate-300'>
-      <div className='container px-5 md:py-12 mx-auto flex md:items-center  md:flex-row md:flex-nowrap flex-wrap flex-col'>
-        <div className='w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left'>
-          <div className='flex title-font font-medium items-center md:justify-start justify-center'>
-            <AiFillChrome size={42} />
-
-            <span className='ml-3 text-xl'>DIX31</span>
-          </div>
-          <p className='mt-2 text-sm text-gray-500 dark:text-slate-400'>
-            Développeur Indépendant Xavier
-          </p>
-        </div>
-
-        <div className='flex w-full px-4 md:justify-end justify-center mt-4 md:mt-0'>
+      <div className='container px-5 md:py-12 mx-auto flex md:items-center md:flex-row md:flex-nowrap flex-wrap flex-col'>
+        <div className='flex w-full md:w-1/3 px-4 md:justify-start justify-center mt-4 md:mt-0'>
           <nav className='flex flex-col mb-8'>
             <h2 className='title-font font-medium tracking-widest text-sm mb-3 uppercase'>
-              autres ressources
+              Découvrez davantage
+            </h2>
+            <Link
+              href='/projets/portfolio'
+              className='text-gray-600 hover:underline dark:text-zinc-300 capitalize'
+            >
+              Portfolio
+            </Link>
+            <Link
+              href='/services'
+              className='text-gray-600 hover:underline dark:text-zinc-300 capitalize'
+            >
+              Mes services
+            </Link>
+            <Link
+              href='/blog'
+              className='text-gray-600 hover:underline dark:text-zinc-300 capitalize'
+            >
+              Blog
+            </Link>
+          </nav>
+        </div>
+
+        <div className='w-full md:w-1/3 flex justify-center md:justify-start items-center'>
+          <div className='md:w-11/12 w-full flex-shrink-0 md:mx-0 mx-auto text-center md:text-left'>
+            <div className='flex title-font font-medium items-center md:justify-start justify-center'>
+              <AiFillChrome size={42} />
+              <span className='ml-3 text-xl'>DIX31</span>
+            </div>
+            <div className='w-full mt-2 text-sm md:text-xs lg:text-lg text-gray-500 dark:text-slate-400'>
+              <p>
+                <span className='font-bold text-lg lg:text-xl'>D</span>
+                éveloppeur{" "}
+                <span className='font-bold text-lg lg:text-xl'>I</span>
+                ndépendant{" "}
+                <span className='font-bold text-lg lg:text-xl'>X</span>avier{" "}
+              </p>
+              <p>Votre partenaire pour le développement web</p>
+            </div>
+          </div>
+        </div>
+
+        <div className='flex w-full md:w-1/3 px-4 md:justify-end justify-center mt-4 md:mt-0'>
+          <nav className='flex flex-col mb-8'>
+            <h2 className='title-font font-medium tracking-widest text-sm mb-3 uppercase'>
+              Liens utiles
             </h2>
 
             <Link
