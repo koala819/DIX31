@@ -3,8 +3,11 @@ import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Button, Input, Textarea } from "@nextui-org/react";
+import toast from "react-hot-toast";
+import { useState } from "react";
 
 export default function Page() {
+  const [hideForm, setHideForm] = useState(false);
   const schema = yup.object().shape({
     email: yup
       .string()
@@ -27,12 +30,10 @@ export default function Page() {
   });
 
   async function handleSendMail(values: any) {
-    console.log("ready to send mail with values", values);
     const data = {
       firstName: values.first_name,
       email: values.email,
       message: values.msg,
-      from: "contact",
     };
 
     const options = {
@@ -43,12 +44,15 @@ export default function Page() {
 
     fetch(`${process.env.CLIENT_URL}/api/mail`, options)
       .then((response: any) => {
-        console.log("response or Not", response);
-        response.status === 200 && console.log("Send mail with SUCCESS :)");
-        // setConfirmationSend(true);
+        if (response.status === 200) {
+          toast.success("Votre message a bien été envoyé");
+          setHideForm(true);
+        } else {
+          toast.error("Une erreur s'est produite", response.statusText);
+        }
       })
       .catch((error: any) => {
-        console.log("ERROR to send the mail in contact.tsx", error);
+        toast.error("Une erreur s'est produite", error);
       });
   }
 
@@ -65,110 +69,125 @@ export default function Page() {
           height='100%'
         />
       </div>
+
       <form
         onSubmit={handleSubmit(handleSendMail)}
         className='container px-5 py-24 mx-auto flex'
       >
         <div className='lg:w-1/3 md:w-1/2 bg-white dark:bg-gray-600 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10'>
           <h2 className='text-gray-900 dark:text-gray-200 text-lg font-medium title-font text-center pb-2 mb-2'>
-            Contactez moi
+            {!hideForm ? "Contactez moi" : "Merci"}
           </h2>
-          <div className='h-1 bg-gray-200 dark:bg-gray-400 rounded overflow-hidden'>
-            <div className='w-24 h-full bg-blue-500'></div>
-          </div>
-          <p className='leading-relaxed mb-5 text-gray-600 dark:text-gray-200 mt-2'>
-            Transformez votre vision en réalité avec mon développement sur
-            mesure.
+          {!hideForm && (
+            <div className='h-1 bg-gray-200 dark:bg-gray-400 rounded overflow-hidden'>
+              <div className='w-24 h-full bg-blue-500'></div>
+            </div>
+          )}
+          <p
+            className={`${
+              !hideForm
+                ? "leading-relaxed mb-5 text-gray-600 dark:text-gray-200 mt-2"
+                : "text-center"
+            }`}
+          >
+            {!hideForm
+              ? "Transformez votre vision en réalité avec mon développement sur mesure."
+              : "Je vous répondrai d'ici 24h maximum."}
           </p>
-
-          <div className='relative mb-4'>
-            <Controller
-              name='first_name'
-              control={control}
-              render={({ field: { onChange, value } }) => (
-                <Input
-                  type='text'
-                  color='primary'
-                  label='Nom'
-                  id='first_name'
-                  placeholder='Entrez votre nom'
-                  defaultValue='Al'
-                  onChange={onChange}
-                  value={value}
-                  className='max-w-[280px]'
+          {!hideForm && (
+            <>
+              <div className='relative mb-4'>
+                <Controller
+                  name='first_name'
+                  control={control}
+                  render={({ field: { onChange, value } }) => (
+                    <Input
+                      type='text'
+                      color='primary'
+                      label='Nom'
+                      id='first_name'
+                      placeholder='Entrez votre nom'
+                      defaultValue='Al'
+                      onChange={onChange}
+                      value={value}
+                      className='max-w-[280px]'
+                    />
+                  )}
                 />
-              )}
-            />
 
-            {errors.first_name && (
-              <div className='text-red-500 font-mono text-xs'>
-                {errors.first_name.message}
+                {errors.first_name && (
+                  <div className='text-red-500 font-mono text-xs'>
+                    {errors.first_name.message}
+                  </div>
+                )}
               </div>
-            )}
-          </div>
 
-          <div className='relative mb-4'>
-            <Controller
-              name='email'
-              control={control}
-              render={({ field: { onChange, value } }) => (
-                <Input
-                  type='email'
-                  color='primary'
-                  label='Email'
-                  id='email'
-                  placeholder='Entrez votre email'
-                  defaultValue='al.gorythme@dix31.org'
-                  onChange={onChange}
-                  value={value}
-                  className='max-w-[280px]'
+              <div className='relative mb-4'>
+                <Controller
+                  name='email'
+                  control={control}
+                  render={({ field: { onChange, value } }) => (
+                    <Input
+                      type='email'
+                      color='primary'
+                      label='Email'
+                      id='email'
+                      placeholder='Entrez votre email'
+                      defaultValue='al.gorythme@dix31.org'
+                      onChange={onChange}
+                      value={value}
+                      className='max-w-[280px]'
+                    />
+                  )}
                 />
-              )}
-            />
 
-            {errors.email && (
-              <div className='text-red-500 font-mono text-xs'>
-                {errors.email.message}
+                {errors.email && (
+                  <div className='text-red-500 font-mono text-xs'>
+                    {errors.email.message}
+                  </div>
+                )}
               </div>
-            )}
-          </div>
 
-          <div className='relative mb-4'>
-            <Controller
-              name='msg'
-              control={control}
-              defaultValue=''
-              render={({ field: { onChange, value } }) => (
-                <Textarea
-                  type='text'
-                  color='primary'
-                  value={value}
-                  onChange={onChange}
-                  label='Veuillez saisir votre message'
-                  autoFocus
-                  className='max-w-xs'
+              <div className='relative mb-4'>
+                <Controller
+                  name='msg'
+                  control={control}
+                  defaultValue=''
+                  render={({ field: { onChange, value } }) => (
+                    <Textarea
+                      type='text'
+                      color='primary'
+                      value={value}
+                      onChange={onChange}
+                      label='Veuillez saisir votre message'
+                      autoFocus
+                      className='max-w-xs'
+                    />
+                  )}
                 />
-              )}
-            />
 
-            {errors.msg && (
-              <div className='text-red-500 font-mono text-xs'>
-                {errors.msg.message}
+                {errors.msg && (
+                  <div className='text-red-500 font-mono text-xs'>
+                    {errors.msg.message}
+                  </div>
+                )}
               </div>
-            )}
-          </div>
 
-          <div className='flex justify-center items-center'>
-            <Button color='primary' type='submit' variant='shadow'>
-              Envoyer
-            </Button>
-          </div>
+              <div className='flex justify-center items-center'>
+                <Button color='primary' type='submit' variant='shadow'>
+                  Envoyer
+                </Button>
+              </div>
 
-          <p className='text-xs text-gray-500 dark:text-gray-300 mt-3'>
-            Mon engagement : vous apporter une réponse en moins de 24h.
-          </p>
+              <p className='text-xs text-gray-500 dark:text-gray-300 mt-3'>
+                Mon engagement : vous apporter une réponse en moins de 24h.
+              </p>
+            </>
+          )}
         </div>
       </form>
+
+      <div className='w-full h-96' />
     </section>
   );
 }

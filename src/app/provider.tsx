@@ -1,6 +1,7 @@
 "use client";
 import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { Toaster } from "react-hot-toast";
 
 export function ThemeProviders({ children }: { children: React.ReactNode }) {
   return (
@@ -8,6 +9,7 @@ export function ThemeProviders({ children }: { children: React.ReactNode }) {
       <NextThemesProvider attribute='class' defaultTheme='light'>
         {children}
       </NextThemesProvider>
+      <Toaster position='top-right' />
     </NextUIProvider>
   );
 }
