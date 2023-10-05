@@ -8,7 +8,7 @@ const nextConfig = {
       "media.licdn.com",
       "dam.malt.com",
       "drive.google.com",
-      "cdn.pixabay.com",
+      "www.gnu.org",
     ],
   },
   reactStrictMode: true,
