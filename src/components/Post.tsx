@@ -1,8 +1,7 @@
 "use client";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import Image from "next/image";
 import Date from "@/components/Date";
-import { Button } from "@nextui-org/react";
+import { Button, Image } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 
 const mdxComponents = {

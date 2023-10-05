@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+import { Image } from "@nextui-org/react";
 import Link from "next/link";
 import Date from "@/components/Date";
 import { allPosts } from "contentlayer/generated";
@@ -11,8 +12,9 @@ export default function Blog() {
           <Image
             className='p-2 rounded-md'
             src={picture || ""}
-            alt={"image"}
-            fill
+            alt={picture}
+            width={200}
+            height={100}
           />
         </div>
         <div className='p-6'>
