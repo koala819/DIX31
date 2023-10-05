@@ -3,7 +3,6 @@ const { withContentlayer } = require("next-contentlayer");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
     domains: [
       "media.licdn.com",
       "dam.malt.com",
@@ -11,6 +10,7 @@ const nextConfig = {
       "www.gnu.org",
     ],
   },
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   reactStrictMode: true,
   swcMinify: true,
 };
