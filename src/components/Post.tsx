@@ -5,7 +5,7 @@ import Date from "@/components/Date";
 import { useRouter } from "next/navigation";
 import Markdown from "markdown-to-jsx";
 
-export function Post({ post }: any) {
+export function Post({ post }: { post: any }) {
   const router = useRouter();
 
   return (

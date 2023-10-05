@@ -1,13 +1,13 @@
-type Params = {
-  id: string;
-};
+// type Params = {
+//   id: string;
+// };
 
-export type PostData = {
-  title: string;
-  date: string;
-  contentHtml: string;
-};
+// export type PostData = {
+//   title: string;
+//   date: string;
+//   contentHtml: string;
+// };
 
-export type Props = {
-  params: Params;
-};
+// export type Props = {
+//   params: Params;
+// };
