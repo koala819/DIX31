@@ -1,19 +1,17 @@
-import { getPostContent } from "@/lib/posts";
+import { allPosts } from "contentlayer/generated";
+import { notFound } from "next/navigation";
+import { PostProps } from "@/types/models";
 import { Post } from "@/components/Post";
-// import { PostData } from "@/types/models";
-// import GrayMatterFile from "gray-matter";
 
-// export async function generateMetadata({ params }: Props) {
-//   const postData: PostData = await getPostData(params.id);
+async function getDocFromParam(slug: string) {
+  const doc = allPosts.find((doc) => doc.slug === slug);
+  if (!doc) notFound();
 
-//   return {
-//     title: postData.title,
-//   };
-// }
+  return doc;
+}
 
-export default async function Page(props: any) {
-  const slug = props.params.id;
-  const post = getPostContent(slug);
+export default async function Page({ params }: PostProps) {
+  const post = await getDocFromParam(params.id);
 
   return <Post post={post} />;
 }

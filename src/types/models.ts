@@ -6,6 +6,12 @@ export interface Recommandation {
   imageSrc: string;
 }
 
+export interface PostProps {
+  params: {
+    id: string;
+  };
+}
+
 // type Params = {
 //   id: string;
 // };
