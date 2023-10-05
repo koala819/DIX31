@@ -3,11 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Recommandation } from "@/types/models";
+import { Tooltip } from "@nextui-org/react";
 
 export default function Page() {
   const [shuffledSections, setShuffledSections] = useState<Recommandation[]>(
     []
   );
+
   const sections = [
     {
       name: "Ousama Ben Younes",
@@ -102,13 +104,22 @@ export default function Page() {
               </p>
             </div>
             <div className='flex justify-end mt-4'>
-              <Link
-                href={section.link}
-                className='text-xl font-medium text-indigo-500 dark:text-cyan-400'
-                target='_blank'
+              <Tooltip
+                content={
+                  section.link.includes("linkedin")
+                    ? "Témoignage publié sur ma page de recommandations de mon profil LinkedIn"
+                    : " Jetez un œil à cette recommandation figurant dans la section 'Recommandations' de mon profil Malt"
+                }
+                color={section.link.includes("linkedin") ? "primary" : "danger"}
               >
-                {section.name}
-              </Link>
+                <Link
+                  href={section.link}
+                  className='text-xl font-medium text-indigo-500 dark:text-cyan-400'
+                  target='_blank'
+                >
+                  {section.name}
+                </Link>
+              </Tooltip>
             </div>
           </section>
         ))}
