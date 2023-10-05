@@ -8,7 +8,6 @@ const nextConfig = {
       "dam.malt.com",
       "drive.google.com",
       "www.gnu.org",
-      "cdn.pixabay.com",
     ],
   },
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
