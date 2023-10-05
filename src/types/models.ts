@@ -1,3 +1,11 @@
+export interface Recommandation {
+  name: string;
+  title: string;
+  description: string;
+  link: string;
+  imageSrc: string;
+}
+
 // type Params = {
 //   id: string;
 // };

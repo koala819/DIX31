@@ -1,7 +1,13 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Recommandation } from "@/types/models";
 
 export default function Page() {
+  const [shuffledSections, setShuffledSections] = useState<Recommandation[]>(
+    []
+  );
   const sections = [
     {
       name: "Ousama Ben Younes",
@@ -59,15 +65,16 @@ export default function Page() {
     },
   ];
 
-  function shuffleArray(array: any[]) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+  useEffect(() => {
+    async function shuffleArray(array: any[]) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      setShuffledSections(array);
     }
-    return array;
-  }
-
-  const shuffledSections = shuffleArray(sections);
+    shuffleArray(sections);
+  }, []);
 
   return (
     <div className='flex flex-col items-center '>
