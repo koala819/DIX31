@@ -21,16 +21,17 @@ export default function Page() {
           <div className='grid gap-6 mx-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 '>
             <section className='px-6 py-4 transition-colors duration-200 transform rounded-lg hover:bg-gray-300 dark:hover:bg-gray-900 bg-gray-200 dark:bg-gray-700'>
               <p className='text-lg font-medium text-gray-800 dark:text-gray-100'>
-                Landing Page
+                Une page Web unique
               </p>
               <h4 className='mt-2 text-4xl font-semibold text-gray-800 dark:text-gray-100'>
                 <span className='text-base font-normal text-gray-600 dark:text-gray-400'>
                   A partir de{" "}
                 </span>
-                <span className='whitespace-nowrap'>400 €</span>
+                <span className='whitespace-nowrap'>500 €</span>
               </h4>
               <p className='mt-4 text-gray-500 dark:text-gray-300'>
-                Transformez les visiteurs en clients avec notre performance.
+                Simple et attrayante elle présente les informations essentielles
+                sur un sujet, un produit ou un service.
               </p>
 
               <div className='mt-8 space-y-8'>
@@ -72,10 +73,10 @@ export default function Page() {
 
               <Link
                 href='/contact'
-                className='flex items-center justify-center p-8'
+                className='flex items-center justify-center p-8 lg:p-2 mt-8'
               >
                 <Button color='primary' variant='shadow'>
-                  Demander un devis
+                  <span className='text-xs'>Demander un devis</span>
                 </Button>
               </Link>
             </section>
@@ -87,7 +88,7 @@ export default function Page() {
                 <span className='text-base font-normal text-gray-600 dark:text-gray-400'>
                   A partir de{" "}
                 </span>
-                <span className='whitespace-nowrap'>350 €</span>
+                <span className='whitespace-nowrap'>1 000 €</span>
               </h4>
               <p className='mt-4 text-gray-500 dark:text-gray-300'>
                 Exposez votre entreprise avec élégance grâce à notre expertise.
@@ -131,25 +132,25 @@ export default function Page() {
               </div>
               <Link
                 href='/contact'
-                className='flex items-center justify-center p-8'
+                className='flex items-center justify-center p-8 lg:p-2 mt-8'
               >
                 <Button color='primary' variant='shadow'>
-                  Demander un devis
+                  <span className='text-xs'>Demander un devis</span>
                 </Button>
               </Link>
             </section>
-            <div className='relative'>
+            <section className='relative'>
               <div className='absolute -top-5 right-2 z-10'>
                 <Chip color='primary'>Populaire</Chip>
               </div>
-              <section className='px-6 py-4 transition-colors duration-200 transform bg-gray-700 rounded-lg dark:bg-blue-800 dark:hover:bg-blue-900'>
+              <div className='px-6 py-4 transition-colors duration-200 transform bg-gray-700 rounded-lg dark:bg-blue-800 dark:hover:bg-blue-900'>
                 <p className='text-lg font-medium text-gray-100'>
                   Site Dynamique
                 </p>
 
                 <h4 className='mt-2 text-4xl font-semibold text-gray-200 dark:text-gray-100'>
                   <span className='text-base font-normal'>A partir de </span>
-                  <span className='whitespace-nowrap'>1 200 €</span>
+                  <span className='whitespace-nowrap'>2 500 €</span>
                 </h4>
                 <p className='mt-4 text-gray-300'>
                   Un site interactif, mariez design et fonctionnalités de
@@ -188,14 +189,14 @@ export default function Page() {
                 </div>
                 <Link
                   href='/contact'
-                  className='flex items-center justify-center p-8'
+                  className='flex items-center justify-center p-8 lg:p-2 mt-8'
                 >
                   <Button color='primary' variant='shadow'>
-                    Demander un devis
+                    <span className='text-xs'>Demander un devis</span>
                   </Button>
                 </Link>
-              </section>
-            </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>
