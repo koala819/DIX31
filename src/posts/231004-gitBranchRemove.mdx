@@ -1,0 +1,84 @@
+---
+title: Supprimer les branches Git
+date: "2023-10-04"
+picture: https://drive.google.com/uc?export=view&id=1OvwNPiJr_E2A6qjeQ9E0R65PLP3Oj-7y
+slug: git-supprimer-branches
+---
+
+<h4>1. Branches Git : Vue d'ensemble</h4>
+
+Commençons par lister nos branches
+
+<div className='flex items-center justify-center'>
+  <Image
+    src='https://drive.google.com/uc?export=view&id=184yz0pJ5YV1ujt9WuKsWxGCrldac3pwK'
+    alt='git branch -a'
+    width={500}
+    height={50}
+  />
+</div>
+
+Ci-dessous les branches existantes. En blanc les branches locales et en rouge les distantes
+
+<div className='flex items-center justify-center'>
+  <Image
+    src='https://drive.google.com/uc?export=view&id=1b-D_njp5fzbPhJ69DtiY3t5Yj_3M-5NX'
+    alt='view branches'
+    width={500}
+    height={50}
+  />
+</div>
+
+<h4>2. Supprimer les branches locales</h4>
+
+Pour supprimer une branche locale, nous pouvons utiliser la commande git-branch avec l'option -d ou -D.
+
+<div className='text-center'>
+  <Snippet color='primary'>git branch (-d | -D) < branchname ></Snippet>
+</div>
+
+- L'option -d est un alias de --delete, qui supprime la branche uniquement si elle a été entièrement fusionnée dans sa branche source.
+- L'option -D est un alias de --delete --force, qui permet de supprimer la branche indépendamment de son statut de fusion
+
+Suppression de la branche locale manageSession
+
+<div className='flex items-center justify-center'>
+  <Image
+    src='https://drive.google.com/uc?export=view&id=1E7dmTWT3WTx7JiT1DPaYZF4HBKYfCGqx'
+    alt='view branches'
+    width={500}
+    height={50}
+  />
+</div>
+
+Nous obtenons une erreur car cette branche n'a pas été fusionnée !
+
+Donc nous allons utiliser l'option -D
+
+<div className='flex items-center justify-center'>
+  <Image
+    src='https://drive.google.com/uc?export=view&id=101oacBu0hXXT_uFt0MA9JeOTixkv1Aor'
+    alt='view branches'
+    width={500}
+    height={50}
+  />
+</div>
+
+<h4>2. Supprimer les branches distantes</h4>
+
+Pour supprimer les branches distantes à l'aide de la commande git-branch, spécifions l'option -r avec l'option -d.
+
+<div className='text-center'>
+  <Snippet color='primary'>git branch -d -r origin/< branchname ></Snippet>
+</div>
+
+Suppression de la branche distante manageSession
+
+<div className='flex items-center justify-center'>
+  <Image
+    src='https://drive.google.com/uc?export=view&id=1VG1NKRsmuQJqSgn4nF1cDEh4zPU_QnR1'
+    alt='view branches'
+    width={500}
+    height={50}
+  />
+</div>
