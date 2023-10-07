@@ -38,24 +38,27 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className='w-full md:w-1/3 flex justify-center md:justify-start items-center'>
+        <section className='w-full md:w-1/3 flex justify-center items-center'>
           <div className='md:w-11/12 w-full flex-shrink-0 md:mx-0 mx-auto text-center md:text-left'>
-            <div className='flex title-font font-medium items-center md:justify-start justify-center'>
+            <div className='flex title-font font-medium items-center justify-center'>
               <AiFillChrome size={42} />
               <span className='ml-3 text-xl'>DIX31</span>
             </div>
-            <div className='w-full mt-2 text-sm md:text-xs lg:text-lg text-gray-500 dark:text-slate-400'>
-              <p>
+            <div className='w-full mt-2 text-sm md:text-xs lg:text-lg text-gray-500 dark:text-slate-400 '>
+              <p className=' flex justify-center items-center'>
                 <span className='font-bold text-lg lg:text-xl'>D</span>
-                éveloppeur{" "}
-                <span className='font-bold text-lg lg:text-xl'>I</span>
-                ndépendant{" "}
-                <span className='font-bold text-lg lg:text-xl'>X</span>avier{" "}
+                éveloppeur
+                <span className='font-bold text-lg lg:text-xl ml-2'> I</span>
+                ndépendant
+                <span className='font-bold text-lg lg:text-xl ml-2'>X</span>
+                avier
               </p>
-              <p>Votre partenaire pour le développement web</p>
+              <p className=' flex justify-center items-center'>
+                Votre partenaire pour le développement web
+              </p>
             </div>
           </div>
-        </div>
+        </section>
 
         <div className='flex w-full md:w-1/3 px-4 md:justify-end justify-center mt-4 md:mt-0'>
           <nav className='flex flex-col mb-8'>
