@@ -40,7 +40,8 @@ export async function POST(req: Request): Promise<Response> {
       html: mailContact(body.firstName, body.message, body.email),
     };
 
-    await transporter.sendMail(mailOptions);
+    const xx = await transporter.sendMail(mailOptions);
+    console.log("mail route", xx);
 
     return NextResponse.json({
       status: 200,

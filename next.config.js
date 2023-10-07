@@ -4,6 +4,7 @@ const { withContentlayer } = require("next-contentlayer");
 const nextConfig = {
   env: {
     CLIENT_URL: process.env.CLIENT_URL,
+    GA_TRACKING_ID: process.env.GA_TRACKING_ID,
     MAIL_FROM: process.env.MAIL_FROM,
     MAIL_HOST: process.env.MAIL_HOST,
     MAIL_PORT: process.env.MAIL_PORT,
