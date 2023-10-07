@@ -1,11 +1,12 @@
 "use client";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import Date from "@/components/Date";
-import { Button, Image } from "@nextui-org/react";
+import { Date } from "@/components/Date";
+import { Button, Image, Snippet } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 
 const mdxComponents = {
   Image,
+  Snippet,
 };
 
 export function Post({ post }: any) {
