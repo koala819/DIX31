@@ -4,7 +4,6 @@ import {
   Button,
   Modal,
   ModalContent,
-  Tooltip,
   useDisclosure,
 } from "@nextui-org/react";
 import Image from "next/image";
@@ -65,14 +64,11 @@ export default function Page() {
         <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
           <p className='font-bold text-lg'>Consulter le projet</p>
           <div className='space-x-2'>
-            <Tooltip
-              content='Le repo est privé, mais contactez moi si vous souhaitez consulter le code'
-              className='cursor-progress'
-            >
-              <Button className='cursor-progress' size='sm' variant='shadow'>
+            <Link href='https://github.com/koala819/club306' target='_blank'>
+              <Button size='sm' variant='shadow' color='primary'>
                 Github
               </Button>
-            </Tooltip>
+            </Link>
 
             <Link href='https://www.club306.fr/' target='_blank'>
               <Button
