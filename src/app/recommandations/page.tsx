@@ -12,6 +12,30 @@ export default function Page() {
 
   const sections = [
     {
+      name: "Pascal BESNARD",
+      title: "Président du Club306",
+      description:
+        "Xavier est devenu un développeur fullstack talentueux qui a joué un rôle" +
+        " essentiel dans la création de notre site internet du club. Sa contribution" +
+        " exceptionnelle a transformé notre vision en une réalité numérique époustouflante." +
+        " De plus, il a su créer un site internet qui non seulement répond à nos besoins, mais" +
+        " qui dépasse largement nos attentes. Sa maîtrise du développement front-end et back-end" +
+        " lui a permis de concevoir une expérience utilisateur fluide et conviviale." +
+        " " +
+        "Son attitude positive et son dévouement en font un atout précieux pour toute équipe" +
+        " de développement. Nous avons tous pu travailler avec lui et il a su s'adapter à nos différentes" +
+        " approches, demandes, et personnalité. Par conséquent, sa capacité à travailler en équipe a" +
+        " également été un atout précieux, collaborant efficacement avec d'autres membres de l'équipe" +
+        " pour atteindre nos objectifs communs." +
+        " " +
+        "Le Club306, son staff, et ses membres sont ravi de recommander Xavier pour vos projets. nous" +
+        " ne vous cacherons pas que le travail de Xavier a été crucial dans la mise en place d'une" +
+        " stratégie virtuelle de notre club.",
+      link: "https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390",
+      imageSrc:
+        "https://media.licdn.com/dms/image/C5603AQE-VbifCXTwyw/profile-displayphoto-shrink_200_200/0/1574721536542?e=1702512000&v=beta&t=Fl2n5ulBU1gP6PomhsdFsr56I_bvCt3kuFP5llhrMlU",
+    },
+    {
       name: "Ousama Ben Younes",
       title: "AWS Devops - YellowLabTools Evangelist",
       description:
