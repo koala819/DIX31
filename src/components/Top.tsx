@@ -102,6 +102,38 @@ export function Top() {
             }}
           >
             <DropdownItem
+              key='99_uptime'
+              description='Réunir les passionnés de la Peugeot 306.'
+              startContent={
+                <Image
+                  alt='Club306 website'
+                  className='object-cover w-full h-full'
+                  height={100}
+                  src='/images/Club306.jpg'
+                  width={100}
+                />
+              }
+              onClick={() => router.push("/projets/Club306")}
+            >
+              Club 306
+            </DropdownItem>
+            <DropdownItem
+              key='supreme_support'
+              description='Vitrine de mes compétences et réalisations professionnelles.'
+              startContent={
+                <Image
+                  alt='My portfolio website'
+                  className='object-cover w-full h-full'
+                  height={100}
+                  src='/images/Portfolio.jpg'
+                  width={100}
+                />
+              }
+              onClick={() => router.push("/projets/portfolio")}
+            >
+              Mon Portfolio
+            </DropdownItem>
+            <DropdownItem
               key='thouy'
               description='Site de location de gîtes personnalisé'
               startContent={
@@ -149,38 +181,6 @@ export function Top() {
               onClick={() => router.push("/projets/CumulerAides")}
             >
               Cumuler les aides
-            </DropdownItem>
-            <DropdownItem
-              key='99_uptime'
-              description='Réunir les passionnés de la Peugeot 306.'
-              startContent={
-                <Image
-                  alt='Club306 website'
-                  className='object-cover w-full h-full'
-                  height={100}
-                  src='/images/Club306.jpg'
-                  width={100}
-                />
-              }
-              onClick={() => router.push("/projets/Club306")}
-            >
-              Club 306
-            </DropdownItem>
-            <DropdownItem
-              key='supreme_support'
-              description='Vitrine de mes compétences et réalisations professionnelles.'
-              startContent={
-                <Image
-                  alt='My portfolio website'
-                  className='object-cover w-full h-full'
-                  height={100}
-                  src='/images/Portfolio.jpg'
-                  width={100}
-                />
-              }
-              onClick={() => router.push("/projets/portfolio")}
-            >
-              Mon Portfolio
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
