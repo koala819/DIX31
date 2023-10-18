@@ -18,6 +18,8 @@ const nextConfig = {
       "dam.malt.com",
       "drive.google.com",
       "www.gnu.org",
+      "www.soprasteria.fr",
+      "www.club306.fr",
     ],
   },
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],

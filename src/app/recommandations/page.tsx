@@ -137,7 +137,55 @@ export default function Page() {
   }, []);
 
   return (
-    <div className='flex flex-col items-center '>
+    <>
+      <header className='grid sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4 p-4'>
+        <div className='flex items-center justify-center'>
+          <Image
+            src='https://www.airbus.com/themes/custom/airbus_web_experience_ui/logo.svg'
+            className='bg-[#06193a] rounded-xl p-8 h-full'
+            width={150}
+            height={150}
+            alt='Logo Airbus'
+          />
+        </div>
+        <div className='flex items-center justify-center'>
+          <Image
+            src='https://loopsider.com/assets/logo.svg'
+            className='rounded-xl'
+            width={150}
+            height={150}
+            alt='Logo LoopSider'
+          />
+        </div>
+        <div className='flex items-center justify-center'>
+          <Image
+            src='https://www.soprasteria.fr/ResourcePackages/Bootstrap4/assets/dist/logos/logo-soprasteria.png'
+            className='object-contain rounded-xl'
+            width={200}
+            height={10}
+            alt='Logo SopraSteria'
+          />
+        </div>
+        <div className='flex items-center justify-center'>
+          <Image
+            src='https://www.club306.fr/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FlogoClub306.3a02f592.png&w=256&q=75'
+            className='rounded-xl'
+            width={150}
+            height={150}
+            alt='Logo Club306'
+          />
+        </div>
+        <div className='flex items-center justify-center'>
+          <Image
+            src='https://a.storyblok.com/f/149852/x/122448b40c/white-logo.svg'
+            className='bg-gray-500 rounded-xl p-8'
+            width={150}
+            height={150}
+            alt='Logo KillBills'
+          />
+        </div>
+      </header>
+
       <div className='flex flex-col items-center '>
         {shuffledSections.map((section, index) => (
           <section
@@ -182,6 +230,6 @@ export default function Page() {
           </section>
         ))}
       </div>
-    </div>
+    </>
   );
 }
