@@ -12,6 +12,31 @@ export default function Page() {
 
   const sections = [
     {
+      name: "Olivier HOAREAU",
+      title: "Fondateur de GoTombola.co (CEO/CTO Founder)",
+      description:
+        "Ce n’était pas gagné. J’ai misé sur Xavier il y a 3 ans. Motivé, il avait peu d’expérience sur le code. " +
+        " Je lui ai proposé d’integrer mon équipe d’apprenti (5), et de développer avec eux un Design System en " +
+        " React et Typescript (via Storybook), sous mon apprentissage (300 recrutements, 25 ans de code au quotidien). " +
+        " Plus de 600 composants génériques developpé, git rebase, linter et reviews dures avec le code. J’ai levé la " +
+        " barre plus haut pour Xavier en lui faisant découvrir les Bonnes Pratiques et la qualité de code : il a souffert " +
+        " sur le Software Craftmanship avec moi. Il a buté, il a refait, il a compris." +
+        " " +
+        " Xavier est posé, avec l’envie de bien faire son travail. Comme beaucoup de personnes aujourd’hui, il a un parcours " +
+        " sinueux, mais empreint de détermination." +
+        " " +
+        " Je pense que Xavier aura sa place (et y sera bien) dans une équipe qui cherche à suivre un cadre, à faire bien les choses, " +
+        " et qui est ouverte et à l’envie de partager." +
+        " " +
+        " React, Typescript, JS, TailwindCSS et NodeJS sont entre autres des sujets qui plaisent à Xavier." +
+        " " +
+        " Je recommande Xavier, notamment dans une équipe qui a besoin de quelqu’un qui peut s’intégrer rapidement aux pratiques de l’équipe, " +
+        " sans avoir envie d’imposer les siennes. Bon vent à toi Xavier.",
+      link: "https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390",
+      imageSrc:
+        "https://media.licdn.com/dms/image/D4E03AQHdhzD-9aI7jQ/profile-displayphoto-shrink_200_200/0/1666095265881?e=1703116800&v=beta&t=FKVOGcCW62E_B0KAGNhYGpTaVXvvgdFpmgdO2BjCYTw",
+    },
+    {
       name: "Pascal BESNARD",
       title: "Président du Club306",
       description:
@@ -88,6 +113,15 @@ export default function Page() {
       link: "https://www.malt.fr/profile/xaviergenolhac",
       imageSrc:
         "https://dam.malt.com/ad194889-8488-4940-9902-f2444623aded?gravity=face&func=face&face_margin=70&w=440&h=440&force_format=webp",
+    },
+    {
+      name: "Sid-Ahmed CHICKH-BLED",
+      title: "SEO KillBills",
+      description:
+        "Xavier est toujours très professionnel, sérieux et motivé dans ses tâches." +
+        " Un plus dans une équipe!",
+      link: "https://www.malt.fr/profile/xaviergenolhac",
+      imageSrc: "https://dam.malt.com/anonymous?w=80&force_format=png",
     },
   ];
 
