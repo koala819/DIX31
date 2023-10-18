@@ -116,12 +116,13 @@ export default function Page() {
     },
     {
       name: "Sid-Ahmed CHICKH-BLED",
-      title: "SEO KillBills",
+      title: "CEO & Co-Founder @ KillBills",
       description:
         "Xavier est toujours très professionnel, sérieux et motivé dans ses tâches." +
         " Un plus dans une équipe!",
       link: "https://www.malt.fr/profile/xaviergenolhac",
-      imageSrc: "https://dam.malt.com/anonymous?w=80&force_format=png",
+      imageSrc:
+        "https://media.licdn.com/dms/image/D4E03AQGv4YmloaK-eA/profile-displayphoto-shrink_200_200/0/1689258281287?e=1703116800&v=beta&t=EGkTLYKADzrpwpfS9AjQGEIPahxdjN8hTb3w5mhVYUI",
     },
   ];
 
