@@ -10,7 +10,6 @@ const nextConfig = {
     MAIL_PORT: process.env.MAIL_PORT,
     MAIL_PWD: process.env.MAIL_PWD,
     MAIL_USER: process.env.MAIL_USER,
-    MAIL_SERVER: process.env.MAIL_SERVER,
   },
   images: {
     domains: [
