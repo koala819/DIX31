@@ -1,4 +1,4 @@
-import { allPosts } from "contentlayer/generated";
+import { allPosts } from ".contentlayer/generated";
 import { notFound } from "next/navigation";
 import { PostProps } from "@/types/models";
 import { Post } from "@/components/Post";

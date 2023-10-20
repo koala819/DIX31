@@ -3,8 +3,13 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import { Date } from "@/components/Date";
 import { Button, Image, Snippet } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
+import { FaCat, FaArrowRight } from "react-icons/fa";
+import { GiSheep } from "react-icons/gi";
 
 const mdxComponents = {
+  FaCat,
+  FaArrowRight,
+  GiSheep,
   Image,
   Snippet,
 };
