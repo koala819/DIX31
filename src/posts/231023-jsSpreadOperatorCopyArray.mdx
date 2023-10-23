@@ -1,0 +1,29 @@
+---
+title: Copier & Fusionner les tableaux en JavaScript
+date: "2023-10-23"
+picture: https://drive.google.com/uc?export=view&id=1d2KUfhUgO4D8nvybKg-ESZCkOeOuwoPC
+slug: js-spread-operator-copy-array
+---
+
+Use the Spread Operator to Copy and Merge Arrays
+
+### Copy an Array
+
+```javascript
+const originalArray = ["value1", "value2", "value3"];
+const copiedArray = [...originalArray];
+
+console.log(copiedArray);
+//[value1, value2, value3]
+```
+
+### Merge two or more Arrays
+
+```javascript
+const array1 = ["value1", "value2", "value3"];
+const array2 = ["value4", "value5", "value6"];
+const mergedArray = [...array1, ...array2];
+
+console.log(mergedArray);
+//[value1, value2, value3, value4, value5, value6]
+```
