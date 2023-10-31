@@ -16,11 +16,11 @@ import {
   Button,
 } from "@nextui-org/react";
 import { FiChevronDown } from "react-icons/fi";
-import { AiFillChrome } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import logo from "../../public/images/Navbar_logo.svg";
 
 export function Top() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,8 +64,13 @@ export function Top() {
         />
         <NavbarBrand>
           <Link href='/' aria-current='page' color='foreground'>
-            <AiFillChrome />
-            <p className='font-bold text-inherit'>DIX31</p>
+            <Image
+              src={logo}
+              alt='DIX31 logo'
+              className='object-fill'
+              width={80}
+              height={50}
+            />
           </Link>
         </NavbarBrand>
       </NavbarContent>
