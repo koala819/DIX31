@@ -1,5 +1,4 @@
 "use client";
-import { AiFillChrome } from "react-icons/ai";
 import { LuCopyleft } from "react-icons/lu";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -7,6 +6,7 @@ import Link from "next/link";
 import Malt from "../../public/images/malt-logo.svg";
 import Image from "next/image";
 import { Tooltip } from "@nextui-org/react";
+import logo from "../../public/images/Footer_logo.svg";
 
 export function Footer() {
   return (
@@ -40,22 +40,19 @@ export function Footer() {
 
         <section className='w-full md:w-1/3 flex justify-center items-center'>
           <div className='md:w-11/12 w-full flex-shrink-0 md:mx-0 mx-auto text-center md:text-left'>
-            <div className='flex title-font font-medium items-center justify-center'>
-              <AiFillChrome size={42} />
-              <span className='ml-3 text-xl'>DIX31</span>
-            </div>
             <div className='w-full mt-2 text-sm md:text-xs lg:text-lg text-gray-500 dark:text-slate-400 '>
-              <p className=' flex justify-center items-center'>
-                <span className='font-bold text-lg lg:text-xl'>D</span>
-                éveloppeur
-                <span className='font-bold text-lg lg:text-xl ml-2'> I</span>
-                ndépendant
-                <span className='font-bold text-lg lg:text-xl ml-2'>X</span>
-                avier
-              </p>
-              <p className=' flex justify-center items-center'>
+              <div className='flex justify-center'>
+                <Image
+                  src={logo}
+                  alt='DIX31 logo'
+                  className='object-fill'
+                  width={250}
+                  height={50}
+                />
+              </div>
+              <article className=' flex justify-center items-center'>
                 Votre partenaire pour le développement web
-              </p>
+              </article>
             </div>
           </div>
         </section>
