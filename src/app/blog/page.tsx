@@ -1,5 +1,5 @@
 "use client";
-import { Image } from "@nextui-org/react";
+import { Chip, Image } from "@nextui-org/react";
 import Link from "next/link";
 import { Date as DateComp } from "@/components/Date";
 import { allPosts } from ".contentlayer/generated";
@@ -104,7 +104,6 @@ export default function Blog() {
     ];
     setTags(sortedTags);
 
-    // setTags(["Tout afficher", ...Array.from(allTags)]);
     setPostPreviews([
       ...recentPostPreviews,
       <React.Fragment key='olderPosts'>{olderPostList}</React.Fragment>,
@@ -129,13 +128,15 @@ export default function Blog() {
     <div>
       <div className='flex justify-center space-x-4'>
         {allTags.map((tag) => (
-          <span
+          <Chip
             key={tag}
-            className={selectedTag === tag ? "bg-red-500" : ""}
+            color='primary'
+            className='hover:cursor-pointer'
+            variant={selectedTag === tag ? "shadow" : "flat"}
             onClick={() => handleTagClick(tag)}
           >
             {tag}
-          </span>
+          </Chip>
         ))}
       </div>
       <section className='text-gray-600 body-font'>
