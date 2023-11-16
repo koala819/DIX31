@@ -6,7 +6,6 @@ import { allPosts } from ".contentlayer/generated";
 import React, { ReactElement, useEffect, useState } from "react";
 
 export default function Blog() {
-  // const [postPreviews, setPostPreviews] = useState<ReactElement[]>([]);
   const [postPreviews, setPostPreviews] = useState<ReactElement[]>([]);
   const [allTags, setTags] = useState<string[]>([]);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
