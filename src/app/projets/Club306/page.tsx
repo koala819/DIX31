@@ -40,7 +40,7 @@ export default function Page() {
         </div>
         <div className='flex justify-center w-full md:w-1/2 p-6'>
           <Image
-            alt='Cumuler les aides website'
+            alt='Club306 website'
             className='object-cover'
             height={400}
             src='/images/Club306.jpg'
