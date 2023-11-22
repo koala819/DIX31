@@ -108,6 +108,22 @@ export function Top() {
           >
             <DropdownItem
               key='99_uptime'
+              description='Centre de formations activateur de compétences.'
+              startContent={
+                <Image
+                  alt="Activ'Savoirs website"
+                  className='object-cover w-full h-full'
+                  height={100}
+                  src='/images/ActivSavoirs.jpg'
+                  width={100}
+                />
+              }
+              onClick={() => router.push("/projets/ActivSavoirs")}
+            >
+              Activ&apos;Savoirs
+            </DropdownItem>
+            <DropdownItem
+              key='99_uptime'
               description='Réunir les passionnés de la Peugeot 306.'
               startContent={
                 <Image

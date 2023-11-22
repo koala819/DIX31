@@ -13,8 +13,7 @@ export default function Page() {
           </h1>
           <p className='mb-8 leading-relaxed'>
             Voici une liste de projets auxquels j&apos;ai contribué en tant que
-            développeur ou membre de l&apos;équipe de développement, mais elle
-            n&apos;est pas exhaustive..
+            développeur ou membre de l&apos;équipe de développement...
           </p>
         </div>
         <Link href='/contact' className='flex justify-center w-1/4 uppercase'>
@@ -24,6 +23,29 @@ export default function Page() {
         </Link>
       </section>
       <section className='grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-32 mb-8 p-8 '>
+        <Card isFooterBlurred radius='lg' className='border-none'>
+          <Image
+            alt="Activ'Savoirs website"
+            className='object-cover w-full h-full'
+            height={400}
+            src='/images/ActivSavoirs.jpg'
+            width={400}
+          />
+          <CardFooter className='justify-between before:bg-white dark:bg-gray-800 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10'>
+            <p className='text-tiny text-gray-800'>Activ&apos;Savoirs</p>
+            <Link href='/projets/ActivSavoirs'>
+              <Button
+                className='text-tiny text-gray-200 bg-black/60 dark:bg-gray-600'
+                variant='flat'
+                color='default'
+                radius='lg'
+                size='sm'
+              >
+                Découvrir
+              </Button>
+            </Link>
+          </CardFooter>
+        </Card>
         <Card isFooterBlurred radius='lg' className='border-none'>
           <Image
             alt='Club306 website'
