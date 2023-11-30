@@ -48,7 +48,7 @@ export default function Blog() {
               </text>
               <text className='flex items-center flex-wrap'>
                 <Link
-                  className='text-blue-500 inline-flex items-center md:mb-2 lg:mb-0 hover:underline hover:text-[#DB2323] dark:text-orange-400 dark:hover:text-orange-300'
+                  className='text-blue-500 inline-flex items-center md:mb-2 lg:mb-0 hover:underline hover:text-[#DB2323] dark:text-orange-400'
                   href={`/blog/${slug}`}
                 >
                   Lire Plus
@@ -78,7 +78,7 @@ export default function Blog() {
           {olderPosts.map(({ picture, slug, title }) => (
             <Link
               key={slug}
-              className='font-medium text-gray-900 flex flex-col hover:bg-slate-100 hover:p-2'
+              className='font-medium text-gray-900 dark:text-white flex flex-col hover:bg-slate-100 dark:hover:bg-orange-500 dark:hover:text-black hover:p-2'
               href={`/blog/${slug}`}
             >
               <div className='flex space-x-2  items-center'>
@@ -126,24 +126,23 @@ export default function Blog() {
 
   return (
     <div>
-      <div className='flex justify-center space-x-4'>
+      <div className='flex justify-center flex-wrap space-x-2 md:space-x-4 my-4'>
         {allTags.map((tag) => (
           <Chip
             key={tag}
             color='primary'
-            className='hover:cursor-pointer'
-            variant={selectedTag === tag ? "shadow" : "flat"}
+            className={`hover:cursor-pointer my-1 ${
+              selectedTag === tag ? "shadow" : "flat"
+            } dark:bg-orange-500`}
             onClick={() => handleTagClick(tag)}
           >
             {tag}
           </Chip>
         ))}
       </div>
-      <section className='text-gray-600 body-font'>
+      <section className='text-gray-600 body-font dark:text-gray-300'>
         <div className='container px-5 py-24 mx-auto'>
-          <div className='flex flex-wrap -m-4'>
-            <div className='flex flex-wrap -m-4'>{postPreviews}</div>
-          </div>
+          <div className='flex flex-wrap -m-4'>{postPreviews}</div>
         </div>
       </section>
     </div>
