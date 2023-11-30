@@ -34,11 +34,9 @@ export function NavbarDIX() {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
     { name: "Projets", path: "/projets" },
-    { name: "Recommandations", path: "/recommandations" },
-    { name: "Contact", path: "/contact" },
     { name: "Blog", path: "/" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -206,11 +204,7 @@ export function NavbarDIX() {
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <NavbarItem isActive={path.includes("/contact")}>
-          <Link href='/contact' aria-current='page' color='foreground'>
-            Contact
-          </Link>
-        </NavbarItem>
+
         <NavbarItem isActive={path.includes("/blog")}>
           <Link href='/blog' aria-current='page' color='foreground'>
             Blog
@@ -218,6 +212,14 @@ export function NavbarDIX() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify='end'>
+        <NavbarItem
+          isActive={path.includes("/contact")}
+          className='hidden sm:flex'
+        >
+          <Link href='/contact' aria-current='page' color='foreground'>
+            Contact
+          </Link>
+        </NavbarItem>
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>
