@@ -3,11 +3,13 @@ import { Button, Chip } from "@nextui-org/react";
 import Link from "next/link";
 import { AiFillCheckCircle } from "react-icons/ai";
 import Hero from "@/components/atoms/Hero";
+import Presentation from "@/components/atoms/Presentation";
 
 export default function Page() {
   return (
     <>
       <Hero />
+      <Presentation />
       <div className=''>
         <div className='sm:flex sm:items-center sm:justify-between p-8'>
           <div>
