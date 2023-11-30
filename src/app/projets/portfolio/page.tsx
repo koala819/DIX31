@@ -26,7 +26,7 @@ export default function Page() {
         </div>
         <div className='flex justify-center w-full md:w-1/2 p-6'>
           <Image
-            alt='Memory Game project'
+            alt='Screenshot DIX31 Portfolio'
             className='object-cover'
             height={400}
             src='/images/Portfolio.jpg'

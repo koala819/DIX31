@@ -3,7 +3,7 @@ export const comments = [
     name: "Vincent DECLERCQ",
     title: "Dirigeant de l'organisme de formation ACTIV'SAVOIRS",
     description:
-      "CSi vous recherchez un prestataire qui conjugue professionnalisme, sens avéré de l'écoute et une véritable dimenssion humaine pour " +
+      "Si vous recherchez un prestataire qui conjugue professionnalisme, sens avéré de l'écoute et une véritable dimenssion humaine pour " +
       "la création de votre futur site internet je vous recommande dans ce cas les services de Xavier Genolhac. " +
       "Ainsi, je voulais partager avec vous mon expérience client car Xavier a réalisé le nouveau site internet de mon entreprise Activ' Savoirs. " +
       "Il est très sérieux, particuliérement fiable et animé par un véritable souci de la satisfaction de son client. " +
