@@ -13,7 +13,7 @@ const CommentItem = ({
 }) => {
   return (
     <motion.div
-      className='p-4 bg-white shadow-lg rounded-lg m-2 hover:scale-105 cursor-pointer flex flex-col items-center w-full md:w-1/2 lg:w-1/3'
+      className='p-4 bg-white dark:bg-slate-600 shadow-lg rounded-lg m-2 hover:scale-105 cursor-pointer flex flex-col items-center w-full md:w-1/2 lg:w-1/3'
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       whileHover={{ scale: 1.05 }}

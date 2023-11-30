@@ -6,11 +6,11 @@ export default function Projets() {
   return (
     <section className='mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8 space-y-6'>
       <div className='flex justify-between items-center'>
-        <h2 className='text-2xl font-bold tracking-tight text-gray-900'>
+        <h2 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
           Réalisations avec le StarterPack
         </h2>
       </div>
-      <p className='text-md text-gray-700 mx-auto mb-6'>
+      <p className='text-md text-gray-700 dark:text-gray-300 mx-auto mb-6'>
         Chaque site web que je crée est un récit de passion et
         d&apos;innovation. Explorez ici une sélection de mes sites les plus
         emblématiques, chacun reflétant une approche personnalisée et une
@@ -27,8 +27,10 @@ export default function Projets() {
           />
         </picture>
         <div className='w-2/3 p-4 space-y-8'>
-          <h3 className='text-xl font-semibold text-gray-800'>DIX31</h3>
-          <p className='text-md text-gray-700'>
+          <h3 className='text-xl font-semibold text-gray-800 dark:text-white'>
+            DIX31
+          </h3>
+          <p className='text-md text-gray-700 dark:text-gray-300'>
             Ce propre site illustre l&apos;efficacité et la flexibilité du
             Starter Pack. Il intègre des fonctionnalités avancées et une
             conception responsive, offrant une expérience utilisateur optimale
@@ -48,10 +50,10 @@ export default function Projets() {
           />
         </picture>
         <div className='w-2/3 p-4 space-y-8'>
-          <h3 className='text-xl font-semibold text-gray-800'>
+          <h3 className='text-xl font-semibold text-gray-800 dark:text-white'>
             Activ&apos;Savoirs
           </h3>
-          <p className='text-md text-gray-700'>
+          <p className='text-md text-gray-700 dark:text-gray-300'>
             Le site d&apos;Activ&apos;Savoirs, développé pour un centre de
             formation professionnelle continue, est un témoignage de ma capacité
             à créer des solutions sur mesure adaptées aux besoins spécifiques du
@@ -64,7 +66,7 @@ export default function Projets() {
       <div className='text-center'>
         <Link
           href='/projets'
-          className='inline-block bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700 transition duration-300'
+          className='inline-block bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline transition duration-300'
         >
           Découvrez mes autres réalisations
         </Link>

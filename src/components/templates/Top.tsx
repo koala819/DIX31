@@ -20,12 +20,17 @@ import { usePathname } from "next/navigation";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import logo from "../../public/images/Navbar_logo.svg";
+import whitelogo from "../../../public/images/Navbar_logo.svg";
+import blackLogo from "../../../public/images/Navbar_logo_dark.png";
+import { useTheme } from "next-themes";
 
 export function Top() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const path = usePathname();
   const router = useRouter();
+  const { resolvedTheme } = useTheme();
+
+  const logo = resolvedTheme === "dark" ? blackLogo : whitelogo;
 
   const menuItems = [
     { name: "Home", path: "/" },
@@ -54,6 +59,7 @@ export function Top() {
           "data-[active=true]:after:h-[2px]",
           "data-[active=true]:after:rounded-[2px]",
           "data-[active=true]:after:bg-primary",
+          "dark:data-[active=true]:after:bg-orange-600",
         ],
       }}
     >

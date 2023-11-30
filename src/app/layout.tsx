@@ -1,8 +1,8 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Top } from "@/components/Top";
-import { Footer } from "@/components/Footer";
+import { Top } from "@/components/templates/Top";
+import { Footer } from "@/components/templates/Footer";
 import { ThemeProviders } from "./provider";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 

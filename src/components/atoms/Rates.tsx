@@ -7,10 +7,10 @@ export default function Rates() {
   return (
     <div className='mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8'>
       <div className='space-y-4'>
-        <h2 className='text-2xl font-bold tracking-tight text-gray-900'>
+        <h2 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
           Tarification simple et transparente
         </h2>
-        <p className='text-lg text-gray-600 pb-8'>
+        <p className='text-lg text-gray-600 dark:text-gray-300 pb-8'>
           Avec DIX31, je crois en la création de solutions web qui vous aident à
           grandir. Que vous souhaitiez démarrer seul avec le StarterPack ou que
           vous préfériez une solution sur mesure, je suis là pour vous
@@ -39,28 +39,28 @@ export default function Rates() {
 
                 <div className='mt-8 space-y-8'>
                   <div className='flex items-center'>
-                    <AiFillCheckCircle className='w-5 h-5 text-blue-500' />
+                    <AiFillCheckCircle className='w-5 h-5 text-blue-500 dark:text-orange-600' />
                     <span className='mx-4 text-gray-700 dark:text-gray-300'>
                       Simplicité
                     </span>
                   </div>
 
                   <div className='flex items-center'>
-                    <AiFillCheckCircle className='w-5 h-5 text-blue-500' />
+                    <AiFillCheckCircle className='w-5 h-5 text-blue-500 dark:text-orange-600' />
                     <span className='mx-4 text-gray-700 dark:text-gray-300'>
                       Efficacité
                     </span>
                   </div>
 
                   <div className='flex items-center'>
-                    <AiFillCheckCircle className='w-5 h-5 text-blue-500' />
+                    <AiFillCheckCircle className='w-5 h-5 text-blue-500 dark:text-orange-600' />
                     <span className='mx-4 text-gray-700 dark:text-gray-300'>
                       Responsive
                     </span>
                   </div>
 
                   <div className='flex items-center'>
-                    <AiFillCheckCircle className='w-5 h-5 text-blue-500' />
+                    <AiFillCheckCircle className='w-5 h-5 text-blue-500 dark:text-orange-600' />
                     <span className='mx-4 text-gray-700 dark:text-gray-300'>
                       Conversion
                     </span>
@@ -69,13 +69,10 @@ export default function Rates() {
               </div>
               <Link
                 href='/contact'
-                className='flex items-center justify-center p-8 lg:p-2 mt-8'
+                rel='noopener noreferrer'
+                className='inline-flex items-center px-6 py-3 mx-auto border border-transparent font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline mt-8 text-xs'
               >
-                <Button color='primary' variant='shadow'>
-                  <span className='text-xs'>
-                    Commencez votre histoire numérique
-                  </span>
-                </Button>
+                Commencez votre histoire numérique
               </Link>
             </section>
 
@@ -100,28 +97,28 @@ export default function Rates() {
 
                 <div className='mt-8 space-y-8'>
                   <div className='flex items-center'>
-                    <AiFillCheckCircle className='w-5 h-5 text-blue-500' />
+                    <AiFillCheckCircle className='w-5 h-5 text-blue-500 dark:text-orange-600' />
                     <span className='mx-4 text-gray-700 dark:text-gray-300'>
                       Visibilité
                     </span>
                   </div>
 
                   <div className='flex items-center'>
-                    <AiFillCheckCircle className='w-5 h-5 text-blue-500' />
+                    <AiFillCheckCircle className='w-5 h-5 text-blue-500 dark:text-orange-600' />
                     <span className='mx-4 text-gray-700 dark:text-gray-300'>
                       Esthétique
                     </span>
                   </div>
 
                   <div className='flex items-center'>
-                    <AiFillCheckCircle className='w-5 h-5 text-blue-500' />
+                    <AiFillCheckCircle className='w-5 h-5 text-blue-500 dark:text-orange-600' />
                     <span className='mx-4 text-gray-700 dark:text-gray-300'>
                       Interactivité
                     </span>
                   </div>
 
                   <div className='flex items-center'>
-                    <AiFillCheckCircle className='w-5 h-5 text-blue-500' />
+                    <AiFillCheckCircle className='w-5 h-5 text-blue-500 dark:text-orange-600' />
                     <span className='mx-4 text-gray-700 dark:text-gray-300'>
                       E-commerce
                     </span>
@@ -130,13 +127,10 @@ export default function Rates() {
               </div>
               <Link
                 href='/contact'
-                className='flex items-center justify-center p-8 lg:p-2'
+                rel='noopener noreferrer'
+                className='inline-flex items-center px-6 py-3 mx-auto border border-transparent font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline mt-8 text-xs'
               >
-                <Button color='primary' variant='shadow'>
-                  <span className='text-xs'>
-                    Mettez en valeur vos produits{" "}
-                  </span>
-                </Button>
+                Mettez en valeur vos produits
               </Link>
             </section>
 
@@ -145,7 +139,7 @@ export default function Rates() {
                 <Chip color='primary'>Populaire</Chip>
               </div>
 
-              <div className='flex flex-col justify-between h-full px-6 py-4 transition-colors duration-200 transform bg-gray-700 rounded-lg dark:bg-blue-800 dark:hover:bg-blue-900'>
+              <div className='flex flex-col justify-between h-full px-6 py-4 transition-colors duration-200 transform bg-gray-700 rounded-lg dark:bg-teal-900 dark:hover:bg-teal-800'>
                 <div>
                   <p className='text-lg font-medium text-gray-100'>
                     Site Dynamique
@@ -156,7 +150,7 @@ export default function Rates() {
                     facile du contenu. Idéal pour des projets complexes comme{" "}
                     <Link
                       href='https://www.activ-savoirs.com/'
-                      className='text-blue-500 hover:text-blue-700'
+                      className='text-blue-500 hover:text-blue-700 dark:text-orange-600 dark:hover:underline'
                       target='_blank'
                     >
                       Activ&apos;Savoirs
@@ -164,7 +158,7 @@ export default function Rates() {
                     ou{" "}
                     <Link
                       href='https://www.club306.fr/'
-                      className='text-blue-500 hover:text-blue-700'
+                      className='text-blue-500 hover:text-blue-700 dark:text-orange-600 dark:hover:underline'
                       target='_blank'
                     >
                       Club306
@@ -178,24 +172,24 @@ export default function Rates() {
 
                   <div className='mt-8 space-y-8'>
                     <div className='flex items-center'>
-                      <AiFillCheckCircle className='w-5 h-5 text-blue-500' />
+                      <AiFillCheckCircle className='w-5 h-5 text-blue-500 dark:text-orange-600' />
                       <span className='mx-4 text-gray-300'>
                         Personnalisation
                       </span>
                     </div>
 
                     <div className='flex items-center'>
-                      <AiFillCheckCircle className='w-5 h-5 text-blue-500' />
+                      <AiFillCheckCircle className='w-5 h-5 text-blue-500 dark:text-orange-600' />
                       <span className='mx-4 text-gray-300'>Flexibilité</span>
                     </div>
 
                     <div className='flex items-center'>
-                      <AiFillCheckCircle className='w-5 h-5 text-blue-500' />
+                      <AiFillCheckCircle className='w-5 h-5 text-blue-500 dark:text-orange-600' />
                       <span className='mx-4 text-gray-300'>Innovation</span>
                     </div>
 
                     <div className='flex items-center'>
-                      <AiFillCheckCircle className='w-5 h-5 text-blue-500' />
+                      <AiFillCheckCircle className='w-5 h-5 text-blue-500 dark:text-orange-600' />
                       <span className='mx-4 text-gray-300'>
                         Gestion de contenu
                       </span>
@@ -205,11 +199,10 @@ export default function Rates() {
 
                 <Link
                   href='/contact'
-                  className='flex items-center justify-center p-8 lg:p-2'
+                  rel='noopener noreferrer'
+                  className='inline-flex items-center px-6 py-3 mx-auto border border-transparent font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline mt-8 text-xs'
                 >
-                  <Button color='primary' variant='shadow'>
-                    <span className='text-xs'>Donnez vie à vos idées</span>
-                  </Button>
+                  Donnez vie à vos idées
                 </Link>
               </div>
             </section>

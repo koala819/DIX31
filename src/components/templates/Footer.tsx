@@ -3,10 +3,8 @@ import { LuCopyleft } from "react-icons/lu";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
-import Malt from "../../public/images/malt-logo.svg";
 import Image from "next/image";
 import { Tooltip } from "@nextui-org/react";
-import logo from "../../public/images/Footer_logo.svg";
 
 export function Footer() {
   return (
@@ -43,7 +41,7 @@ export function Footer() {
             <div className='w-full mt-2 text-sm md:text-xs lg:text-lg text-gray-500 dark:text-slate-400 '>
               <div className='flex justify-center'>
                 <Image
-                  src={logo}
+                  src={"images/Footer_logo.svg"}
                   alt='DIX31 logo'
                   className='object-fill'
                   width={250}
@@ -112,7 +110,12 @@ export function Footer() {
                   target='_blank'
                   className='text-gray-500 dark:text-gray-200 dark:hover:text-blue-500'
                 >
-                  <Image src={Malt} alt='Malt' width={24} height={24} />
+                  <Image
+                    src={"/images/malt-logo.svg"}
+                    alt='Malt'
+                    width={24}
+                    height={24}
+                  />
                 </Link>
               </Tooltip>
               <Tooltip showArrow={true} color='default' content='Github'>

@@ -9,7 +9,7 @@ export default function Presentation() {
   return (
     <section className='mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8'>
       <div className='flex justify-between items-center'>
-        <h2 className='text-2xl font-bold tracking-tight text-gray-900'>
+        <h2 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
           Une solution web sur mesure pour les entrepreneurs et les associations
         </h2>
       </div>
@@ -28,7 +28,7 @@ export default function Presentation() {
               height={300}
             />
           </picture>
-          <h3 className='mt-4 text-sm text-gray-700'>
+          <h3 className='mt-4 text-sm text-gray-700 dark:text-gray-300'>
             Formulaire de contact intégré et fonctionnel
           </h3>
         </Link>
@@ -46,7 +46,7 @@ export default function Presentation() {
               height={300}
             />
           </picture>
-          <h3 className='mt-4 text-sm text-gray-700'>
+          <h3 className='mt-4 text-sm text-gray-700 dark:text-gray-300'>
             Basculer facilement entre les thèmes clair et sombre
           </h3>
         </Link>
@@ -64,7 +64,7 @@ export default function Presentation() {
               height={300}
             />
           </picture>
-          <h3 className='mt-4 text-sm text-gray-700'>
+          <h3 className='mt-4 text-sm text-gray-700 dark:text-gray-300'>
             Intégration de Google Analytics pour des insights précis
           </h3>
         </Link>
@@ -82,7 +82,7 @@ export default function Presentation() {
               height={300}
             />
           </picture>
-          <h3 className='mt-4 text-sm text-gray-700'>
+          <h3 className='mt-4 text-sm text-gray-700 dark:text-gray-300'>
             Entièrement gratuit et open-source
           </h3>
         </Link>

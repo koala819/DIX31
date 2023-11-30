@@ -43,7 +43,7 @@ const CommentList = ({ comments }: { comments: Comment[] }) => {
 
   return (
     <>
-      <h2 className='mx-auto lg:max-w-7xl lg:px-8 text-2xl font-bold tracking-tight text-gray-900'>
+      <h2 className='mx-auto lg:max-w-7xl lg:px-8 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
         Ce que mes Partenaires disent de moi
       </h2>
 
