@@ -1,7 +1,7 @@
 import { allPosts } from ".contentlayer/generated";
 import { notFound } from "next/navigation";
 import { PostProps } from "@/types/models";
-import { Post } from "@/components/Post";
+import { Post } from "@/components/molecules/Post";
 
 async function getDocFromParam(slug: string) {
   const doc = allPosts.find((doc) => doc.slug === slug);

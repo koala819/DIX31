@@ -1,7 +1,7 @@
 "use client";
 import { Chip, Image } from "@nextui-org/react";
 import Link from "next/link";
-import { Date as DateComp } from "@/components/Date";
+import { Date as DateComp } from "@/components/atoms/Date";
 import { allPosts } from ".contentlayer/generated";
 import React, { ReactElement, useEffect, useState } from "react";
 
