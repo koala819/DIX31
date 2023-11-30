@@ -5,6 +5,8 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import Hero from "@/components/atoms/Hero";
 import Presentation from "@/components/atoms/Presentation";
 import Description from "@/components/atoms/Description";
+import CommentList from "@/components/molecules/CommentList";
+import { comments } from "@/lib/comments";
 
 export default function Page() {
   return (
@@ -12,6 +14,7 @@ export default function Page() {
       <Hero />
       <Presentation />
       <Description />
+      <CommentList comments={comments} />
       <div className=''>
         <div className='sm:flex sm:items-center sm:justify-between p-8'>
           <div>

@@ -2,13 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Recommandation } from "@/types/models";
+// import { Recommandation } from "@/types/models";
 import { Tooltip } from "@nextui-org/react";
 
 export default function Page() {
-  const [shuffledSections, setShuffledSections] = useState<Recommandation[]>(
-    []
-  );
+  const [shuffledSections, setShuffledSections] = useState<any[]>([]);
 
   const sections = [
     {
