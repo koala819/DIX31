@@ -4,12 +4,14 @@ import Link from "next/link";
 import { AiFillCheckCircle } from "react-icons/ai";
 import Hero from "@/components/atoms/Hero";
 import Presentation from "@/components/atoms/Presentation";
+import Description from "@/components/atoms/Description";
 
 export default function Page() {
   return (
-    <>
+    <section className='my-16'>
       <Hero />
       <Presentation />
+      <Description />
       <div className=''>
         <div className='sm:flex sm:items-center sm:justify-between p-8'>
           <div>
@@ -204,6 +206,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }
