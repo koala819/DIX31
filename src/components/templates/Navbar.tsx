@@ -17,7 +17,7 @@ import {
 } from "@nextui-org/react";
 import { FiChevronDown } from "react-icons/fi";
 import { usePathname } from "next/navigation";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { ThemeSwitcher } from "@/components/utils/ThemeSwitcher";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import whitelogo from "../../../public/images/Navbar_logo.svg";

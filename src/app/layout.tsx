@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import { NavbarDIX as Navbar } from "@/components/templates/Navbar";
 import { Footer } from "@/components/templates/Footer";
 import { ThemeProviders } from "./provider";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import GoogleAnalytics from "@/components/utils/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
