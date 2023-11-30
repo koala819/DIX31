@@ -24,7 +24,7 @@ import whitelogo from "../../../public/images/Navbar_logo.svg";
 import blackLogo from "../../../public/images/Navbar_logo_dark.png";
 import { useTheme } from "next-themes";
 
-export function Top() {
+export function NavbarDIX() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const path = usePathname();
   const router = useRouter();
@@ -82,11 +82,6 @@ export function Top() {
       </NavbarContent>
 
       <NavbarContent className='hidden sm:flex ' justify='center'>
-        <NavbarItem isActive={path.includes("/services")}>
-          <Link href='/services' aria-current='page' color='foreground'>
-            Services
-          </Link>
-        </NavbarItem>
         <Dropdown>
           <NavbarItem isActive={path.includes("/projets")}>
             <DropdownTrigger>
@@ -211,11 +206,6 @@ export function Top() {
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <NavbarItem isActive={path.includes("/recommandations")}>
-          <Link href='/recommandations' aria-current='page' color='foreground'>
-            Recommandations
-          </Link>
-        </NavbarItem>
         <NavbarItem isActive={path.includes("/contact")}>
           <Link href='/contact' aria-current='page' color='foreground'>
             Contact

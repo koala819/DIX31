@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Top } from "@/components/templates/Top";
+import { NavbarDIX as Navbar } from "@/components/templates/Navbar";
 import { Footer } from "@/components/templates/Footer";
 import { ThemeProviders } from "./provider";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
@@ -25,7 +25,7 @@ export default function RootLayout({
           <div className='min-h-screen min-w-screen'>
             <div className=' flex flex-col h-screen'>
               <nav>
-                <Top />
+                <Navbar />
               </nav>
               <main className='flex-1'>
                 <div className='w-full lg:w-8/12 px-4 mx-auto mt-6'>
