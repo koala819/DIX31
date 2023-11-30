@@ -85,15 +85,11 @@ export function Footer() {
       </div>
       <div className='bg-gray-100 dark:bg-black'>
         <div className='container mx-auto py-4 px-5 flex flex-wrap flex-row'>
-          <Link
-            href='https://fr.wikipedia.org/wiki/Copyleft'
-            target='_blank'
-            className='flex text-gray-500 items-center space-x-2 dark:text-gray-200 hover:font-bold'
-          >
+          <text className='flex text-gray-500 items-center space-x-2 dark:text-gray-200'>
             <p>Copyleft</p>
             <LuCopyleft />
             <p> 2023 by Xavier</p>
-          </Link>
+          </text>
           <div className='ml-auto'>
             <span className='inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start space-x-8'>
               <Tooltip showArrow={true} color='primary' content='Linkedin'>
