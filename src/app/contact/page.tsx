@@ -107,7 +107,6 @@ export default function Page() {
                       label='Nom'
                       id='first_name'
                       placeholder='Entrez votre nom'
-                      defaultValue='Al'
                       onChange={onChange}
                       value={value}
                       className='max-w-[280px]'
@@ -133,7 +132,6 @@ export default function Page() {
                       label='Email'
                       id='email'
                       placeholder='Entrez votre email'
-                      defaultValue='al.gorythme@dix31.org'
                       onChange={onChange}
                       value={value}
                       className='max-w-[280px]'
