@@ -107,7 +107,7 @@ export function NavbarDIX() {
           >
             <DropdownItem
               key='99_uptime'
-              description='Centre de formations activateur de compétences.'
+              description='Centre de formations professionnelles continues'
               startContent={
                 <Image
                   alt="Activ'Savoirs website"
@@ -123,10 +123,10 @@ export function NavbarDIX() {
             </DropdownItem>
             <DropdownItem
               key='99_uptime'
-              description='Réunir les passionnés de la Peugeot 306.'
+              description='Premier club automobiles de France'
               startContent={
                 <Image
-                  alt='Club306 website'
+                  alt='Club 306 France'
                   className='object-cover w-full h-full'
                   height={100}
                   src='/images/Club306.jpg'
@@ -139,10 +139,10 @@ export function NavbarDIX() {
             </DropdownItem>
             <DropdownItem
               key='supreme_support'
-              description='Vitrine de mes compétences et réalisations professionnelles.'
+              description='Développeur Indépendant Xavier Website'
               startContent={
                 <Image
-                  alt='My portfolio website'
+                  alt='DIX31 website'
                   className='object-cover w-full h-full'
                   height={100}
                   src='/images/Portfolio.jpg'
@@ -151,11 +151,11 @@ export function NavbarDIX() {
               }
               onClick={() => router.push("/projets/portfolio")}
             >
-              Mon Portfolio
+              DIX31
             </DropdownItem>
             <DropdownItem
               key='thouy'
-              description='Site de location de gîtes personnalisé'
+              description='Site de location de gîtes dans le Tarn'
               startContent={
                 <Image
                   alt='Gîtes de Thouy website'
@@ -171,10 +171,10 @@ export function NavbarDIX() {
             </DropdownItem>
             <DropdownItem
               key='usage_metrics'
-              description='Jeu créé avec passion pour renforcer mes compétences en JavaScript.'
+              description='Jeux créé avec passion'
               startContent={
                 <Image
-                  alt='First memory game'
+                  alt='Memory game'
                   priority
                   className='object-cover w-full h-full'
                   height={100}
@@ -188,7 +188,7 @@ export function NavbarDIX() {
             </DropdownItem>
             <DropdownItem
               key='production_ready'
-              description='Site pour guider les propriétaires dans la rénovation de leurs habitations.'
+              description='Guider dans la rénovation des habitations'
               startContent={
                 <Image
                   alt='Cumuler les aides website'
