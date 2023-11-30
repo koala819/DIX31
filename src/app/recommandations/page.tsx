@@ -12,6 +12,20 @@ export default function Page() {
 
   const sections = [
     {
+      name: "Vincent DECLERCQ",
+      title: "Dirigeant de l'organisme de formation ACTIV'SAVOIRS",
+      description:
+        "CSi vous recherchez un prestataire qui conjugue professionnalisme, sens avéré de l'écoute et une véritable dimenssion humaine pour " +
+        "la création de votre futur site internet je vous recommande dans ce cas les services de Xavier Genolhac. " +
+        "Ainsi, je voulais partager avec vous mon expérience client car Xavier a réalisé le nouveau site internet de mon entreprise Activ' Savoirs. " +
+        "Il est très sérieux, particuliérement fiable et animé par un véritable souci de la satisfaction de son client. " +
+        "Cerise sur le gateau ses prestations sont d'un excellent rapport qualité/prix " +
+        "Consultez le sans réserve et je suis convaincu que vous viendrez enrichir ses recommandations car il le mérite à plus d'un égard.",
+      link: "https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390",
+      imageSrc:
+        "https://media.licdn.com/dms/image/D4E03AQF657fi-HlGqA/profile-displayphoto-shrink_200_200/0/1699184603852?e=1706745600&v=beta&t=bvHaywaT9lMXqyp2czz052fNX68Dv8C9r3EN4tdblOE",
+    },
+    {
       name: "Olivier HOAREAU",
       title: "Fondateur de GoTombola.co (CEO/CTO Founder)",
       description:
