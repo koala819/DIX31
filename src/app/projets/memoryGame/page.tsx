@@ -2,11 +2,8 @@
 import { Chip, Button } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function Page() {
-  const router = useRouter();
-
   return (
     <>
       <section className='text-gray-600 dark:text-gray-300 md:flex items-center justify-center p-4 '>
