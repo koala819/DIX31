@@ -2,26 +2,39 @@
 import { Chip, Button, Tooltip } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function Page() {
-  const router = useRouter();
-
   return (
     <>
       <section className='text-gray-600 dark:text-gray-300 md:flex items-center justify-center p-4 '>
         <div className='w-full md:w-1/2 p-4'>
           <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 dark:text-gray-200'>
-            DIX31 Portfolio
+            DIX31
           </h1>
           <p className='mb-8 leading-relaxed'>
-            Mon portfolio : une vitrine de mes compétences et réalisations
-            professionnelles pour une présentation complète de mon parcours.
+            Une exposition complète et professionnelle de mes compétences et
+            réalisations, reflétant l&apos;intégralité de mon parcours
+            professionnel.
           </p>
           <div className='md:flex items-center space-x-4 mt-12 justify-center space-y-2 md:space-y-0'>
-            <Chip color='primary'>Projet Solo</Chip>
-            <Chip color='primary'>Site Vitrine</Chip>
-            <Chip color='primary'>Software Craftsmanship</Chip>
+            <Chip
+              color='primary'
+              className='dark:bg-orange-500 dark:text-black'
+            >
+              Projet Solo
+            </Chip>
+            <Chip
+              color='primary'
+              className='dark:bg-orange-500 dark:text-black'
+            >
+              Site Vitrine
+            </Chip>
+            <Chip
+              color='primary'
+              className='dark:bg-orange-500 dark:text-black'
+            >
+              Software Craftsmanship
+            </Chip>
           </div>
         </div>
         <div className='flex justify-center w-full md:w-1/2 p-6'>
@@ -51,7 +64,12 @@ export default function Page() {
           <p className='font-bold text-lg'>Consulter le projet</p>
           <div className='space-x-2'>
             <Link href='https://github.com/koala819/myWebSite' target='_blank'>
-              <Button size='sm' variant='shadow'>
+              <Button
+                size='sm'
+                color='primary'
+                className='mt-2 md:mt-0 dark:bg-orange-500 dark:text-black hover:underline'
+                variant='shadow'
+              >
                 Github
               </Button>
             </Link>
@@ -96,21 +114,29 @@ export default function Page() {
       <section className='w-full p-4 flex flex-col space-y-8'>
         <h1 className='text-3xl font-bold'>Stacks utilisées</h1>
         <div className='flex items-center justify-center space-x-4'>
-          <Chip color='primary'>Next.JS</Chip>
-          <Chip color='primary'>TypeScript</Chip>
-          <Chip color='primary'>Tailwind</Chip>
-          <Chip color='primary'>Vercel</Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            Next.JS
+          </Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            TypeScript
+          </Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            Tailwind
+          </Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            Vercel
+          </Chip>
         </div>
       </section>
-      <section className='w-full p-4 flex flex-col my-32'>
+      <Link href='/projets' className='w-full flex flex-col my-32 items-center'>
         <Button
           variant='shadow'
           color='primary'
-          onClick={() => router.push("/projets")}
+          className='dark:bg-orange-500 dark:text-black hover:underline'
         >
           Retour
         </Button>
-      </section>
+      </Link>
     </>
   );
 }

@@ -17,12 +17,14 @@ export default function Page() {
           </p>
         </div>
 
-        <Link
-          href='/contact'
-          rel='noopener noreferrer'
-          className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline'
-        >
-          Me Contacter
+        <Link href='/contact'>
+          <Button
+            variant='shadow'
+            color='primary'
+            className='dark:bg-orange-600 dark:text-black dark:font-extrabold hover:underline'
+          >
+            Me Contacter
+          </Button>
         </Link>
       </section>
       <section className='grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-32 mb-8 p-8 '>
@@ -35,10 +37,12 @@ export default function Page() {
             width={400}
           />
           <CardFooter className='justify-between before:bg-white dark:bg-gray-800 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10'>
-            <p className='text-tiny text-gray-800'>Activ&apos;Savoirs</p>
+            <p className='text-tiny text-gray-800 dark:text-white'>
+              Activ&apos;Savoirs
+            </p>
             <Link href='/projets/ActivSavoirs'>
               <Button
-                className='text-tiny text-gray-200 bg-black/60 dark:bg-gray-600'
+                className='text-tiny text-gray-200 bg-black/60 dark:bg-orange-600 dark:text-black hover:underline'
                 variant='flat'
                 color='default'
                 radius='lg'
@@ -61,7 +65,7 @@ export default function Page() {
             <p className='text-tiny text-gray-200'>Club 306</p>
             <Link href='/projets/Club306'>
               <Button
-                className='text-tiny text-gray-200 bg-black/60 dark:bg-gray-600'
+                className='text-tiny text-gray-200 bg-black/60 dark:bg-orange-600 dark:text-black hover:underline'
                 variant='flat'
                 color='default'
                 radius='lg'
@@ -86,7 +90,7 @@ export default function Page() {
             </p>
             <Link href='/projets/portfolio'>
               <Button
-                className='text-tiny text-gray-600 dark:text-gray-200 bg-black/20 dark:bg-gray-600'
+                className='text-tiny text-gray-600 bg-black/20 dark:bg-orange-600 dark:text-black hover:underline'
                 variant='flat'
                 color='default'
                 radius='lg'
@@ -111,7 +115,7 @@ export default function Page() {
             </p>
             <Link href='/projets/Thouy'>
               <Button
-                className='text-tiny text-gray-600 dark:text-gray-200 bg-black/20 dark:bg-gray-600'
+                className='text-tiny text-gray-600 bg-black/20 dark:bg-orange-600 dark:text-black hover:underline'
                 variant='flat'
                 color='default'
                 radius='lg'
@@ -135,7 +139,7 @@ export default function Page() {
             <p className='text-tiny text-gray-800'>Memory Game</p>
             <Link href='/projets/memoryGame'>
               <Button
-                className='text-tiny text-gray-200 bg-black/60 dark:bg-gray-600'
+                className='text-tiny text-gray-200 bg-black/60 dark:bg-orange-600 dark:text-black hover:underline'
                 variant='flat'
                 color='default'
                 radius='lg'
@@ -158,7 +162,7 @@ export default function Page() {
             <p className='text-tiny text-gray-200'>Cumuler les aides</p>
             <Link href='/projets/CumulerAides'>
               <Button
-                className='text-tiny text-gray-200 bg-black/60 dark:bg-gray-600'
+                className='text-tiny text-gray-200 bg-black/60 dark:bg-orange-600 dark:text-black hover:underline'
                 variant='flat'
                 color='default'
                 radius='lg'

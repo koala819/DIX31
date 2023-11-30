@@ -9,12 +9,10 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 export default function Page() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [imageSrc, setImageSrc] = useState<string>("");
-  const router = useRouter();
 
   function displayBigPicture(picture: string) {
     onOpen();
@@ -33,9 +31,24 @@ export default function Page() {
             amour pour ce modèle emblématique de voiture.
           </p>
           <div className='md:flex items-center space-x-4 mt-12 justify-center space-y-2 md:space-y-0'>
-            <Chip color='primary'>Projet Solo</Chip>
-            <Chip color='primary'>Web App</Chip>
-            <Chip color='primary'>Site Communautaire</Chip>
+            <Chip
+              color='primary'
+              className='dark:bg-orange-500 dark:text-black'
+            >
+              Projet Solo
+            </Chip>
+            <Chip
+              color='primary'
+              className='dark:bg-orange-500 dark:text-black'
+            >
+              Web App
+            </Chip>
+            <Chip
+              color='primary'
+              className='dark:bg-orange-500 dark:text-black'
+            >
+              Site Communautaire
+            </Chip>
           </div>
         </div>
         <div className='flex justify-center w-full md:w-1/2 p-6'>
@@ -65,7 +78,12 @@ export default function Page() {
           <p className='font-bold text-lg'>Consulter le projet</p>
           <div className='space-x-2'>
             <Link href='https://github.com/koala819/club306' target='_blank'>
-              <Button size='sm' variant='shadow' color='primary'>
+              <Button
+                size='sm'
+                variant='shadow'
+                color='primary'
+                className='dark:bg-orange-500 dark:text-black'
+              >
                 Github
               </Button>
             </Link>
@@ -74,7 +92,7 @@ export default function Page() {
               <Button
                 size='sm'
                 color='primary'
-                className='mt-2 md:mt-0'
+                className='dark:bg-orange-500 dark:text-black mt-2 md:mt-0'
                 variant='shadow'
               >
                 Visiter
@@ -109,10 +127,18 @@ export default function Page() {
       <section className='w-full p-4 flex flex-col space-y-8'>
         <h1 className='text-3xl font-bold'>Stacks utilisées</h1>
         <div className='flex items-center justify-center space-x-4'>
-          <Chip color='primary'>Next.JS</Chip>
-          <Chip color='primary'>Tailwind</Chip>
-          <Chip color='primary'>TypeScript</Chip>
-          <Chip color='primary'>Supabase</Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            Next.JS
+          </Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            Tailwind
+          </Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            TypeScript
+          </Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            Supabase
+          </Chip>
         </div>
       </section>
       <Modal
@@ -235,15 +261,15 @@ export default function Page() {
           </div>
         </>
       </section>
-      <section className='w-full p-4 flex flex-col my-32'>
+      <Link href='/projets' className='w-full flex flex-col my-32 items-center'>
         <Button
           variant='shadow'
           color='primary'
-          onClick={() => router.push("/projets")}
+          className='dark:bg-orange-500 dark:text-black hover:underline'
         >
           Retour
         </Button>
-      </section>
+      </Link>
     </>
   );
 }

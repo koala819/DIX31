@@ -1,11 +1,9 @@
 "use client";
 import { Chip, Button, Tooltip } from "@nextui-org/react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Page() {
-  const router = useRouter();
-
   return (
     <>
       <section className='text-gray-600 dark:text-gray-300 md:flex items-center justify-center p-4 '>
@@ -19,9 +17,24 @@ export default function Page() {
             disponibles.
           </p>
           <div className='md:flex items-center space-x-4 mt-12 justify-center space-y-2 md:space-y-0'>
-            <Chip color='primary'>Projet d&apos;équipe</Chip>
-            <Chip color='primary'>Web App</Chip>
-            <Chip color='primary'>Site de Leads</Chip>
+            <Chip
+              color='primary'
+              className='dark:bg-orange-500 dark:text-black'
+            >
+              Projet d&apos;équipe
+            </Chip>
+            <Chip
+              color='primary'
+              className='dark:bg-orange-500 dark:text-black'
+            >
+              Web App
+            </Chip>
+            <Chip
+              color='primary'
+              className='dark:bg-orange-500 dark:text-black'
+            >
+              Site de Leads
+            </Chip>
           </div>
         </div>
         <div className='flex justify-center w-full md:w-1/2 p-6'>
@@ -99,21 +112,29 @@ export default function Page() {
       <section className='w-full p-4 flex flex-col space-y-8'>
         <h1 className='text-3xl font-bold'>Stacks utilisées</h1>
         <div className='flex items-center justify-center space-x-4'>
-          <Chip color='primary'>HTML</Chip>
-          <Chip color='primary'>CSS</Chip>
-          <Chip color='primary'>JavaScript</Chip>
-          <Chip color='primary'>Google Cloud Platform</Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            HTML
+          </Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            CSS
+          </Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            JavaScript
+          </Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            Google Cloud Platform
+          </Chip>
         </div>
       </section>
-      <section className='w-full p-4 flex flex-col my-32'>
+      <Link href='/projets' className='w-full flex flex-col my-32 items-center'>
         <Button
           variant='shadow'
           color='primary'
-          onClick={() => router.push("/projets")}
+          className='dark:bg-orange-500 dark:text-black hover:underline'
         >
           Retour
         </Button>
-      </section>
+      </Link>
     </>
   );
 }

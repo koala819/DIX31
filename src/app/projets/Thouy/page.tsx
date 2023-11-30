@@ -2,11 +2,8 @@
 import { Chip, Button, Tooltip } from "@nextui-org/react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 export default function Page() {
-  const router = useRouter();
-
   return (
     <>
       <section className='text-gray-600 dark:text-gray-300 md:flex items-center justify-center p-4 '>
@@ -20,9 +17,24 @@ export default function Page() {
             pittoresque.
           </p>
           <div className='md:flex items-center space-x-4 mt-12 justify-center space-y-2 md:space-y-0'>
-            <Chip color='primary'>Projet Solo</Chip>
-            <Chip color='primary'>Frontend</Chip>
-            <Chip color='primary'>Site Vitrine</Chip>
+            <Chip
+              color='primary'
+              className='dark:bg-orange-500 dark:text-black'
+            >
+              Projet Solo
+            </Chip>
+            <Chip
+              color='primary'
+              className='dark:bg-orange-500 dark:text-black'
+            >
+              Frontend
+            </Chip>
+            <Chip
+              color='primary'
+              className='dark:bg-orange-500 dark:text-black'
+            >
+              Site Vitrine
+            </Chip>
           </div>
         </div>
         <div className='flex justify-center w-full md:w-1/2 p-6'>
@@ -67,7 +79,7 @@ export default function Page() {
                 <Button
                   size='sm'
                   color='primary'
-                  className='mt-2 md:mt-0'
+                  className='mt-2 md:mt-0 dark:bg-orange-500 dark:text-black hover:underline'
                   variant='shadow'
                 >
                   Visiter
@@ -104,20 +116,26 @@ export default function Page() {
       <section className='w-full p-4 flex flex-col space-y-8'>
         <h1 className='text-3xl font-bold'>Stacks utilisées</h1>
         <div className='flex items-center justify-center space-x-4'>
-          <Chip color='primary'>HTML</Chip>
-          <Chip color='primary'>CSS</Chip>
-          <Chip color='primary'>PHP</Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            HTML
+          </Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            CSS
+          </Chip>
+          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+            PHP
+          </Chip>
         </div>
       </section>
-      <section className='w-full p-4 flex flex-col my-32'>
+      <Link href='/projets' className='w-full flex flex-col my-32 items-center'>
         <Button
           variant='shadow'
           color='primary'
-          onClick={() => router.push("/projets")}
+          className='dark:bg-orange-500 dark:text-black hover:underline'
         >
           Retour
         </Button>
-      </section>
+      </Link>
     </>
   );
 }
