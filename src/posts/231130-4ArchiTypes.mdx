@@ -1,0 +1,150 @@
+---
+title: "Les 4 types populaires d'architectures"
+date: "2023-11-30"
+picture: https://res.cloudinary.com/dltiyerih/image/upload/f_auto,q_auto/231130-4ArchiTypes
+slug: four-architectures
+tags: ["BestPracticesIT"]
+---
+
+<p>
+  Dans cet article, nous explorerons les quatre architectures de systèmes les
+  plus répandues dans le secteur technologique, en soulignant leurs forces et
+  faiblesses. Tout comme la fondation est essentielle pour la solidité d'une
+  maison, choisir la bonne architecture est crucial pour la robustesse d'un
+  système informatique.
+</p>
+
+<h3>Architecture Monolithique</h3>
+
+<picture className='w-full flex justify-center'>
+  <Image
+    src='https://res.cloudinary.com/dltiyerih/image/upload/f_auto,q_auto/231130-4ArchiTypes-monolithique'
+    alt='Architecture Monolithique'
+    width={400}
+    height={400}
+  />
+</picture>
+
+<ul>
+  <li>
+    <span className='font-extrabold'>Description :</span> Dans une architecture
+    monolithique, tous les composants du système sont intégrés en une seule et
+    unique unité.
+  </li>
+  <li>
+    <span className='font-extrabold'>Avantages :</span> Idéale pour les projets
+    en démarrage avec un seul code source, facilitant le suivi et le débogage,
+    et des coûts d'infrastructure réduits.
+  </li>
+  <li>
+    <span className='font-extrabold'>Inconvénients :</span> À mesure que le
+    projet s'agrandit, le déploiement devient plus lourd et le couplage entre
+    les composants peut conduire à un code complexe et des régressions
+    fréquentes.
+  </li>
+  <li>
+    <span className='font-extrabold'>Exemple :</span> Airbnb. En tant que
+    plateforme de réservation en ligne, Airbnb a commencé avec une architecture
+    monolithique, ce qui a permis de développer et de lancer rapidement leurs
+    services initiaux.
+  </li>
+</ul>
+
+<h3>Architecture Microservices</h3>
+
+<picture className='w-full flex justify-center'>
+  <Image
+    src='https://res.cloudinary.com/dltiyerih/image/upload/f_auto,q_auto/231130-4ArchiTypes-microservices'
+    alt='Architecture Microservices'
+    width={400}
+    height={400}
+  />
+</picture>
+
+<ul>
+  <li>
+    <span className='font-extrabold'>Description :</span> Cette architecture
+    décompose le système en une collection de services indépendants, chacun avec
+    son propre modèle de données et communiquant via des API.
+  </li>
+  <li>
+    <span className='font-extrabold'>Avantages :</span> Favorise la modularité,
+    l'agilité, et une mise à l'échelle plus aisée.
+  </li>
+  <li>
+    <span className='font-extrabold'>Inconvénients :</span> Ajoute de la
+    complexité dans la gestion de la communication entre les services et la
+    cohérence des données, avec des coûts d'infrastructure plus élevés.
+  </li>
+  <li>
+    <span className='font-extrabold'>Exemple :</span> Amazon a adopté
+    l'architecture microservices pour gérer efficacement sa vaste gamme de
+    services et produits. Cette architecture permet à chaque division de
+    fonctionner et d'évoluer indépendamment.
+  </li>
+</ul>
+<h3>Architecture Microkernel</h3>
+
+<picture className='w-full flex justify-center'>
+  <Image
+    src='https://res.cloudinary.com/dltiyerih/image/upload/f_auto,q_auto/231130-4ArchiTypes-microkernel'
+    alt='Architecture Microkernel'
+    width={400}
+    height={400}
+  />
+</picture>
+
+<ul>
+  <li>
+    <span className='font-extrabold'>Description :</span> Sépare un microkernel
+    central, qui gère les fonctionnalités de base, des plugins ajoutant des
+    fonctionnalités supplémentaires.
+  </li>
+  <li>
+    <span className='font-extrabold'>Avantages :</span> Permet une extensibilité
+    et une isolation efficace des pannes.
+  </li>
+  <li>
+    <span className='font-extrabold'>Inconvénients :</span> Nécessite une
+    conception minutieuse pour maintenir la stabilité et la performance.
+  </li>
+  <li>
+    <span className='font-extrabold'>Exemple :</span> Adobe Photoshop utilise
+    une architecture microkernel, où le noyau central gère les fonctionnalités
+    de base, et les plugins ajoutent divers outils et fonctionnalités
+    supplémentaires.
+  </li>
+</ul>
+<h3>Architecture Orientée Événement</h3>
+
+<picture className='w-full flex justify-center'>
+  <Image
+    src='https://res.cloudinary.com/dltiyerih/image/upload/f_auto,q_auto/231130-4ArchiTypes-archi-orientee-evenement'
+    alt='Architecture Orientée Événement'
+    width={400}
+    height={400}
+  />
+</picture>
+
+<ul>
+  <li>
+    <span className='font-extrabold'>Description :</span> Basée sur la
+    publication et la consommation d'événements entre des composants
+    indépendants, souvent à l'aide d'un Message Broker.
+  </li>
+  <li>
+    <span className='font-extrabold'>Avantages :</span> Découplage total des
+    composants, robustesse accrue et amélioration des performances grâce à la
+    parallélisation.
+  </li>
+  <li>
+    <span className='font-extrabold'>Inconvénients :</span> Complexité dans la
+    gestion des événements et difficulté accrue pour le débogage.
+  </li>
+  <li>
+    <span className='font-extrabold'>Exemple :</span> LinkedIn utilise une
+    architecture orientée événement pour gérer efficacement les interactions
+    complexes et les échanges de données entre les différents composants de sa
+    plateforme de réseautage professionnel.
+  </li>
+</ul>
