@@ -5,7 +5,7 @@ export default function Description() {
     <div className='mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8'>
       <div className='space-y-4'>
         <h2 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-          Découvrez mon Starter Pack Gratuit
+          Découvrez un Starter Pack Gratuit
         </h2>
         <p className='text-lg text-gray-600 dark:text-gray-300'>
           Starter Pack inclut tout ce dont vous avez besoin pour lancer votre

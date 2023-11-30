@@ -11,9 +11,9 @@ export default function Page() {
       <Hero />
       <Presentation />
       <Description />
-      <CommentList comments={comments} />
       <Projets />
       <Rates />
+      <CommentList comments={comments} />
     </section>
   );
 }

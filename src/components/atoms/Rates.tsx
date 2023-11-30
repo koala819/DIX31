@@ -139,7 +139,7 @@ export default function Rates() {
                 <Chip color='primary'>Populaire</Chip>
               </div>
 
-              <div className='flex flex-col justify-between h-full px-6 py-4 transition-colors duration-200 transform bg-gray-700 rounded-lg dark:bg-teal-900 dark:hover:bg-teal-800'>
+              <div className='flex flex-col justify-between h-full px-6 py-4 transition-colors duration-200 transform bg-gray-700 hover:bg-gray-800 rounded-lg dark:bg-teal-900 dark:hover:bg-teal-800'>
                 <div>
                   <p className='text-lg font-medium text-gray-100'>
                     Site Dynamique
