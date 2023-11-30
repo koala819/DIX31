@@ -16,10 +16,13 @@ export default function Page() {
             développeur ou membre de l&apos;équipe de développement...
           </p>
         </div>
-        <Link href='/contact' className='flex justify-center w-1/4 uppercase'>
-          <Button color='primary' variant='shadow'>
-            Me Contacter
-          </Button>
+
+        <Link
+          href='/contact'
+          rel='noopener noreferrer'
+          className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline'
+        >
+          Me Contacter
         </Link>
       </section>
       <section className='grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-32 mb-8 p-8 '>
