@@ -16,17 +16,12 @@ export function Footer() {
               Découvrez davantage
             </h2>
             <Link
-              href='/projets/portfolio'
+              href='/projets'
               className='text-gray-600 hover:underline dark:text-zinc-300 capitalize'
             >
-              Portfolio
+              Projets
             </Link>
-            <Link
-              href='/services'
-              className='text-gray-600 hover:underline dark:text-zinc-300 capitalize'
-            >
-              Mes services
-            </Link>
+
             <Link
               href='/blog'
               className='text-gray-600 hover:underline dark:text-zinc-300 capitalize'
