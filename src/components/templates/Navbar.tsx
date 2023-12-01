@@ -35,7 +35,7 @@ export function NavbarDIX() {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Projets", path: "/projets" },
-    { name: "Blog", path: "/" },
+    { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];
 
