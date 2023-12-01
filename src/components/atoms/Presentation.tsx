@@ -51,7 +51,7 @@ export default function Presentation() {
           </h3>
         </Link>
         <Link
-          href='https://github.com/koala819/starterPack/blob/master/site/src/components/util/GoogleAnalytics.tsx'
+          href='https://github.com/koala819/StarterPack/blob/master/site/src/components/util/GoogleAnalytics.tsx'
           target='_blank'
           className='group relative cursor-pointer'
         >
@@ -69,7 +69,7 @@ export default function Presentation() {
           </h3>
         </Link>
         <Link
-          href='https://github.com/koala819/starterPackch'
+          href='https://github.com/koala819/StarterPack'
           target='_blank'
           className='group relative cursor-pointer'
         >
