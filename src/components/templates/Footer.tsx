@@ -22,7 +22,7 @@ export function Footer() {
               Accueil
             </Link>
             <Link
-              href='/projets'
+              href='/projects'
               className='text-gray-600 hover:underline dark:text-zinc-300 capitalize'
             >
               Projets

@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Page() {
+export default function Club306() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [imageSrc, setImageSrc] = useState<string>("");
 
@@ -261,7 +261,10 @@ export default function Page() {
           </div>
         </>
       </section>
-      <Link href='/projets' className='w-full flex flex-col my-32 items-center'>
+      <Link
+        href='/projects'
+        className='w-full flex flex-col my-32 items-center'
+      >
         <Button
           variant='shadow'
           color='primary'

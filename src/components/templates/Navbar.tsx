@@ -34,7 +34,7 @@ export function NavbarDIX() {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "Projets", path: "/projets" },
+    { name: "Projets", path: "/projects" },
     { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];
@@ -81,12 +81,12 @@ export function NavbarDIX() {
 
       <NavbarContent className='hidden sm:flex ' justify='center'>
         <Dropdown>
-          <NavbarItem isActive={path.includes("/projets")}>
+          <NavbarItem isActive={path.includes("/projects")}>
             <DropdownTrigger>
               <Button
                 disableRipple
                 className={` ${
-                  path.includes("/projets")
+                  path.includes("/projects")
                     ? "font-bold text-base data-[hover=true]:bg-transparent"
                     : "p-0 text-base data-[hover=true]:bg-transparent hover:text-gray-600"
                 }`}
@@ -117,7 +117,7 @@ export function NavbarDIX() {
                   width={100}
                 />
               }
-              onClick={() => router.push("/projets/ActivSavoirs")}
+              onClick={() => router.push("/projects/ActivSavoirs")}
             >
               Activ&apos;Savoirs
             </DropdownItem>
@@ -133,7 +133,7 @@ export function NavbarDIX() {
                   width={100}
                 />
               }
-              onClick={() => router.push("/projets/Club306")}
+              onClick={() => router.push("/projects/Club306")}
             >
               Club 306
             </DropdownItem>
@@ -149,7 +149,7 @@ export function NavbarDIX() {
                   width={100}
                 />
               }
-              onClick={() => router.push("/projets/portfolio")}
+              onClick={() => router.push("/projects/dix31")}
             >
               DIX31
             </DropdownItem>
@@ -165,7 +165,7 @@ export function NavbarDIX() {
                   width={100}
                 />
               }
-              onClick={() => router.push("/projets/Thouy")}
+              onClick={() => router.push("/projects/Thouy")}
             >
               Gîtes de Thouy
             </DropdownItem>
@@ -182,7 +182,7 @@ export function NavbarDIX() {
                   width={100}
                 />
               }
-              onClick={() => router.push("/projets/memoryGame")}
+              onClick={() => router.push("/projects/memoryGame")}
             >
               Memory Game
             </DropdownItem>
@@ -198,7 +198,7 @@ export function NavbarDIX() {
                   width={100}
                 />
               }
-              onClick={() => router.push("/projets/CumulerAides")}
+              onClick={() => router.push("/projects/CumulerAides")}
             >
               Cumuler les aides
             </DropdownItem>

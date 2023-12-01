@@ -235,7 +235,10 @@ export default function Page() {
         </>
       </section>
 
-      <Link href='/projets' className='w-full flex flex-col my-32 items-center'>
+      <Link
+        href='/projects'
+        className='w-full flex flex-col my-32 items-center'
+      >
         <Button
           variant='shadow'
           color='primary'

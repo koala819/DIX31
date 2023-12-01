@@ -3,7 +3,7 @@ import { Card, CardFooter, Button } from "@nextui-org/react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Page() {
+export default function Projects() {
   return (
     <>
       <section className='text-gray-600 dark:text-gray-300 flex items-center justify-center p-4 '>
@@ -40,7 +40,7 @@ export default function Page() {
             <p className='text-tiny text-gray-800 dark:text-white'>
               Activ&apos;Savoirs
             </p>
-            <Link href='/projets/ActivSavoirs'>
+            <Link href='/projects/ActivSavoirs'>
               <Button
                 className='text-tiny text-gray-200 bg-black/60 dark:bg-orange-600 dark:text-black hover:underline'
                 variant='flat'
@@ -63,7 +63,7 @@ export default function Page() {
           />
           <CardFooter className='justify-between before:bg-white dark:bg-gray-800 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10'>
             <p className='text-tiny text-gray-200'>Club 306</p>
-            <Link href='/projets/Club306'>
+            <Link href='/projects/Club306'>
               <Button
                 className='text-tiny text-gray-200 bg-black/60 dark:bg-orange-600 dark:text-black hover:underline'
                 variant='flat'
@@ -78,17 +78,15 @@ export default function Page() {
         </Card>
         <Card isFooterBlurred radius='lg' className='border-none'>
           <Image
-            alt='My portfolio website'
+            alt='My website'
             className='object-cover w-full h-full'
             height={1000}
             src='/images/Portfolio.jpg'
             width={1000}
           />
           <CardFooter className='justify-between before:bg-white/10 dark:bg-gray-800 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10'>
-            <p className='text-tiny text-gray-600 dark:text-gray-200'>
-              DIX31 Portfolio
-            </p>
-            <Link href='/projets/portfolio'>
+            <p className='text-tiny text-gray-600 dark:text-gray-200'>DIX31</p>
+            <Link href='/projects/dix31'>
               <Button
                 className='text-tiny text-gray-600 bg-black/20 dark:bg-orange-600 dark:text-black hover:underline'
                 variant='flat'
@@ -113,7 +111,7 @@ export default function Page() {
             <p className='text-tiny text-gray-600 dark:text-gray-200'>
               Gîtes de Thouy
             </p>
-            <Link href='/projets/Thouy'>
+            <Link href='/projects/Thouy'>
               <Button
                 className='text-tiny text-gray-600 bg-black/20 dark:bg-orange-600 dark:text-black hover:underline'
                 variant='flat'
@@ -137,7 +135,7 @@ export default function Page() {
           />
           <CardFooter className='justify-between before:bg-gray-800 dark:bg-gray-800 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10'>
             <p className='text-tiny text-gray-800'>Memory Game</p>
-            <Link href='/projets/memoryGame'>
+            <Link href='/projects/memoryGame'>
               <Button
                 className='text-tiny text-gray-200 bg-black/60 dark:bg-orange-600 dark:text-black hover:underline'
                 variant='flat'
@@ -160,7 +158,7 @@ export default function Page() {
           />
           <CardFooter className='justify-between before:bg-white dark:bg-gray-800 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10'>
             <p className='text-tiny text-gray-200'>Cumuler les aides</p>
-            <Link href='/projets/CumulerAides'>
+            <Link href='/projects/CumulerAides'>
               <Button
                 className='text-tiny text-gray-200 bg-black/60 dark:bg-orange-600 dark:text-black hover:underline'
                 variant='flat'

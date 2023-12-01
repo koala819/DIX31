@@ -9,8 +9,10 @@ import GoogleAnalytics from "@/components/utils/GoogleAnalytics";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DIX31",
-  description: "Developpeur Independant Xavier",
+  title:
+    "DIX31 - Développeur Web Indépendant Xavier | Conception de Sites Web Personnalisés",
+  description:
+    "Xavier de DIX31, développeur web indépendant expert en création de sites web personnalisés, landing pages, sites vitrines et solutions dynamiques. Optimisé pour les entrepreneurs et les associations, avec un accent sur l'innovation, la personnalisation et un excellent rapport qualité/prix.",
 };
 
 export default function RootLayout({

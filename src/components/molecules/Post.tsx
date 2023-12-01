@@ -5,6 +5,7 @@ import { Image, Snippet } from "@nextui-org/react";
 import Link from "next/link";
 import { FaCat, FaArrowRight } from "react-icons/fa";
 import { GiSheep } from "react-icons/gi";
+import { getBlogPostMetadata } from "@/lib/blogPostMetadata";
 
 const mdxComponents = {
   FaCat,
@@ -17,6 +18,7 @@ const mdxComponents = {
 
 export function Post({ post }: any) {
   const MDXContent = useMDXComponent(post.body.code);
+  getBlogPostMetadata(post.title, post.body.code);
 
   return (
     <div className='p-8 sm:prose-base md:prose-lg'>

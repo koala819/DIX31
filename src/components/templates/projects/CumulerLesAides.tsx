@@ -3,7 +3,7 @@ import { Chip, Button, Tooltip } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Page() {
+export default function CumulerLesAides() {
   return (
     <>
       <section className='text-gray-600 dark:text-gray-300 md:flex items-center justify-center p-4 '>
@@ -126,7 +126,10 @@ export default function Page() {
           </Chip>
         </div>
       </section>
-      <Link href='/projets' className='w-full flex flex-col my-32 items-center'>
+      <Link
+        href='/projects'
+        className='w-full flex flex-col my-32 items-center'
+      >
         <Button
           variant='shadow'
           color='primary'
