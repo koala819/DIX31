@@ -63,7 +63,7 @@ export default function Dix31() {
         <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
           <p className='font-bold text-lg'>Consulter le projet</p>
           <div className='space-x-2'>
-            <Link href='https://github.com/koala819/myWebSite' target='_blank'>
+            <Link href='https://github.com/koala819/DIX31' target='_blank'>
               <Button
                 size='sm'
                 color='primary'
