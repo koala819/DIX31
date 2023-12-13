@@ -57,24 +57,14 @@ export default function Contact() {
   }
 
   return (
-    <section className='flex-grow text-gray-700 body-font relative'>
-      <div className='absolute inset-0 bg-gray-300 dark:bg-gray-800'>
-        <iframe
-          style={{
-            filter: "grayscale(1) contrast(1.2) opacity(0.4)",
-          }}
-          title='map'
-          src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d54970.122924033974!2d1.489419400498161!3d43.60630826308362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1605604684663!5m2!1sfr!2sfr'
-          width='100%'
-          height='100%'
-        />
-      </div>
+    <section className='flex bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden p-12'>
+      <div
+        className='hidden lg:block lg:w-1/3 bg-center bg-cover rounded-2xl'
+        style={{ backgroundImage: "url('/images/maTete.jpg')" }}
+      />
 
-      <form
-        onSubmit={handleSubmit(handleSendMail)}
-        className='container px-5 py-24 mx-auto flex'
-      >
-        <div className='lg:w-1/3 md:w-1/2 bg-white dark:bg-gray-600 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10'>
+      <aside className='w-full p-8 lg:w-2/3'>
+        <form onSubmit={handleSubmit(handleSendMail)}>
           <h2 className='text-gray-900 dark:text-gray-200 text-lg font-medium title-font text-center pb-2 mb-2'>
             {!hideForm ? "Contactez moi" : "Merci"}
           </h2>
@@ -182,10 +172,8 @@ export default function Contact() {
               </p>
             </>
           )}
-        </div>
-      </form>
-
-      <div className='w-full h-96' />
+        </form>
+      </aside>
     </section>
   );
 }
