@@ -80,6 +80,12 @@ export function NavbarDIX() {
       </NavbarContent>
 
       <NavbarContent className='hidden sm:flex ' justify='center'>
+        <NavbarItem isActive={path === "/"} className='hidden sm:flex'>
+          <Link href='/' aria-current='page' color='foreground'>
+            Accueil
+          </Link>
+        </NavbarItem>
+
         <Dropdown>
           <NavbarItem isActive={path.includes("/projects")}>
             <DropdownTrigger>
@@ -210,8 +216,6 @@ export function NavbarDIX() {
             Blog
           </Link>
         </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify='end'>
         <NavbarItem
           isActive={path.includes("/contact")}
           className='hidden sm:flex'
@@ -220,6 +224,8 @@ export function NavbarDIX() {
             Contact
           </Link>
         </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify='end'>
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>
