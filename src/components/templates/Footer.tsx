@@ -1,7 +1,6 @@
 "use client";
 import { LuCopyleft } from "react-icons/lu";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { Tooltip } from "@nextui-org/react";
@@ -101,18 +100,13 @@ export function Footer() {
                   <FaLinkedin size={24} />
                 </Link>
               </Tooltip>
-              <Tooltip showArrow={true} color='danger' content='Malt'>
+              <Tooltip showArrow={true} color='danger' content='Youtube'>
                 <Link
-                  href='https://www.malt.fr/profile/xaviergenolhac'
+                  href='https://www.youtube.com/channel/UCcQkYLTdSUjYHsof8fUwrng'
                   target='_blank'
                   className='text-gray-500 dark:text-gray-200 dark:hover:text-blue-500'
                 >
-                  <Image
-                    src={"/images/malt-logo.svg"}
-                    alt='Malt'
-                    width={24}
-                    height={24}
-                  />
+                  <FaYoutube size={24} />
                 </Link>
               </Tooltip>
               <Tooltip showArrow={true} color='default' content='Github'>
