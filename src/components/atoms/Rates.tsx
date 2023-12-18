@@ -11,10 +11,10 @@ export default function Rates() {
           Tarification simple et transparente
         </h2>
         <p className='text-lg text-gray-600 dark:text-gray-300 pb-8'>
-          Avec DIX31, je crois en la création de solutions web qui vous aident à
-          grandir. Que vous souhaitiez démarrer seul avec le StarterPack ou que
-          vous préfériez une solution sur mesure, je suis là pour vous
-          accompagner à chaque étape.
+          Avec DIX31, je propose l&apos;accompagnement à la création de
+          solutions web tout en vous aidant à progresser. Que vous souhaitiez
+          démarrer seul avec le StarterPack ou que vous préfériez une solution
+          sur mesure, je suis là pour vous accompagner à chaque étape.
         </p>
         <div className='flex items-center  justify-center px-2 space-x-8 my-16'>
           <div className='grid gap-6 mx-6 sm:gap-8 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 '>

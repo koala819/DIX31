@@ -33,9 +33,8 @@ export default function Projets() {
           <p className='text-md text-gray-700 dark:text-gray-300'>
             Ce propre site illustre l&apos;efficacité et la flexibilité du
             Starter Pack. Il intègre des fonctionnalités avancées et une
-            conception responsive, offrant une expérience utilisateur optimale
-            et une démonstration concrète de mo savoir-faire en matière de
-            développement web.
+            conception responsive. Offrir une expérience utilisateur optimale
+            est un témoignage de ma capacité à créer des solutions.
           </p>
         </div>
       </section>
