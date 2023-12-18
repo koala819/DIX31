@@ -33,8 +33,8 @@ export default function Projets() {
           <p className='text-md text-gray-700 dark:text-gray-300'>
             Ce propre site illustre l&apos;efficacité et la flexibilité du
             Starter Pack. Il intègre des fonctionnalités avancées et une
-            conception responsive. Offrir une expérience utilisateur optimale
-            est un témoignage de ma capacité à créer des solutions.
+            conception responsive. Ma capacité à créer des solutions vous offre
+            une expérience utilisateur optimale.
           </p>
         </div>
       </section>
@@ -54,10 +54,10 @@ export default function Projets() {
           </h3>
           <p className='text-md text-gray-700 dark:text-gray-300'>
             Le site d&apos;Activ&apos;Savoirs, développé pour un centre de
-            formation professionnelle continue, est un témoignage de ma capacité
-            à créer des solutions sur mesure adaptées aux besoins spécifiques du
-            secteur de la formation. Ce projet met en avant une interface
-            intuitive et une expérience utilisateur enrichie.
+            formation professionnelle continue, permet de créer des solutions
+            sur mesure adaptées aux besoins spécifiques du secteur de la
+            formation. Ce projet met en avant une interface intuitive et une
+            expérience utilisateur enrichie.
           </p>
         </div>
       </section>
