@@ -5,7 +5,7 @@ import { Post, TagCount } from "@/types/models";
 import { BlogHeader } from "@/components/molecules/BlogHeader";
 import { BlogBody } from "@/components/molecules/BlogBody";
 import { BlogFooter } from "@/components/molecules/BlogFooter";
-import { BlogSlide } from "@/components/molecules/BlogSlide";
+import { BlogSlide } from "@/components/atoms/BlogSlide";
 
 export default function Blog() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);

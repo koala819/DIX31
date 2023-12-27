@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { TagCount, TagIconMap } from "@/types/models";
 import { Button } from "@nextui-org/react";
 import { BsFillEmojiSmileUpsideDownFill } from "react-icons/bs";
