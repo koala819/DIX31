@@ -74,7 +74,7 @@ export function Footer() {
               protections des données
             </Link>
             <Link
-              href=''
+              href='/contact'
               className='text-gray-600 hover:underline dark:text-zinc-300 capitalize'
             >
               contact
