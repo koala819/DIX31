@@ -6,11 +6,15 @@ import { useEffect, useState } from "react";
 
 const CommentList = ({ comments }: { comments: Comment[] }) => {
   const [shuffledSections, setShuffledSections] = useState<Comment[]>([]);
+  const [isReadyToAnimate, setIsReadyToAnimate] = useState(false);
 
   const controls = useAnimation();
 
-  const pauseAnimation = () => controls.stop();
-  const startAnimation = () => {
+  function pauseAnimation() {
+    controls.stop();
+  }
+
+  function startAnimation() {
     // Utilisez shuffledSections pour le calcul de la longueur
     controls.start({
       y: -100 * shuffledSections.length,
@@ -20,7 +24,7 @@ const CommentList = ({ comments }: { comments: Comment[] }) => {
         ease: "linear",
       },
     });
-  };
+  }
 
   useEffect(() => {
     async function shuffleArray(array: Comment[]) {
@@ -32,14 +36,14 @@ const CommentList = ({ comments }: { comments: Comment[] }) => {
     }
 
     shuffleArray([...comments]).then((shuffled) => {
-      setShuffledSections([...shuffled, ...shuffled]); // Dupliquez la liste mélangée ici
-      startAnimation();
+      setShuffledSections([...shuffled, ...shuffled]);
+      setIsReadyToAnimate(true);
     });
-
-    setTimeout(() => {
-      startAnimation();
-    }, 100);
   }, [comments]);
+
+  useEffect(() => {
+    startAnimation();
+  }, [isReadyToAnimate]);
 
   return (
     <section className='my-16'>
