@@ -20,3 +20,11 @@ export interface PostProps {
     id: string;
   };
 }
+
+export interface TagIconMap {
+  [key: string]: JSX.Element | null;
+}
+
+export interface TagCount {
+  [key: string]: number;
+}
