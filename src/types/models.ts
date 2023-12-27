@@ -12,6 +12,7 @@ export interface Post {
   title?: string;
   picture?: string;
   tags: string[];
+  description?: string;
 }
 
 export interface PostProps {
