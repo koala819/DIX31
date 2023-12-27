@@ -5,7 +5,7 @@ import { Image, Snippet } from "@nextui-org/react";
 import Link from "next/link";
 import { FaCat, FaArrowRight } from "react-icons/fa";
 import { GiSheep } from "react-icons/gi";
-import { getBlogPostMetadata } from "@/lib/blogPostMetadata";
+import { getBlogPostMetadata } from "@/lib/Blog/utils";
 
 const mdxComponents = {
   FaCat,

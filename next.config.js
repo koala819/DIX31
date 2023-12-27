@@ -19,6 +19,7 @@ const nextConfig = {
       "www.gnu.org",
       "www.soprasteria.fr",
       "www.club306.fr",
+      "images.unsplash.com",
     ],
   },
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
