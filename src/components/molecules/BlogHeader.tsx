@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Post } from "@/types/models";
-import { Date as DateComp } from "@/components/atoms/Date";
+import { Date } from "@/components/atoms/Date";
 
 export function BlogHeader({ firstPosts }: { firstPosts: Post[] }) {
   return (
@@ -33,7 +33,7 @@ export function BlogHeader({ firstPosts }: { firstPosts: Post[] }) {
             <div className='flex mt-3'>
               <div>
                 <p className='font-semibold text-gray-400 text-xs'>
-                  <DateComp dateString={post.date} />
+                  <Date dateString={post.date} />
                 </p>
               </div>
             </div>

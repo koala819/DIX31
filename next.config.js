@@ -20,6 +20,7 @@ const nextConfig = {
       "www.soprasteria.fr",
       "www.club306.fr",
       "res.cloudinary.com",
+      "korben.info",
       "images.unsplash.com",
       "randomuser.me",
     ],
