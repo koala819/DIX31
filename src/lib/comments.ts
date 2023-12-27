@@ -78,7 +78,7 @@ export const comments = [
       " l'avoir pris à ses côtés.",
     link: "https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390",
     imageSrc:
-      "https://media.licdn.com/dms/image/C4E03AQHwG_y-wypwOw/profile-displayphoto-shrink_200_200/0/1608131183814?e=1701907200&v=beta&t=VQVLniwB8AgcgqRFRhcCjCLOtvFFB2jl4bxyZUzSiuo",
+      "https://media.licdn.com/dms/image/C4E03AQHwG_y-wypwOw/profile-displayphoto-shrink_200_200/0/1608131184550?e=1709164800&v=beta&t=-FzMrELBLZ-J1wwhXwuJ-yvEnBGV6eZxxBRlI1dKXQ0",
   },
   {
     name: "Sandrine PELLISER",
@@ -92,7 +92,7 @@ export const comments = [
       " ces relations de travail.",
     link: "https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390",
     imageSrc:
-      "https://media.licdn.com/dms/image/C4E03AQE495Jzmbqrgw/profile-displayphoto-shrink_200_200/0/1662454533049?e=1701907200&v=beta&t=pIYmQja6P7UrJ_XMIFz06nIbq2xiW7Glrr_8y8tsDdw",
+      "https://media.licdn.com/dms/image/C4E03AQE495Jzmbqrgw/profile-displayphoto-shrink_400_400/0/1662454534053?e=1709164800&v=beta&t=FaeTJKGKBJEchgVndsSFqnwoSAEFk_ZtWL4YN3v3-jk",
   },
   {
     name: "Jorge Bravo Bertoglio",
@@ -103,7 +103,7 @@ export const comments = [
       " satisfaits et conseillons pour d'autres missions.",
     link: "https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390",
     imageSrc:
-      "https://media.licdn.com/dms/image/C4E03AQFj_QXgRnp_rQ/profile-displayphoto-shrink_200_200/0/1613247706156?e=1701907200&v=beta&t=We5_r-OcHp31wIMMv3yq6jkyvhmGl_NhqzbiJkO_gEc",
+      "https://media.licdn.com/dms/image/C4E03AQFj_QXgRnp_rQ/profile-displayphoto-shrink_200_200/0/1613247707071?e=1709164800&v=beta&t=_5QYXIQ2_2HmOnmFZGQyXLwaqUDtQkZSmf7Ye7sHpDc",
   },
   {
     name: "Amandine Werlé",
