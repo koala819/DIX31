@@ -10,8 +10,7 @@ export const comments = [
       "Cerise sur le gateau ses prestations sont d'un excellent rapport qualité/prix " +
       "Consultez le sans réserve et je suis convaincu que vous viendrez enrichir ses recommandations car il le mérite à plus d'un égard.",
     link: "https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390",
-    imageSrc:
-      "https://media.licdn.com/dms/image/D4E03AQF657fi-HlGqA/profile-displayphoto-shrink_200_200/0/1699184603852?e=1706745600&v=beta&t=bvHaywaT9lMXqyp2czz052fNX68Dv8C9r3EN4tdblOE",
+    imageSrc: "/images/Vincent DECLERCQ.jpeg",
   },
   {
     name: "Olivier HOAREAU",
@@ -35,8 +34,7 @@ export const comments = [
       " Je recommande Xavier, notamment dans une équipe qui a besoin de quelqu’un qui peut s’intégrer rapidement aux pratiques de l’équipe, " +
       " sans avoir envie d’imposer les siennes. Bon vent à toi Xavier.",
     link: "https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390",
-    imageSrc:
-      "https://media.licdn.com/dms/image/D4E03AQHdhzD-9aI7jQ/profile-displayphoto-shrink_200_200/0/1666095265881?e=1703116800&v=beta&t=FKVOGcCW62E_B0KAGNhYGpTaVXvvgdFpmgdO2BjCYTw",
+    imageSrc: "/images/Olivier HOAREAU.jpeg",
   },
   {
     name: "Pascal BESNARD",
@@ -59,8 +57,7 @@ export const comments = [
       " ne vous cacherons pas que le travail de Xavier a été crucial dans la mise en place d'une" +
       " stratégie virtuelle de notre club.",
     link: "https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390",
-    imageSrc:
-      "https://media.licdn.com/dms/image/C5603AQE-VbifCXTwyw/profile-displayphoto-shrink_200_200/0/1574721536542?e=1702512000&v=beta&t=Fl2n5ulBU1gP6PomhsdFsr56I_bvCt3kuFP5llhrMlU",
+    imageSrc: "/images/Pascal BESNARD.jpeg",
   },
   {
     name: "Ousama Ben Younes",
@@ -77,8 +74,7 @@ export const comments = [
       " chaudement et je tiens vraiment à remercier Olivier Hoareau de" +
       " l'avoir pris à ses côtés.",
     link: "https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390",
-    imageSrc:
-      "https://media.licdn.com/dms/image/C4E03AQHwG_y-wypwOw/profile-displayphoto-shrink_200_200/0/1608131184550?e=1709164800&v=beta&t=-FzMrELBLZ-J1wwhXwuJ-yvEnBGV6eZxxBRlI1dKXQ0",
+    imageSrc: "/images/Ousama Ben Younes.jpeg",
   },
   {
     name: "Sandrine PELLISER",
@@ -91,8 +87,7 @@ export const comments = [
       " missions. Son charisme et ses qualités humaines sont un plus dans" +
       " ces relations de travail.",
     link: "https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390",
-    imageSrc:
-      "https://media.licdn.com/dms/image/C4E03AQE495Jzmbqrgw/profile-displayphoto-shrink_400_400/0/1662454534053?e=1709164800&v=beta&t=FaeTJKGKBJEchgVndsSFqnwoSAEFk_ZtWL4YN3v3-jk",
+    imageSrc: "/images/Sandrine PELLISER.jpeg",
   },
   {
     name: "Jorge Bravo Bertoglio",
@@ -102,8 +97,7 @@ export const comments = [
       " responsable, travail de grande qualité et technique, nous avons été" +
       " satisfaits et conseillons pour d'autres missions.",
     link: "https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390",
-    imageSrc:
-      "https://media.licdn.com/dms/image/C4E03AQFj_QXgRnp_rQ/profile-displayphoto-shrink_200_200/0/1613247707071?e=1709164800&v=beta&t=_5QYXIQ2_2HmOnmFZGQyXLwaqUDtQkZSmf7Ye7sHpDc",
+    imageSrc: "/images/Jorge Bravo Bertoglio.jpeg",
   },
   {
     name: "Amandine Werlé",
@@ -113,8 +107,7 @@ export const comments = [
       " des solutions parfaitement adaptées à la demande de notre" +
       " association.",
     link: "https://www.malt.fr/profile/xaviergenolhac",
-    imageSrc:
-      "https://dam.malt.com/ad194889-8488-4940-9902-f2444623aded?gravity=face&func=face&face_margin=70&w=440&h=440&force_format=webp",
+    imageSrc: "/images/Amandine Werlé.jpeg",
   },
   {
     name: "Sid-Ahmed CHICKH-BLED",
@@ -123,7 +116,6 @@ export const comments = [
       "Xavier est toujours très professionnel, sérieux et motivé dans ses tâches." +
       " Un plus dans une équipe!",
     link: "https://www.malt.fr/profile/xaviergenolhac",
-    imageSrc:
-      "https://media.licdn.com/dms/image/D4E03AQGv4YmloaK-eA/profile-displayphoto-shrink_200_200/0/1689258281287?e=1703116800&v=beta&t=EGkTLYKADzrpwpfS9AjQGEIPahxdjN8hTb3w5mhVYUI",
+    imageSrc: "/images/Sid-Ahmed CHICKH-BLED.jpeg",
   },
 ];
