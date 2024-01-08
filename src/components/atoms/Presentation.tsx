@@ -15,7 +15,7 @@ export default function Presentation() {
       </div>
       <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
         <Link
-          href='https://glittery-lebkuchen-a1a108.netlify.app/contact'
+          href='https://starterpack-iota.vercel.app/contact'
           target='_blank'
           className='group relative cursor-pointer'
         >
@@ -33,7 +33,7 @@ export default function Presentation() {
           </h3>
         </Link>
         <Link
-          href='https://glittery-lebkuchen-a1a108.netlify.app'
+          href='https://starterpack-iota.vercel.app'
           target='_blank'
           className='group relative cursor-pointer'
         >
@@ -51,7 +51,7 @@ export default function Presentation() {
           </h3>
         </Link>
         <Link
-          href='https://github.com/koala819/StarterPack/blob/master/site/src/components/util/GoogleAnalytics.tsx'
+          href='https://github.com/koala819/StarterPack/blob/master/src/components/util/GoogleAnalytics.tsx'
           target='_blank'
           className='group relative cursor-pointer'
         >
