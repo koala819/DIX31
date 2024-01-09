@@ -1,69 +1,70 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function Description() {
   return (
-    <div className='mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8'>
-      <div className='space-y-4'>
-        <h2 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-          Découvrez un Starter Pack Gratuit
+    <div className="mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8">
+      <div className="space-y-4">
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Explorez le Starter Pack Gratuit : Votre Tremplin pour le
+          Développement Web
         </h2>
-        <p className='text-lg text-gray-600 dark:text-gray-300'>
+        <p className="text-lg text-gray-600 dark:text-gray-300">
           Starter Pack inclut tout ce dont vous avez besoin pour lancer votre
-          site web : une interface utilisateur riche avec{" "}
+          site web : une interface utilisateur riche avec{' '}
           <Link
-            href='https://nextui.org/'
-            className='text-blue-600 hover:text-blue-800 dark:text-orange-600 dark:hover:underline font-semibold'
-            target='_blank'
+            href="https://nextui.org/"
+            className="text-blue-600 hover:text-blue-800 dark:text-orange-600 dark:hover:underline font-semibold"
+            target="_blank"
           >
             NextUI
           </Link>
-          , l&apos;intégration de{" "}
-          <span className='font-semibold'>Google Analytics</span>, un script
+          , l&apos;intégration de{' '}
+          <span className="font-semibold">Google Analytics</span>, un script
           pour le formulaire de contact, un sélecteur de thème pour basculer
-          entre les modes clair et sombre, et des{" "}
+          entre les modes clair et sombre, et des{' '}
           <Link
-            href='https://react-hot-toast.com/'
-            className='text-blue-600 hover:text-blue-800 dark:text-orange-600 dark:hover:underline font-semibold'
-            target='_blank'
+            href="https://react-hot-toast.com/"
+            className="text-blue-600 hover:text-blue-800 dark:text-orange-600 dark:hover:underline font-semibold"
+            target="_blank"
           >
             notifications toast
-          </Link>{" "}
+          </Link>{' '}
           pour une meilleure interaction utilisateur.
         </p>
-        <p className='text-lg text-gray-600 dark:text-gray-300'>
+        <p className="text-lg text-gray-600 dark:text-gray-300">
           Avec des instructions simples, vous pouvez cloner mon repo GitHub et
           lancer votre site en quelques étapes.
         </p>
-        <p className='text-lg text-gray-600 dark:text-gray-300'>
-          Suivez les instructions dans mon{" "}
+        <p className="text-lg text-gray-600 dark:text-gray-300">
+          Suivez les instructions dans mon{' '}
           <Link
-            href='https://www.dix31.com/blog/231116-StarterPack-with-Github'
-            className='text-blue-600 hover:text-blue-800 dark:text-orange-600 dark:hover:underline font-semibold'
-            target='_blank'
+            href="https://www.dix31.com/blog/231116-StarterPack-with-Github"
+            className="text-blue-600 hover:text-blue-800 dark:text-orange-600 dark:hover:underline font-semibold"
+            target="_blank"
           >
             blog
-          </Link>{" "}
-          et ma{" "}
+          </Link>{' '}
+          et ma{' '}
           <Link
-            href='https://www.youtube.com/channel/UCcQkYLTdSUjYHsof8fUwrng'
-            className='text-blue-600 hover:text-blue-800 dark:text-orange-600 dark:hover:underline font-semibold'
-            target='_blank'
+            href="https://www.youtube.com/channel/UCcQkYLTdSUjYHsof8fUwrng"
+            className="text-blue-600 hover:text-blue-800 dark:text-orange-600 dark:hover:underline font-semibold"
+            target="_blank"
           >
             chaîne YouTube
-          </Link>{" "}
+          </Link>{' '}
           pour des tutoriels détaillés.
         </p>
       </div>
-      <div className='mt-6 text-center'>
+      <div className="mt-6 text-center">
         <Link
-          href='https://github.com/koala819/StarterPack'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline'
+          href="https://github.com/koala819/StarterPack"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline"
         >
           Clonez le Starter Pack Maintenant
         </Link>
       </div>
     </div>
-  );
+  )
 }
