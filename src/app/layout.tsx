@@ -30,7 +30,7 @@ export default function RootLayout({
                 <Navbar />
               </nav>
               <main className="flex-1">
-                <div className="w-full lg:w-8/12 px-4 mx-auto mt-6">
+                <div className="w-full px-4 mx-auto mt-6">
                   <div className="flex flex-col min-w-0 break-words w-full mb-6rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
                     <GoogleAnalytics />
                     {children}
