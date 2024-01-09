@@ -25,21 +25,20 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <ThemeProviders>
           <div className="min-h-screen min-w-screen">
-            <div className=" flex flex-col h-screen">
-              <nav>
-                <Navbar />
-              </nav>
-              <main className="flex-1">
-                <div className="w-full px-4 mx-auto mt-6">
-                  <div className="flex flex-col min-w-0 break-words w-full mb-6rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
-                    <GoogleAnalytics />
-                    {children}
-                  </div>
+            {/* <div className=" flex flex-col h-screen"> */}
+            <Navbar />
+
+            <main className="flex-1">
+              <div className="w-full px-4 mx-auto mt-6">
+                <div className="flex flex-col min-w-0 break-words w-full mb-6rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
+                  <GoogleAnalytics />
+                  {children}
                 </div>
-              </main>
-              <Footer />
-            </div>
+              </div>
+            </main>
+            <Footer />
           </div>
+          {/* </div> */}
         </ThemeProviders>
       </body>
     </html>
