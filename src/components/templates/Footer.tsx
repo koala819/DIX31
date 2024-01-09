@@ -190,7 +190,7 @@ export const Footer = () => {
                   <Link
                     href="https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390/"
                     target="_blank"
-                    className="text-gray-500 dark:text-gray-200 dark:hover:text-blue-500"
+                    className="text-gray-500 dark:text-gray-200 dark:hover:text-blue-500 hover:text-blue-500"
                   >
                     <FaLinkedin size={24} />
                   </Link>
@@ -199,7 +199,7 @@ export const Footer = () => {
                   <Link
                     href="https://www.youtube.com/channel/UCcQkYLTdSUjYHsof8fUwrng"
                     target="_blank"
-                    className="text-gray-500 dark:text-gray-200 dark:hover:text-red-500"
+                    className="text-gray-500 dark:text-gray-200 dark:hover:text-red-500 hover:text-red-500"
                   >
                     <FaYoutube size={24} />
                   </Link>
@@ -208,7 +208,7 @@ export const Footer = () => {
                   <Link
                     href="https://github.com/koala819/"
                     target="_blank"
-                    className="ml-3 text-gray-500 dark:text-gray-200 dark:hover:text-yellow-500"
+                    className="ml-3 text-gray-500 dark:text-gray-200 dark:hover:text-yellow-500 hover:text-yellow-500"
                   >
                     <FaGithub size={24} />
                   </Link>
