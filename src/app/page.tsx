@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
-import Description from '@/components/atoms/Description'
+// import Description from '@/components/atoms/Description'
 import Hero from '@/components/atoms/Hero'
-import Presentation from '@/components/atoms/Presentation'
+// import Presentation from '@/components/atoms/Presentation'
 import Projets from '@/components/atoms/Projets'
 import Rates from '@/components/atoms/Rates'
 import CommentList from '@/components/molecules/CommentList'

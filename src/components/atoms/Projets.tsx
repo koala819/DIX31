@@ -9,7 +9,7 @@ export default function Projets() {
     <section className="mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8 space-y-6">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Portefeuille de Projets : Succès avec le Starter Pack DIX31
+          Portefeuille de Projets : Succès avec le Starter Pack
         </h2>
       </div>
       <p className="text-md text-gray-700 dark:text-gray-300 mx-auto mb-6">
