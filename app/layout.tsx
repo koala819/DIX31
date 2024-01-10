@@ -1,5 +1,5 @@
+import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Head from 'next/head'
 
 import { ThemeProviders } from '@/app/provider'
 import '@/styles/globals.css'
@@ -9,6 +9,18 @@ import { NavbarDIX as Navbar } from '@/ui/templates/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
+export const metadata: Metadata = {
+  metadataBase: new URL(`${process.env.CLIENT_URL}`),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'fr-FR': '/fr-FR',
+    },
+  },
+  icons: {
+    icon: '/app/favicon.ico',
+  },
+}
 export default function RootLayout({
   children,
 }: {
@@ -16,10 +28,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <Head>
-        <link rel="canonical" href={`${process.env.CLIENT_URL}`} />
-        <link rel="icon" href="/app/favicon.ico" />
-      </Head>
       <body className={`${inter.className}`}>
         <ThemeProviders>
           <div className="min-h-screen min-w-screen">
