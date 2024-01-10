@@ -18,8 +18,8 @@ export default function Page() {
   return (
     <section className="my-16">
       <Hero />
-      <Presentation />
-      <Description />
+      {/* <Presentation /> */}
+      {/* <Description /> */}
       <Projets />
       <Rates />
       <CommentList comments={comments} />

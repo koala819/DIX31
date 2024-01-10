@@ -1,6 +1,6 @@
 'use client'
 
-import { Chip } from '@nextui-org/react'
+import { Button, Chip } from '@nextui-org/react'
 import { AiFillCheckCircle } from 'react-icons/ai'
 
 import Link from 'next/link'
@@ -72,9 +72,11 @@ export default function Rates() {
               <Link
                 href="/contact"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 mx-auto border border-transparent font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline mt-8 text-xs"
+                className="flex justify-center mt-8"
               >
-                Commencez votre histoire numérique
+                <Button color="primary" variant="shadow">
+                  Commencez votre histoire numérique
+                </Button>
               </Link>
             </section>
 
@@ -130,9 +132,11 @@ export default function Rates() {
               <Link
                 href="/contact"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 mx-auto border border-transparent font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline mt-8 text-xs"
+                className="flex justify-center mt-8"
               >
-                Mettez en valeur vos produits
+                <Button color="primary" variant="shadow">
+                  Mettez en valeur vos produits
+                </Button>
               </Link>
             </section>
 
@@ -202,9 +206,11 @@ export default function Rates() {
                 <Link
                   href="/contact"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 mx-auto border border-transparent font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline mt-8 text-xs"
+                  className="flex justify-center mt-8"
                 >
-                  Donnez vie à vos idées
+                  <Button color="primary" variant="shadow">
+                    Donnez vie à vos idées
+                  </Button>
                 </Link>
               </div>
             </section>

@@ -1,6 +1,6 @@
 'use client'
 
-import { Image } from '@nextui-org/react'
+import { Button, Image } from '@nextui-org/react'
 
 import Link from 'next/link'
 
@@ -67,9 +67,11 @@ export default function Projets() {
       <div className="text-center">
         <Link
           href="/projets"
-          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline transition duration-300"
+          // className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline transition duration-300"
         >
-          Découvrez mes autres réalisations
+          <Button color="primary" variant="shadow">
+            Découvrez mes autres réalisations
+          </Button>
         </Link>
       </div>
     </section>
