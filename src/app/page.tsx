@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import Head from 'next/head'
 
 import Description from '@/components/atoms/Description'
 import Hero from '@/components/atoms/Hero'

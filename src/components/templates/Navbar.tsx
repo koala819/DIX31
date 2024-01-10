@@ -49,6 +49,7 @@ export const NavbarDIX = () => {
       maxWidth="full"
       className="pb-4"
       isBordered={true}
+      position="sticky"
       classNames={{
         item: [
           'flex',
