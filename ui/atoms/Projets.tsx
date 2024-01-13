@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function Projets() {
   return (
     <section className="mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8 space-y-6  text-gray-600 dark:text-gray-200">
-      <div className="text-center mx-auto pb-10">
+      <div className="mx-auto pb-10">
         <h2 className="text-5xl md:text-6xl font-bold mb-5">
           Portefeuille de Projets : Succès avec le Starter Pack
         </h2>

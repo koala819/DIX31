@@ -9,7 +9,7 @@ export default function Rates() {
     <div className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
       <div className="space-y-4">
         <div className="w-full mx-auto px-5 py-10 text-gray-600 dark:text-gray-200 mb-10">
-          <div className="text-center mx-auto pb-10">
+          <div className="mx-auto pb-10">
             <h2 className="text-5xl md:text-6xl font-bold mb-5">
               Plans Flexibles : Tarifs Adaptés à Votre Projet Web
             </h2>
