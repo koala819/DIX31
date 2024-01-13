@@ -19,17 +19,11 @@ export default function Projets() {
         </span>
       </div>
 
-      <section className="flex justify-center w-full p-6">
-        <picture className="w-1/3">
-          <Image
-            alt="Screenshot DIX31 Portfolio"
-            className="object-cover"
-            height={400}
-            src="/images/Club306.jpg"
-            width={400}
-          />
+      <section className="hidden:flex lg:flex justify-center w-full p-6">
+        <picture className="flex w-full justify-center lg:w-1/3">
+          <Image alt="Screenshot Club 306" src="/images/Club306.jpg" />
         </picture>
-        <div className="w-2/3 p-4 space-y-8">
+        <div className="w-full lg:w-2/3 p-4 space-y-8">
           <Link
             href="https://www.club306.fr/"
             target="_blank"
@@ -47,17 +41,15 @@ export default function Projets() {
           </p>
         </div>
       </section>
-      <section className="flex justify-center w-full p-6">
-        <picture className="w-1/3">
+
+      <section className="hidden:flex lg:flex justify-center w-full p-6">
+        <picture className="flex w-full justify-center lg:w-1/3">
           <Image
             alt="Screenshot Activ Savoirs"
-            className="object-cover"
-            height={400}
             src="/images/ActivSavoirs.jpg"
-            width={400}
           />
         </picture>
-        <div className="w-2/3 p-4 space-y-8">
+        <div className="w-full lg:w-2/3 p-4 space-y-8">
           <Link
             href="https://www.activ-savoirs.com/"
             target="_blank"
