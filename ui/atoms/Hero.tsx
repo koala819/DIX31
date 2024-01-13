@@ -27,7 +27,7 @@ export default function Hero() {
               créant des sites sur mesure qui reflètent votre essence unique.
               Ensemble, faisons rayonner votre marque dans le monde digital.
             </p>
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <Link href="/contact">
                 <Button color="primary" variant="shadow">
                   Commencez votre projet
