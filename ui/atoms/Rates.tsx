@@ -1,6 +1,5 @@
 'use client'
 
-import { Button, Chip } from '@nextui-org/react'
 import { AiFillCheckCircle } from 'react-icons/ai'
 
 import Link from 'next/link'
