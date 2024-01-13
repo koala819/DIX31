@@ -160,58 +160,61 @@ export const Footer = () => {
 
         <hr className="my-6 border-gray-200 md:my-8 dark:border-gray-700" />
 
-        <div className="flex items-center justify-between">
-          <div className="w-full mt-2 text-sm md:text-xs lg:text-lg text-gray-500 dark:text-slate-400 ">
-            <Image
-              src={dix31Logo}
-              alt="DIX31 logo"
-              className="object-fill"
-              width={250}
-              height={50}
-            />
+        <div className="lg:flex items-center justify-between">
+          <section className="w-full mt-2 text-sm md:text-xs lg:text-lg text-gray-500 dark:text-slate-400">
+            <picture className="flex w-full justify-center">
+              <Image
+                src={dix31Logo}
+                alt="DIX31 logo"
+                className="object-fill"
+                width={250}
+                height={50}
+              />
+            </picture>
 
-            <article className="">
+            <article className="text-center">
               Votre partenaire pour le développement web
             </article>
-          </div>
-          <div className="container mx-auto py-4 px-5 flex flex-wrap flex-row">
-            <text className="flex text-gray-500 items-center space-x-2 dark:text-gray-200">
+          </section>
+
+          <section className="container mx-auto py-4 px-5 flex flex-wrap flex-row">
+            <text className="flex text-gray-500 items-center space-x-2 dark:text-gray-200 w-full justify-center">
               <p>Copyleft</p>
               <LuCopyleft />
               <p> {currentYear} by Xavier</p>
             </text>
-            <div className="ml-auto">
-              <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start space-x-8">
-                <Tooltip showArrow={true} color="primary" content="Linkedin">
-                  <Link
-                    href="https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390/"
-                    target="_blank"
-                    className="text-gray-500 dark:text-gray-200 dark:hover:text-blue-500 hover:text-blue-500"
-                  >
-                    <FaLinkedin size={24} />
-                  </Link>
-                </Tooltip>
-                <Tooltip showArrow={true} color="danger" content="Youtube">
-                  <Link
-                    href="https://www.youtube.com/channel/UCcQkYLTdSUjYHsof8fUwrng"
-                    target="_blank"
-                    className="text-gray-500 dark:text-gray-200 dark:hover:text-red-500 hover:text-red-500"
-                  >
-                    <FaYoutube size={24} />
-                  </Link>
-                </Tooltip>
-                <Tooltip showArrow={true} color="default" content="Github">
-                  <Link
-                    href="https://github.com/koala819/"
-                    target="_blank"
-                    className="ml-3 text-gray-500 dark:text-gray-200 dark:hover:text-yellow-500 hover:text-yellow-500"
-                  >
-                    <FaGithub size={24} />
-                  </Link>
-                </Tooltip>
-              </span>
-            </div>
-          </div>
+            <picture className="flex justify-center w-full lg:ml-auto space-x-8 sm:mt-0 mt-2">
+              {/* <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start space-x-8"> */}
+              <Tooltip showArrow={true} color="primary" content="Linkedin">
+                <Link
+                  href="https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390/"
+                  target="_blank"
+                  className="text-gray-500 dark:text-gray-200 dark:hover:text-blue-500 hover:text-blue-500"
+                >
+                  <FaLinkedin size={24} />
+                </Link>
+              </Tooltip>
+              <Tooltip showArrow={true} color="danger" content="Youtube">
+                <Link
+                  href="https://www.youtube.com/channel/UCcQkYLTdSUjYHsof8fUwrng"
+                  target="_blank"
+                  className="text-gray-500 dark:text-gray-200 dark:hover:text-red-500 hover:text-red-500"
+                >
+                  <FaYoutube size={24} />
+                </Link>
+              </Tooltip>
+              <Tooltip showArrow={true} color="default" content="Github">
+                <Link
+                  href="https://github.com/koala819/"
+                  target="_blank"
+                  className="ml-3 text-gray-500 dark:text-gray-200 dark:hover:text-yellow-500 hover:text-yellow-500"
+                >
+                  <FaGithub size={24} />
+                </Link>
+              </Tooltip>
+              {/* </span> */}
+            </picture>
+          </section>
         </div>
       </div>
     </footer>
