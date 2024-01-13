@@ -17,7 +17,7 @@ export default function Rates() {
               Je propose l&apos;accompagnement à la création de solutions web
               tout en vous aidant à progresser. Que vous souhaitiez démarrer
               seul avec le StarterPack ou que vous préfériez une solution sur
-              mesure, je suis là pour vous accompagner à chaque étape
+              mesure, je suis là pour vous accompagner à chaque étape.
             </span>
           </div>
           <div className="mx-auto md:flex">

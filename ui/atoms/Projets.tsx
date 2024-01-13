@@ -6,37 +6,44 @@ import Link from 'next/link'
 
 export default function Projets() {
   return (
-    <section className="mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8 space-y-6">
-      <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+    <section className="mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8 space-y-6  text-gray-600 dark:text-gray-200">
+      <div className="text-center mx-auto pb-10">
+        <h2 className="text-5xl md:text-6xl font-bold mb-5">
           Portefeuille de Projets : Succès avec le Starter Pack
         </h2>
+        <span className="text-xl font-medium">
+          Chaque site web que je crée est un récit de passion et
+          d&apos;innovation. Explorez ici une sélection de mes sites les plus
+          emblématiques, chacun reflétant une approche personnalisée et une
+          réponse créative aux besoins uniques de mes partenaires.
+        </span>
       </div>
-      <p className="text-md text-gray-700 dark:text-gray-300 mx-auto mb-6">
-        Chaque site web que je crée est un récit de passion et
-        d&apos;innovation. Explorez ici une sélection de mes sites les plus
-        emblématiques, chacun reflétant une approche personnalisée et une
-        réponse créative aux besoins uniques de mes partenaires.
-      </p>
+
       <section className="flex justify-center w-full p-6">
         <picture className="w-1/3">
           <Image
             alt="Screenshot DIX31 Portfolio"
             className="object-cover"
             height={400}
-            src="/images/Portfolio.jpg"
+            src="/images/Club306.jpg"
             width={400}
           />
         </picture>
         <div className="w-2/3 p-4 space-y-8">
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-            DIX31
-          </h3>
+          <Link
+            href="https://www.club306.fr/"
+            target="_blank"
+            className="hover:underline  hover:text-blue-600 dark:hover:text-orange-600"
+          >
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+              Club 306
+            </h3>
+          </Link>
           <p className="text-md text-gray-700 dark:text-gray-300">
-            Ce propre site illustre l&apos;efficacité et la flexibilité du
-            Starter Pack. Il intègre des fonctionnalités avancées et une
-            conception responsive. Ma capacité à créer des solutions vous offre
-            une expérience utilisateur optimale.
+            Site communautaire moderne conçu pour les passionnés de Peugeot 306.
+            Intègre PayPal pour adhésions faciles, atteint rapidement plus de
+            100 membres, grâce à des fonctionnalités interactives, une gestion
+            efficace des membres, et une stratégie de croissance réussie.
           </p>
         </div>
       </section>
@@ -51,26 +58,30 @@ export default function Projets() {
           />
         </picture>
         <div className="w-2/3 p-4 space-y-8">
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-            Activ&apos;Savoirs
-          </h3>
+          <Link
+            href="https://www.activ-savoirs.com/"
+            target="_blank"
+            className="hover:underline  hover:text-blue-600 dark:hover:text-orange-600"
+          >
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+              Activ&apos;Savoirs
+            </h3>
+          </Link>
           <p className="text-md text-gray-700 dark:text-gray-300">
-            Le site d&apos;Activ&apos;Savoirs, développé pour un centre de
-            formation professionnelle continue, permet de créer des solutions
-            sur mesure adaptées aux besoins spécifiques du secteur de la
-            formation. Ce projet met en avant une interface intuitive et une
-            expérience utilisateur enrichie.
+            Conception du site Activ Savoirs, centre de formation continu, avec
+            Next.js, TypeScript, Prismic, Tailwind. Interface utilisateur
+            moderne, facile à maintenir grâce à Prismic. Collaboration étroite
+            avec designer UX/UI pour l&apos;esthétique et une fonctionnalité
+            simplifié. Intégration de Google Analytics pour le suivi de
+            performance.
           </p>
         </div>
       </section>
 
       <div className="text-center">
-        <Link
-          href="/projets"
-          // className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700 dark:bg-orange-600 dark:text-black dark:font-extrabold dark:hover:underline transition duration-300"
-        >
+        <Link href="/contact">
           <Button color="primary" variant="shadow">
-            Découvrez mes autres réalisations
+            Commençons notre Collaboration
           </Button>
         </Link>
       </div>
