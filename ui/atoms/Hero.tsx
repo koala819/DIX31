@@ -11,6 +11,9 @@ export default function Hero() {
   return (
     <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
       <div className="flex flex-wrap justify-between">
+        <h1 className="text-4xl md:text-6xl font-bold  text-gray-600 dark:text-gray-200 mb-6">
+          Naviguez vers le succès avec un artisan du web à vos côtés
+        </h1>
         <aside className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/2 lg:pb-24">
           {/* <h1 className="text-4xl font-bold text-black dark:text-white sm:text-5xl md:text-6xl">
             Starter Pack Gratuit pour Développeurs Web Débutants
@@ -19,9 +22,6 @@ export default function Hero() {
             Outil Gratuit de Développement Web pour Lancer Votre Projet
           </h2> */}
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-6xl font-bold text-black dark:text-white mb-6">
-              Naviguez vers le succès avec un artisan du web à vos côtés
-            </h1>
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
               Je transforme vos idées en expériences numériques captivantes,
               créant des sites sur mesure qui reflètent votre essence unique.
@@ -33,9 +33,6 @@ export default function Hero() {
                   Commencez votre projet
                 </Button>
               </Link>
-              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300">
-                et embarquons ensemble vers de nouveaux horizons numériques.
-              </p>
             </div>
           </div>
         </aside>
