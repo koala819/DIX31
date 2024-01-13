@@ -48,30 +48,45 @@ const CommentList = ({ comments }: { comments: Comment[] }) => {
   }, [isReadyToAnimate])
 
   return (
-    <section className="my-16">
-      <h2 className="mx-auto lg:max-w-7xl lg:px-8 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Témoignages Clients : Expériences Réussies avec DIX31
-      </h2>
+    // <section className="my-16">
+    //   <h2 className="mx-auto lg:max-w-7xl lg:px-8 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+    //     Témoignages Clients : Expériences Réussies avec DIX31
+    //   </h2>
+    <div className="mx-auto px-4 lg:max-w-7xl lg:px-8">
+      <div className="space-y-4">
+        <div className="w-full mx-auto px-5 py-10 text-gray-600 dark:text-gray-200 mb-10">
+          <div className="mx-auto pb-10">
+            <h2 className="text-5xl md:text-6xl font-bold mb-5">
+              Témoignages Clients : Expériences Réussies avec DIX31
+            </h2>
+            <span className="text-xl font-medium">
+              Découvrez comment mes clients ont transformé leurs entreprises
+              avec DIX31 : des histoires de succès inspirantes qui témoignent de
+              mon expertise et de mon engagement.
+            </span>
+          </div>
 
-      <div className="mt-6 overflow-hidden h-[calc(100vh-100px)]">
-        <motion.div
-          className="flex flex-wrap justify-center items-start"
-          initial={{ y: 0 }}
-          animate={controls}
-          onMouseEnter={pauseAnimation}
-          onMouseLeave={startAnimation}
-        >
-          {shuffledSections.map((comment, index) => (
-            <CommentItem
-              key={index}
-              comment={comment}
+          <div className="mt-6 overflow-hidden h-[calc(100vh-100px)]">
+            <motion.div
+              className="flex flex-wrap justify-center items-start"
+              initial={{ y: 0 }}
+              animate={controls}
               onMouseEnter={pauseAnimation}
               onMouseLeave={startAnimation}
-            />
-          ))}
-        </motion.div>
+            >
+              {shuffledSections.map((comment, index) => (
+                <CommentItem
+                  key={index}
+                  comment={comment}
+                  onMouseEnter={pauseAnimation}
+                  onMouseLeave={startAnimation}
+                />
+              ))}
+            </motion.div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   )
 }
 
