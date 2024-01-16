@@ -184,14 +184,13 @@ export const Footer = () => {
               <p> {currentYear} by Xavier</p>
             </text>
             <picture className="flex justify-center w-full lg:ml-auto space-x-8 sm:mt-0 mt-2">
-              {/* <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start space-x-8"> */}
               <Tooltip showArrow={true} color="primary" content="Linkedin">
                 <Link
                   href="https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390/"
                   target="_blank"
                   className="text-gray-500 dark:text-gray-200 dark:hover:text-blue-500 hover:text-blue-500"
                 >
-                  <FaLinkedin size={24} />
+                  <FaLinkedin size={24} className="hover:fill-blue-500" />
                 </Link>
               </Tooltip>
               <Tooltip showArrow={true} color="danger" content="Youtube">
@@ -200,7 +199,7 @@ export const Footer = () => {
                   target="_blank"
                   className="text-gray-500 dark:text-gray-200 dark:hover:text-red-500 hover:text-red-500"
                 >
-                  <FaYoutube size={24} />
+                  <FaYoutube size={24} className="hover:fill-red-500" />
                 </Link>
               </Tooltip>
               <Tooltip showArrow={true} color="default" content="Github">
@@ -212,7 +211,6 @@ export const Footer = () => {
                   <FaGithub size={24} />
                 </Link>
               </Tooltip>
-              {/* </span> */}
             </picture>
           </section>
         </div>
