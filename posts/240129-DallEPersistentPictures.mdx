@@ -1,0 +1,96 @@
+---
+title: 'Créer des personnages persistants avec Dall-E'
+date: '2024-01-29'
+picture: https://res.cloudinary.com/dltiyerih/image/upload/f_auto,q_auto/garçon00
+slug: dallE-persistent-picture
+tags: ['IA']
+description: 'Apprendre à maîtriser Dall-E 3 pour créer des personnages persistants. Un guide pour ceux qui veulent plus de cohérence dans leurs créations visuelles.'
+---
+
+<text>
+  Vous connaissez sûrement les défis que représentent la création répétée d'un
+  même personnage dans différentes situations avec les générateurs d'images.
+  Cela peut être un obstacle lorsque vous souhaitez concevoir une bande dessinée
+  ou maintenir une cohérence visuelle dans vos communications. Cependant, il
+  existe une astuce pour surmonter ce problème : l'utilisation de l'identifiant
+  unique ("gen_id") généré par le modèle. En utilisant le même "gen_id" pour une
+  image, vous pouvez garantir que le personnage reste le même, même si vous
+  modifiez subtilement le texte de la description, tel qu'une expression
+  faciale. Cette approche permet de créer des images cohérentes tout en laissant
+  place à la créativité.
+</text>
+
+<h3>Comment faire ça ?</h3>
+
+<ol className='list-decimal'>
+  <li>**Aller sur ChatGPT**</li>
+
+  <li>
+    **Générer une image** : Un exemple
+  </li>
+  <div className='text-center'>
+    <Snippet color='default'>Portrait attachant d'un petit garçon de 7 ans aux cheveux bruns, capturé lors d'une séance photo en studio avec une lumière naturelle pour mettre en valeur ses traits distinctifs. L'enfant est en train de jouer aux billes. Il porte un polo blanc et un pantalon beige. Donne moi l'id de l'image</Snippet>
+  </div>
+</ol>
+
+<text>
+  Nous obtenons cette image avec cet id <b>70VNufBFXeX57VCf</b>
+</text>
+
+<div className="flex items-center justify-center">
+  <Image
+    src="https://res.cloudinary.com/dltiyerih/image/upload/f_auto,q_auto/garçon01"
+    alt="picture boy playing marbles"
+    width={500}
+    height={50}
+  />
+</div>
+
+<h3>Tout en gardant le même personnage modifier son expression</h3>
+
+<text>
+  Modifier très légèrement le prompt et conserver l'id. Si le promt est trop
+  différent, la consistance sera perdue. Il faut donc tester par petites
+  touches. Ici on rajoute juste triste car il a perdu une bille à la fin, juste
+  avant “l'id”.
+</text>
+
+<Snippet color="default">
+  Portrait attachant d'un petit garçon de 7 ans aux cheveux bruns, capturé lors
+  d'une séance photo en studio avec une lumière naturelle pour mettre en valeur
+  ses traits distinctifs. L'enfant est en train de jouer aux billes. Il porte un
+  polo blanc et un pantalon beige, triste car il a perdu une bille id
+  70VNufBFXeX57VCf
+</Snippet>
+
+<div className="flex items-center justify-center">
+  <Image
+    src="https://res.cloudinary.com/dltiyerih/image/upload/f_auto,q_auto/garçon02"
+    alt="picture sad boy playing marbles"
+    width={500}
+    height={50}
+  />
+</div>
+
+<h3>Lui mettre un objet dans les mains</h3>
+
+<Snippet color="default">
+  Portrait attachant d'un petit garçon de 7 ans aux cheveux bruns, capturé lors
+  d'une séance photo en studio avec une lumière naturelle pour mettre en valeur
+  ses traits distinctifs. L'enfant est en train de jouer aux billes. Il porte un
+  polo blanc et un pantalon beige, il range les billes dans son sac qu'il tient
+  dans une main id 70VNufBFXeX57VCf
+</Snippet>
+
+<div className="flex items-center justify-center">
+  <Image
+    src="https://res.cloudinary.com/dltiyerih/image/upload/f_auto,q_auto/garçon04"
+    alt="picture sad boy playing marbles"
+    width={500}
+    height={50}
+  />
+</div>
+
+<h3>C'est le moment de plonger dans l'action !</h3>
+
+L'inspiration vient du compte de <Link href="https://twitter.com/ai_for_success/status/1717248913164636487?utm_source=generationia.flint.media&utm_medium=referral&utm_campaign=comment-creer-des-personnages-persistants-avec-dall-e-3" className="hover:underline" target="\_blank">Ashutosh Shrivastava </Link> sur X (anciennement sur Twitter), où une multitude d'astuces fascinantes vous attendent pour explorer et exploiter cette fonctionnalité à fond. En partageant nos découvertes et en collaborant, nous pouvons tous progresser ensemble. Le savoir est une ressource puissante et gratuite, alors n'hésitez pas à vous lancer dans l'aventure pour libérer votre créativité !
