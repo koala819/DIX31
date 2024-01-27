@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 import LazyLoad from '@/utils/LazyLoad'
 
-import { Button } from '@/components/button'
+import { Button } from '@/components/ui/button'
 
 export default function Hero() {
   return (

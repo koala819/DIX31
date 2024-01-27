@@ -2,7 +2,9 @@
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { Button, Input, Textarea } from "@nextui-org/react";
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { Textarea } from "@/components/ui/textarea"
 import toast from "react-hot-toast";
 import { useState } from "react";
 
@@ -57,7 +59,7 @@ export default function Contact() {
   }
 
   return (
-    <section className='flex bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden p-12'>
+    <section className='flex rounded-lg shadow-lg overflow-hidden p-12'>
       <div
         className='hidden lg:block lg:w-1/3 bg-center bg-cover rounded-2xl'
         style={{ backgroundImage: "url('/images/maTete.jpg')" }}
@@ -65,18 +67,18 @@ export default function Contact() {
 
       <aside className='w-full p-8 lg:w-2/3'>
         <form onSubmit={handleSubmit(handleSendMail)}>
-          <h2 className='text-gray-900 dark:text-gray-200 text-lg font-medium title-font text-center pb-2 mb-2'>
+          <h2 className='text-lg font-medium title-font text-center pb-2 mb-2'>
             {!hideForm ? "Contactez moi" : "Merci"}
           </h2>
           {!hideForm && (
-            <div className='h-1 bg-gray-200 dark:bg-gray-400 rounded overflow-hidden'>
+            <div className='h-1 rounded overflow-hidden'>
               <div className='w-24 h-full bg-blue-500'></div>
             </div>
           )}
           <p
             className={`${
               !hideForm
-                ? "leading-relaxed mb-5 text-gray-600 dark:text-gray-200 mt-2"
+                ? "leading-relaxed mb-5 mt-2"
                 : "text-center"
             }`}
           >
@@ -94,12 +96,10 @@ export default function Contact() {
                     <Input
                       type='text'
                       color='primary'
-                      label='Nom'
                       id='first_name'
                       placeholder='Entrez votre nom'
                       onChange={onChange}
                       value={value}
-                      className='max-w-[280px]'
                     />
                   )}
                 />
@@ -119,12 +119,10 @@ export default function Contact() {
                     <Input
                       type='email'
                       color='primary'
-                      label='Email'
                       id='email'
                       placeholder='Entrez votre email'
                       onChange={onChange}
                       value={value}
-                      className='max-w-[280px]'
                     />
                   )}
                 />
@@ -143,13 +141,11 @@ export default function Contact() {
                   defaultValue=''
                   render={({ field: { onChange, value } }) => (
                     <Textarea
-                      type='text'
                       color='primary'
                       value={value}
                       onChange={onChange}
-                      label='Veuillez saisir votre message'
+                      placeholder='Veuillez saisir votre message'
                       autoFocus
-                      className='max-w-xs'
                     />
                   )}
                 />
@@ -162,12 +158,12 @@ export default function Contact() {
               </div>
 
               <div className='flex justify-center items-center'>
-                <Button color='primary' type='submit' variant='shadow'>
-                  Envoyer
+                <Button color='primary' type='submit'>
+                  Envoyer votre message
                 </Button>
               </div>
 
-              <p className='text-xs text-gray-500 dark:text-gray-300 mt-3'>
+              <p className='text-xs mt-3 text-center'>
                 Mon engagement : vous apporter une réponse en moins de 24h.
               </p>
             </>
