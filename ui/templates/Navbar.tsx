@@ -46,7 +46,7 @@ export const NavbarDIX = () => {
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="full"
-      className="pb-4"
+      className="pb-4 mx-auto -px-4 py-5"
       isBordered={true}
       position="sticky"
       classNames={{

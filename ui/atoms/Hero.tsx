@@ -1,11 +1,12 @@
 'use client'
 
-import { Button } from '@nextui-org/react'
 import ReactPlayer from 'react-player'
 
 import Link from 'next/link'
 
 import LazyLoad from '@/utils/LazyLoad'
+
+import { Button } from '@/components/ui/button'
 
 export default function Hero() {
   return (
@@ -29,9 +30,7 @@ export default function Hero() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link href="/contact">
-                <Button color="primary" variant="shadow">
-                  Commencez votre projet
-                </Button>
+                <Button>Commencez votre projet</Button>
               </Link>
             </div>
           </div>
