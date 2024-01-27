@@ -72,7 +72,7 @@ export default function Contact() {
           </h2>
           {!hideForm && (
             <div className='h-1 rounded overflow-hidden'>
-              <div className='w-24 h-full bg-blue-500'></div>
+              <div className='w-24 h-full bg-blue-500 dark:bg-orange-600'></div>
             </div>
           )}
           <p

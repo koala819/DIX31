@@ -2,16 +2,16 @@ import type { Config } from 'tailwindcss'
 
 const { nextui } = require('@nextui-org/react')
 
-const config = {
-  darkMode: ['class'],
+const config: Config = {
   content: [
-    './ui/**/*.{ts,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+    './ui/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './node_modules/@nextui-org/theme/dist/**/*.{ts,tsx}',
   ],
-  prefix: '',
+  darkMode: 'class',
   theme: {
+    
     container: {
       center: true,
       padding: '2rem',
@@ -76,11 +76,7 @@ const config = {
       },
     },
   },
-  plugins: [
-    nextui(),
-    require('@tailwindcss/typography'),
-    require('tailwindcss-animate'),
-  ],
-} satisfies Config
+  plugins: [nextui(), require('@tailwindcss/typography'),require('tailwindcss-animate')],
+}
 
-export default config
+module.exports = config
