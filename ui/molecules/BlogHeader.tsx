@@ -23,8 +23,16 @@ export function BlogHeader({
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 hover:opacity-20 z-10 rounded-lg" />
           <div className="relative w-full h-full rounded-lg overflow-hidden">
             <Image
-              src={urlFor(post.titleImage)}
-              alt={post.title || 'image sans titre'}
+              src={
+                post.titleImage
+                  ? urlFor(post.titleImage)
+                  : urlFor(post.titleImagebyCloudinary)
+              }
+              alt={
+                post.titleImagebyCloudinary
+                  ? post.titleImagebyCloudinary.alt
+                  : post.title
+              }
               layout="fill"
               objectFit="cover"
             />

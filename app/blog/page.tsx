@@ -18,6 +18,7 @@ async function getPosts() {
       smallDescription,
       "currentSlug": slug.current,
       titleImage,
+      titleImagebyCloudinary,
       "tag": tag[]->{
         name
       }
@@ -30,6 +31,5 @@ async function getPosts() {
 
 export default async function Page() {
   const posts: SimpleBlogCardProps[] = await getPosts()
-
   return <Blog posts={posts} />
 }

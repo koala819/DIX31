@@ -6,7 +6,7 @@ export default {
     {
       name: 'title',
       type: 'string',
-      title: 'Title of Blog article',
+      title: "Titre de l'article du blog",
     },
     {
       name: 'tag',
@@ -29,30 +29,45 @@ export default {
       title: 'Date',
     },
     {
+      name: 'titleImagebyCloudinary',
+      title: 'Image Titre avec Cloudinary',
+      type: 'cloudinaryImage',
+    },
+    {
       name: 'titleImage',
       type: 'image',
-      title: 'Title image',
+      title: 'Image du titre',
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Texte Alternatif',
+          description: 'Important pour le SEO et l’accessibilité.',
+          validation: (Rule: any) =>
+            Rule.error('Vous devez remplir le texte alternatif.').required(),
+        },
+      ],
     },
-    // {
-    //   name: 'categories',
-    //   title: 'Categories',
-    //   type: 'array',
-    //   of: [{ type: 'reference', to: { type: 'category' } }],
-    // },
+
     {
       name: 'smallDescription',
       type: 'text',
-      title: 'Small description',
+      title: 'Description',
     },
     {
       name: 'content',
       type: 'array',
-      title: 'Content',
+      title: 'Contenu',
       of: [
         { type: 'block' },
+        {
+          name: 'cloudinaryImage',
+          title: 'Cloudinary Image',
+          type: 'cloudinaryImage',
+        },
         {
           type: 'image',
           options: {
@@ -62,20 +77,31 @@ export default {
             {
               name: 'caption',
               type: 'string',
-              title: 'Caption',
-              options: {
-                isHighlighted: true, // Optional, to highlight the caption field in the studio
-              },
+              title: 'Légende',
             },
             {
               name: 'alt',
               type: 'string',
-              title: 'Alternative Text',
-              description: 'Important for SEO and accessibility.',
+              title: 'Texte Alternatif',
+              description: 'Important pour le SEO et l’accessibilité.',
               validation: (Rule: any) =>
                 Rule.error(
-                  'You have to fill out the alternative text.',
+                  'Vous devez remplir le texte alternatif.',
                 ).required(),
+            },
+            {
+              name: 'size',
+              type: 'string',
+              title: "Taille de l'Image",
+              description: "Choisissez une taille pour l'image",
+              options: {
+                list: [
+                  { title: 'Petite', value: 'small' },
+                  { title: 'Moyenne', value: 'medium' },
+                  { title: 'Grande', value: 'large' },
+                ],
+                layout: 'radio', // Vous pouvez changer le type de l'interface ici (par exemple 'dropdown')
+              },
             },
           ],
         },

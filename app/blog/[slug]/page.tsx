@@ -11,6 +11,7 @@ async function getSlug(slug: string) {
       title,
       content,
       titleImage,
+      titleImagebyCloudinary,
       date
   }[0]`
   if (!query) notFound()

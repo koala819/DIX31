@@ -4,6 +4,7 @@ export interface SimpleBlogCardProps {
   smallDescription: string
   currentSlug: string
   titleImage: any
+  titleImagebyCloudinary: any
   tag: any
 }
 
@@ -13,6 +14,7 @@ export interface fullBlog {
   title: string
   content: any
   titleImage: any
+  titleImagebyCloudinary: any
 }
 
 export interface TagCount {

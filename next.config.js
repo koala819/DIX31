@@ -13,6 +13,16 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 's.hdnux.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.reuters.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
         hostname: 'media.licdn.com',
         port: '',
       },

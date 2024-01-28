@@ -19,8 +19,16 @@ export function BlogFooter({ posts }: { posts: SimpleBlogCardProps[] }) {
           <Link href={`/blog/${post.currentSlug}`}>
             <div className="w-full h-48 overflow-hidden">
               <Image
-                src={urlFor(post.titleImage)}
-                alt={post.title || ''}
+                src={
+                  post.titleImage
+                    ? urlFor(post.titleImage)
+                    : urlFor(post.titleImagebyCloudinary)
+                }
+                alt={
+                  post.titleImagebyCloudinary
+                    ? post.titleImagebyCloudinary.alt
+                    : post.title
+                }
                 layout="responsive"
                 width={100}
                 height={48}

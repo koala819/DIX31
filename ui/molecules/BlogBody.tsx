@@ -17,8 +17,16 @@ export function BlogBody({ posts }: { posts: SimpleBlogCardProps[] }) {
         >
           <div className="h-64 lg:w-56 flex-none overflow-hidden rounded-t-2xl lg:rounded-tr-none lg:rounded-l-2xl relative">
             <Image
-              src={urlFor(post.titleImage)}
-              alt={post.title || ''}
+              src={
+                post.titleImage
+                  ? urlFor(post.titleImage)
+                  : urlFor(post.titleImagebyCloudinary)
+              }
+              alt={
+                post.titleImagebyCloudinary
+                  ? post.titleImagebyCloudinary.alt
+                  : post.title
+              }
               layout="fill"
               objectFit="cover"
               className="text-center"
