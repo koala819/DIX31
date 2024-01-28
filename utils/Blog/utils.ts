@@ -1,10 +1,10 @@
-import { Metadata } from "next";
+import { Metadata } from 'next'
 
-function getBlogPostMetadata(postTitle: string, postSummary: string): Metadata {
-  return {
+export function getBlogPostMetadata(postTitle: string, postSummary: any) {
+  const metadata: Metadata = {
     title: `${postTitle} - Blog de DIX31`,
-    description: `${postSummary.substring(0, 150)}...`,
-  };
-}
+    description: `${postSummary[0].children[0].text.substring(0, 150)}...`,
+  }
 
-export { getBlogPostMetadata };
+  return metadata
+}

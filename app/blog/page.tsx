@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { SimpleBlogCardProps } from '@/types/simpleBlogCard'
+import { SimpleBlogCardProps } from '@/types/blog'
 
 import { client } from '@/lib/sanity'
 import Blog from '@/ui/templates/Blog'
@@ -17,7 +17,10 @@ async function getPosts() {
       date,
       smallDescription,
       "currentSlug": slug.current,
-      titleImage
+      titleImage,
+      "tag": tag[]->{
+        name
+      }
   }`
 
   const data = await client.fetch(query)
@@ -27,6 +30,6 @@ async function getPosts() {
 
 export default async function Page() {
   const posts: SimpleBlogCardProps[] = await getPosts()
-  console.log('posts from SANITY', posts)
-  return <Blog />
+
+  return <Blog posts={posts} />
 }

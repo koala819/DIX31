@@ -23,6 +23,7 @@ const nextConfig = {
       "korben.info",
       "images.unsplash.com",
       "randomuser.me",
+      "cdn.sanity.io"
     ],
   },
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],

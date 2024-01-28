@@ -1,22 +1,24 @@
-export interface Post {
-  slug?: string
+export interface SimpleBlogCardProps {
+  title: string
   date: string
-  title?: string
-  picture?: string
-  tags: string[]
-  description?: string
+  smallDescription: string
+  currentSlug: string
+  titleImage: any
+  tag: any
 }
 
-export interface PostProps {
-  params: {
-    id: string
-  }
-}
-
-export interface TagIconMap {
-  [key: string]: JSX.Element | null
+export interface fullBlog {
+  slug: string
+  date: string
+  title: string
+  content: any
+  titleImage: any
 }
 
 export interface TagCount {
   [key: string]: number
+}
+
+export interface TagIconMap {
+  [key: string]: JSX.Element | null
 }

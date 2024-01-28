@@ -1,6 +1,5 @@
 'use client'
 
-import { Button } from '@nextui-org/react'
 import { BsFillEmojiSmileUpsideDownFill } from 'react-icons/bs'
 import { FaAndroid, FaGithub, FaJsSquare, FaRobot } from 'react-icons/fa'
 import { HiMiniHandThumbUp } from 'react-icons/hi2'
@@ -9,7 +8,9 @@ import { MdComputer } from 'react-icons/md'
 import { SiHackaday } from 'react-icons/si'
 import { TiLightbulb } from 'react-icons/ti'
 
-import { TagCount, TagIconMap } from 'types/blog'
+import { TagCount, TagIconMap } from '@/types/blog'
+
+import { Button } from '@/components/ui/button'
 
 export function BlogSlide({
   tags,
@@ -41,12 +42,7 @@ export function BlogSlide({
         <h5 className="font-bold text-lg uppercase text-gray-700 px-1 my-2">
           Mots clés
         </h5>
-        <Button
-          color="primary"
-          onClick={onReset}
-          variant="shadow"
-          className="my-2 mr-2"
-        >
+        <Button color="primary" onClick={onReset} className="mr-2">
           Réinitialiser
         </Button>
       </header>

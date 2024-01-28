@@ -3,10 +3,12 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Date } from '@/ui/atoms/Date'
-import { Post } from 'types/blog'
+import { SimpleBlogCardProps } from '@/types/blog'
 
-export function BlogFooter({ posts }: { posts: Post[] }) {
+import { urlFor } from '@/lib/sanity'
+import { Date } from '@/ui/atoms/Date'
+
+export function BlogFooter({ posts }: { posts: SimpleBlogCardProps[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
       {posts.map((post, index) => (
@@ -14,10 +16,10 @@ export function BlogFooter({ posts }: { posts: Post[] }) {
           key={index}
           className="rounded overflow-hidden shadow-lg bg-white hover:shadow-xl transition-shadow"
         >
-          <Link href={`/blog/${post.slug}`}>
+          <Link href={`/blog/${post.currentSlug}`}>
             <div className="w-full h-48 overflow-hidden">
               <Image
-                src={post.picture || ''}
+                src={urlFor(post.titleImage).url() || ''}
                 alt={post.title || ''}
                 layout="responsive"
                 width={100}

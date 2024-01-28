@@ -2,36 +2,39 @@
 
 import { useEffect, useState } from 'react'
 
-import { allPosts } from '.contentlayer/generated'
+import { SimpleBlogCardProps, TagCount } from '@/types/blog'
 
 import { BlogSlide } from '@/ui/atoms/BlogSlide'
 import { BlogBody } from '@/ui/molecules/BlogBody'
 import { BlogFooter } from '@/ui/molecules/BlogFooter'
 import { BlogHeader } from '@/ui/molecules/BlogHeader'
-import { Post, TagCount } from 'types/blog'
 
-export default function Blog() {
+export default function Blog({ posts }: { posts: SimpleBlogCardProps[] }) {
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
-  const [displayPosts, setDisplayPosts] = useState<Post[]>([])
-  const [footerPosts, setFooterPosts] = useState<Post[]>([])
+  const [displayPosts, setDisplayPosts] = useState<SimpleBlogCardProps[]>([])
+  const [footerPosts, setFooterPosts] = useState<SimpleBlogCardProps[]>([])
   const [tagsCount, setTagsCount] = useState<TagCount>({})
 
   // Déterminer les deux articles les plus récents pour BlogHeader
-  const mostRecentPosts = allPosts
+  const mostRecentPosts = posts
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 2)
 
   useEffect(() => {
     const filteredPosts = selectedTag
-      ? allPosts.filter((post) => post.tags.includes(selectedTag))
-      : allPosts
+      ? posts.filter((post) =>
+          post.tag.some((tag: { name: string }) => tag.name === selectedTag),
+        )
+      : posts
 
-    // Séparer les posts pour BlogBody et BlogFooter
+    // Séparer les posts pour BlogBody
     const bodyPosts = selectedTag
       ? filteredPosts.slice(0, 10)
       : filteredPosts
           .filter((post) => !mostRecentPosts.includes(post))
           .slice(0, 10)
+
+    // Séparer les posts pour BlogFooter
     const remainingPosts = selectedTag
       ? filteredPosts.slice(10)
       : filteredPosts
@@ -42,14 +45,17 @@ export default function Blog() {
     setFooterPosts(remainingPosts)
 
     // Calculer le nombre d'articles par tag
-    const count = allPosts.reduce((acc: TagCount, post) => {
-      post.tags.forEach((tag) => {
-        acc[tag] = (acc[tag] || 0) + 1
-      })
+    const count = posts.reduce((acc: TagCount, post: SimpleBlogCardProps) => {
+      if (post.tag && post.tag.length > 0) {
+        post.tag.forEach((tag: { name: string }) => {
+          const tagName = tag.name
+          acc[tagName] = (acc[tagName] || 0) + 1
+        })
+      }
       return acc
     }, {} as TagCount)
     setTagsCount(count)
-  }, [selectedTag])
+  }, [selectedTag, posts])
 
   const handleTagClick = (tagName: string) => {
     setSelectedTag(tagName)
