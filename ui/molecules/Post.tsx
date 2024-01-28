@@ -34,13 +34,15 @@ const CustomImage = ({ value }: { value: { size: string; alt: string } }) => {
   }
   return (
     <div className="flex justify-center">
-      <Image
-        src={urlFor(value)}
-        alt={value.alt || 'Image'}
-        width={width}
-        height={height}
-        className="rounded-lg"
-      />
+      <Link href={urlFor(value)} target="_blank">
+        <Image
+          src={urlFor(value)}
+          alt={value.alt || 'Image'}
+          width={width}
+          height={height}
+          className="rounded-lg cursor-pointer"
+        />
+      </Link>
     </div>
   )
 }
