@@ -10,7 +10,7 @@ import { fullBlog } from '@/types/blog'
 import { Button } from '@/components/ui/button'
 
 import { urlFor } from '@/lib/sanity'
-import { Date } from '@/ui/atoms/Date'
+import { format, parseISO } from 'date-fns'
 
 export function Post({ post }: { post: fullBlog }) {
   // getBlogPostMetadata(post.title, post.content)
@@ -21,13 +21,13 @@ export function Post({ post }: { post: fullBlog }) {
         <h1 className="font-extrabold text-3xl">{post.title}</h1>
 
         <span className="text-gray-500 font-medium">
-          <Date dateString={post.date} />
+          {format(parseISO(post.date), 'dd-MM-yyyy')}
         </span>
       </header>
 
       <div className="w-full flex justify-center">
         <Image
-          src={urlFor(post.titleImage).url()}
+          src={urlFor(post.titleImage)}
           alt={post.title}
           width={500}
           height={800}

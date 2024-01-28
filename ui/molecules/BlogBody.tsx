@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { SimpleBlogCardProps } from '@/types/blog'
 
 import { urlFor } from '@/lib/sanity'
-import { Date } from '@/ui/atoms/Date'
+import { format, parseISO } from 'date-fns'
 
 export function BlogBody({ posts }: { posts: SimpleBlogCardProps[] }) {
   return (
@@ -17,7 +17,7 @@ export function BlogBody({ posts }: { posts: SimpleBlogCardProps[] }) {
         >
           <div className="h-64 lg:w-56 flex-none overflow-hidden rounded-t-2xl lg:rounded-tr-none lg:rounded-l-2xl relative">
             <Image
-              src={urlFor(post.titleImage).url() || ''}
+              src={urlFor(post.titleImage)}
               alt={post.title || ''}
               layout="fill"
               objectFit="cover"
@@ -33,7 +33,7 @@ export function BlogBody({ posts }: { posts: SimpleBlogCardProps[] }) {
               {post?.smallDescription?.slice(0, 200) + '...' || ''}
             </p>
             <p className="text-xs">
-              <Date dateString={post.date} />
+              {format(parseISO(post.date), 'dd-MM-yyyy')}
             </p>
           </div>
         </Link>

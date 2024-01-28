@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { SimpleBlogCardProps } from '@/types/blog'
 
 import { urlFor } from '@/lib/sanity'
-import { Date } from '@/ui/atoms/Date'
+import { format, parseISO } from 'date-fns'
 
 export function BlogFooter({ posts }: { posts: SimpleBlogCardProps[] }) {
   return (
@@ -19,7 +19,7 @@ export function BlogFooter({ posts }: { posts: SimpleBlogCardProps[] }) {
           <Link href={`/blog/${post.currentSlug}`}>
             <div className="w-full h-48 overflow-hidden">
               <Image
-                src={urlFor(post.titleImage).url() || ''}
+                src={urlFor(post.titleImage)}
                 alt={post.title || ''}
                 layout="responsive"
                 width={100}
@@ -33,7 +33,7 @@ export function BlogFooter({ posts }: { posts: SimpleBlogCardProps[] }) {
                   {post?.description?.slice(0, 100) + "..."}
                 </p>*/}
               <p className="text-gray-600 text-xs mt-2">
-                <Date dateString={post.date} />
+                {format(parseISO(post.date), 'dd-MM-yyyy')}
               </p>
             </div>
           </Link>

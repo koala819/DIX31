@@ -1,9 +1,6 @@
 import { notFound } from 'next/navigation'
 
-import { PostProps } from '@/types/OLDblog'
 import { fullBlog } from '@/types/blog'
-
-import { allPosts } from '.contentlayer/generated'
 
 import { client } from '@/lib/sanity'
 import { Post } from '@/ui/molecules/Post'

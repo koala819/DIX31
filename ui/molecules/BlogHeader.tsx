@@ -1,12 +1,10 @@
-import React from 'react'
-
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { SimpleBlogCardProps } from '@/types/blog'
 
 import { urlFor } from '@/lib/sanity'
-import { Date } from '@/ui/atoms/Date'
+import { format, parseISO } from 'date-fns'
 
 export function BlogHeader({
   firstPosts,
@@ -25,8 +23,8 @@ export function BlogHeader({
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 hover:opacity-20 z-10 rounded-lg" />
           <div className="relative w-full h-full rounded-lg overflow-hidden">
             <Image
-              src={urlFor(post.titleImage).url() || ''}
-              alt={post.title || ''}
+              src={urlFor(post.titleImage)}
+              alt={post.title || 'image sans titre'}
               layout="fill"
               objectFit="cover"
             />
@@ -39,11 +37,9 @@ export function BlogHeader({
               {post.title}
             </h2>
             <div className="flex mt-3">
-              <div>
-                <p className="font-semibold text-gray-300 group-hover:text-black text-xs">
-                  <Date dateString={post.date} />
-                </p>
-              </div>
+              <p className="font-semibold text-gray-300 group-hover:text-black text-xs">
+                {format(parseISO(post.date), 'dd-MM-yyyy')}
+              </p>
             </div>
           </div>
         </Link>

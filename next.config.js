@@ -1,5 +1,3 @@
-const { withContentlayer } = require("next-contentlayer");
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
@@ -12,23 +10,72 @@ const nextConfig = {
     MAIL_USER: process.env.MAIL_USER,
   },
   images: {
-    domains: [
-      "media.licdn.com",
-      "dam.malt.com",
-      "drive.google.com",
-      "www.gnu.org",
-      "www.soprasteria.fr",
-      "www.club306.fr",
-      "res.cloudinary.com",
-      "korben.info",
-      "images.unsplash.com",
-      "randomuser.me",
-      "cdn.sanity.io"
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'dam.malt.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'drive.google.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.gnu.org',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.soprasteria.fr',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.club306.fr',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'korben.info',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'randomuser.me',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: '',
+      },
     ],
   },
-  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   reactStrictMode: true,
   swcMinify: true,
-};
+}
 
-module.exports = withContentlayer(nextConfig);
+module.exports = nextConfig
