@@ -16,7 +16,7 @@ export function BlogHeader({
       {firstPosts.map((post) => (
         <Link
           key={post.currentSlug}
-          className="group mb-4 md:mb-0 w-full md:w-1/2 relative rounded-lg inline-block"
+          className="mb-4 md:mb-0 w-full md:w-1/2 relative rounded-lg inline-block"
           href={`/blog/${post.currentSlug}`}
           style={{ height: '250px' }}
         >
@@ -41,11 +41,11 @@ export function BlogHeader({
             </span>
           </div>
           <div className="p-4 absolute bottom-0 left-0 z-20">
-            <h2 className="text-4xl font-semibold text-gray-100 group-hover:text-black leading-tight">
+            <h2 className="text-4xl font-semibold text-gray-100 leading-tight">
               {post.title}
             </h2>
             <div className="flex mt-3">
-              <p className="font-semibold text-gray-300 group-hover:text-black text-xs">
+              <p className="font-semibold text-gray-300 text-xs">
                 {format(parseISO(post.date), 'dd-MM-yyyy')}
               </p>
             </div>

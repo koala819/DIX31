@@ -24,9 +24,7 @@ async function getPosts() {
       }
   }`
 
-  const data = await client.fetch(query)
-
-  return data
+  return await client.fetch(query)
 }
 
 export default async function Page() {
