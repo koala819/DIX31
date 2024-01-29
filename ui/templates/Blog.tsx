@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react'
 
 import { SimpleBlogCardProps, TagCount } from '@/types/blog'
 
-import { BlogSlide } from '@/ui/atoms/BlogSlide'
 import { BlogBody } from '@/ui/molecules/BlogBody'
 import { BlogFooter } from '@/ui/molecules/BlogFooter'
 import { BlogHeader } from '@/ui/molecules/BlogHeader'
+import { BlogSlide } from '@/ui/molecules/BlogSlide'
 
 export default function Blog({ posts }: { posts: SimpleBlogCardProps[] }) {
   const [selectedTag, setSelectedTag] = useState<string | null>(null)

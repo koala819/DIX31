@@ -39,9 +39,7 @@ export function BlogSlide({
   return (
     <div className="mb-4">
       <header className="flex items-center justify-between w-full">
-        <h5 className="font-bold text-lg uppercase text-gray-700 px-1 my-2">
-          Mots clés
-        </h5>
+        <h5 className="font-bold text-lg uppercase px-1 my-2">Mots clés</h5>
         <Button color="primary" onClick={onReset} className="mr-2">
           Réinitialiser
         </Button>
@@ -51,18 +49,14 @@ export function BlogSlide({
         {Object.entries(tags).map(([tagName, articleCount]) => (
           <li
             key={tagName}
-            className="px-1 py-4 border-b border-t border-white hover:border-gray-200 transition duration-300"
+            className="px-1 py-4 hover:border-b hover:border-t hover:border-primary transition duration-300"
             onClick={() => onTagClick(tagName)}
           >
-            <section className="flex items-center text-gray-600 cursor-pointer">
-              {tagIcons[tagName] || (
-                <span className="inline-block h-4 w-4 bg-green-300"></span>
-              )}
+            <section className="flex items-center cursor-pointer">
+              {tagIcons[tagName] || <span className="inline-block h-4 w-4" />}
               <text className="font-bold ml-2">{tagName}</text>
-              <span className="text-gray-500 ml-auto">
-                {articleCount} articles
-              </span>
-              <i className="text-gray-500 bx bx-right-arrow-alt ml-1"></i>
+              <span className="ml-auto">{articleCount} articles</span>
+              <i className="bx bx-right-arrow-alt ml-1" />
             </section>
           </li>
         ))}
