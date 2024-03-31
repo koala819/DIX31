@@ -18,7 +18,6 @@
     "@tailwindcss/typography": "^0.5.10",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "class-variance-authority": "^0.7.0",
-    "cli": "link:@types/@sanity/cli",
     "clsx": "^2.1.0",
     "date-fns": "^3.3.1",
     "date-fns-tz": "^2.0.0",
