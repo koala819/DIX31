@@ -32,14 +32,19 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [theme, setTheme] = useState<Theme>('light')
+  // Initialize theme state with 'light' as default
+  const [theme, setTheme] = useState<Theme>('dark' || 'light')
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem('theme') as Theme
+    // Access localStorage in useEffect to ensure code runs on client side
+    const storedTheme = localStorage.getItem('theme') as Theme | null
+    console.log('storedTheme', storedTheme)
     if (storedTheme) {
       setTheme(storedTheme)
     }
+  }, [])
 
+  useEffect(() => {
     const html = document.documentElement
     html.className = theme
     localStorage.setItem('theme', theme)
