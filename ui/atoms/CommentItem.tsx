@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { motion } from 'framer-motion'
-import { Comment } from 'types/comment'
+import { Comment } from 'types/models'
 
 const CommentItem = ({
   comment,

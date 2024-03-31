@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 import CommentItem from '@/ui/atoms/CommentItem'
 import { motion, useAnimation } from 'framer-motion'
-import { Comment } from 'types/comment'
+import { Comment } from 'types/models'
 
 const CommentList = ({ comments }: { comments: Comment[] }) => {
   const [shuffledSections, setShuffledSections] = useState<Comment[]>([])
