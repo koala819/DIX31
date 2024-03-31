@@ -6,10 +6,10 @@ import toast from 'react-hot-toast'
 import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { LuCopyleft } from 'react-icons/lu'
 
-import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { useTheme } from '@/context/ThemeContext'
 import Footer_dark_logo from '@/public/images/Footer_dark_logo.png'
 import Footer_logo from '@/public/images/Footer_logo.png'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -17,7 +17,6 @@ import * as yup from 'yup'
 
 export const Footer = () => {
   const { theme } = useTheme()
-  const dix31Logo = theme === 'dark' ? Footer_dark_logo : Footer_logo
   const currentYear = new Date().getFullYear()
 
   const schema = yup.object().shape({
@@ -164,7 +163,7 @@ export const Footer = () => {
           <section className="w-full mt-2 text-sm md:text-xs lg:text-lg text-gray-500 dark:text-slate-400">
             <picture className="flex w-full justify-center">
               <Image
-                src={dix31Logo}
+                src={theme === 'dark' ? Footer_dark_logo : Footer_logo}
                 alt="DIX31 logo"
                 className="object-fill"
                 width={250}

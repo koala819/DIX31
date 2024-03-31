@@ -31,7 +31,6 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <ThemeProviders>
           <div className="min-h-screen min-w-screen">
-            {/* <div className=" flex flex-col h-screen"> */}
             <Navbar />
 
             <main className="flex-1">
@@ -44,7 +43,6 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
-          {/* </div> */}
         </ThemeProviders>
       </body>
     </html>

@@ -18,22 +18,20 @@ import {
 import { useState } from 'react'
 import { FiChevronDown } from 'react-icons/fi'
 
-import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/navigation'
 
-import whitelogo from '@/public/images/Navbar_logo.svg'
+import { useTheme } from '@/context/ThemeContext'
+import whiteLogo from '@/public/images/Navbar_logo.svg'
 import blackLogo from '@/public/images/Navbar_logo_dark.png'
 import { ThemeSwitcher } from '@/ui/atoms/ThemeSwitcher'
 
 export const NavbarDIX = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   const path = usePathname()
   const router = useRouter()
   const { theme } = useTheme()
-
-  const logo = theme === 'dark' ? blackLogo : whitelogo
 
   const menuItems = [
     { name: 'Home', path: '/' },
@@ -75,7 +73,7 @@ export const NavbarDIX = () => {
         <NavbarBrand>
           <Link href="/" aria-current="page" color="foreground">
             <Image
-              src={logo}
+              src={theme === 'light' ? whiteLogo : blackLogo}
               alt="DIX31 logo"
               className="object-fill"
               width={80}
