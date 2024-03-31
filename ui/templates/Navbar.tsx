@@ -117,22 +117,6 @@ export const NavbarDIX = () => {
           >
             <DropdownItem
               key="99_uptime"
-              description="Centre de formations professionnelles continues"
-              startContent={
-                <Image
-                  alt="Activ'Savoirs website"
-                  className="object-cover w-full h-full"
-                  height={100}
-                  src="/images/ActivSavoirs.jpg"
-                  width={100}
-                />
-              }
-              onClick={() => router.push('/projects/ActivSavoirs')}
-            >
-              Activ&apos;Savoirs
-            </DropdownItem>
-            <DropdownItem
-              key="99_uptime"
               description="Premier club automobiles de France"
               startContent={
                 <Image
@@ -146,6 +130,22 @@ export const NavbarDIX = () => {
               onClick={() => router.push('/projects/Club306')}
             >
               Club 306
+            </DropdownItem>
+            <DropdownItem
+              key="wheeler_forever"
+              description="Site du Youtubeur Bonheur Sur Seine"
+              startContent={
+                <Image
+                  alt="DIX31 website"
+                  className="object-cover w-full h-full"
+                  height={100}
+                  src="/images/BonheurSurSeine.jpg"
+                  width={100}
+                />
+              }
+              onClick={() => router.push('/projects/BonheurSurSeine')}
+            >
+              Bonheur Sur Seine
             </DropdownItem>
             <DropdownItem
               key="supreme_support"
@@ -164,6 +164,23 @@ export const NavbarDIX = () => {
               DIX31
             </DropdownItem>
             <DropdownItem
+              key="99_uptime"
+              description="Centre de formations professionnelles continues"
+              startContent={
+                <Image
+                  alt="Activ'Savoirs website"
+                  className="object-cover w-full h-full"
+                  height={100}
+                  src="/images/ActivSavoirs.jpg"
+                  width={100}
+                />
+              }
+              onClick={() => router.push('/projects/ActivSavoirs')}
+            >
+              Activ&apos;Savoirs
+            </DropdownItem>
+
+            <DropdownItem
               key="thouy"
               description="Site de location de gîtes dans le Tarn"
               startContent={
@@ -179,7 +196,7 @@ export const NavbarDIX = () => {
             >
               Gîtes de Thouy
             </DropdownItem>
-            <DropdownItem
+            {/* <DropdownItem
               key="usage_metrics"
               description="Jeux créé avec passion"
               startContent={
@@ -211,7 +228,7 @@ export const NavbarDIX = () => {
               onClick={() => router.push('/projects/CumulerAides')}
             >
               Cumuler les aides
-            </DropdownItem>
+            </DropdownItem> */}
           </DropdownMenu>
         </Dropdown>
 
