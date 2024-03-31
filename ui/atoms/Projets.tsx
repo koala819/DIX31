@@ -45,27 +45,31 @@ export default function Projets() {
       <section className="hidden:flex lg:flex justify-center w-full p-6">
         <picture className="flex w-full justify-center lg:w-1/3">
           <Image
-            alt="Screenshot Activ Savoirs"
-            src="/images/ActivSavoirs.jpg"
+            alt="Screenshot Bonheur Sur Seine"
+            src="/images/BonheurSurSeine.jpg"
           />
         </picture>
         <div className="w-full lg:w-2/3 p-4 space-y-8">
           <Link
-            href="https://www.activ-savoirs.com/"
+            href="https://www.bonheursurseine.com/"
             target="_blank"
             className="hover:underline  hover:text-blue-600 dark:hover:text-orange-600"
           >
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-              Activ&apos;Savoirs
+              Bonheur Sur Seine
             </h3>
           </Link>
           <p className="text-md text-gray-700 dark:text-gray-300">
-            Conception du site Activ Savoirs, centre de formation continu, avec
-            Next.js, TypeScript, Prismic, Tailwind. Interface utilisateur
-            moderne, facile à maintenir grâce à Prismic. Collaboration étroite
-            avec designer UX/UI pour l&apos;esthétique et une fonctionnalité
-            simplifié. Intégration de Google Analytics pour le suivi de
-            performance.
+            Découvrez le projet Bonheur Sur Seine, une plateforme avant-gardiste
+            conçue pour les passionnés de gyroroue et créée pour un Youtuber et
+            wheeler de renom. Ce projet se distingue par son utilisation
+            stratégique de technologies de pointe telles que Next.js et
+            TypeScript, combinées à l&apos;agilité de Tailwind CSS pour une
+            interface utilisateur esthétique et réactive. Grâce à
+            l&apos;intégration de Prismic, un système de gestion de contenu
+            révolutionnaire, le site offre une expérience utilisateur fluide et
+            une maintenance simplifiée, permettant des mises à jour de contenu
+            en temps réel sans compromettre la performance
           </p>
         </div>
       </section>
