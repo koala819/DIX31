@@ -57,12 +57,12 @@ const CommentList = ({ comments }: { comments: Comment[] }) => {
         <div className="w-full mx-auto px-5 py-10 text-gray-600 dark:text-gray-200 mb-10">
           <div className="mx-auto pb-10">
             <h2 className="text-5xl md:text-6xl font-bold mb-5">
-              Témoignages Clients : Expériences Réussies avec DIX31
+              Vos Succès, Notre Signature DIX31
             </h2>
             <span className="text-xl font-medium">
-              Découvrez comment mes clients ont transformé leurs entreprises
-              avec DIX31 : des histoires de succès inspirantes qui témoignent de
-              mon expertise et de mon engagement.
+              Explorez les transformations vécues par mes clients grâce à DIX31.
+              Leur réussite est la preuve vivante de mon savoir-faire et de ma
+              dévotion.
             </span>
           </div>
 

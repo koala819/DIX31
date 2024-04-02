@@ -11,13 +11,14 @@ export default function Rates() {
         <div className="w-full mx-auto px-5 py-10 text-gray-600 dark:text-gray-200 mb-10">
           <div className="mx-auto pb-10">
             <h2 className="text-5xl md:text-6xl font-bold mb-5">
-              Plans Flexibles : Tarifs Adaptés à Votre Projet Web
+              Liberté et Adaptabilité pour votre projet
             </h2>
             <span className="text-xl font-medium">
-              Je propose l&apos;accompagnement à la création de solutions web
-              tout en vous aidant à progresser. Que vous souhaitiez démarrer
-              seul avec le StarterPack ou que vous préfériez une solution sur
-              mesure, je suis là pour vous accompagner à chaque étape.
+              Je vous accompagne dans la conception de solutions web, en vous
+              fournissant le soutien nécessaire pour progresser. Que vous
+              débutiez seul ou préfériez une solution entièrement sur mesure, je
+              suis là pour vous guider à chaque étape de votre aventure
+              numérique.
             </span>
           </div>
           <div className="mx-auto md:flex">
