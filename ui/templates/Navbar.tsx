@@ -149,7 +149,7 @@ export const NavbarDIX = () => {
             </DropdownItem>
             <DropdownItem
               key="supreme_support"
-              description="Développeur Indépendant Xavier Website"
+              description="DIX31"
               startContent={
                 <Image
                   alt="DIX31 website"
@@ -161,7 +161,7 @@ export const NavbarDIX = () => {
               }
               onClick={() => router.push('/projects/dix31')}
             >
-              DIX31
+              Website
             </DropdownItem>
             <DropdownItem
               key="99_uptime"
