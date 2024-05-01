@@ -2,9 +2,10 @@ import { Metadata } from 'next'
 
 import { comments } from '@/utils/comments'
 
+import { client } from '@/lib/sanity'
+import Blog from '@/ui/atoms/Blog'
 // import Description from '@/components/atoms/Description'
 import Hero from '@/ui/atoms/Hero'
-// import Presentation from '@/components/atoms/Presentation'
 import Projets from '@/ui/atoms/Projets'
 import Rates from '@/ui/atoms/Rates'
 import CommentList from '@/ui/molecules/CommentList'
@@ -14,11 +15,27 @@ export const metadata: Metadata = {
   description:
     'Spécialiste en création de sites web personnalisés et responsive. Solutions sur mesure pour entreprises. Consultation gratuite.',
 }
-export default function Page() {
+export default async function Page() {
+  async function getPosts() {
+    const query = `*[_type == 'blog'] | order(date desc)[0...3] {
+      title,
+      date,
+      smallDescription,
+      "currentSlug": slug.current,
+      titleImage,
+      titleImagebyCloudinary,
+      "tag": tag[]->{
+        name
+      }
+    }`
+
+    return await client.fetch(query)
+  }
+  const posts = await getPosts()
   return (
     <section className="my-16">
       <Hero />
-      {/* <Presentation /> */}
+      <Blog posts={posts} />
       {/* <Description /> */}
       <Projets />
       <Rates />
