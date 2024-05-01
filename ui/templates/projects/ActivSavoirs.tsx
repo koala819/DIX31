@@ -1,26 +1,44 @@
 'use client'
 
-import {
-  Button,
-  Chip,
-  Modal,
-  ModalContent,
-  Tooltip,
-  useDisclosure,
-} from '@nextui-org/react'
+import { Button, Chip, Image, Tooltip } from '@nextui-org/react'
 import { useState } from 'react'
+import PhotoAlbum from 'react-photo-album'
+import Lightbox from 'yet-another-react-lightbox'
+// import optional lightbox plugins
+import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen'
+import Slideshow from 'yet-another-react-lightbox/plugins/slideshow'
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
+import 'yet-another-react-lightbox/plugins/thumbnails.css'
+import Zoom from 'yet-another-react-lightbox/plugins/zoom'
+import 'yet-another-react-lightbox/styles.css'
 
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Page() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure()
-  const [imageSrc, setImageSrc] = useState<string>('')
+  const [index, setIndex] = useState<number>(-1)
 
-  function displayBigPicture(picture: string) {
-    onOpen()
-    setImageSrc(`/images/${picture}.jpg`)
-  }
+  const photos = [
+    {
+      src: '/images/AS01.jpg',
+      width: 1080,
+      height: 800,
+    },
+    {
+      src: '/images/AS02.jpg',
+      width: 1080,
+      height: 800,
+    },
+    {
+      src: '/images/AS03.jpg',
+      width: 1080,
+      height: 800,
+    },
+    {
+      src: '/images/AS04.jpg',
+      width: 1080,
+      height: 800,
+    },
+  ]
 
   return (
     <>
@@ -64,6 +82,8 @@ export default function Page() {
           />
         </div>
       </section>
+
+      {/* Secteur & Type de projet & Date de livraison  & Consulter le projet */}
       <section className="w-full mx-auto grid md:grid-cols-4 gap-x-4 p-4 space-y-12 md:space-y-0">
         <div className="text-center space-y-4 p-2 border-1 rounded-lg border-gray-300">
           <p className="font-bold text-lg">Secteur</p>
@@ -107,6 +127,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* Challenge technique et stratégie */}
       <section className="w-full p-4 md:flex md:space-x-8 space-y-12 md:space-y-0">
         <div className="md:w-1/2 space-y-8 text-justify">
           <h1 className="text-3xl font-bold">Challenge technique</h1>
@@ -154,6 +176,8 @@ export default function Page() {
           </p>
         </div>
       </section>
+
+      {/* Stacks utilisées */}
       <section className="w-full p-4 flex flex-col space-y-8">
         <h1 className="text-3xl font-bold">Stacks utilisées</h1>
         <div className="flex items-center justify-center space-x-4">
@@ -171,70 +195,27 @@ export default function Page() {
           </Chip>
         </div>
       </section>
-      <Modal
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        size="5xl"
-        hideCloseButton
-      >
-        <ModalContent>
-          {() => (
-            <Image
-              className="object-cover object-center w-full h-full"
-              alt="Panel member club 306"
-              height={1000}
-              src={imageSrc}
-              width={1000}
-            />
-          )}
-        </ModalContent>
-      </Modal>
-      <section className="w-full p-4">
-        <>
-          <h1 className="text-3xl font-bold">Preview</h1>
-          <div className="w-full mx-auto grid md:grid-cols-4 gap-x-4 p-4 space-y-12 md:space-y-0">
-            <div className="text-center space-y-4 p-2 border-1 rounded-lg border-gray-300">
-              <Image
-                onClick={() => displayBigPicture('AS01')}
-                alt="Activ'Savoirs Thematique"
-                className="object-cover"
-                height={400}
-                src="/images/AS01.jpg"
-                width={400}
-              />
-            </div>
-            <div className="text-center space-y-4 p-2 border-1 rounded-lg border-gray-300">
-              <Image
-                onClick={() => displayBigPicture('AS02')}
-                alt="Activ'Savoirs Formateur"
-                className="object-cover"
-                height={400}
-                src="/images/AS02.jpg"
-                width={400}
-              />
-            </div>
-            <div className="text-center space-y-4 p-2 border-1 rounded-lg border-gray-300">
-              <Image
-                onClick={() => displayBigPicture('AS03')}
-                alt="Activ'Savoirs full site"
-                className="object-cover"
-                height={400}
-                src="/images/AS03.jpg"
-                width={400}
-              />
-            </div>
-            <div className="text-center space-y-4 p-2 border-1 rounded-lg border-gray-300">
-              <Image
-                onClick={() => displayBigPicture('AS04')}
-                alt="Activ'Savoirs avis user"
-                className="object-cover"
-                height={400}
-                src="/images/AS04.jpg"
-                width={400}
-              />
-            </div>
-          </div>
-        </>
+
+      {/* Preview */}
+      <section className="w-full">
+        <h1 className="text-3xl font-bold mb-8">Preview</h1>
+
+        <picture className="p-8">
+          <PhotoAlbum
+            photos={photos}
+            layout="rows"
+            columns={4}
+            onClick={({ index }) => setIndex(index)}
+          />
+          <Lightbox
+            slides={photos}
+            open={index >= 0}
+            index={index}
+            close={() => setIndex(-1)}
+            // enable optional lightbox plugins
+            plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+          />
+        </picture>
       </section>
 
       <Link
