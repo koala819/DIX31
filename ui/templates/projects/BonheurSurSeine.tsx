@@ -73,15 +73,12 @@ export default function Club306() {
             </Chip>
           </div>
         </div>
-        <div className="flex justify-center w-full md:w-1/2 p-6">
+        <picture className="w-full md:w-1/2 flex justify-center">
           <Image
-            alt="Bonheur Sur Seine website"
-            className="object-cover"
-            height={400}
+            alt="BonheurSurSeine website"
             src="/images/BonheurSurSeine.jpg"
-            width={400}
           />
-        </div>
+        </picture>
       </section>
 
       {/* Secteur & Type de projet & Date de livraison  & Consulter le projet */}
