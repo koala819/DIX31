@@ -8,8 +8,6 @@ import { urlFor } from '@/lib/sanity'
 import { format, parseISO } from 'date-fns'
 
 export default function Blog({ posts }: any) {
-  console.log('posts', posts)
-
   return (
     <div className="mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8 space-y-6  text-gray-600 dark:text-gray-200">
       <h2 className="text-5xl md:text-6xl font-bold mb-5">Derniers articles</h2>
@@ -38,7 +36,7 @@ export default function Blog({ posts }: any) {
                 />
 
                 <Link
-                  className="flex justify-center items-center bg-blue-700 dark:bg-orange-500 bg-opacity-80 dark:bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                  className="flex justify-center items-center bg-blue-700 dark:bg-orange-300 bg-opacity-80 dark:bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white dark:text-black rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
                   href={`/blog/${post.currentSlug}`}
                   target="_self"
                   rel="noopener noreferrer"
@@ -68,7 +66,7 @@ export default function Blog({ posts }: any) {
               <h3 className="font-medium text-xl leading-8">
                 <Link
                   href={`/blog/${post.currentSlug}`}
-                  className="block relative group-hover:text-blue-700 dark:group-hover:text-orange-500 transition-colors duration-200 "
+                  className="block relative group-hover:text-blue-700 dark:group-hover:text-orange-300 transition-colors duration-200 "
                 >
                   {post?.title}
                 </Link>
