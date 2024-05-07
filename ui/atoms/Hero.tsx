@@ -1,14 +1,17 @@
 'use client'
 
-import { Image } from '@nextui-org/react'
+import { Button, Image } from '@nextui-org/react'
 
 // import ReactPlayer from 'react-player'
 import Link from 'next/link'
 
 // import LazyLoad from '@/utils/LazyLoad'
-import { Button } from '@/components/ui/button'
+// import { Button } from '@/components/ui/button'
+import { useTheme } from '@/context/ThemeContext'
 
 export default function Hero() {
+  const { theme } = useTheme()
+
   return (
     <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
       <div className="flex flex-wrap justify-between">
@@ -46,11 +49,15 @@ export default function Hero() {
               émancipons votre projet du labyrinthe des abonnements et des
               complexités.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link href="/contact">
-                <Button>Commencez votre projet</Button>
-              </Link>
-            </div>
+
+            <Link href="/contact" className="flex justify-center">
+              <Button
+                color={theme === 'dark' ? 'warning' : 'primary'}
+                variant="shadow"
+              >
+                Commencez votre projet
+              </Button>
+            </Link>
           </div>
         </aside>
 
