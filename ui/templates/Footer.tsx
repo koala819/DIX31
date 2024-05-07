@@ -1,6 +1,7 @@
 'use client'
 
 import { Tooltip } from '@nextui-org/react'
+import { Button } from '@nextui-org/react'
 import { Controller, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa'
@@ -94,12 +95,14 @@ export const Footer = () => {
                 </div>
               )}
 
-              <button
+              <Button
                 type="submit"
-                className="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80"
+                className="ml-4 text-sm font-medium "
+                color={theme === 'dark' ? 'warning' : 'primary'}
+                variant="shadow"
               >
                 S&apos;abonner
-              </button>
+              </Button>
             </form>
           </div>
 
@@ -111,20 +114,20 @@ export const Footer = () => {
             <div className="flex flex-col items-start mt-5 space-y-2">
               <Link
                 href="/"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
               >
                 Accueil
               </Link>
               <Link
                 href="/projects"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
               >
                 Projets
               </Link>
 
               <Link
                 href="/blog"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
               >
                 Blog
               </Link>
@@ -137,19 +140,19 @@ export const Footer = () => {
             <div className="flex flex-col items-start mt-5 space-y-2">
               <Link
                 href="/mentions"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
               >
                 Mentions légales
               </Link>
               <Link
                 href="/protection"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
               >
                 Protections des données
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
               >
                 Contact
               </Link>
