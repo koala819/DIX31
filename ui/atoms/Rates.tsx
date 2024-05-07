@@ -108,9 +108,9 @@ export default function Rates() {
             </div>
             <div className="w-full md:w-1/3 md:max-w-none bg-white px-8 dark:bg-gray-700 md:px-10 py-8 md:py-10 mb-3 mx-auto md:my-6 rounded-md shadow-lg shadow-gray-600 md:flex md:flex-col">
               <div className="w-full flex-grow">
-                <h2 className="text-center font-bold uppercase mb-4 text-gray-800 dark:text-gray-100">
+                <h3 className="text-center font-bold uppercase mb-4 text-gray-800 dark:text-gray-100">
                   Site Dynamique
-                </h2>
+                </h3>
                 <p className="my-4 text-gray-500 dark:text-gray-300">
                   Un site web dynamique avec un backend pour une mise à jour
                   facile du contenu. Idéal pour des projets complexes pour
