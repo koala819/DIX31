@@ -6,7 +6,8 @@ import { client } from '@/lib/sanity'
 import Blog from '@/ui/templates/Blog'
 
 export const metadata: Metadata = {
-  title: 'Blog de DIX31 - Dernières Tendances et Conseils en Développement Web',
+  title:
+    'Conseils Professionnels en Développement Web par DIX31 - Blog Tech France',
   description:
     'Lisez le blog de DIX31 pour des insights uniques sur le développement web, des astuces de codage, des tendances du marché, et des études de cas détaillées.',
 }

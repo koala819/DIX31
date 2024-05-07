@@ -11,7 +11,7 @@ import Rates from '@/ui/atoms/Rates'
 import CommentList from '@/ui/molecules/CommentList'
 
 export const metadata: Metadata = {
-  title: '  DIX31 - Développeur Web Xavier | Sites Web Personnalisés',
+  title: 'DIX31 - Création de Sites Web Personnalisés sur mesure à Toulouse',
   description:
     'Spécialiste en création de sites web personnalisés et responsive. Solutions sur mesure pour entreprises. Consultation gratuite.',
 }

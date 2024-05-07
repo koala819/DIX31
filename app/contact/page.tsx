@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import Contact from '@/ui/templates/Contact'
 
 export const metadata: Metadata = {
-  title: 'Contactez DIX31 - Votre Expert en Développement Web',
+  title: 'Contactez DIX31 pour vos Projets de Développement Web en France',
   description:
     'Prenez contact avec DIX31 pour discuter de vos besoins en développement web et découvrir comment nous pouvons transformer vos idées en réalité.',
 }
