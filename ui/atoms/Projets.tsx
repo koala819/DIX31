@@ -4,7 +4,50 @@ import { Button, Image } from '@nextui-org/react'
 
 import Link from 'next/link'
 
+import { useTheme } from '@/context/ThemeContext'
+
 export default function Projets() {
+  const { theme } = useTheme()
+
+  const projects = [
+    {
+      link: 'https://www.club306.fr/',
+      title: 'Club 306',
+      picture: {
+        alt: 'Screenshot Club 306',
+        src: '/images/Club306.jpg',
+      },
+      description:
+        'Un espace en ligne innovant créé pour les amateurs de Peugeot 306,\n' +
+        "alliant design actuel et facilité d'utilisation. Avec\n" +
+        "l'intégration d'un moyen de paiement pour simplifier\n" +
+        'pour les adhésions, ce site a su fédérer une communauté de plus de\n' +
+        '100 membres en peu de temps. Grâce à des outils interactifs, une\n' +
+        'gestion fluide de la communauté, et une stratégie de développement\n' +
+        'efficace, il est devenu le point de rendez-vous incontournable\n' +
+        'pour partager la passion de la Peugeot 306.',
+    },
+    {
+      link: 'https://www.bonheursurseine.com/',
+      title: 'Bonheur Sur Seine',
+      picture: {
+        alt: 'Screenshot Bonheur Sur Seine',
+        src: '/images/BonheurSurSeine.jpg',
+      },
+      description:
+        "Plongez dans l'univers de Bonheur Sur Seine, une plateforme\n" +
+        'révolutionnaire dédiée aux aficionados de la gyroroue, conçue\n' +
+        'spécialement pour un YouTubeur et wheeler éminent. Ce site se\n' +
+        'distingue par une approche innovante, exploitant des technologies\n' +
+        'avancées pour offrir une navigation fluide et une esthétique\n' +
+        'soignée. Grâce à un design réactif et à une gestion de contenu\n' +
+        "intuitive, les utilisateurs profitent d'une expérience en ligne\n" +
+        'sans égale, où la mise à jour du contenu est à la fois simple et\n' +
+        'instantanée, assurant ainsi une interaction constante et engageante\n' +
+        'avec la communauté.',
+    },
+  ]
+
   return (
     <section className="mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8 space-y-6  text-gray-600 dark:text-gray-200">
       <div className="mx-auto pb-10">
@@ -20,68 +63,31 @@ export default function Projets() {
         </span>
       </div>
 
-      <section className="hidden:flex lg:flex justify-center w-full p-6">
-        <picture className="flex w-full justify-center lg:w-1/3">
-          <Image alt="Screenshot Club 306" src="/images/Club306.jpg" />
-        </picture>
-        <div className="w-full lg:w-2/3 p-4 space-y-8">
+      {projects.map((project, index) => (
+        <section className="w-full p-6" key={index}>
           <Link
-            href="https://www.club306.fr/"
+            href={project.link}
             target="_blank"
-            className="hover:underline  hover:text-blue-600 dark:hover:text-orange-600"
+            className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border p-8 hover:bg-blue-100 dark:hover:bg-orange-300 hover:opacity-75 dark:hover:opacity-100 dark:hover:text-black text-gray-800 dark:text-white"
           >
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-              Club 306
-            </h3>
-          </Link>
-          <p className="text-md text-gray-700 dark:text-gray-300">
-            Un espace en ligne innovant créé pour les amateurs de Peugeot 306,
-            alliant design actuel et facilité d&apos;utilisation. Avec
-            l&apos;intégration d&apos;un moyen de paiement pour simplifier pour
-            les adhésions, ce site a su fédérer une communauté de plus de 100
-            membres en peu de temps. Grâce à des outils interactifs, une gestion
-            fluide de la communauté, et une stratégie de développement efficace,
-            il est devenu le point de rendez-vous incontournable pour partager
-            la passion de la Peugeot 306.
-          </p>
-        </div>
-      </section>
+            <picture className="w-full">
+              <Image alt={project.picture.alt} src={project.picture.src} />
+            </picture>
 
-      <section className="hidden:flex lg:flex justify-center w-full p-6">
-        <picture className="flex w-full justify-center lg:w-1/3">
-          <Image
-            alt="Screenshot Bonheur Sur Seine"
-            src="/images/BonheurSurSeine.jpg"
-          />
-        </picture>
-        <div className="w-full lg:w-2/3 p-4 space-y-8">
-          <Link
-            href="https://www.bonheursurseine.com/"
-            target="_blank"
-            className="hover:underline  hover:text-blue-600 dark:hover:text-orange-600"
-          >
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-              Bonheur Sur Seine
-            </h3>
+            <div className="w-full space-y-8">
+              <h3 className="text-xl font-semibold ">{project.title}</h3>
+              <p className="text-md ">{project.description}</p>
+            </div>
           </Link>
-          <p className="text-md text-gray-700 dark:text-gray-300">
-            Plongez dans l&apos;univers de Bonheur Sur Seine, une plateforme
-            révolutionnaire dédiée aux aficionados de la gyroroue, conçue
-            spécialement pour un YouTubeur et wheeler éminent. Ce site se
-            distingue par une approche innovante, exploitant des technologies
-            avancées pour offrir une navigation fluide et une esthétique
-            soignée. Grâce à un design réactif et à une gestion de contenu
-            intuitive, les utilisateurs profitent d&apos;une expérience en ligne
-            sans égale, où la mise à jour du contenu est à la fois simple et
-            instantanée, assurant ainsi une interaction constante et engageante
-            avec la communauté.
-          </p>
-        </div>
-      </section>
+        </section>
+      ))}
 
       <div className="text-center">
         <Link href="/contact">
-          <Button color="primary" variant="shadow">
+          <Button
+            color={theme === 'dark' ? 'warning' : 'primary'}
+            variant="shadow"
+          >
             Commençons notre Collaboration
           </Button>
         </Link>
