@@ -1,7 +1,14 @@
 'use client'
 
+import { AiOutlineCodeSandbox } from 'react-icons/ai'
 import { BsFillEmojiSmileUpsideDownFill } from 'react-icons/bs'
-import { FaAndroid, FaGithub, FaJsSquare, FaRobot } from 'react-icons/fa'
+import {
+  FaAndroid,
+  FaGithub,
+  FaJsSquare,
+  FaRobot,
+  FaSearch,
+} from 'react-icons/fa'
 import { HiMiniHandThumbUp } from 'react-icons/hi2'
 import { IoMdRocket } from 'react-icons/io'
 import { MdComputer } from 'react-icons/md'
@@ -23,17 +30,19 @@ export function BlogSlide({
   onReset: () => void
 }) {
   const tagIcons: TagIconMap = {
-    DIX31: <MdComputer />,
-    IA: <FaRobot />,
-    StarterPack: <IoMdRocket />,
-    Github: <FaGithub />,
-    BestPracticesIT: <HiMiniHandThumbUp />,
-    tips: <TiLightbulb />,
-    JS: <FaJsSquare />,
-    hack: <SiHackaday />,
-    git: <FaGithub />,
     android: <FaAndroid />,
+    BestPracticesIT: <HiMiniHandThumbUp />,
+    IA: <FaRobot />,
+    DIX31: <MdComputer />,
+    git: <FaGithub />,
+    Github: <FaGithub />,
+    hack: <SiHackaday />,
     humour: <BsFillEmojiSmileUpsideDownFill />,
+    IT: <AiOutlineCodeSandbox />,
+    JS: <FaJsSquare />,
+    SEO: <FaSearch />,
+    StarterPack: <IoMdRocket />,
+    tips: <TiLightbulb />,
   }
 
   return (
