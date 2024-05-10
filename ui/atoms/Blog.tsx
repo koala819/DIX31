@@ -20,6 +20,7 @@ export default function Blog({ posts }: any) {
                 target="_self"
                 href={`/blog/${post.currentSlug}`}
                 className="absolute opacity-0 top-0 right-0 left-0 bottom-0"
+                aria-label={post.currentSlug}
               ></Link>
               <div className="relative mb-4 rounded-2xl">
                 <Image
