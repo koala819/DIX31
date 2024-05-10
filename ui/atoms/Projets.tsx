@@ -15,7 +15,7 @@ export default function Projets() {
       title: 'Club 306',
       picture: {
         alt: 'Screenshot Club 306',
-        src: '/images/Club306.jpg',
+        src: '/images/Club-306.jpg',
       },
       description:
         'Un espace en ligne innovant créé pour les amateurs de Peugeot 306,\n' +
@@ -32,7 +32,7 @@ export default function Projets() {
       title: 'Bonheur Sur Seine',
       picture: {
         alt: 'Screenshot Bonheur Sur Seine',
-        src: '/images/BonheurSurSeine.jpg',
+        src: '/images/Bonheur-Sur-Seine.jpg',
       },
       description:
         "Plongez dans l'univers de Bonheur Sur Seine, une plateforme\n" +
