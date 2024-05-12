@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
+import { Analytics } from "@vercel/analytics/react"
 import { ThemeProviders } from '@/app/provider'
 import '@/styles/globals.css'
 import GoogleAnalytics from '@/ui/atoms/GoogleAnalytics'
@@ -38,6 +38,7 @@ export default function RootLayout({
                 <div className="flex flex-col min-w-0 break-words w-full mb-6 rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
                   <GoogleAnalytics />
                   {children}
+                  <Analytics />
                 </div>
               </div>
             </main>
