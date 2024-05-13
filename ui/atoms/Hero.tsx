@@ -1,13 +1,22 @@
 'use client'
 
-import { Button, Image } from '@nextui-org/react'
+import { Button } from '@nextui-org/react'
 
+import dynamic from 'next/dynamic'
+import Image from 'next/image'
 // import ReactPlayer from 'react-player'
 import Link from 'next/link'
 
 // import LazyLoad from '@/utils/LazyLoad'
 // import { Button } from '@/components/ui/button'
 import { useTheme } from '@/context/ThemeContext'
+
+const WithCustomLoading = dynamic(
+  () => import('@/ui/atoms/AccompagnerPicture'),
+  {
+    loading: () => <p>Loading...</p>,
+  },
+)
 
 export default function Hero() {
   const { theme } = useTheme()
@@ -73,7 +82,15 @@ export default function Hero() {
           </LazyLoad> */}
           <picture className="flex w-full justify-center p-8">
             {/* <Image alt="Screenshot Club 306" src="/images/Club306.jpg" /> */}
-            <Image src="/images/Accompagner.webp" alt="Accompagner" />
+            <WithCustomLoading />
+            {/* <Image
+              src="/images/Accompagner.webp"
+              alt="Accompagner"
+              layout="responsive"
+              width={700}
+              height={400}
+              priority
+            /> */}
           </picture>
         </aside>
       </div>

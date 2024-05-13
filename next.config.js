@@ -10,6 +10,10 @@ const nextConfig = {
     MAIL_USER: process.env.MAIL_USER,
   },
   images: {
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    loader: 'default',
+    path: '/_next/image',
     remotePatterns: [
       {
         protocol: 'https',
