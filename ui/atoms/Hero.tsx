@@ -67,7 +67,7 @@ export default function Hero() {
               style={{ aspectRatio: '16 / 9' }}
             />
           </LazyLoad> */}
-          <picture className="flex w-full justify-center p-8">
+          <picture className="hidden md:flex w-full justify-center p-8">
             <WithCustomLoading
               src="/images/Accompagner.webp"
               alt="Accompagner"
