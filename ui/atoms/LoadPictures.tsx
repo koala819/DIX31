@@ -1,4 +1,4 @@
-import { Image as ImageReact } from '@nextui-org/react'
+import { Image as ImageNextUI } from '@nextui-org/react'
 
 import Image from 'next/image'
 
@@ -42,7 +42,7 @@ const LoadPictures = ({
           layout={layout}
         />
       ) : (
-        <ImageReact
+        <ImageNextUI
           src={src}
           alt={alt}
           width={width}

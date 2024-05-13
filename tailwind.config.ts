@@ -11,7 +11,6 @@ const config: Config = {
   ],
   darkMode: 'class',
   theme: {
-    
     container: {
       center: true,
       padding: '2rem',
@@ -20,6 +19,9 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -76,7 +78,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [nextui(), require('@tailwindcss/typography'),require('tailwindcss-animate')],
+  plugins: [
+    nextui(),
+    require('@tailwindcss/typography'),
+    require('tailwindcss-animate'),
+  ],
 }
 
 module.exports = config

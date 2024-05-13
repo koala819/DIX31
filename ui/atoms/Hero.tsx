@@ -22,7 +22,7 @@ export default function Hero() {
         </h1>
         <aside className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/2 lg:pb-24">
           <div className="container mx-auto px-4">
-            <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
+            <p className="font-sans text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
               Dans l&apos;arène numérique, où la simplicité rencontre
               l&apos;innovation, je forge des sites web qui parlent. De la
               passion de{' '}
