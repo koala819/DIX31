@@ -60,7 +60,7 @@ export default function Hero() {
         </aside>
 
         <aside className="w-full lg:w-1/2">
-          <LazyLoad className="flex w-full justify-center p-8">
+          {/* <LazyLoad className="flex w-full justify-center p-8">
             <WithCustomLoading
               src="/images/Accompagner.webp"
               alt="Accompagner"
@@ -68,7 +68,7 @@ export default function Hero() {
               width={700}
               height={400}
             />
-          </LazyLoad>
+          </LazyLoad> */}
           {/* <picture className="flex w-full justify-center p-8">
             <WithCustomLoading
               src="/images/Accompagner.webp"
