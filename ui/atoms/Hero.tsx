@@ -5,6 +5,8 @@ import { Button } from '@nextui-org/react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
+import LazyLoad from '@/utils/LazyLoad'
+
 import { useTheme } from '@/context/ThemeContext'
 
 export default function Hero() {
@@ -58,16 +60,7 @@ export default function Hero() {
         </aside>
 
         <aside className="w-full lg:w-1/2">
-          {/* <LazyLoad className="flex items-center justify-center  h-full p-8">
-            <ReactPlayer
-              url="https://www.youtube.com/watch?v=6TOL9fLe5yM"
-              controls={true}
-              width="100%"
-              alt="Vidéo promotionnelle inspirante pour le Starter Pack DIX31, illustrant ses multiples fonctionnalités avec des images captivantes de personnes, chutes d'eau et étoiles, et mettant en avant des phrases clés motivantes pour lancer des projets créatifs et innovants."
-              style={{ aspectRatio: '16 / 9' }}
-            />
-          </LazyLoad> */}
-          <picture className="flex w-full justify-center p-8">
+          <LazyLoad className="flex w-full justify-center p-8">
             <WithCustomLoading
               src="/images/Accompagner.webp"
               alt="Accompagner"
@@ -75,7 +68,16 @@ export default function Hero() {
               width={700}
               height={400}
             />
-          </picture>
+          </LazyLoad>
+          {/* <picture className="flex w-full justify-center p-8">
+            <WithCustomLoading
+              src="/images/Accompagner.webp"
+              alt="Accompagner"
+              layout="responsive"
+              width={700}
+              height={400}
+            />
+          </picture> */}
         </aside>
       </div>
     </section>
