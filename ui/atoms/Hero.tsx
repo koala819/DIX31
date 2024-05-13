@@ -17,14 +17,14 @@ export default function Hero() {
   return (
     <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
       <div className="flex flex-wrap justify-between">
-        <Skeleton isLoaded={!!theme}>
+        <Skeleton isLoaded={true}>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-600 dark:text-gray-200 mb-6">
             Créez avec Liberté, Vivez sans Limite
           </h1>
         </Skeleton>
         <aside className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/2 lg:pb-24">
           <div className="container mx-auto px-4">
-            <Skeleton isLoaded={!!theme}>
+            <Skeleton isLoaded={true}>
               <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
                 Dans l&apos;arène numérique, où la simplicité rencontre
                 l&apos;innovation, je forge des sites web qui parlent...
