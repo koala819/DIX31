@@ -123,7 +123,7 @@ export const NavbarDIX = () => {
                   alt="Club 306 France"
                   className="object-cover w-full h-full"
                   height={100}
-                  src="/images/Club306.jpg"
+                  src="/images/Club-306-nav-bar.jpg"
                   width={100}
                 />
               }
@@ -139,7 +139,7 @@ export const NavbarDIX = () => {
                   alt="DIX31 website"
                   className="object-cover w-full h-full"
                   height={100}
-                  src="/images/BonheurSurSeine.jpg"
+                  src="/images/Bonheur-Sur-Seine-nav-bar.jpg"
                   width={100}
                 />
               }
@@ -155,7 +155,7 @@ export const NavbarDIX = () => {
                   alt="DIX31 website"
                   className="object-cover w-full h-full"
                   height={100}
-                  src="/images/Portfolio.jpg"
+                  src="/images/dix31-nav-bar.jpg"
                   width={100}
                 />
               }
@@ -171,7 +171,7 @@ export const NavbarDIX = () => {
                   alt="Activ'Savoirs website"
                   className="object-cover w-full h-full"
                   height={100}
-                  src="/images/ActivSavoirs.jpg"
+                  src="/images/Activ-Savoirs-nav-bar.jpg"
                   width={100}
                 />
               }
@@ -188,7 +188,7 @@ export const NavbarDIX = () => {
                   alt="Gîtes de Thouy website"
                   className="object-cover w-full h-full"
                   height={100}
-                  src="/images/Thouy.jpg"
+                  src="/images/Thouy-nav-bar.jpg"
                   width={100}
                 />
               }
