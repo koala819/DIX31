@@ -7,6 +7,7 @@ const AccompagnerPicture = () => {
       alt="Accompagner"
       width={700}
       height={400}
+      loading="lazy"
     />
   )
 }
