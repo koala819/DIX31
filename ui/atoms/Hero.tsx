@@ -17,13 +17,13 @@ export default function Hero() {
   })
 
   return (
-    <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
+    <LazyLoad className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
       <div className="flex flex-wrap justify-between">
         <h1 className="text-4xl md:text-6xl font-bold  text-gray-600 dark:text-gray-200 mb-6">
           Créez avec Liberté, Vivez sans Limite
         </h1>
         <aside className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/2 lg:pb-24">
-          <LazyLoad className="container mx-auto px-4">
+          <div className="container mx-auto px-4">
             <p className="font-sans text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
               Dans l&apos;arène numérique, où la simplicité rencontre
               l&apos;innovation, je forge des sites web qui parlent. De la
@@ -56,7 +56,7 @@ export default function Hero() {
                 Commencez votre projet
               </Button>
             </Link>
-          </LazyLoad>
+          </div>
         </aside>
 
         <aside className="w-full lg:w-1/2">
@@ -80,6 +80,6 @@ export default function Hero() {
           </picture> */}
         </aside>
       </div>
-    </section>
+    </LazyLoad>
   )
 }
