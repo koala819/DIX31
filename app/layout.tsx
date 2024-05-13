@@ -1,21 +1,21 @@
 import { Analytics } from '@vercel/analytics/react'
 
 import { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 
+// import { Inter } from 'next/font/google'
 import { ThemeProviders } from '@/app/provider'
 import '@/styles/globals.css'
 import GoogleAnalytics from '@/ui/atoms/GoogleAnalytics'
 import { Footer } from '@/ui/templates/Footer'
 import { NavbarDIX as Navbar } from '@/ui/templates/Navbar'
 
-const inter = Inter({
-  weight: ['400', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
+// const inter = Inter({
+//   weight: ['400', '700'],
+//   style: ['normal'],
+//   subsets: ['latin'],
+//   variable: '--font-inter',
+//   display: 'swap',
+// })
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.CLIENT_URL}`),
@@ -36,7 +36,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body className={`${inter.variable}`}>
+      <body
+      // className={`${inter.variable}`}
+      >
         <ThemeProviders>
           <div className="min-h-screen min-w-screen">
             <Navbar />
