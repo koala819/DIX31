@@ -3,23 +3,16 @@
 import { Button } from '@nextui-org/react'
 
 import dynamic from 'next/dynamic'
-import Image from 'next/image'
-// import ReactPlayer from 'react-player'
 import Link from 'next/link'
 
-// import LazyLoad from '@/utils/LazyLoad'
-// import { Button } from '@/components/ui/button'
 import { useTheme } from '@/context/ThemeContext'
-
-const WithCustomLoading = dynamic(
-  () => import('@/ui/atoms/AccompagnerPicture'),
-  {
-    loading: () => <p>Loading...</p>,
-  },
-)
 
 export default function Hero() {
   const { theme } = useTheme()
+
+  const WithCustomLoading = dynamic(() => import('@/ui/atoms/LoadPictures'), {
+    loading: () => <p>Chargement...</p>,
+  })
 
   return (
     <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
@@ -28,12 +21,6 @@ export default function Hero() {
           Créez avec Liberté, Vivez sans Limite
         </h1>
         <aside className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/2 lg:pb-24">
-          {/* <h1 className="text-4xl font-bold text-black dark:text-white sm:text-5xl md:text-6xl">
-            Starter Pack Gratuit pour Développeurs Web Débutants
-          </h1>
-          <h2 className="leading-relaxed text-gray-500 dark:text-gray-300 xl:text-lg">
-            Outil Gratuit de Développement Web pour Lancer Votre Projet
-          </h2> */}
           <div className="container mx-auto px-4">
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
               Dans l&apos;arène numérique, où la simplicité rencontre
@@ -81,16 +68,13 @@ export default function Hero() {
             />
           </LazyLoad> */}
           <picture className="flex w-full justify-center p-8">
-            {/* <Image alt="Screenshot Club 306" src="/images/Club306.jpg" /> */}
-            <WithCustomLoading />
-            {/* <Image
+            <WithCustomLoading
               src="/images/Accompagner.webp"
               alt="Accompagner"
               layout="responsive"
               width={700}
               height={400}
-              priority
-            /> */}
+            />
           </picture>
         </aside>
       </div>
