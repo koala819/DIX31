@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@nextui-org/react'
+import { Button, Skeleton } from '@nextui-org/react'
 
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
@@ -11,40 +11,43 @@ export default function Hero() {
   const { theme } = useTheme()
 
   const WithCustomLoading = dynamic(() => import('@/ui/atoms/LoadPictures'), {
-    loading: () => <p>Chargement...</p>,
+    loading: () => <Skeleton />,
   })
 
   return (
     <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
       <div className="flex flex-wrap justify-between">
-        <h1 className="text-4xl md:text-6xl font-bold  text-gray-600 dark:text-gray-200 mb-6">
-          Créez avec Liberté, Vivez sans Limite
-        </h1>
+        <Skeleton isLoaded={!!theme}>
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-600 dark:text-gray-200 mb-6">
+            Créez avec Liberté, Vivez sans Limite
+          </h1>
+        </Skeleton>
         <aside className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/2 lg:pb-24">
           <div className="container mx-auto px-4">
-            <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
-              Dans l&apos;arène numérique, où la simplicité rencontre
-              l&apos;innovation, je forge des sites web qui parlent. De la
-              passion de{' '}
-              <Link
-                href="https://www.bonheursurseine.com/"
-                target="_blank"
-                className="underline  hover:text-blue-600 dark:hover:text-orange-600 font-bold"
-              >
-                BonheurSurSeine
-              </Link>{' '}
-              à l&apos;esprit communautaire du{' '}
-              <Link
-                href="https://www.club306.fr/"
-                target="_blank"
-                className="underline hover:text-blue-600 dark:hover:text-orange-600 font-bold"
-              >
-                Club 306
-              </Link>
-              , mon approche, centrée sur votre besoin est ma devise. Ensemble,
-              émancipons votre projet du labyrinthe des abonnements et des
-              complexités.
-            </p>
+            <Skeleton isLoaded={!!theme}>
+              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
+                Dans l&apos;arène numérique, où la simplicité rencontre
+                l&apos;innovation, je forge des sites web qui parlent...
+                <Link
+                  href="https://www.bonheursurseine.com/"
+                  target="_blank"
+                  className="underline hover:text-blue-600 dark:hover:text-orange-600 font-bold"
+                >
+                  BonheurSurSeine
+                </Link>
+                à l&apos;esprit communautaire du
+                <Link
+                  href="https://www.club306.fr/"
+                  target="_blank"
+                  className="underline hover:text-blue-600 dark:hover:text-orange-600 font-bold"
+                >
+                  Club 306
+                </Link>
+                , mon approche, centrée sur votre besoin est ma devise.
+                Ensemble, émancipons votre projet du labyrinthe des abonnements
+                et des complexités.
+              </p>
+            </Skeleton>
 
             <Link href="/contact" className="flex justify-center">
               <Button
