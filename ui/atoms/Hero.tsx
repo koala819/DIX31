@@ -14,7 +14,7 @@ export default function Hero() {
         Votre vision est ma mission !
       </h1>
       <section className="lg:flex">
-        <aside className="w-full lg:hidden">
+        {/* <aside className="w-full lg:hidden">
           <WithCustomLoading
             src="/images/Accompagner.webp"
             alt="dix31 vous accompagne dans votre projet"
@@ -23,7 +23,7 @@ export default function Hero() {
             height={400}
             priority
           />
-        </aside>
+        </aside> */}
         <aside className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/2 lg:pb-24 bg-blue-200">
           <div className="container mx-auto px-4">
             <p className="font-sans text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
