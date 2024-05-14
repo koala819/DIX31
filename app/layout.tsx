@@ -33,6 +33,10 @@ export const metadata: Metadata = {
       'fr-FR': '/fr-FR',
     },
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: '/app/favicon.ico',
   },
