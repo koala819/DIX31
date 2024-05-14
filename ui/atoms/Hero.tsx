@@ -1,6 +1,11 @@
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
 export default function Hero() {
+  const WithCustomLoading = dynamic(() => import('@/ui/atoms/LoadPictures'), {
+    loading: () => <div>Chargement ...</div>,
+  })
+
   return (
     <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
       <div className="flex flex-wrap justify-between">
@@ -42,6 +47,26 @@ export default function Hero() {
             </Button>
           </Link> */}
         </div>
+      </aside>
+      <aside className="w-full lg:w-1/2">
+        {/* <LazyLoad className="flex items-center justify-center  h-full p-8">
+            <ReactPlayer
+              url="https://www.youtube.com/watch?v=6TOL9fLe5yM"
+              controls={true}
+              width="100%"
+              alt="Vidéo promotionnelle inspirante pour le Starter Pack DIX31, illustrant ses multiples fonctionnalités avec des images captivantes de personnes, chutes d'eau et étoiles, et mettant en avant des phrases clés motivantes pour lancer des projets créatifs et innovants."
+              style={{ aspectRatio: '16 / 9' }}
+            />
+          </LazyLoad> */}
+        <picture className="hidden md:flex w-full justify-center p-8">
+          <WithCustomLoading
+            src="/images/Accompagner.webp"
+            alt="Accompagner"
+            layout="responsive"
+            width={700}
+            height={400}
+          />
+        </picture>
       </aside>
     </section>
   )
