@@ -1,13 +1,13 @@
-// import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/react'
+
 // import { Suspense, lazy } from 'react'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 // import { ThemeProviders } from '@/app/provider'
 import '@/styles/globals.css'
+import GoogleAnalytics from '@/ui/atoms/GoogleAnalytics'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-
-// import GoogleAnalytics from '@/ui/atoms/GoogleAnalytics'
 
 // import { Footer } from '@/ui/templates/Footer'
 // import { NavbarDIX as Navbar } from '@/ui/templates/Navbar'
@@ -65,10 +65,10 @@ export default function RootLayout({
           <main className="flex-1">
             <div className="w-full px-4 mx-auto mt-6">
               <div className="flex flex-col min-w-0 break-words w-full mb-6 rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
-                {/* <GoogleAnalytics /> */}
+                <GoogleAnalytics />
                 {children}
                 <SpeedInsights />
-                {/* <Analytics /> */}
+                <Analytics />
               </div>
             </div>
           </main>
