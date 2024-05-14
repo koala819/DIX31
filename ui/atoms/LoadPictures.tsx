@@ -29,7 +29,7 @@ const LoadPictures = ({
           loading="lazy"
           className={className}
           objectFit={objectFit}
-          layout={layout}
+          // layout={layout}
           priority={priority}
         />
       ) : (
@@ -38,10 +38,9 @@ const LoadPictures = ({
           alt={alt}
           width={width}
           height={height}
-          loading="lazy"
           className={className}
           objectFit={objectFit}
-          layout={layout}
+          // layout={layout}
           priority={priority}
         />
       )}

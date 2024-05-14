@@ -9,8 +9,8 @@ export default function Hero() {
   })
   return (
     <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
-      <div className="flex flex-wrap justify-between">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-600 dark:text-gray-200 mb-6">
+      <div className="flex flex-wrap justify-between bg-green-200">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-600 dark:text-gray-200 mb-6 bg-red-300">
           Créez avec Liberté, Vivez sans Limite
         </h1>
       </div>
@@ -63,7 +63,7 @@ export default function Hero() {
           <WithCustomLoading
             src="/images/Accompagner.webp"
             alt="dix31 vous accompagne dans votre projet"
-            layout="responsive"
+            className="responsive"
             width={700}
             height={400}
             priority
