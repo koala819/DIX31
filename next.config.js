@@ -1,5 +1,110 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async headers() {
+    return [
+      {
+        // Appliquer cette politique de cache à toutes les images
+        source: '/_next/image',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', // Cache pour 1 an
+          },
+        ],
+      },
+      {
+        // Appliquer cette politique de cache à tous les fichiers statiques (CSS, JS)
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', // Cache pour 1 an
+          },
+        ],
+      },
+      {
+        // Appliquer cette politique de cache aux fichiers dans le dossier public
+        source: '/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', // Cache pour 1 an
+          },
+        ],
+      },
+      {
+        // Appliquer cette politique de cache aux fichiers dans le dossier lib
+        source: '/lib/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', // Cache pour 1 an
+          },
+        ],
+      },
+      {
+        // Appliquer cette politique de cache aux fichiers dans le dossier types
+        source: '/types/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', // Cache pour 1 an
+          },
+        ],
+      },
+      {
+        // Appliquer cette politique de cache aux fichiers dans le dossier context
+        source: '/context/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', // Cache pour 1 an
+          },
+        ],
+      },
+      {
+        // Appliquer cette politique de cache aux fichiers dans le dossier components
+        source: '/components/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', // Cache pour 1 an
+          },
+        ],
+      },
+      {
+        // Appliquer cette politique de cache aux fichiers dans le dossier ui
+        source: '/ui/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', // Cache pour 1 an
+          },
+        ],
+      },
+      {
+        // Appliquer cette politique de cache aux fichiers dans le dossier utils
+        source: '/utils/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', // Cache pour 1 an
+          },
+        ],
+      },
+      {
+        // Appliquer cette politique de cache aux fichiers dans le dossier styles
+        source: '/styles/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', // Cache pour 1 an
+          },
+        ],
+      },
+    ]
+  },
+
   env: {
     CLIENT_URL: process.env.CLIENT_URL,
     GA_TRACKING_ID: process.env.GA_TRACKING_ID,
