@@ -8,6 +8,7 @@ import '@/styles/globals.css'
 import GoogleAnalytics from '@/ui/atoms/GoogleAnalytics'
 import { Footer } from '@/ui/templates/Footer'
 import { NavbarDIX as Navbar } from '@/ui/templates/Navbar'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // const inter = Inter({
 //   weight: ['400', '700'],
@@ -49,6 +50,7 @@ export default function RootLayout({
                   <GoogleAnalytics />
                   {children}
                   <Analytics />
+                  <SpeedInsights />
                 </div>
               </div>
             </main>
