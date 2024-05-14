@@ -16,7 +16,7 @@ import Footer_logo from '@/public/images/Footer_logo.png'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
-export const Footer = () => {
+export default function Footer() {
   const { theme } = useTheme()
   const currentYear = new Date().getFullYear()
 

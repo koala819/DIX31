@@ -27,7 +27,7 @@ import whiteLogo from '@/public/images/Navbar_logo.svg'
 import blackLogo from '@/public/images/Navbar_logo_dark.png'
 import { ThemeSwitcher } from '@/ui/atoms/ThemeSwitcher'
 
-export const NavbarDIX = () => {
+export default function NavbarDIX() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   const path = usePathname()
   const router = useRouter()
