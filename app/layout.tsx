@@ -2,6 +2,8 @@
 // import { Suspense, lazy } from 'react'
 import { Metadata } from 'next'
 
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
 // import { Inter } from 'next/font/google'
 // import { ThemeProviders } from '@/app/provider'
 
@@ -56,6 +58,7 @@ export default function RootLayout({
               <div className="flex flex-col min-w-0 break-words w-full mb-6 rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
                 {/* <GoogleAnalytics /> */}
                 {children}
+                <SpeedInsights />
                 {/* <Analytics /> */}
               </div>
             </div>
