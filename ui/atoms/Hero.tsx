@@ -30,7 +30,7 @@ export default function Hero() {
       : window.btoa(str)
 
   return (
-    <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 bg-blue-500 sm:bg-red-400 md:bg-green-400 lg:bg-yellow-500 xl:bg-orange-500 2xl:border-l-cyan-600">
+    <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 ">
       <h1 className="font-sans text-4xl md:text-6xl font-bold text-gray-600 dark:text-gray-200 mb-6">
         Votre vision est ma mission !
       </h1>

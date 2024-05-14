@@ -64,7 +64,7 @@ export default function RootLayout({
 
           <main className="flex-1">
             <div className="w-full px-4 mx-auto mt-6">
-              <div className="flex flex-col min-w-0 break-words w-full mb-6 rounded-lg bg-green-500 dark:bg-slate-800 border-0">
+              <div className="flex flex-col min-w-0 break-words w-full mb-6 rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
                 <GoogleAnalytics />
                 {children}
                 <SpeedInsights />

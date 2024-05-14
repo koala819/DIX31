@@ -1,3 +1,5 @@
+import React from 'react'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -16,6 +18,8 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+
+import { cn } from '@/lib/utils'
 
 export default function Navbar() {
   function BookIcon(props: any) {
@@ -136,43 +140,56 @@ export default function Navbar() {
     )
   }
 
-  function MountainIcon(props: any) {
+  const ListItem = React.forwardRef<
+    React.ElementRef<'a'>,
+    React.ComponentPropsWithoutRef<'a'>
+  >(({ className, title, children, ...props }, ref) => {
     return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-      </svg>
+      <li>
+        <NavigationMenuLink asChild>
+          <a
+            ref={ref}
+            className={cn(
+              'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+              className,
+            )}
+            {...props}
+          >
+            <div className="text-sm font-medium leading-none">{title}</div>
+            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+              {children}
+            </p>
+          </a>
+        </NavigationMenuLink>
+      </li>
     )
-  }
+  })
+  ListItem.displayName = 'ListItem'
+
   return (
-    <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
+    <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 bg-blue-500 sm:bg-red-400 md:bg-green-400 lg:bg-yellow-500 xl:bg-orange-500 2xl:bg-cyan-600">
       {/* MOBILE VIEW */}
       <Sheet>
         <SheetTrigger asChild>
-          <Button className="lg:hidden" size="icon" variant="outline">
+          <Button className="md:hidden" size="icon" variant="outline">
             <MenuIcon className="h-6 w-6" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
         <SheetContent side="left">
-          <Link className="flex items-center gap-2" href="#">
-            <MountainIcon className="h-6 w-6" />
-            <span className="font-semibold">Mon Site</span>
+          <Link className="flex items-center gap-2" href="/">
+            <Image
+              src={'/images/Navbar_logo.svg'}
+              alt="DIX31 logo"
+              className="object-fill"
+              width={80}
+              height={50}
+            />
           </Link>
           <div className="grid gap-4 py-6">
             <Link
               className="flex items-center gap-2 text-lg font-medium"
-              href="#"
+              href="/"
             >
               <HomeIcon className="h-5 w-5" />
               Accueil
@@ -180,106 +197,60 @@ export default function Navbar() {
             <Collapsible className="grid gap-4">
               <CollapsibleTrigger className="flex items-center gap-2 text-lg font-medium [&[data-state=open]>svg]:rotate-90">
                 <FolderIcon className="h-5 w-5" />
-                Projets
+                Réalisations
                 <ChevronRightIcon className="ml-auto h-5 w-5 transition-all" />
               </CollapsibleTrigger>
               <CollapsibleContent>
                 <div className="-mx-6 grid gap-6 bg-gray-100 p-6 dark:bg-gray-800">
                   <Link
                     className="group grid h-auto w-full items-start gap-2"
-                    href="#"
+                    href="/projects/Club306"
                   >
-                    <Image
-                      alt="Club306"
-                      className="rounded-lg object-cover"
-                      height="150"
-                      src="/placeholder.svg"
-                      style={{
-                        aspectRatio: '200/150',
-                        objectFit: 'cover',
-                      }}
-                      width="200"
-                    />
                     <div>
                       <div className="text-sm font-medium leading-none group-hover:underline">
-                        Club306
+                        Club 306
                       </div>
                       <div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
-                        Un club pour les passionnés de sports et de loisirs.
+                        Premier club de France sur la Peugeot 306
                       </div>
                     </div>
                   </Link>
                   <Link
                     className="group grid h-auto w-full items-start gap-2"
-                    href="#"
+                    href="/projects/BonheurSurSeine"
                   >
-                    <Image
-                      alt="BonheurSurSeine"
-                      className="rounded-lg object-cover"
-                      height="150"
-                      src="/placeholder.svg"
-                      style={{
-                        aspectRatio: '200/150',
-                        objectFit: 'cover',
-                      }}
-                      width="200"
-                    />
                     <div>
                       <div className="text-sm font-medium leading-none group-hover:underline">
-                        BonheurSurSeine
+                        Bonheur Sur Seine
                       </div>
                       <div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
-                        Un projet pour rendre la Seine plus accessible aux
-                        citoyens.
+                        Site sur la gyroroue
                       </div>
                     </div>
                   </Link>
                   <Link
                     className="group grid h-auto w-full items-start gap-2"
-                    href="#"
+                    href="/projects/Thouy"
                   >
-                    <Image
-                      alt="ActivSavoirs"
-                      className="rounded-lg object-cover"
-                      height="150"
-                      src="/placeholder.svg"
-                      style={{
-                        aspectRatio: '200/150',
-                        objectFit: 'cover',
-                      }}
-                      width="200"
-                    />
                     <div>
                       <div className="text-sm font-medium leading-none group-hover:underline">
-                        ActivSavoirs
+                        Gîtes de Thouy
                       </div>
                       <div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
-                        Une plateforme d&apos;apprentissage en ligne pour tous.
+                        Location de gîtes dans le Tarn
                       </div>
                     </div>
                   </Link>
                   <Link
                     className="group grid h-auto w-full items-start gap-2"
-                    href="#"
+                    href="/projects/ActivSavoirs"
                   >
-                    <Image
-                      alt="Thouy"
-                      className="rounded-lg object-cover"
-                      height="150"
-                      src="/placeholder.svg"
-                      style={{
-                        aspectRatio: '200/150',
-                        objectFit: 'cover',
-                      }}
-                      width="200"
-                    />
                     <div>
                       <div className="text-sm font-medium leading-none group-hover:underline">
-                        Thouy
+                        Activ&apos;Savoirs
                       </div>
                       <div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
-                        Un projet de rénovation urbaine dans le quartier de
-                        Thouy.
+                        Centre de formations profesionnelles continues
                       </div>
                     </div>
                   </Link>
@@ -288,14 +259,14 @@ export default function Navbar() {
             </Collapsible>
             <Link
               className="flex items-center gap-2 text-lg font-medium"
-              href="#"
+              href="/blog"
             >
               <BookIcon className="h-5 w-5" />
               Blog
             </Link>
             <Link
               className="flex items-center gap-2 text-lg font-medium"
-              href="#"
+              href="/contact"
             >
               <MailIcon className="h-5 w-5" />
               Contact
@@ -305,133 +276,61 @@ export default function Navbar() {
       </Sheet>
 
       {/* VIEW LARGE PAGE */}
-      <NavigationMenu className="hidden lg:flex">
+      <NavigationMenu className="hidden md:flex">
         <NavigationMenuList>
           <NavigationMenuLink asChild>
             <Link
               className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-              href="#"
+              href="/"
             >
               Accueil
             </Link>
           </NavigationMenuLink>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Projets</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Réalisations</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="grid w-[600px] p-2">
-                <NavigationMenuLink asChild>
-                  <Link
-                    className="group grid h-auto w-full items-start gap-2 rounded-md bg-white p-4 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-                    href="#"
-                  >
-                    <Image
-                      alt="Club306"
-                      className="rounded-lg object-cover"
-                      height="150"
-                      src="/placeholder.svg"
-                      style={{
-                        aspectRatio: '200/150',
-                        objectFit: 'cover',
-                      }}
-                      width="200"
-                    />
-                    <div>
-                      <div className="text-sm font-medium leading-none group-hover:underline">
-                        Club306
+              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <Link
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      href="/projects/Club306"
+                    >
+                      <Image
+                        src="/images/logo-Club-306.png"
+                        alt="Logo du Club 306"
+                        width={500}
+                        height={500}
+                      />
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        Club 306
                       </div>
-                      <div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
-                        Un club pour les passionnés de sports et de loisirs.
-                      </div>
-                    </div>
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link
-                    className="group grid h-auto w-full items-start gap-2 rounded-md bg-white p-4 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-                    href="#"
-                  >
-                    <Image
-                      alt="BonheurSurSeine"
-                      className="rounded-lg object-cover"
-                      height="150"
-                      src="/placeholder.svg"
-                      style={{
-                        aspectRatio: '200/150',
-                        objectFit: 'cover',
-                      }}
-                      width="200"
-                    />
-                    <div>
-                      <div className="text-sm font-medium leading-none group-hover:underline">
-                        BonheurSurSeine
-                      </div>
-                      <div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
-                        Un projet pour rendre la Seine plus accessible aux
-                        citoyens.
-                      </div>
-                    </div>
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link
-                    className="group grid h-auto w-full items-start gap-2 rounded-md bg-white p-4 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-                    href="#"
-                  >
-                    <Image
-                      alt="ActivSavoirs"
-                      className="rounded-lg object-cover"
-                      height="150"
-                      src="/placeholder.svg"
-                      style={{
-                        aspectRatio: '200/150',
-                        objectFit: 'cover',
-                      }}
-                      width="200"
-                    />
-                    <div>
-                      <div className="text-sm font-medium leading-none group-hover:underline">
-                        ActivSavoirs
-                      </div>
-                      <div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
-                        Une plateforme d&apos;apprentissage en ligne pour tous.
-                      </div>
-                    </div>
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link
-                    className="group grid h-auto w-full items-start gap-2 rounded-md bg-white p-4 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-                    href="#"
-                  >
-                    <Image
-                      alt="Thouy"
-                      className="rounded-lg object-cover"
-                      height="150"
-                      src="/placeholder.svg"
-                      style={{
-                        aspectRatio: '200/150',
-                        objectFit: 'cover',
-                      }}
-                      width="200"
-                    />
-                    <div>
-                      <div className="text-sm font-medium leading-none group-hover:underline">
-                        Thouy
-                      </div>
-                      <div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
-                        Un projet de rénovation urbaine dans le quartier de
-                        Thouy.
-                      </div>
-                    </div>
-                  </Link>
-                </NavigationMenuLink>
-              </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        Premier club de France sur la Peugeot 306
+                      </p>
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
+                <ListItem
+                  href="/projects/BonheurSurSeine"
+                  title="Bonheur Sur Seine"
+                >
+                  Site sur la gyroroue
+                </ListItem>
+                <ListItem href="/projects/Thouy" title="Gîtes de Thouy">
+                  Location de gîtes dans le Tarn
+                </ListItem>
+                <ListItem href="/projects/ActivSavoirs" title="Activ'Savoirs">
+                  Centre de formations profesionnelles continues
+                </ListItem>
+              </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+
           <NavigationMenuLink asChild>
             <Link
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-              href="#"
+              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium transition-colors hover:bg-primary/90 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+              href="/blog"
             >
               Blog
             </Link>
@@ -439,7 +338,7 @@ export default function Navbar() {
           <NavigationMenuLink asChild>
             <Link
               className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-              href="#"
+              href="/contact"
             >
               Contact
             </Link>
