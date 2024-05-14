@@ -17,6 +17,13 @@ export const metadata: Metadata = {
   title: 'DIX31 - Création de Sites Web Personnalisés sur mesure à Toulouse',
   description:
     'Spécialiste en création de sites web personnalisés et responsive. Solutions sur mesure pour entreprises. Consultation gratuite.',
+  robots: 'index, follow',
+  alternates: {
+    canonical: '/',
+    languages: {
+      'fr-FR': '/fr-FR',
+    },
+  },
 }
 export default async function Page() {
   // const getPosts = cache(async () => {
