@@ -1,5 +1,4 @@
-import { Button } from '@nextui-org/react'
-
+// import { Button } from '@nextui-org/react'
 import dynamic from 'next/dynamic'
 // import Image from 'next/image'
 import Link from 'next/link'
@@ -40,14 +39,14 @@ export default function Hero() {
             complexités.
           </p>
 
-          <Link href="/contact" className="flex justify-center">
-            <Button
-              // color={theme === 'dark' ? 'warning' : 'primary'}
-              variant="shadow"
-            >
-              Commencez votre projet
-            </Button>
-          </Link>
+          {/* <Link href="/contact" className="flex justify-center">
+          <Button
+            // color={theme === 'dark' ? 'warning' : 'primary'}
+            variant="shadow"
+          >
+            Commencez votre projet
+          </Button>
+          </Link> */}
         </div>
       </aside>
       <aside className="w-full lg:w-1/2">
