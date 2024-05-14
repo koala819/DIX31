@@ -1,10 +1,12 @@
 // import React, { Suspense, lazy } from 'react'
 // import { cache } from 'react'
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 
 // import { comments } from '@/utils/comments'
 // import { client } from '@/lib/sanity'
-import Hero from '@/ui/atoms/Hero'
+// import Hero from '@/ui/atoms/Hero'
+const Hero = dynamic(() => import('@/ui/atoms/Hero'))
 
 // const Blog = lazy(() => import('@/ui/atoms/Blog'))
 // const Projets = lazy(() => import('@/ui/atoms/Projets'))
