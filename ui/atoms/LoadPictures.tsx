@@ -1,5 +1,4 @@
-import { Image as ImageNextUI } from '@nextui-org/react'
-
+// import { Image as ImageNextUI } from '@nextui-org/react'
 import Image from 'next/image'
 
 const LoadPictures = ({
@@ -30,7 +29,7 @@ const LoadPictures = ({
           objectFit={objectFit}
           layout={layout}
         />
-      ) : layout === 'responsive' ? (
+      ) : (
         <Image
           src={src}
           alt={alt}
@@ -40,15 +39,6 @@ const LoadPictures = ({
           className={className}
           objectFit={objectFit}
           layout={layout}
-        />
-      ) : (
-        <ImageNextUI
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          loading="lazy"
-          className={className}
         />
       )}
     </div>

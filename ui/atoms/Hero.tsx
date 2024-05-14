@@ -1,9 +1,12 @@
-import { Button } from '@nextui-org/react'
-
-import Image from 'next/image'
+// import { Button } from '@nextui-org/react'
+import dynamic from 'next/dynamic'
+// import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Hero() {
+  const WithCustomLoading = dynamic(() => import('@/ui/atoms/LoadPictures'), {
+    loading: () => <div>Chargement ...</div>,
+  })
   return (
     <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
       <div className="flex flex-wrap justify-between">
@@ -36,14 +39,14 @@ export default function Hero() {
             complexités.
           </p>
 
-          {/* <Link href="/contact" className="flex justify-center">*/}
+          {/* <Link href="/contact" className="flex justify-center">
           <Button
             // color={theme === 'dark' ? 'warning' : 'primary'}
             variant="shadow"
           >
             Commencez votre projet
           </Button>
-          {/*</Link> */}
+          </Link> */}
         </div>
       </aside>
       <aside className="w-full lg:w-1/2">
@@ -57,7 +60,7 @@ export default function Hero() {
             />
           </LazyLoad> */}
         <picture className="hidden md:flex w-full justify-center p-8">
-          <Image
+          <WithCustomLoading
             src="/images/Accompagner.webp"
             alt="Accompagner"
             layout="responsive"
