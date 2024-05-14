@@ -40,8 +40,10 @@ const LoadPictures = ({
           height={height}
           className={className}
           objectFit={objectFit}
+          loading="lazy"
+
           // layout={layout}
-          priority={priority}
+          // priority={priority}
         />
       )}
     </div>
