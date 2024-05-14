@@ -1,8 +1,8 @@
 // import { Analytics } from '@vercel/analytics/react'
 // import { Suspense, lazy } from 'react'
 import { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 
-// import { Inter } from 'next/font/google'
 // import { ThemeProviders } from '@/app/provider'
 import '@/styles/globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -15,13 +15,13 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 // const Footer = lazy(() => import('@/ui/templates/Footer'))
 // const Navbar = lazy(() => import('@/ui/templates/Navbar'))
 
-// const inter = Inter({
-//   weight: ['400', '700'],
-//   style: ['normal'],
-//   subsets: ['latin'],
-//   variable: '--font-inter',
-//   display: 'swap',
-// })
+const inter = Inter({
+  weight: ['400', '700'],
+  style: ['normal'],
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.CLIENT_URL}`),
@@ -55,9 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body
-      // className={`${inter.variable}`}
-      >
+      <body className={`${inter.variable}`}>
         {/* <ThemeProviders> */}
         <div className="min-h-screen min-w-screen">
           {/* <Suspense fallback={<div>Chargement ...</div>}>

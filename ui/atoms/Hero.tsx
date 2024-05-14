@@ -3,6 +3,8 @@ import dynamic from 'next/dynamic'
 // import Image from 'next/image'
 import Link from 'next/link'
 
+import { Button } from '@/components/ui/button'
+
 export default function Hero() {
   const WithCustomLoading = dynamic(() => import('@/ui/atoms/LoadPictures'), {
     loading: () => <div>Chargement ...</div>,
@@ -10,43 +12,29 @@ export default function Hero() {
   return (
     <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
       <div className="flex flex-wrap justify-between bg-green-200">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-600 dark:text-gray-200 mb-6 bg-red-300">
-          Créez avec Liberté, Vivez sans Limite
+        <h1 className="font-sans text-4xl md:text-6xl font-bold text-gray-600 dark:text-gray-200 mb-6 bg-red-300">
+          Votre vision est ma mission !
         </h1>
       </div>
       <aside className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/2 lg:pb-24">
         <div className="container mx-auto px-4">
-          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
-            Dans l&apos;arène numérique, où la simplicité rencontre
-            l&apos;innovation, je forge des sites web qui parlent...
-            <Link
-              href="https://www.bonheursurseine.com/"
-              target="_blank"
-              className="underline hover:text-blue-600 dark:hover:text-orange-600 font-bold"
-            >
-              BonheurSurSeine
-            </Link>
-            à l&apos;esprit communautaire du
-            <Link
-              href="https://www.club306.fr/"
-              target="_blank"
-              className="underline hover:text-blue-600 dark:hover:text-orange-600 font-bold"
-            >
-              Club 306
-            </Link>
-            , mon approche, centrée sur votre besoin est ma devise. Ensemble,
-            émancipons votre projet du labyrinthe des abonnements et des
-            complexités.
+          <p className="font-sans text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
+            Libérons ensemble votre projet des complexités et des contraintes
+            des abonnements pour naviguer sereinement dans le paysage numérique.
+            Découvrez l&apos;excellence professionnelle et associez-vous à moi
+            pour transformer vos idées numériques en réalité. Contactez-moi dès
+            aujourd&apos;hui et franchissez le premier pas vers
+            l&apos;émancipation de votre projet
           </p>
 
-          {/* <Link href="/contact" className="flex justify-center">
-          <Button
+          <Link href="/contact" className="flex justify-center">
+            <Button
             // color={theme === 'dark' ? 'warning' : 'primary'}
-            variant="shadow"
-          >
-            Commencez votre projet
-          </Button>
-          </Link> */}
+            // variant="shadow"
+            >
+              Commencez votre projet
+            </Button>
+          </Link>
         </div>
       </aside>
       <aside className="w-full lg:w-1/2">
