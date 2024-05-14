@@ -9,6 +9,7 @@ const LoadPictures = ({
   className,
   objectFit,
   layout,
+  priority,
 }: {
   src: any
   alt: string
@@ -17,6 +18,7 @@ const LoadPictures = ({
   className?: string
   objectFit?: string
   layout?: string
+  priority?: boolean
 }) => {
   return (
     <div>
@@ -28,6 +30,7 @@ const LoadPictures = ({
           className={className}
           objectFit={objectFit}
           layout={layout}
+          priority={priority}
         />
       ) : (
         <Image
@@ -39,6 +42,7 @@ const LoadPictures = ({
           className={className}
           objectFit={objectFit}
           layout={layout}
+          priority={priority}
         />
       )}
     </div>

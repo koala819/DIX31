@@ -62,10 +62,11 @@ export default function Hero() {
         <picture className="hidden md:flex w-full justify-center p-8">
           <WithCustomLoading
             src="/images/Accompagner.webp"
-            alt="Accompagner"
+            alt="dix31 vous accompagne dans votre projet"
             layout="responsive"
             width={700}
             height={400}
+            priority
           />
         </picture>
       </aside>
