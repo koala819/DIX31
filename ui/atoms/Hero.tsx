@@ -1,13 +1,34 @@
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
+import { Skeleton } from '@/components/ui/skeleton'
 
 const WithCustomLoading = dynamic(() => import('@/ui/atoms/LoadPictures'), {
   loading: () => <div>Chargement ...</div>,
 })
 
 export default function Hero() {
+  const shimmer = (w: number, h: number) => `
+<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="g">
+      <stop stop-color="#333" offset="20%" />
+      <stop stop-color="#222" offset="50%" />
+      <stop stop-color="#333" offset="70%" />
+    </linearGradient>
+  </defs>
+  <rect width="${w}" height="${h}" fill="#333" />
+  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+</svg>`
+
+  const toBase64 = (str: string) =>
+    typeof window === 'undefined'
+      ? Buffer.from(str).toString('base64')
+      : window.btoa(str)
+
   return (
     <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 bg-blue-500 sm:bg-red-400 md:bg-green-400 lg:bg-yellow-500 xl:bg-orange-500 2xl:border-l-cyan-600">
       <h1 className="font-sans text-4xl md:text-6xl font-bold text-gray-600 dark:text-gray-200 mb-6">
@@ -15,10 +36,11 @@ export default function Hero() {
       </h1>
       <section className="lg:flex">
         <aside className="w-full lg:hidden">
-          <WithCustomLoading
+          <Image
             src="/images/Accompagnement-dix31-mobile.webp"
             alt="dix31 vous accompagne dans votre projet"
             className="responsive"
+            placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
             width={350}
             height={200}
             priority
