@@ -10,16 +10,14 @@ import {
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from '@/components/ui/navigation-menu'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
-export default function Navbar() {
+export function NavBar() {
   function BookIcon(props: any) {
     return (
       <svg
@@ -156,9 +154,9 @@ export default function Navbar() {
       </svg>
     )
   }
+
   return (
     <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
-      {/* MOBILE VIEW */}
       <Sheet>
         <SheetTrigger asChild>
           <Button className="lg:hidden" size="icon" variant="outline">
@@ -305,20 +303,7 @@ export default function Navbar() {
           </div>
         </SheetContent>
       </Sheet>
-
-      {/* VIEW LARGE PAGE */}
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <NavigationMenuLink>Link</NavigationMenuLink>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-
-      {/* <NavigationMenu className="hidden lg:flex">
+      <NavigationMenu className="hidden lg:flex">
         <NavigationMenuList>
           <NavigationMenuLink asChild>
             <Link
@@ -328,8 +313,137 @@ export default function Navbar() {
               Accueil
             </Link>
           </NavigationMenuLink>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Projets</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <div className="grid w-[600px] p-2">
+                <NavigationMenuLink asChild>
+                  <Link
+                    className="group grid h-auto w-full items-start gap-2 rounded-md bg-white p-4 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+                    href="#"
+                  >
+                    <Image
+                      alt="Club306"
+                      className="rounded-lg object-cover"
+                      height="150"
+                      src="/placeholder.svg"
+                      style={{
+                        aspectRatio: '200/150',
+                        objectFit: 'cover',
+                      }}
+                      width="200"
+                    />
+                    <div>
+                      <div className="text-sm font-medium leading-none group-hover:underline">
+                        Club306
+                      </div>
+                      <div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
+                        Un club pour les passionnés de sports et de loisirs.
+                      </div>
+                    </div>
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link
+                    className="group grid h-auto w-full items-start gap-2 rounded-md bg-white p-4 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+                    href="#"
+                  >
+                    <Image
+                      alt="BonheurSurSeine"
+                      className="rounded-lg object-cover"
+                      height="150"
+                      src="/placeholder.svg"
+                      style={{
+                        aspectRatio: '200/150',
+                        objectFit: 'cover',
+                      }}
+                      width="200"
+                    />
+                    <div>
+                      <div className="text-sm font-medium leading-none group-hover:underline">
+                        BonheurSurSeine
+                      </div>
+                      <div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
+                        Un projet pour rendre la Seine plus accessible aux
+                        citoyens.
+                      </div>
+                    </div>
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link
+                    className="group grid h-auto w-full items-start gap-2 rounded-md bg-white p-4 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+                    href="#"
+                  >
+                    <Image
+                      alt="ActivSavoirs"
+                      className="rounded-lg object-cover"
+                      height="150"
+                      src="/placeholder.svg"
+                      style={{
+                        aspectRatio: '200/150',
+                        objectFit: 'cover',
+                      }}
+                      width="200"
+                    />
+                    <div>
+                      <div className="text-sm font-medium leading-none group-hover:underline">
+                        ActivSavoirs
+                      </div>
+                      <div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
+                        Une plateforme d&apos;apprentissage en ligne pour tous.
+                      </div>
+                    </div>
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link
+                    className="group grid h-auto w-full items-start gap-2 rounded-md bg-white p-4 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+                    href="#"
+                  >
+                    <Image
+                      alt="Thouy"
+                      className="rounded-lg object-cover"
+                      height="150"
+                      src="/placeholder.svg"
+                      style={{
+                        aspectRatio: '200/150',
+                        objectFit: 'cover',
+                      }}
+                      width="200"
+                    />
+                    <div>
+                      <div className="text-sm font-medium leading-none group-hover:underline">
+                        Thouy
+                      </div>
+                      <div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
+                        Un projet de rénovation urbaine dans le quartier de
+                        Thouy.
+                      </div>
+                    </div>
+                  </Link>
+                </NavigationMenuLink>
+              </div>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuLink asChild>
+            <Link
+              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+              href="#"
+            >
+              Blog
+            </Link>
+          </NavigationMenuLink>
+          <NavigationMenuLink asChild>
+            <Link
+              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+              href="#"
+            >
+              Contact
+            </Link>
+          </NavigationMenuLink>
         </NavigationMenuList>
-      </NavigationMenu> */}
+      </NavigationMenu>
     </header>
   )
 }
