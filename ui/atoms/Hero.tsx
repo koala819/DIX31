@@ -14,16 +14,16 @@ export default function Hero() {
         Votre vision est ma mission !
       </h1>
       <section className="lg:flex">
-        {/* <aside className="w-full lg:hidden">
+        <aside className="w-full lg:hidden">
           <WithCustomLoading
-            src="/images/Accompagner.webp"
+            src="/images/Accompagnement-dix31-mobile.webp"
             alt="dix31 vous accompagne dans votre projet"
             className="responsive"
-            width={700}
-            height={400}
+            width={350}
+            height={200}
             priority
           />
-        </aside> */}
+        </aside>
         <aside className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/2 lg:pb-24 bg-blue-200">
           <div className="container mx-auto px-4">
             <p className="font-sans text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
@@ -44,7 +44,7 @@ export default function Hero() {
         <aside className="hidden lg:block lg:w-1/2 bg-purple-500">
           <picture className="hidden md:flex w-full justify-center p-8">
             <WithCustomLoading
-              src="/images/Accompagner.webp"
+              src="/images/Accompagnement-avec-dix31.webp"
               alt="dix31 vous accompagne dans votre projet"
               className="responsive"
               width={700}
