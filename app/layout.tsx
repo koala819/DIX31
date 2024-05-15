@@ -6,7 +6,7 @@ import { Inter } from 'next/font/google'
 
 import { ThemeProvider } from '@/app/provider'
 import '@/styles/globals.css'
-import GoogleAnalytics from '@/ui/atoms/GoogleAnalytics'
+// import GoogleAnalytics from '@/ui/atoms/GoogleAnalytics'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const Navbar = lazy(() => import('@/ui/templates/Navbar'))
@@ -66,7 +66,7 @@ export default function RootLayout({
             <main className="flex-1">
               <div className="w-full px-4 mx-auto mt-6">
                 <div className="flex flex-col min-w-0 break-words w-full mb-6 rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
-                  <GoogleAnalytics />
+                  {/* <GoogleAnalytics /> */}
                   {children}
                   <SpeedInsights />
                   <Analytics />
