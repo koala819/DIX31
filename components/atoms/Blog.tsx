@@ -34,6 +34,8 @@ export default function Blog({ posts }: any) {
                       ? post.titleImagebyCloudinary.alt
                       : post.title
                   }
+                  width={500}
+                  height={300}
                 />
 
                 <Link
