@@ -1,9 +1,9 @@
 'use client'
 
-import { Button, Card, CardFooter } from '@nextui-org/react'
-
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
 
 export default function Projects() {
   return (
@@ -21,8 +21,8 @@ export default function Projects() {
 
         <Link href="/contact">
           <Button
-            variant="shadow"
-            color="primary"
+            // variant="shadow"
+            // color="primary"
             className="dark:bg-orange-600 dark:text-black dark:font-extrabold hover:underline"
           >
             Me Contacter
@@ -30,7 +30,7 @@ export default function Projects() {
         </Link>
       </section>
       <section className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-32 mb-8 p-8 ">
-        <Card isFooterBlurred radius="lg" className="border-none">
+        {/* <Card isFooterBlurred radius="lg" className="border-none">
           <Image
             alt="Bonheur Sur Seine website"
             className="object-cover w-full h-full"
@@ -150,7 +150,7 @@ export default function Projects() {
               </Button>
             </Link>
           </CardFooter>
-        </Card>
+        </Card> */}
         {/* <Card isFooterBlurred radius='lg' className='border-none'>
           <Image
             alt='First memory game'

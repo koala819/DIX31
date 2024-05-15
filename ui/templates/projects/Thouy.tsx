@@ -1,8 +1,10 @@
 'use client'
 
-import { Button, Chip, Image, Tooltip } from '@nextui-org/react'
-
+import Image from 'next/image'
+// import { Button, Chip, Image, Tooltip } from '@nextui-org/react'
 import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
 
 export default function Thouy() {
   return (
@@ -18,7 +20,7 @@ export default function Thouy() {
             pittoresque.
           </p>
           <div className="md:flex items-center space-x-4 mt-12 justify-center space-y-2 md:space-y-0">
-            <Chip
+            {/* <Chip
               color="primary"
               className="dark:bg-orange-500 dark:text-black"
             >
@@ -35,7 +37,7 @@ export default function Thouy() {
               className="dark:bg-orange-500 dark:text-black"
             >
               Site Vitrine
-            </Chip>
+            </Chip> */}
           </div>
         </div>
         <picture className="w-full md:w-1/2 flex justify-center">
@@ -58,28 +60,28 @@ export default function Thouy() {
         <div className="text-center space-y-4 p-2 border-1 rounded-lg border-gray-300">
           <p className="font-bold text-lg">Consulter le projet</p>
           <div className="space-x-2">
-            <Tooltip
+            {/* <Tooltip
               content="Code non disponible"
               className="cursor-not-allowed"
-            >
-              <Button className="cursor-not-allowed" size="sm" variant="shadow">
-                Github
-              </Button>
-            </Tooltip>
+            > */}
+            <Button className="cursor-not-allowed" size="sm">
+              Github
+            </Button>
+            {/* </Tooltip> */}
             <Link
               href="https://web.archive.org/web/20150221195549/http:/www.gites-tarn-thouy.com/index.php"
               target="_blank"
             >
-              <Tooltip content="Archive du site de 2011">
-                <Button
-                  size="sm"
-                  color="primary"
-                  className="mt-2 md:mt-0 dark:bg-orange-500 dark:text-black hover:underline"
-                  variant="shadow"
-                >
-                  Visiter
-                </Button>
-              </Tooltip>
+              {/* <Tooltip content="Archive du site de 2011"> */}
+              <Button
+                size="sm"
+                color="primary"
+                className="mt-2 md:mt-0 dark:bg-orange-500 dark:text-black hover:underline"
+                // variant="shadow"
+              >
+                Visiter
+              </Button>
+              {/* </Tooltip> */}
             </Link>
           </div>
         </div>
@@ -111,7 +113,7 @@ export default function Thouy() {
       <section className="w-full p-4 flex flex-col space-y-8">
         <h1 className="text-3xl font-bold">Stacks utilisées</h1>
         <div className="flex items-center justify-center space-x-4">
-          <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
+          {/* <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
             HTML
           </Chip>
           <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
@@ -119,7 +121,7 @@ export default function Thouy() {
           </Chip>
           <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
             PHP
-          </Chip>
+          </Chip> */}
         </div>
       </section>
       <Link
@@ -127,7 +129,7 @@ export default function Thouy() {
         className="w-full flex flex-col my-32 items-center"
       >
         <Button
-          variant="shadow"
+          // variant="shadow"
           color="primary"
           className="dark:bg-orange-500 dark:text-black hover:underline"
         >

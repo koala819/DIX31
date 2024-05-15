@@ -1,8 +1,10 @@
 'use client'
 
-import { Button, Image } from '@nextui-org/react'
-
+// import { Button, Image } from '@nextui-org/react'
+import Image from 'next/image'
 import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
 
 import { useTheme } from '@/context/ThemeContext'
 
@@ -86,7 +88,7 @@ export default function Projets() {
         <Link href="/contact">
           <Button
             color={theme === 'dark' ? 'warning' : 'primary'}
-            variant="shadow"
+            // variant="shadow"
           >
             Commençons notre Collaboration
           </Button>

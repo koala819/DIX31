@@ -1,7 +1,7 @@
 'use client'
 
-import { Tooltip } from '@nextui-org/react'
-import { Button } from '@nextui-org/react'
+// import { Tooltip } from '@nextui-org/react'
+// import { Button } from '@nextui-org/react'
 import { Controller, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa'
@@ -9,6 +9,8 @@ import { LuCopyleft } from 'react-icons/lu'
 
 import Image from 'next/image'
 import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
 
 import { useTheme } from '@/context/ThemeContext'
 import Footer_dark_logo from '@/public/images/Footer_dark_logo.png'
@@ -99,7 +101,7 @@ export default function Footer() {
                 type="submit"
                 className="ml-4 text-sm font-medium "
                 color={theme === 'dark' ? 'warning' : 'primary'}
-                variant="shadow"
+                // variant="shadow"
               >
                 S&apos;abonner
               </Button>
@@ -186,36 +188,36 @@ export default function Footer() {
               <p> {currentYear} by Xavier</p>
             </text>
             <picture className="flex justify-center w-full lg:ml-auto space-x-8 sm:mt-0 mt-2">
-              <Tooltip showArrow={true} color="primary" content="Linkedin">
-                <Link
-                  href="https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390/"
-                  target="_blank"
-                  className="text-gray-500 dark:text-gray-200 dark:hover:text-blue-500 hover:text-blue-500"
-                  aria-label="Visitez mon profil LinkedIn"
-                >
-                  <FaLinkedin size={24} className="hover:fill-blue-500" />
-                </Link>
-              </Tooltip>
-              <Tooltip showArrow={true} color="danger" content="Youtube">
-                <Link
-                  href="https://www.youtube.com/channel/UCcQkYLTdSUjYHsof8fUwrng"
-                  target="_blank"
-                  className="text-gray-500 dark:text-gray-200 dark:hover:text-red-500 hover:text-red-500"
-                  aria-label="Visitez ma chaîne YouTube"
-                >
-                  <FaYoutube size={24} className="hover:fill-red-500" />
-                </Link>
-              </Tooltip>
-              <Tooltip showArrow={true} color="default" content="Github">
-                <Link
-                  href="https://github.com/koala819/"
-                  target="_blank"
-                  className="ml-3 text-gray-500 dark:text-gray-200 dark:hover:text-yellow-500 hover:text-yellow-500"
-                  aria-label="Visitez mon profil GitHub"
-                >
-                  <FaGithub size={24} />
-                </Link>
-              </Tooltip>
+              {/* <Tooltip showArrow={true} color="primary" content="Linkedin"> */}
+              <Link
+                href="https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390/"
+                target="_blank"
+                className="text-gray-500 dark:text-gray-200 dark:hover:text-blue-500 hover:text-blue-500"
+                aria-label="Visitez mon profil LinkedIn"
+              >
+                <FaLinkedin size={24} className="hover:fill-blue-500" />
+              </Link>
+              {/* </Tooltip> */}
+              {/* <Tooltip showArrow={true} color="danger" content="Youtube"> */}
+              <Link
+                href="https://www.youtube.com/channel/UCcQkYLTdSUjYHsof8fUwrng"
+                target="_blank"
+                className="text-gray-500 dark:text-gray-200 dark:hover:text-red-500 hover:text-red-500"
+                aria-label="Visitez ma chaîne YouTube"
+              >
+                <FaYoutube size={24} className="hover:fill-red-500" />
+              </Link>
+              {/* </Tooltip> */}
+              {/* <Tooltip showArrow={true} color="default" content="Github"> */}
+              <Link
+                href="https://github.com/koala819/"
+                target="_blank"
+                className="ml-3 text-gray-500 dark:text-gray-200 dark:hover:text-yellow-500 hover:text-yellow-500"
+                aria-label="Visitez mon profil GitHub"
+              >
+                <FaGithub size={24} />
+              </Link>
+              {/* </Tooltip> */}
             </picture>
           </section>
         </div>

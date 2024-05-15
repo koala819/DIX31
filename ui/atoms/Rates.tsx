@@ -1,9 +1,11 @@
 'use client'
 
-import { Button } from '@nextui-org/react'
+// import { Button } from '@nextui-org/react'
 import { AiFillCheckCircle } from 'react-icons/ai'
 
 import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
 
 import { useTheme } from '@/context/ThemeContext'
 
@@ -111,7 +113,7 @@ export default function Rates() {
                   <Link href="/contact" className="w-full">
                     <Button
                       color={theme === 'dark' ? 'warning' : 'primary'}
-                      variant="shadow"
+                      // variant="shadow"
                     >
                       Commander
                     </Button>

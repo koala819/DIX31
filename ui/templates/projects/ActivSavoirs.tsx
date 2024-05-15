@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Chip, Image, Tooltip } from '@nextui-org/react'
+// import { Button, Chip, Image, Tooltip } from '@nextui-org/react'
 import { useState } from 'react'
 import PhotoAlbum from 'react-photo-album'
 import Lightbox from 'yet-another-react-lightbox'
@@ -12,7 +12,10 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css'
 import Zoom from 'yet-another-react-lightbox/plugins/zoom'
 import 'yet-another-react-lightbox/styles.css'
 
+import Image from 'next/image'
 import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
 
 export default function Page() {
   const [index, setIndex] = useState<number>(-1)
@@ -52,7 +55,7 @@ export default function Page() {
             couvrant neuf thématiques clés.
           </p>
           <div className="md:flex items-center space-x-4 mt-12 justify-center space-y-2 md:space-y-0">
-            <Chip
+            {/* <Chip
               color="primary"
               className="dark:bg-orange-500 dark:text-black"
             >
@@ -69,7 +72,7 @@ export default function Page() {
               className="dark:bg-orange-500 dark:text-black"
             >
               Site Vitrine
-            </Chip>
+            </Chip> */}
           </div>
         </div>
         <div className="flex justify-center w-full md:w-1/2 p-6">
@@ -105,21 +108,21 @@ export default function Page() {
                 Github
               </Button>
             </Link> */}
-            <Tooltip
+            {/* <Tooltip
               content="Code non disponible"
               className="cursor-not-allowed"
-            >
-              <Button className="cursor-not-allowed" size="sm" variant="shadow">
-                Github
-              </Button>
-            </Tooltip>
+            > */}
+            <Button className="cursor-not-allowed" size="sm">
+              Github
+            </Button>
+            {/* </Tooltip> */}
 
             <Link href="https://active-savoirs.vercel.app/" target="_blank">
               <Button
                 size="sm"
                 color="primary"
                 className="mt-2 md:mt-0 dark:bg-orange-500 dark:text-black hover:underline"
-                variant="shadow"
+                // variant="shadow"
               >
                 Visiter
               </Button>
@@ -181,7 +184,7 @@ export default function Page() {
       <section className="w-full p-4 flex flex-col space-y-8">
         <h1 className="text-3xl font-bold">Stacks utilisées</h1>
         <div className="flex items-center justify-center space-x-4">
-          <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
+          {/* <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
             Next.JS
           </Chip>
           <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
@@ -192,7 +195,7 @@ export default function Page() {
           </Chip>
           <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
             Prismic
-          </Chip>
+          </Chip> */}
         </div>
       </section>
 
@@ -223,7 +226,7 @@ export default function Page() {
         className="w-full flex flex-col my-32 items-center"
       >
         <Button
-          variant="shadow"
+          // variant="shadow"
           color="primary"
           className="dark:bg-orange-500 dark:text-black hover:underline"
         >

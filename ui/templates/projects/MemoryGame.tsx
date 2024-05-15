@@ -1,85 +1,88 @@
-"use client";
-import { Chip, Button } from "@nextui-org/react";
-import Image from "next/image";
-import Link from "next/link";
+'use client'
+
+// import { Chip, Button } from "@nextui-org/react";
+import Image from 'next/image'
+import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
 
 export default function MemoryGame() {
   return (
     <>
-      <section className='text-gray-600 dark:text-gray-300 md:flex items-center justify-center p-4 '>
-        <div className='w-full md:w-1/2 p-4'>
-          <h1 className='title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 dark:text-gray-200'>
+      <section className="text-gray-600 dark:text-gray-300 md:flex items-center justify-center p-4 ">
+        <div className="w-full md:w-1/2 p-4">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 dark:text-gray-200">
             Memory Game
           </h1>
-          <p className='mb-8 leading-relaxed'>
+          <p className="mb-8 leading-relaxed">
             J&apos;ai créé ce jeu avec passion pour renforcer mes compétences en
             JavaScript tout en offrant à mon fils une expérience ludique pour
             maîtriser l&apos;utilisation de la souris.
           </p>
-          <div className='md:flex items-center space-x-4 mt-12 justify-center space-y-2 md:space-y-0'>
-            <Chip
-              color='primary'
-              className='dark:bg-orange-500 dark:text-black'
+          <div className="md:flex items-center space-x-4 mt-12 justify-center space-y-2 md:space-y-0">
+            {/* <Chip
+              color="primary"
+              className="dark:bg-orange-500 dark:text-black"
             >
               Projet Solo
             </Chip>
             <Chip
-              color='primary'
-              className='dark:bg-orange-500 dark:text-black'
+              color="primary"
+              className="dark:bg-orange-500 dark:text-black"
             >
               Jeux Educatif
             </Chip>
             <Chip
-              color='primary'
-              className='dark:bg-orange-500 dark:text-black'
+              color="primary"
+              className="dark:bg-orange-500 dark:text-black"
             >
               Projet Perso
-            </Chip>
+            </Chip> */}
           </div>
         </div>
-        <div className='flex justify-center w-full md:w-1/2 p-6'>
+        <div className="flex justify-center w-full md:w-1/2 p-6">
           <Image
-            alt='Memory Game project'
-            className='object-cover'
+            alt="Memory Game project"
+            className="object-cover"
             height={400}
-            src='/images/gameMemory.jpg'
+            src="/images/gameMemory.jpg"
             width={400}
           />
         </div>
       </section>
-      <section className='w-full mx-auto grid md:grid-cols-4 gap-x-4 p-4 space-y-12 md:space-y-0'>
-        <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
-          <p className='font-bold text-lg'>Secteur</p>
+      <section className="w-full mx-auto grid md:grid-cols-4 gap-x-4 p-4 space-y-12 md:space-y-0">
+        <div className="text-center space-y-4 p-2 border-1 rounded-lg border-gray-300">
+          <p className="font-bold text-lg">Secteur</p>
           <p>Familiale</p>
         </div>
-        <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
-          <p className='font-bold text-lg'>Type de projet</p>
+        <div className="text-center space-y-4 p-2 border-1 rounded-lg border-gray-300">
+          <p className="font-bold text-lg">Type de projet</p>
           <p>JavaScript</p>
         </div>
-        <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
-          <p className='font-bold text-lg'>Date de livraison</p>
+        <div className="text-center space-y-4 p-2 border-1 rounded-lg border-gray-300">
+          <p className="font-bold text-lg">Date de livraison</p>
           <p>2020</p>
         </div>
-        <div className='text-center space-y-4 p-2 border-1 rounded-lg border-gray-300'>
-          <p className='font-bold text-lg'>Consulter le projet</p>
-          <div className='space-x-2'>
-            <Link href='https://github.com/koala819/MemoryGame' target='_blank'>
+        <div className="text-center space-y-4 p-2 border-1 rounded-lg border-gray-300">
+          <p className="font-bold text-lg">Consulter le projet</p>
+          <div className="space-x-2">
+            <Link href="https://github.com/koala819/MemoryGame" target="_blank">
               <Button
-                size='sm'
-                color='primary'
-                className='mt-2 md:mt-0 dark:bg-orange-500 dark:text-black hover:underline'
-                variant='shadow'
+                size="sm"
+                color="primary"
+                className="mt-2 md:mt-0 dark:bg-orange-500 dark:text-black hover:underline"
+                // variant="shadow"
               >
                 Github
               </Button>
             </Link>
 
-            <Link href='https://memorygame819.netlify.app/' target='_blank'>
+            <Link href="https://memorygame819.netlify.app/" target="_blank">
               <Button
-                size='sm'
-                color='primary'
-                className='mt-2 md:mt-0 dark:bg-orange-500 dark:text-black hover:underline'
-                variant='shadow'
+                size="sm"
+                color="primary"
+                className="mt-2 md:mt-0 dark:bg-orange-500 dark:text-black hover:underline"
+                // variant="shadow"
               >
                 Visiter
               </Button>
@@ -87,9 +90,9 @@ export default function MemoryGame() {
           </div>
         </div>
       </section>
-      <section className='w-full p-4 md:flex md:space-x-8 space-y-12 md:space-y-0'>
-        <div className='md:w-1/2 space-y-8 text-justify'>
-          <h1 className='text-3xl font-bold'>Challenge technique</h1>
+      <section className="w-full p-4 md:flex md:space-x-8 space-y-12 md:space-y-0">
+        <div className="md:w-1/2 space-y-8 text-justify">
+          <h1 className="text-3xl font-bold">Challenge technique</h1>
           <p>
             Le défi de ce projet réside dans sa nature d&apos;être mon premier
             projet JavaScript. Il nécessitait la maîtrise des concepts
@@ -99,8 +102,8 @@ export default function MemoryGame() {
             développement web.
           </p>
         </div>
-        <div className='md:w-1/2 space-y-8 text-justify'>
-          <h1 className='text-3xl font-bold'>Stratégie</h1>
+        <div className="md:w-1/2 space-y-8 text-justify">
+          <h1 className="text-3xl font-bold">Stratégie</h1>
           <p>
             Mon approche pour ce projet en solitaire a débuté par une solide
             compréhension des bases de JavaScript. J&apos;ai ensuite exploré
@@ -112,35 +115,35 @@ export default function MemoryGame() {
           </p>
         </div>
       </section>
-      <section className='w-full p-4 flex flex-col space-y-8'>
-        <h1 className='text-3xl font-bold'>Stacks utilisées</h1>
-        <div className='flex items-center justify-center space-x-4'>
-          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+      <section className="w-full p-4 flex flex-col space-y-8">
+        <h1 className="text-3xl font-bold">Stacks utilisées</h1>
+        <div className="flex items-center justify-center space-x-4">
+          {/* <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
             HTML
           </Chip>
-          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+          <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
             CSS
           </Chip>
-          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+          <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
             JavaScript
           </Chip>
-          <Chip color='primary' className='dark:bg-orange-500 dark:text-black'>
+          <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
             Netlify
-          </Chip>
+          </Chip> */}
         </div>
       </section>
       <Link
-        href='/projects'
-        className='w-full flex flex-col my-32 items-center'
+        href="/projects"
+        className="w-full flex flex-col my-32 items-center"
       >
         <Button
-          variant='shadow'
-          color='primary'
-          className='dark:bg-orange-500 dark:text-black hover:underline'
+          // variant="shadow"
+          color="primary"
+          className="dark:bg-orange-500 dark:text-black hover:underline"
         >
           Retour
         </Button>
       </Link>
     </>
-  );
+  )
 }

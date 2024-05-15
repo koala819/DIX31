@@ -4,7 +4,7 @@ import { Suspense, lazy } from 'react'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-// import { ThemeProviders } from '@/app/provider'
+import { ThemeProvider } from '@/app/provider'
 import '@/styles/globals.css'
 import GoogleAnalytics from '@/ui/atoms/GoogleAnalytics'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -56,27 +56,32 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body className={`${inter.variable}`}>
-        {/* <ThemeProviders> */}
-        <div className="min-h-screen min-w-screen">
-          <Suspense fallback={<div>Chargement ...</div>}>
-            <Navbar />
-          </Suspense>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="min-h-screen min-w-screen">
+            <Suspense fallback={<div>Chargement ...</div>}>
+              <Navbar />
+            </Suspense>
 
-          <main className="flex-1">
-            <div className="w-full px-4 mx-auto mt-6">
-              <div className="flex flex-col min-w-0 break-words w-full mb-6 rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
-                <GoogleAnalytics />
-                {children}
-                <SpeedInsights />
-                <Analytics />
+            <main className="flex-1">
+              <div className="w-full px-4 mx-auto mt-6">
+                <div className="flex flex-col min-w-0 break-words w-full mb-6 rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
+                  <GoogleAnalytics />
+                  {children}
+                  <SpeedInsights />
+                  <Analytics />
+                </div>
               </div>
-            </div>
-          </main>
-          {/* <Suspense fallback={<div>Chargement ...</div>}>
+            </main>
+            {/* <Suspense fallback={<div>Chargement ...</div>}>
               <Footer />
             </Suspense> */}
-        </div>
-        {/* </ThemeProviders> */}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Chip, Image } from '@nextui-org/react'
+// import { Button, Chip, Image } from '@nextui-org/react'
 import { useState } from 'react'
 import PhotoAlbum from 'react-photo-album'
 import Lightbox from 'yet-another-react-lightbox'
@@ -12,7 +12,10 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css'
 import Zoom from 'yet-another-react-lightbox/plugins/zoom'
 import 'yet-another-react-lightbox/styles.css'
 
+import Image from 'next/image'
 import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
 
 export default function Club306() {
   const [index, setIndex] = useState<number>(-1)
@@ -72,7 +75,7 @@ export default function Club306() {
             amour pour ce modèle emblématique de voiture.
           </p>
           <div className="md:flex items-center space-x-4 mt-12 justify-center space-y-2 md:space-y-0">
-            <Chip
+            {/* <Chip
               color="primary"
               className="dark:bg-orange-500 dark:text-black"
             >
@@ -89,7 +92,7 @@ export default function Club306() {
               className="dark:bg-orange-500 dark:text-black"
             >
               Site Communautaire
-            </Chip>
+            </Chip> */}
           </div>
         </div>
         <picture className="w-full md:w-1/2 flex justify-center">
@@ -117,7 +120,7 @@ export default function Club306() {
             <Link href="https://github.com/koala819/club306" target="_blank">
               <Button
                 size="sm"
-                variant="shadow"
+                // variant="shadow"
                 color="primary"
                 className="dark:bg-orange-500 dark:text-black"
               >
@@ -130,7 +133,7 @@ export default function Club306() {
                 size="sm"
                 color="primary"
                 className="dark:bg-orange-500 dark:text-black mt-2 md:mt-0"
-                variant="shadow"
+                // variant="shadow"
               >
                 Visiter
               </Button>
@@ -168,7 +171,7 @@ export default function Club306() {
       <section className="w-full p-4 flex flex-col space-y-8">
         <h1 className="text-3xl font-bold">Stacks utilisées</h1>
         <div className="flex items-center justify-center space-x-4">
-          <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
+          {/* <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
             Next.JS
           </Chip>
           <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
@@ -179,7 +182,7 @@ export default function Club306() {
           </Chip>
           <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
             Supabase
-          </Chip>
+          </Chip> */}
         </div>
       </section>
 
@@ -210,7 +213,7 @@ export default function Club306() {
         className="w-full flex flex-col my-32 items-center"
       >
         <Button
-          variant="shadow"
+          // variant="shadow"
           color="primary"
           className="dark:bg-orange-500 dark:text-black hover:underline"
         >

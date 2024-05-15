@@ -1,8 +1,10 @@
 'use client'
 
-import { Button, Chip, Image, Tooltip } from '@nextui-org/react'
-
+import Image from 'next/image'
+// import { Button, Chip, Image, Tooltip } from '@nextui-org/react'
 import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
 
 export default function Dix31() {
   return (
@@ -18,7 +20,7 @@ export default function Dix31() {
             professionnel.
           </p>
           <div className="md:flex items-center space-x-4 mt-12 justify-center space-y-2 md:space-y-0">
-            <Chip
+            {/* <Chip
               color="primary"
               className="dark:bg-orange-500 dark:text-black"
             >
@@ -35,7 +37,7 @@ export default function Dix31() {
               className="dark:bg-orange-500 dark:text-black"
             >
               Software Craftsmanship
-            </Chip>
+            </Chip> */}
           </div>
         </div>
         <picture className="w-full md:w-1/2 flex justify-center">
@@ -63,22 +65,22 @@ export default function Dix31() {
                 size="sm"
                 color="primary"
                 className="mt-2 md:mt-0 dark:bg-orange-500 dark:text-black hover:underline"
-                variant="shadow"
+                // variant="shadow"
               >
                 Github
               </Button>
             </Link>
 
-            <Tooltip content="Vous le visitez en ce moment ^^">
-              <Button
-                size="sm"
-                color="danger"
-                className="mt-2 md:mt-0 cursor-not-allowed"
-                variant="shadow"
-              >
-                Visiter
-              </Button>
-            </Tooltip>
+            {/* <Tooltip content="Vous le visitez en ce moment ^^"> */}
+            <Button
+              size="sm"
+              color="danger"
+              className="mt-2 md:mt-0 cursor-not-allowed"
+              // variant="shadow"
+            >
+              Visiter
+            </Button>
+            {/* </Tooltip> */}
           </div>
         </div>
       </section>
@@ -109,7 +111,7 @@ export default function Dix31() {
       <section className="w-full p-4 flex flex-col space-y-8">
         <h1 className="text-3xl font-bold">Stacks utilisées</h1>
         <div className="flex items-center justify-center space-x-4">
-          <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
+          {/* <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
             Next.JS
           </Chip>
           <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
@@ -120,7 +122,7 @@ export default function Dix31() {
           </Chip>
           <Chip color="primary" className="dark:bg-orange-500 dark:text-black">
             Vercel
-          </Chip>
+          </Chip> */}
         </div>
       </section>
       <Link
@@ -128,7 +130,7 @@ export default function Dix31() {
         className="w-full flex flex-col my-32 items-center"
       >
         <Button
-          variant="shadow"
+          // variant="shadow"
           color="primary"
           className="dark:bg-orange-500 dark:text-black hover:underline"
         >

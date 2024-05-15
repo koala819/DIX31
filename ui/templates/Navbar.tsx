@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+// import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import {
   Collapsible,
@@ -20,6 +21,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 import { cn } from '@/lib/utils'
+import { ModeToggle as Toggle } from '@/ui/atoms/Toggle'
 
 export default function Navbar() {
   function BookIcon(props: any) {
@@ -167,7 +169,22 @@ export default function Navbar() {
   ListItem.displayName = 'ListItem'
 
   return (
-    <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 bg-blue-500 sm:bg-red-400 md:bg-green-400 lg:bg-yellow-500 xl:bg-orange-500 2xl:bg-cyan-600">
+    <header className="container flex items-center justify-between px-4 md:px-6 py-4 h-20 w-full shrink-0 bg-blue-500 sm:bg-red-400 md:bg-green-400 lg:bg-yellow-500 xl:bg-orange-500 2xl:bg-cyan-600">
+      <div className="hidden md:block">
+        <Image
+          alt="Logo DIX31"
+          // className="contain"
+          height={80}
+          src="/images/Navbar_logo.svg"
+          style={
+            {
+              // aspectRatio: '50/20',
+              // objectFit: 'contain',
+            }
+          }
+          width={100}
+        />
+      </div>
       {/* MOBILE VIEW */}
       <Sheet>
         <SheetTrigger asChild>
@@ -276,75 +293,81 @@ export default function Navbar() {
       </Sheet>
 
       {/* VIEW LARGE PAGE */}
-      <NavigationMenu className="hidden md:flex">
-        <NavigationMenuList>
-          <NavigationMenuLink asChild>
-            <Link
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-              href="/"
-            >
-              Accueil
-            </Link>
-          </NavigationMenuLink>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Réalisations</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/projects/Club306"
-                    >
-                      <Image
-                        src="/images/logo-Club-306.png"
-                        alt="Logo du Club 306"
-                        width={500}
-                        height={500}
-                      />
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        Club 306
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Premier club de France sur la Peugeot 306
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <ListItem
-                  href="/projects/BonheurSurSeine"
-                  title="Bonheur Sur Seine"
-                >
-                  Site sur la gyroroue
-                </ListItem>
-                <ListItem href="/projects/Thouy" title="Gîtes de Thouy">
-                  Location de gîtes dans le Tarn
-                </ListItem>
-                <ListItem href="/projects/ActivSavoirs" title="Activ'Savoirs">
-                  Centre de formations profesionnelles continues
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
+      <div className="text-lg font-semibold">
+        <NavigationMenu className="hidden md:flex">
+          <NavigationMenuList>
+            <NavigationMenuLink asChild>
+              <Link
+                className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+                href="/"
+              >
+                Accueil
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Réalisations</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <li className="row-span-3">
+                    <NavigationMenuLink asChild>
+                      <Link
+                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                        href="/projects/Club306"
+                      >
+                        <Image
+                          src="/images/logo-Club-306.png"
+                          alt="Logo du Club 306"
+                          width={500}
+                          height={500}
+                        />
+                        <div className="mb-2 mt-4 text-lg font-medium">
+                          Club 306
+                        </div>
+                        <p className="text-sm leading-tight text-muted-foreground">
+                          Premier club de France sur la Peugeot 306
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <ListItem
+                    href="/projects/BonheurSurSeine"
+                    title="Bonheur Sur Seine"
+                  >
+                    Site sur la gyroroue
+                  </ListItem>
+                  <ListItem href="/projects/Thouy" title="Gîtes de Thouy">
+                    Location de gîtes dans le Tarn
+                  </ListItem>
+                  <ListItem href="/projects/ActivSavoirs" title="Activ'Savoirs">
+                    Centre de formations profesionnelles continues
+                  </ListItem>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
 
-          <NavigationMenuLink asChild>
-            <Link
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium transition-colors hover:bg-primary/90 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-              href="/blog"
-            >
-              Blog
-            </Link>
-          </NavigationMenuLink>
-          <NavigationMenuLink asChild>
-            <Link
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-              href="/contact"
-            >
-              Contact
-            </Link>
-          </NavigationMenuLink>
-        </NavigationMenuList>
-      </NavigationMenu>
+            <NavigationMenuLink asChild>
+              <Link
+                className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+                href="/blog"
+              >
+                Blog
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild>
+              <Link
+                className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+                href="/contact"
+              >
+                Contact
+              </Link>
+            </NavigationMenuLink>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+
+      <div className="text-lg font-semibold">
+        <Toggle />
+      </div>
     </header>
   )
 }
