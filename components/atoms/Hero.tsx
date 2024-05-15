@@ -4,10 +4,7 @@ import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
 
-// import { Skeleton } from '@/components/ui/skeleton'
-// import LoadPictures from '@/ui/atoms/LoadPictures'
-
-const WithCustomLoading = dynamic(() => import('@/ui/atoms/LoadPictures'), {
+const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
   loading: () => <div>Chargement ...</div>,
 })
 

@@ -1,19 +1,23 @@
 import Image from 'next/image'
 
 export default function LoadImage({
-  src,
   alt,
-  width,
-  height,
   className,
+  height,
+  layout,
+  objectFit,
   priority,
+  src,
+  width,
 }: {
-  src: string
   alt: string
-  width: number
-  height: number
   className?: string
+  height?: number
+  layout?: string
+  objectFit?: string
   priority?: boolean
+  src: string
+  width?: number
 }) {
   const shimmer = (w: number, h: number) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -36,13 +40,15 @@ export default function LoadImage({
 
   return (
     <Image
-      src={src}
       alt={alt}
       className={className}
-      placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
-      width={width}
       height={height}
+      layout={layout}
+      objectFit={objectFit}
+      placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
       priority={priority}
+      src={src}
+      width={width}
     />
   )
 }

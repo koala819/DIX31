@@ -1,13 +1,14 @@
-'use client'
-
-// import { Image } from '@nextui-org/react'
-import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
 import { urlFor } from '@/lib/sanity'
 import { format, parseISO } from 'date-fns'
 
 export default function Blog({ posts }: any) {
+  const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
+    loading: () => <div>Chargement ...</div>,
+  })
+
   return (
     <div className="mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8 space-y-6  text-gray-600 dark:text-gray-200">
       <h2 className="text-5xl md:text-6xl font-bold mb-5">Derniers articles</h2>
@@ -22,8 +23,8 @@ export default function Blog({ posts }: any) {
                 className="absolute opacity-0 top-0 right-0 left-0 bottom-0"
                 aria-label={post.currentSlug}
               ></Link>
-              <div className="relative mb-4 rounded-2xl">
-                <Image
+              <div className="relative mb-4 rounded-2xl w-full h-64">
+                <WithCustomLoading
                   src={
                     post.titleImage
                       ? urlFor(post.titleImage)
@@ -34,10 +35,10 @@ export default function Blog({ posts }: any) {
                       ? post.titleImagebyCloudinary.alt
                       : post.title
                   }
-                  width={500}
-                  height={300}
+                  layout="fill"
+                  objectFit="cover"
+                  className="object-cover rounded-3xl"
                 />
-
                 <Link
                   className="flex justify-center items-center bg-blue-700 dark:bg-orange-300 bg-opacity-80 dark:bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white dark:text-black rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
                   href={`/blog/${post.currentSlug}`}
@@ -53,14 +54,15 @@ export default function Blog({ posts }: any) {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M13 5l7 7-7 7M5 5l7 7-7 7"
                     ></path>
                   </svg>
                 </Link>
               </div>
+
               <div className="flex justify-between items-center w-full pb-4 mb-auto">
                 <p className="text-sm text-gray-500 dark:text-gray-200">
                   Publié le {format(parseISO(post.date), 'dd-MM-yyyy')}
