@@ -35,11 +35,12 @@ export default function Hero() {
         Votre vision est ma mission !
       </h1>
       <section className="lg:flex">
-        <aside className="w-full lg:hidden">
+        {/* DISPLAY MOBILE VIEW */}
+        <aside className="w-full lg:hidden flex justify-center">
           <Image
             src="/images/Accompagnement-dix31-mobile.webp"
             alt="dix31 vous accompagne dans votre projet"
-            className="responsive"
+            className="responsive rounded-3xl mb-2"
             placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
             width={350}
             height={200}
