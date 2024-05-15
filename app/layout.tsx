@@ -9,10 +9,6 @@ import '@/styles/globals.css'
 import GoogleAnalytics from '@/ui/atoms/GoogleAnalytics'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
-// import { Footer } from '@/ui/templates/Footer'
-// import { NavbarDIX as Navbar } from '@/ui/templates/Navbar'
-
-// const Footer = lazy(() => import('@/ui/templates/Footer'))
 const Navbar = lazy(() => import('@/ui/templates/Navbar'))
 
 const inter = Inter({
@@ -48,6 +44,7 @@ export const metadata: Metadata = {
     icon: '/app/favicon.ico',
   },
 }
+
 export default function RootLayout({
   children,
 }: {
@@ -66,7 +63,6 @@ export default function RootLayout({
             <Suspense fallback={<div>Chargement ...</div>}>
               <Navbar />
             </Suspense>
-
             <main className="flex-1">
               <div className="w-full px-4 mx-auto mt-6">
                 <div className="flex flex-col min-w-0 break-words w-full mb-6 rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
@@ -77,9 +73,6 @@ export default function RootLayout({
                 </div>
               </div>
             </main>
-            {/* <Suspense fallback={<div>Chargement ...</div>}>
-              <Footer />
-            </Suspense> */}
           </div>
         </ThemeProvider>
       </body>
