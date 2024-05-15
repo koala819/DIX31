@@ -1,11 +1,13 @@
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
 
-const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
-  loading: () => <div>Chargement ...</div>,
-})
+import LoadImage from '@/lib/LoadImage'
+
+// const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
+//   loading: () => <div>Chargement ...</div>,
+// })
 
 export default function Hero() {
   return (
@@ -16,7 +18,7 @@ export default function Hero() {
       <section className="lg:flex">
         {/* MOBILE VIEW DISPLAY */}
         <aside className="w-full lg:hidden flex justify-center mb-4">
-          <WithCustomLoading
+          <LoadImage
             src="/images/Accompagnement-dix31-mobile.webp"
             alt="dix31 vous accompagne dans votre projet"
             className="responsive rounded-2xl"
@@ -44,7 +46,7 @@ export default function Hero() {
         </aside>
         <aside className="hidden lg:block lg:w-1/2">
           <picture className="hidden md:flex w-full justify-center p-8">
-            <WithCustomLoading
+            <LoadImage
               src="/images/Accompagnement-avec-dix31.webp"
               alt="dix31 vous accompagne dans votre projet"
               className="responsive  rounded-3xl"
