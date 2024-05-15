@@ -9,7 +9,8 @@ import '@/styles/globals.css'
 // import GoogleAnalytics from '@/ui/atoms/GoogleAnalytics'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
-const Navbar = lazy(() => import('@/ui/templates/Navbar'))
+const Navbar = lazy(() => import('@/components/templates/Navbar'))
+const Footer = lazy(() => import('@/components/templates/Footer'))
 
 const inter = Inter({
   weight: ['400', '700'],
@@ -73,6 +74,9 @@ export default function RootLayout({
                 </div>
               </div>
             </main>
+            <Suspense fallback={<div>Chargement ...</div>}>
+              <Footer />
+            </Suspense>
           </div>
         </ThemeProvider>
       </body>

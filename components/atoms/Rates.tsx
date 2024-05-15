@@ -48,11 +48,11 @@ export default function Rates() {
         'répondre à toutes vos exigences.',
       price: 'Sur devis',
       features: [
-        'Gestion de Contenu Facile',
-        'Performance et Sécurité Optimales',
-        'Solutions Web Intégrées',
-        'Site Web Évolutif',
-        'Fonctionnalités Interactives',
+        'Contenu Simplifié',
+        'Performance Sécurisée',
+        'Solutions Intégrées',
+        'Évolutivité Assurée',
+        'Interactivité Accrue',
       ],
     },
   ]

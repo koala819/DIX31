@@ -49,21 +49,17 @@ const CommentList = ({ comments }: { comments: Comment[] }) => {
   }, [isReadyToAnimate])
 
   return (
-    // <section className="my-16">
-    //   <h2 className="mx-auto lg:max-w-7xl lg:px-8 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-    //     Témoignages Clients : Expériences Réussies avec DIX31
-    //   </h2>
     <div className="mx-auto px-4 lg:max-w-7xl lg:px-8">
       <div className="space-y-4">
         <div className="w-full mx-auto px-5 py-10 text-gray-600 dark:text-gray-200 mb-10">
           <div className="mx-auto pb-10">
             <h2 className="text-5xl md:text-6xl font-bold mb-5">
-              Vos Succès, Notre Signature DIX31
+              Vos Triomphes, Notre Fierté
             </h2>
             <span className="text-xl font-medium">
-              Explorez les transformations vécues par mes clients grâce à DIX31.
-              Leur réussite est la preuve vivante de mon savoir-faire et de ma
-              dévotion.
+              Plongez dans les histoires de ceux qui ont transformé leur vision
+              en réalité avec DIX31. Chaque succès est une célébration de notre
+              passion et de notre innovation au service de vos ambitions.
             </span>
           </div>
 

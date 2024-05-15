@@ -1,25 +1,19 @@
 'use client'
 
-// import { Tooltip } from '@nextui-org/react'
-// import { Button } from '@nextui-org/react'
 import { Controller, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { LuCopyleft } from 'react-icons/lu'
 
-import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
 
-import { useTheme } from '@/context/ThemeContext'
-import Footer_dark_logo from '@/public/images/Footer_dark_logo.png'
-import Footer_logo from '@/public/images/Footer_logo.png'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
 export default function Footer() {
-  const { theme } = useTheme()
   const currentYear = new Date().getFullYear()
 
   const schema = yup.object().shape({
@@ -64,13 +58,17 @@ export default function Footer() {
       })
   }
 
+  const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
+    loading: () => <div>Chargement ...</div>,
+  })
+
   return (
     <footer className="bg-white dark:bg-gray-900">
       <div className="container px-6 py-12 mx-auto">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
           <div className="sm:col-span-2">
             <span className="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white">
-              Abonnez-vous à ma newsletter pour rester informé.
+              Recevez nos dernières nouveautés.
             </span>
             <form
               onSubmit={handleSubmit(handleSendMail)}
@@ -97,12 +95,7 @@ export default function Footer() {
                 </div>
               )}
 
-              <Button
-                type="submit"
-                className="ml-4 text-sm font-medium "
-                color={theme === 'dark' ? 'warning' : 'primary'}
-                // variant="shadow"
-              >
+              <Button type="submit" className="ml-4 text-sm font-medium ">
                 S&apos;abonner
               </Button>
             </form>
@@ -110,7 +103,7 @@ export default function Footer() {
 
           <div>
             <p className="font-semibold text-gray-800 dark:text-white">
-              Liens rapides
+              Explorez
             </p>
 
             <div className="flex flex-col items-start mt-5 space-y-2">
@@ -124,20 +117,22 @@ export default function Footer() {
                 href="/projects"
                 className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
               >
-                Projets
+                Nos Projets
               </Link>
 
               <Link
                 href="/blog"
                 className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
               >
-                Blog
+                Le Blog
               </Link>
             </div>
           </div>
 
           <div>
-            <p className="font-semibold text-gray-800 dark:text-white">Légal</p>
+            <p className="font-semibold text-gray-800 dark:text-white">
+              Informations Utiles
+            </p>
 
             <div className="flex flex-col items-start mt-5 space-y-2">
               <Link
@@ -150,13 +145,13 @@ export default function Footer() {
                 href="/protection"
                 className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
               >
-                Protections des données
+                Confidentialité
               </Link>
               <Link
                 href="/contact"
                 className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
               >
-                Contact
+                Nous Contacter
               </Link>
             </div>
           </div>
@@ -167,10 +162,10 @@ export default function Footer() {
         <div className="lg:flex items-center justify-between">
           <section className="w-full mt-2 text-sm md:text-xs lg:text-lg text-gray-500 dark:text-slate-400">
             <picture className="flex w-full justify-center">
-              <Image
-                src={theme === 'dark' ? Footer_dark_logo : Footer_logo}
+              <WithCustomLoading
+                src="/images/Footer_logo.png"
                 alt="DIX31 logo"
-                className="object-fill"
+                className="object-fill rounded-none"
                 width={250}
                 height={50}
               />
