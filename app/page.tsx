@@ -12,7 +12,7 @@ const Hero = dynamic(() => import('@/components/atoms/Hero'))
 
 const Blog = lazy(() => import('@/components/atoms/Blog'))
 const Projects = lazy(() => import('@/components/atoms/Projects'))
-// const Rates = lazy(() => import('@/ui/atoms/Rates'))
+const Rates = lazy(() => import('@/components/atoms/Rates'))
 // const CommentList = lazy(() => import('@/ui/molecules/CommentList'))
 
 export const metadata: Metadata = {
@@ -53,8 +53,8 @@ export default async function Page() {
       <Suspense fallback={<div>Chargement ...</div>}>
         <Blog posts={posts} />
         <Projects />
-        {/* <Rates />
-        <CommentList comments={comments} /> */}
+        <Rates />
+        {/* <CommentList comments={comments} /> */}
       </Suspense>
     </section>
   )
