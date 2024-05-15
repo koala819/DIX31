@@ -1,9 +1,8 @@
 import React from 'react'
 
-import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
-// import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import {
   Collapsible,
@@ -168,20 +167,18 @@ export default function Navbar() {
   })
   ListItem.displayName = 'ListItem'
 
+  const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
+    loading: () => <div>Chargement ...</div>,
+  })
+
   return (
     <header className="container flex items-center justify-between px-4 md:px-6 py-4 h-20">
       <div className="hidden md:block">
-        <Image
+        <WithCustomLoading
           alt="Logo DIX31"
-          // className="contain"
           height={80}
           src="/images/Navbar_logo.svg"
-          style={
-            {
-              // aspectRatio: '50/20',
-              // objectFit: 'contain',
-            }
-          }
+          className="rounded-none"
           width={100}
         />
       </div>
@@ -195,7 +192,7 @@ export default function Navbar() {
         </SheetTrigger>
         <SheetContent side="left">
           <Link className="flex items-center gap-2" href="/">
-            <Image
+            <WithCustomLoading
               src={'/images/Navbar_logo.svg'}
               alt="DIX31 logo"
               className="object-fill"
@@ -301,11 +298,13 @@ export default function Navbar() {
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
                 href="/"
               >
-                Accueil
+                <h3>Accueil</h3>
               </Link>
             </NavigationMenuLink>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Réalisations</NavigationMenuTrigger>
+              <NavigationMenuTrigger>
+                <h3>Réalisations</h3>
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   <li className="row-span-3">
@@ -314,14 +313,14 @@ export default function Navbar() {
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                         href="/projects/Club306"
                       >
-                        <Image
+                        <WithCustomLoading
                           src="/images/logo-Club-306.png"
                           alt="Logo du Club 306"
                           width={500}
                           height={500}
                         />
                         <div className="mb-2 mt-4 text-lg font-medium">
-                          Club 306
+                          <h4>Club 306</h4>
                         </div>
                         <p className="text-sm leading-tight text-muted-foreground">
                           Premier club de France sur la Peugeot 306
@@ -329,16 +328,17 @@ export default function Navbar() {
                       </Link>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem
-                    href="/projects/BonheurSurSeine"
-                    title="Bonheur Sur Seine"
-                  >
+                  <ListItem href="/projects/BonheurSurSeine">
+                    <h4 className="text-black">Bonheur Sur Seine</h4>
                     Site sur la gyroroue
                   </ListItem>
-                  <ListItem href="/projects/Thouy" title="Gîtes de Thouy">
+                  <ListItem href="/projects/Thouy">
+                    <h4 className="text-black">Gîtes de Thouy</h4>
                     Location de gîtes dans le Tarn
                   </ListItem>
-                  <ListItem href="/projects/ActivSavoirs" title="Activ'Savoirs">
+
+                  <ListItem href="/projects/ActivSavoirs">
+                    <h4 className="text-black">Activ&lsquo;Savoirs</h4>
                     Centre de formations profesionnelles continues
                   </ListItem>
                 </ul>
@@ -350,7 +350,7 @@ export default function Navbar() {
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
                 href="/blog"
               >
-                Blog
+                <h3>Blog</h3>
               </Link>
             </NavigationMenuLink>
             <NavigationMenuLink asChild>
@@ -358,7 +358,7 @@ export default function Navbar() {
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
                 href="/contact"
               >
-                Contact
+                <h3>Contact</h3>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuList>
