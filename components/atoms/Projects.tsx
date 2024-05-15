@@ -47,31 +47,28 @@ export default function Projets() {
   })
 
   return (
-    <section className="mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8 space-y-6  text-gray-600 dark:text-gray-200">
-      <div className="mx-auto pb-10">
-        <h2 className="text-5xl md:text-6xl font-bold mb-5">Projets clés</h2>
-        <span className="text-xl font-medium">
-          Chaque site web créé est une collaboration unique ! Il est conçu pour
-          répondre précisément à vos besoins. Découvrez deux projets sur-mesure,
-          chacun façonné avec une attention particulière pour garantir une
-          expérience utilisateur optimale. Nous offrons bien plus qu&apos;un
-          simple service :{' '}
-          <strong>nous vous guidons vers l&apos;indépendance</strong>. Gérez le
-          contenu de votre site avec aisance et confiance, sans jamais vous
-          sentir submergé par la complexité technique. Ensemble, transformons
-          vos idées en réalité, en vous assurant{' '}
-          <strong>un contrôle total</strong> et{' '}
-          <strong>une simplicité d&apos;utilisation</strong>. Contactez-nous
-          pour commencer à donner vie à vos visions.
-        </span>
-      </div>
+    <div className="container">
+      <h2>Projets clés</h2>
+      <span>
+        Chaque site web créé est une collaboration unique ! Il est conçu pour
+        répondre précisément à vos besoins. Découvrez deux projets sur-mesure,
+        chacun façonné avec une attention particulière pour garantir une
+        expérience utilisateur optimale. Nous offrons bien plus qu&apos;un
+        simple service :{' '}
+        <strong>nous vous guidons vers l&apos;indépendance</strong>. Gérez le
+        contenu de votre site avec aisance et confiance, sans jamais vous sentir
+        submergé par la complexité technique. Ensemble, transformons vos idées
+        en réalité, en vous assurant <strong>un contrôle total</strong> et{' '}
+        <strong>une simplicité d&apos;utilisation</strong>. Contactez-nous pour
+        commencer à donner vie à vos visions.
+      </span>
 
       {projects.map((project, index) => (
         <section className="w-full p-6" key={index}>
           <Link
             href={project.link}
             target="_blank"
-            className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border p-8 hover:bg-blue-100 dark:hover:bg-blue-500 hover:opacity-75 dark:hover:opacity-100 dark:hover:text-black text-gray-800 dark:text-white"
+            className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border p-8 hover:bg-blue-100 dark:hover:bg-blue-500  dark:hover:opacity-100 dark:hover:text-black"
           >
             <picture className="w-full">
               <WithCustomLoading
@@ -82,9 +79,9 @@ export default function Projets() {
               />
             </picture>
 
-            <div className="w-full space-y-8">
-              <h3 className="text-xl font-semibold ">{project.title}</h3>
-              <p className="text-md ">{project.description}</p>
+            <div className="w-full">
+              <h3 className="mb-4">{project.title}</h3>
+              <span>{project.description}</span>
             </div>
           </Link>
         </section>
@@ -95,6 +92,6 @@ export default function Projets() {
           <Button>Planifiez une Consultation Gratuite</Button>
         </Link>
       </div>
-    </section>
+    </div>
   )
 }

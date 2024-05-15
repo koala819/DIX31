@@ -178,7 +178,14 @@ export default function Navbar() {
           alt="Logo DIX31"
           height={80}
           src="/images/Navbar_logo.svg"
-          className="rounded-none"
+          className="rounded-none block dark:hidden"
+          width={100}
+        />
+        <WithCustomLoading
+          alt="Logo DIX31"
+          height={80}
+          src="/images/Navbar_logo_dark.png"
+          className="rounded-none hidden dark:block"
           width={100}
         />
       </div>

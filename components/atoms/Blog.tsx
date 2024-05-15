@@ -10,8 +10,8 @@ export default function Blog({ posts }: any) {
   })
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8 space-y-6  text-gray-600 dark:text-gray-200">
-      <h2 className="text-5xl md:text-6xl font-bold mb-5">Derniers articles</h2>
+    <div className="container">
+      <h2>Derniers articles</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-center px-2 mx-auto">
         {posts.map((post: any) => (
@@ -68,7 +68,7 @@ export default function Blog({ posts }: any) {
                   Publié le {format(parseISO(post.date), 'dd-MM-yyyy')}
                 </p>
               </div>
-              <h3 className="font-medium text-xl leading-8">
+              <h3>
                 <Link
                   href={`/blog/${post.currentSlug}`}
                   className="block relative group-hover:font-extrabold dark:group-hover:text-black transition-colors duration-200 "
@@ -76,7 +76,6 @@ export default function Blog({ posts }: any) {
                   {post?.title}
                 </Link>
               </h3>
-              <div></div>
             </article>
           </>
         ))}

@@ -46,7 +46,7 @@ export default async function Page() {
   const posts = await getPosts()
 
   return (
-    <section className="my-16">
+    <>
       <Hero />
       <Suspense fallback={<div>Chargement ...</div>}>
         <Blog posts={posts} />
@@ -54,6 +54,6 @@ export default async function Page() {
         <Rates />
         <CommentList comments={comments} />
       </Suspense>
-    </section>
+    </>
   )
 }

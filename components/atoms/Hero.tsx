@@ -29,11 +29,9 @@ export default function Hero() {
       : window.btoa(str)
 
   return (
-    <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 ">
-      <h1 className="font-sans text-4xl md:text-6xl font-bold text-gray-600 dark:text-gray-200 mb-6">
-        Votre vision est ma mission !
-      </h1>
-      <section className="lg:flex">
+    <div className="container">
+      <h1>Votre vision est ma mission !</h1>
+      <div className="lg:flex">
         {/* DISPLAY MOBILE VIEW */}
         <aside className="w-full lg:hidden flex justify-center">
           <Image
@@ -47,22 +45,18 @@ export default function Hero() {
           />
         </aside>
 
-        <aside className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/2 lg:pb-24">
-          <div className="container mx-auto px-4">
-            <p className=" text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
-              Libérons ensemble votre projet des complexités et des contraintes
-              des abonnements pour naviguer sereinement dans le paysage
-              numérique. Découvrez l&apos;excellence professionnelle et
-              associez-vous à moi pour transformer vos idées numériques en
-              réalité. Contactez-moi dès aujourd&apos;hui et franchissez le
-              premier pas vers l&apos;émancipation de votre projet
-            </p>
-            <Link href="/contact">
-              <Button className="flex justify-center">
-                Commencez votre projet
-              </Button>
-            </Link>
-          </div>
+        <aside className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/2 lg:pb-24 space-y-8">
+          <span>
+            Libérons ensemble votre projet des complexités et des contraintes
+            des abonnements pour naviguer sereinement dans le paysage numérique.
+            Découvrez l&apos;excellence professionnelle et associez-vous à moi
+            pour transformer vos idées numériques en réalité. Contactez-moi dès
+            aujourd&apos;hui et franchissez le premier pas vers
+            l&apos;émancipation de votre projet
+          </span>
+          <Link href="/contact">
+            <Button>Commencez votre projet</Button>
+          </Link>
         </aside>
 
         {/* DISPLAY LARGE VIEW */}
@@ -78,7 +72,7 @@ export default function Hero() {
             />
           </picture>
         </aside>
-      </section>
-    </section>
+      </div>
+    </div>
   )
 }
