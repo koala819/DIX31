@@ -3,17 +3,15 @@ import React, { Suspense, cache, lazy } from 'react'
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
-// import { comments } from '@/lib/comments'
+import { comments } from '@/lib/comments'
 import { client } from '@/lib/sanity'
 
-// import Hero from '@/ui/atoms/Hero'
 const Hero = dynamic(() => import('@/components/atoms/Hero'))
-// const client = dynamic(() => import('@/lib/sanity'))
 
 const Blog = lazy(() => import('@/components/atoms/Blog'))
 const Projects = lazy(() => import('@/components/atoms/Projects'))
 const Rates = lazy(() => import('@/components/atoms/Rates'))
-// const CommentList = lazy(() => import('@/ui/molecules/CommentList'))
+const CommentList = lazy(() => import('@/components/molecules/CommentList'))
 
 export const metadata: Metadata = {
   title: 'DIX31 - Création de Sites Web Personnalisés sur mesure à Toulouse',
@@ -54,7 +52,7 @@ export default async function Page() {
         <Blog posts={posts} />
         <Projects />
         <Rates />
-        {/* <CommentList comments={comments} /> */}
+        <CommentList comments={comments} />
       </Suspense>
     </section>
   )

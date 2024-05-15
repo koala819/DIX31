@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react'
 
-import CommentItem from '@/ui/atoms/CommentItem'
+import CommentItem from '@/components/atoms/CommentItem'
+
 import { motion, useAnimation } from 'framer-motion'
 import { Comment } from 'types/models'
 
