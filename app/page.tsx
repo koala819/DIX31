@@ -46,7 +46,7 @@ export default async function Page() {
   // const posts = await getPosts()
 
   return (
-    <section className="my-16 bg-orange-500">
+    <section className="my-16">
       <Hero />
       {/* <Suspense fallback={<div>Chargement ...</div>}>
         <Blog posts={posts} />

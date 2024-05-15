@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server'
 
-import { mailContact } from '@/utils/mail'
-
+import { mailContact } from '@/lib/mail'
 import nodemailer from 'nodemailer'
 
 export async function POST(req: Request): Promise<Response> {

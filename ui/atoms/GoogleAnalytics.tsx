@@ -1,6 +1,6 @@
 import Script from 'next/script'
 
-import * as gtag from '@/utils/gtag'
+import * as gtag from '@/lib/gtag'
 
 const GoogleAnalytics = () => {
   return (

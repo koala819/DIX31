@@ -169,7 +169,7 @@ export default function Navbar() {
   ListItem.displayName = 'ListItem'
 
   return (
-    <header className="container flex items-center justify-between px-4 md:px-6 py-4 h-20 w-full shrink-0 bg-blue-500 sm:bg-red-400 md:bg-green-400 lg:bg-yellow-500 xl:bg-orange-500 2xl:bg-cyan-600">
+    <header className="container flex items-center justify-between px-4 md:px-6 py-4 h-20">
       <div className="hidden md:block">
         <Image
           alt="Logo DIX31"
