@@ -51,13 +51,18 @@ export default function Projets() {
       <div className="mx-auto pb-10">
         <h2 className="text-5xl md:text-6xl font-bold mb-5">Projets clés</h2>
         <span className="text-xl font-medium">
-          Chaque site web que je développe est plus qu’une construction : c’est
-          une collaboration. Ici, découvrez des projets uniques, chacun façonné
-          avec le souci de répondre parfaitement à vos besoins. Plus qu’un
-          simple service, je vous guide vers l’autonomie, vous permettant de
-          gérer facilement le contenu de votre site, comme un pro, sans jamais
-          vous sentir perdu dans la technique. Ensemble, donnons vie à vos
-          idées, en vous assurant contrôle et simplicité.
+          Chaque site web créé est une collaboration unique ! Il est conçu pour
+          répondre précisément à vos besoins. Découvrez deux projets sur-mesure,
+          chacun façonné avec une attention particulière pour garantir une
+          expérience utilisateur optimale. Nous offrons bien plus qu&apos;un
+          simple service :{' '}
+          <strong>nous vous guidons vers l&apos;indépendance</strong>. Gérez le
+          contenu de votre site avec aisance et confiance, sans jamais vous
+          sentir submergé par la complexité technique. Ensemble, transformons
+          vos idées en réalité, en vous assurant{' '}
+          <strong>un contrôle total</strong> et{' '}
+          <strong>une simplicité d&apos;utilisation</strong>. Contactez-nous
+          pour commencer à donner vie à vos visions.
         </span>
       </div>
 
@@ -87,12 +92,7 @@ export default function Projets() {
 
       <div className="text-center">
         <Link href="/contact">
-          <Button
-          // color={theme === 'dark' ? 'warning' : 'primary'}
-          // variant="shadow"
-          >
-            Commençons notre Collaboration
-          </Button>
+          <Button>Planifiez une Consultation Gratuite</Button>
         </Link>
       </div>
     </section>
