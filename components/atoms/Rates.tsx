@@ -97,7 +97,7 @@ export default function Rates() {
                   <ul className="text-sm px-5 mb-8 text-gray-700 dark:text-gray-300 space-y-8 mt-4 ">
                     {rate.features.map((feature, index) => (
                       <li className="flex leading-tight" key={index}>
-                        <AiFillCheckCircle className="w-5 h-5 text-blue-500 dark:text-orange-300 mr-2" />
+                        <AiFillCheckCircle className="w-5 h-5 text-blue-500 mr-2" />
                         {feature}
                       </li>
                     ))}

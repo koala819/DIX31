@@ -109,20 +109,20 @@ export default function Footer() {
             <div className="flex flex-col items-start mt-5 space-y-2">
               <Link
                 href="/"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
+                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-500 hover:underline hover:text-blue-500"
               >
                 Accueil
               </Link>
               <Link
                 href="/projects"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
+                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-500 hover:underline hover:text-blue-500"
               >
                 Nos Projets
               </Link>
 
               <Link
                 href="/blog"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
+                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-500 hover:underline hover:text-blue-500"
               >
                 Le Blog
               </Link>
@@ -137,19 +137,19 @@ export default function Footer() {
             <div className="flex flex-col items-start mt-5 space-y-2">
               <Link
                 href="/mentions"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
+                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-500 hover:underline hover:text-blue-500"
               >
                 Mentions légales
               </Link>
               <Link
                 href="/protection"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
+                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-500 hover:underline hover:text-blue-500"
               >
                 Confidentialité
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-orange-400 hover:underline hover:text-blue-500"
+                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-500 hover:underline hover:text-blue-500"
               >
                 Nous Contacter
               </Link>
