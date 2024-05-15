@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
 
-const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
-  loading: () => <div>Chargement ...</div>,
-})
-
 export default function Hero() {
+  const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
+    loading: () => <div>Chargement ...</div>,
+  })
+
   const shimmer = (w: number, h: number) => `
   <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
@@ -49,7 +49,7 @@ export default function Hero() {
 
         <aside className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/2 lg:pb-24">
           <div className="container mx-auto px-4">
-            <p className="font-sans text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
+            <p className=" text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
               Libérons ensemble votre projet des complexités et des contraintes
               des abonnements pour naviguer sereinement dans le paysage
               numérique. Découvrez l&apos;excellence professionnelle et
@@ -71,7 +71,7 @@ export default function Hero() {
             <WithCustomLoading
               src="/images/Accompagnement-avec-dix31.webp"
               alt="dix31 vous accompagne dans votre projet"
-              className="responsive rounded-3xl"
+              className="responsive"
               width={700}
               height={400}
               priority

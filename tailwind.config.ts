@@ -1,12 +1,9 @@
 import type { Config } from 'tailwindcss'
 
-// const { nextui } = require('@nextui-org/react')
-
 const config: Config = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './ui/**/*.{js,ts,jsx,tsx}',
-    // './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{ts,tsx}',
   ],
   darkMode: 'class',
@@ -19,9 +16,6 @@ const config: Config = {
       },
     },
     extend: {
-      // fontFamily: {
-      //   sans: ['var(--font-inter)'],
-      // },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -82,7 +76,6 @@ const config: Config = {
     },
   },
   plugins: [
-    // nextui(),
     // require('@tailwindcss/typography'),
     // require('tailwindcss-animate'),
   ],

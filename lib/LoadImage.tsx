@@ -41,7 +41,7 @@ export default function LoadImage({
   return (
     <Image
       alt={alt}
-      className={className}
+      className={`rounded-3xl ${className}`}
       height={height}
       layout={layout}
       objectFit={objectFit}

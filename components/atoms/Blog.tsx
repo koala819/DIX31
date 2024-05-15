@@ -16,7 +16,7 @@ export default function Blog({ posts }: any) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-center px-2 mx-auto">
         {posts.map((post: any) => (
           <>
-            <article className="bg-white dark:bg-slate-700 p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border">
+            <article className="bg-white dark:bg-slate-700 p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border hover:bg-blue-100 hover:dark:bg-blue-500">
               <Link
                 target="_self"
                 href={`/blog/${post.currentSlug}`}
@@ -37,10 +37,10 @@ export default function Blog({ posts }: any) {
                   }
                   layout="fill"
                   objectFit="cover"
-                  className="object-cover rounded-3xl"
+                  className="object-cover"
                 />
                 <Link
-                  className="flex justify-center items-center bg-blue-700 dark:bg-orange-300 bg-opacity-80 dark:bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white dark:text-black rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                  className="flex justify-center items-center bg-blue-100 dark:bg-blue-500 bg-opacity-80 dark:bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-black dark:text-black rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
                   href={`/blog/${post.currentSlug}`}
                   target="_self"
                   rel="noopener noreferrer"
@@ -64,14 +64,14 @@ export default function Blog({ posts }: any) {
               </div>
 
               <div className="flex justify-between items-center w-full pb-4 mb-auto">
-                <p className="text-sm text-gray-500 dark:text-gray-200">
+                <p className="text-sm text-gray-500 dark:text-gray-200 dark:group-hover:text-black">
                   Publié le {format(parseISO(post.date), 'dd-MM-yyyy')}
                 </p>
               </div>
               <h3 className="font-medium text-xl leading-8">
                 <Link
                   href={`/blog/${post.currentSlug}`}
-                  className="block relative group-hover:text-blue-700 dark:group-hover:text-orange-300 transition-colors duration-200 "
+                  className="block relative group-hover:font-extrabold dark:group-hover:text-black transition-colors duration-200 "
                 >
                   {post?.title}
                 </Link>

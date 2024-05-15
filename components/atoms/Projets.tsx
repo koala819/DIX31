@@ -1,16 +1,9 @@
-'use client'
-
-// import { Button, Image } from '@nextui-org/react'
-import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
 
-import { useTheme } from '@/context/ThemeContext'
-
 export default function Projets() {
-  const { theme } = useTheme()
-
   const projects = [
     {
       link: 'https://www.club306.fr/',
@@ -49,6 +42,9 @@ export default function Projets() {
         'avec la communauté.',
     },
   ]
+  const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
+    loading: () => <div>Chargement ...</div>,
+  })
 
   return (
     <section className="mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8 space-y-6  text-gray-600 dark:text-gray-200">
@@ -70,10 +66,15 @@ export default function Projets() {
           <Link
             href={project.link}
             target="_blank"
-            className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border p-8 hover:bg-blue-100 dark:hover:bg-orange-300 hover:opacity-75 dark:hover:opacity-100 dark:hover:text-black text-gray-800 dark:text-white"
+            className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border p-8 hover:bg-blue-100 dark:hover:bg-blue-500 hover:opacity-75 dark:hover:opacity-100 dark:hover:text-black text-gray-800 dark:text-white"
           >
             <picture className="w-full">
-              <Image alt={project.picture.alt} src={project.picture.src} />
+              <WithCustomLoading
+                alt={project.picture.alt}
+                src={project.picture.src}
+                width={700}
+                height={400}
+              />
             </picture>
 
             <div className="w-full space-y-8">
@@ -87,8 +88,8 @@ export default function Projets() {
       <div className="text-center">
         <Link href="/contact">
           <Button
-            color={theme === 'dark' ? 'warning' : 'primary'}
-            // variant="shadow"
+          // color={theme === 'dark' ? 'warning' : 'primary'}
+          // variant="shadow"
           >
             Commençons notre Collaboration
           </Button>

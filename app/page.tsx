@@ -11,7 +11,7 @@ const Hero = dynamic(() => import('@/components/atoms/Hero'))
 // const client = dynamic(() => import('@/lib/sanity'))
 
 const Blog = lazy(() => import('@/components/atoms/Blog'))
-// const Projets = lazy(() => import('@/ui/atoms/Projets'))
+const Projets = lazy(() => import('@/components/atoms/Projets'))
 // const Rates = lazy(() => import('@/ui/atoms/Rates'))
 // const CommentList = lazy(() => import('@/ui/molecules/CommentList'))
 
@@ -52,8 +52,8 @@ export default async function Page() {
       <Hero />
       <Suspense fallback={<div>Chargement ...</div>}>
         <Blog posts={posts} />
-        {/* <Projets />
-        <Rates />
+        <Projets />
+        {/* <Rates />
         <CommentList comments={comments} /> */}
       </Suspense>
     </section>
