@@ -1,147 +1,136 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Protection des Données - DIX31 | Confidentialité Garantie',
+  description:
+    'Découvrez comment DIX31.com protège et gère vos données personnelles. Lisez notre politique de confidentialité détaillée ici.',
+  alternates: {
+    canonical: `${process.env.CLIENT_URL}/protection`,
+  },
+}
 
 export default function Page() {
   return (
     <div className="container space-y-8">
       <h1 className="text-blue-500 dark:text-cyan-500 uppercase">
-        Protection des données personnelles
+        Protection des Données Personnelles - DIX31
       </h1>
 
-      <span>
-        DIX31.com est soucieux de la protection des données personnelles. Nous
-        nous m&apos;engageons à assurer le meilleur niveau de protection à vos
-        données personnelles en conformité avec la loi applicable et le{' '}
-        <Link
-          href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees"
-          target="_blank"
-          className="underline hover:text-blue-700"
-        >
-          règlement général sur la protection des données personnelles
-        </Link>
-        .
-      </span>
+      <section className="flex flex-col space-y-4">
+        <h2>Engagement de DIX31 :</h2>
+        <span>
+          DIX31.com prend très au sérieux la protection de vos données
+          personnelles. Nous nous engageons à garantir un niveau de protection
+          élevé pour vos données, conformément aux législations en vigueur et au
+          Règlement Général sur la Protection des Données (RGPD).
+        </span>
+      </section>
 
       <section className="flex flex-col space-y-4">
-        <h2>Responsable du traitement</h2>
+        <h2>Responsable du traitement:</h2>
+        <span>
+          <u>Entité</u> : DIX31.com
+        </span>
+        <span>
+          <u>Localisation</u> : 31300 Toulouse, France
+        </span>
+        <span>
+          <u>Email</u> :
+          <Link
+            href="mailto:contact@dix31.com"
+            className="underline hover:text-blue-700"
+          >
+            contact@dix31.com
+          </Link>
+        </span>
+      </section>
+
+      <section className="flex flex-col space-y-4">
+        <h2>Finalités du traitement:</h2>
         <p>
-          Les données personnelles collectées sur ce site internet sont
-          enregistrées dans une base de données informatisée par le responsable
-          du traitement :
+          Les données personnelles que nous collectons sont utilisées pour :
         </p>
-        <ul>
-          <li>DIX31.com</li>
-          <li>31300 Toulouse FRANCE</li>
-          <li>
-            <Link
-              href="mailto:contact@dix31.com"
-              className="underline hover:text-blue-700"
-            >
-              contact@dix31.com
-            </Link>
+        <ul className="list-disc" role="list">
+          <li className="mx-12" role="listitem">
+            Gérer la relation clientèle et le support client.
+          </li>
+          <li className="mx-12" role="listitem">
+            Répondre aux demandes via les formulaires de contact.
+          </li>
+          <li className="mx-12" role="listitem">
+            Réaliser des mesures d&apos;audience telles que le suivi des pages
+            vues et l&apos;activité sur le site.
           </li>
         </ul>
       </section>
 
       <section className="flex flex-col space-y-4">
-        <h2>Finalités du traitement</h2>
+        <h2>Données collectées:</h2>
         <p>
-          Les données personnelles collectées sont utilisées pour la gestion de
-          la clientèle et du support client, l&apos;envoi d&apos;emails de
-          réponses aux formulaires de contact.
-        </p>
-        <p>
-          Certaines données sont collectées automatiquement du fait de vos
-          actions sur le site afin d&apos;effectuer des mesures d&apos;audience
-          (le nombre de pages vues, le nombre de visites du site, les produits
-          consultés, etc.) ou sont nécessaires à la prévention et la résolution
-          d’incidents techniques.
+          Les informations que nous recueillons incluent notamment votre adresse
+          email et votre adresse IP. Nous nous engageons à ne collecter que les
+          données strictement nécessaires à la fourniture de nos services. Le
+          caractère obligatoire ou facultatif des données est clairement indiqué
+          lors de la collecte.
         </p>
       </section>
 
-      <section className="flex flex-col space-y-4">
-        <h2>Données collectées</h2>
-        <p>
-          Les données personnelles collectées et traitées sont notamment vos
-          email et adresse IP.
-        </p>
-        <p>
-          Je m&apos;engages à ne collecter que le minimum de données nécessaires
-          au bon fonctionnement du service fourni par ce site internet. Le
-          caractère obligatoire ou facultatif des données collectées vous est
-          signalé au moment de leur saisie par une mention
-          &quot;Obligatoire&quot; (ou tout autre indicateur visuel approrié
-          comme un astérisque ou un élément en gras) ou &quot;Facultatif&quot;.
-        </p>
-      </section>
-
-      <h2>Durée de conservation</h2>
+      <h2>Durée de conservation:</h2>
       <p>
-        Les données sont conservées pendant toute la durée d&apos;utilisation du
-        service puis sont archivées pour une durée supplémentaire en lien avec
-        les durées de prescription et de conservation légale pour des raisons
-        strictement limitées et autorisées par la loi (paiement, garantie,
-        litiges, etc.). Passé ce délai, elles sont supprimées.
+        Les données sont conservées pendant la durée de fourniture du service et
+        archivées selon les durées légales pour des raisons telles que le
+        paiement et la garantie. Elles sont ensuite supprimées.
       </p>
 
       <section className="flex flex-col space-y-4">
-        <h2>Destinataires</h2>
+        <h2>Destinataires des données:</h2>
         <p>
-          Les données collectées sont destinées dans un but commercial et
-          technique.
+          Ces données sont principalement utilisées à des fins commerciales et
+          techniques et peuvent être partagées avec :
         </p>
-        <p> Elles sont également transmises aux tiers suivants : </p>
         <ul className="list-disc" role="list">
           <li className="mx-12" role="listitem">
-            Google Analytics (analytics.google.com) en tant qu&apos;outil de
-            suivi d&apos;audience,
+            <span>
+              <u>Google Analytics</u> - pour l&apos;analyse d&apos;audience
+            </span>
           </li>
           <li className="mx-12" role="listitem">
-            Nodemailer (
-            <Link
-              href="https://www.nodemailer.com/"
-              className="underline hover:text-blue-700"
-              target="_blank"
-            >
-              nodemailer.com
-            </Link>
-            ) utilisé pour le formulaire de contact.
+            <span>
+              <u>Nodemailer</u> - pour la gestion des communications.
+            </span>
           </li>
         </ul>
       </section>
 
       <section className="flex flex-col space-y-4">
-        <h2>Localisation & hébergement des données collectées</h2>
-        <p>
-          Les données collectées sont hébergées par les prestataires suivants :
-        </p>
+        <h2>Localisation et hébergement des données:</h2>
+        <p>Les données sont hébergées par :</p>
         <ul className="list-disc" role="list">
           <li className="mx-12" role="listitem">
-            Vercel en qualité d&apos;hébergeur du site web (localisation des
-            données : monde),
+            <span>
+              <u>Vercel </u> - hébergeur du site web (Données mondialisées).
+            </span>
           </li>
           <li className="mx-12" role="listitem">
-            Google Analytics (analytics.google.com) en tant qu&apos;outil de
-            suivi d&apos;audience (localisation des données : Monde),
-          </li>
-          <li className="mx-12" role="listitem">
-            nodemailer (nodemailer.com) utilisé pour l&apos;envoi du formulaire
-            de contact.
+            <span>
+              <u>Google Analytics et Nodemailer</u> - pour les fonctionnalités
+              spécifiques mentionnées.
+            </span>
           </li>
         </ul>
       </section>
 
-      <h2>Retrait du consentement</h2>
+      <h2>Retrait du Consentement:</h2>
       <p>
-        Vous pouvez retirer à tout moment votre consentement sur
-        l&apos;utilisation de vos données personnelles non-indispensables à la
-        bonne utilisation du service fourni par ce site internet, en écrivant à{' '}
+        Vous pouvez retirer votre consentement à tout moment pour les données
+        non essentielles à nos services, en nous contactant à{' '}
         <Link
           href="mailto:contact@dix31.com"
           className="underline hover:text-blue-700"
         >
           contact@dix31.com
-        </Link>{' '}
-        pour le retrait de données que vous nous auriez communiqué.
+        </Link>
       </p>
     </div>
   )
