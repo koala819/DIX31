@@ -6,7 +6,6 @@ import { Inter } from 'next/font/google'
 
 import { ThemeProvider } from '@/app/provider'
 import '@/styles/globals.css'
-// import GoogleAnalytics from '@/ui/atoms/GoogleAnalytics'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const Navbar = lazy(() => import('@/components/templates/Navbar'))
@@ -71,6 +70,7 @@ export default function RootLayout({
                   {children}
                   <SpeedInsights />
                   <Analytics />
+                  <SpeedInsights />
                 </div>
               </div>
             </main>
