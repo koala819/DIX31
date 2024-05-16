@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import Projects from '@/ui/templates/Projects'
+import { Achievements } from '@/components/atoms/Achievements'
 
 export const metadata: Metadata = {
   title:
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <Projects />
+  return <Achievements />
 }
