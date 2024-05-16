@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     'Conseils Professionnels en Développement Web par DIX31 - Blog Tech France',
   description:
     'Lisez le blog de DIX31 pour des insights uniques sur le développement web, des astuces de codage, des tendances du marché, et des études de cas détaillées.',
+  alternates: {
+    canonical: `${process.env.CLIENT_URL}/blog`,
+  },
 }
 
 async function getPosts() {
