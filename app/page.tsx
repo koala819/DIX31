@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'Spécialiste en création de sites web personnalisés et responsive. Solutions sur mesure pour entreprises. Consultation gratuite.',
   robots: 'index, follow',
   alternates: {
-    canonical: '/',
+    canonical: `${process.env.CLIENT_URL}/`,
     languages: {
       'fr-FR': '/fr-FR',
     },
