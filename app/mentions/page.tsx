@@ -1,112 +1,89 @@
-import Link from "next/link";
+import { Metadata } from 'next'
+import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Mentions Légales - DIX31 | Création de Sites Web à Toulouse',
+  description:
+    'Consultez les mentions légales de DIX31.com pour des informations sur notre politique de confidentialité, les cookies, et la propriété intellectuelle.',
+  alternates: {
+    canonical: `${process.env.CLIENT_URL}/mentions`,
+  },
+}
 
 export default function Page() {
   return (
-    <section className='text-gray-700 dark:text-white '>
-      <div className='container px-4 mb-20 mt-20 mx-auto '>
-        <h1 className='text-blue-500 dark:text-cyan-500 text-2xl text-center mb-12 uppercase font-bold'>
-          Mentions légales
-        </h1>
+    <div className="container space-y-8">
+      <h1 className="text-blue-500 dark:text-cyan-500 text-center uppercase">
+        Mentions légales de DIX31
+      </h1>
 
-        <div className='flex flex-col space-y-4'>
-          <p>
-            <span className='font-bold underline'>Nom du site web :</span>{" "}
-            Développeur Indépendant Xavier
-          </p>
-          <p>
-            <span className='font-bold underline'>Numéro de Siret :</span>{" "}
-            85254837900019
-          </p>
-          <p>
-            <span className='font-bold underline'>
-              Directeur de la publication :
-            </span>{" "}
-            Xavier GENOLHAC
-          </p>
-          <p>
-            <span className='font-bold underline'>Activité :</span> Création de
-            sites web sur mesure et développement de logiciels spécifiques
-          </p>
-          <p>
-            <span className='font-bold underline'>URL :</span> www.dix31.com
-          </p>
-          <p>
-            <span className='font-bold underline'>Localisation :</span> 31300
-            Toulouse - France
-          </p>
-        </div>
+      <section className="flex flex-col space-y-4">
+        <h2>Informations Générales :</h2>
+        <span>
+          <u>Nom du site web</u> : DIX31.com
+        </span>
 
-        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-400 mt-8'>
-          Hébergement
-        </h1>
-        <div className='flex flex-col space-y-4'>
-          <p>
-            <span className='font-bold underline'>Nom :</span> Vercel
-          </p>
-        </div>
+        <span>
+          <u>Numéro de Siret</u> : 85254837900019
+        </span>
 
-        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-400 mt-8'>
-          Cookies
-        </h1>
-        <p className='text-justify mb-4'>
-          En poursuivant votre navigation sur ce site internet, vous acceptez
-          l’utilisation de cookies. Un cookie est un petit fichier texte créé
-          par un serveur web du site internet visité. Les cookies sont stockés
-          sur le PC de l&apos;internaute. Les cookies permettent durant une
-          durée de vie qui varie de reconnaître la machine qui se connecte.
-        </p>
-        <p>Sur ce site web, les cookies sont utilisés pour :</p>
-        <ul className='list-disc' role='list'>
-          <li className='mx-12' role='listitem'>
-            Réaliser des statistiques de visites avec Google Analytics,
-          </li>
-          <li className='mx-12' role='listitem'>
-            Vous offrir une meilleure expérience utilisateur.
-          </li>
-        </ul>
-        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-400 mt-8'>
-          Liens Hypertextes
-        </h1>
-        <p className='text-justify mb-4'>
-          Ce site web peut comporter des hyperliens vers d&apos;autres sites
-          internet. Il est important de noter que notre entreprise ne peut être
-          tenue responsable du contenu de ces sites ni des pratiques de
-          confidentialité qu&apos;ils adoptent.
-        </p>
-        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-400 mt-8'>
-          Données Personnelles
-        </h1>
-        <p className='text-justify mb-4'>
-          Les données personnelles collectées sur ce site sont strictement
-          réservées à l&apos;usage interne de notre entreprise. En aucun cas,
-          elles ne seront vendues, échangées ou louées à des tiers. Conformément
-          à la loi Informatique et Libertés du 6 janvier 1978, vous avez le
-          droit d&apos;accéder à vos données, de les rectifier et de les
-          supprimer. Pour exercer ce droit, veuillez{" "}
-          <Link href='/contact' className='underline hover:text-blue-700'>
-            nous contacter
-          </Link>
-          . Nous nous engageons à respecter votre confidentialité et à protéger
-          vos données personnelles.
-        </p>
-        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-400 mt-8'>
-          Propriété Intellectuelle
-        </h1>
-        <p className='text-justify mb-4'>
-          Tous les éléments de ce site sont protégés par des licences de
-          copyleft, ce qui signifie que leur reproduction, leur distribution et
-          leur modification sont autorisées sous certaines conditions
-          spécifiques. Ces licences sont conçues pour promouvoir la libre
-          circulation des idées et du contenu, tout en garantissant que les
-          droits de l&apos;auteur sont respectés. Vous êtes invités à consulter
-          les termes et conditions de chaque licence applicable à ces éléments
-          pour comprendre les droits et les restrictions qui s&apos;y
-          rapportent. L&apos;utilisation de contenus sous copyleft doit se
-          conformer aux exigences de ces licences, et toute reproduction,
-          distribution ou modification doit être effectuée en accord avec les
-          conditions spécifiées dans ces licences.
-        </p>
-      </div>
-    </section>
-  );
+        <span>
+          <u>Directeur de la publication</u> : Xavier GENOLHAC
+        </span>
+
+        <span>
+          <u>Activité</u> : Création de sites web sur mesure et développement de
+          logiciels spécifiques
+        </span>
+
+        <span>
+          <u>URL</u> : www.dix31.com
+        </span>
+
+        <span>
+          <u>Localisation</u> : 31300 Toulouse - France
+        </span>
+      </section>
+
+      <section>
+        <h2>Hébergement:</h2>
+        <span>
+          <u>Nom</u> : Vercel
+        </span>
+      </section>
+
+      <h2>Utilisation de Cookies :</h2>
+      <p>
+        En utilisant DIX31.com, vous acceptez notre utilisation de cookies qui
+        améliorent votre expérience et nous aident à suivre les visites via
+        Google Analytics.
+      </p>
+
+      <h2>Liens Hypertextes:</h2>
+      <p>
+        DIX31.com peut inclure des liens vers d&apos;autres sites. Nous ne
+        sommes pas responsables de leur contenu ni de leurs pratiques de
+        confidentialité.
+      </p>
+
+      <h2>Protection des Données Personnelles :</h2>
+      <p>
+        Vos données personnelles sont utilisées uniquement en interne et ne sont
+        ni vendues, ni échangées, ni louées à des tiers. Conformément à la loi
+        du 6 janvier 1978, vous avez le droit d&apos;accès, de rectification et
+        de suppression de vos données.{' '}
+        <Link href="/contact" className="underline hover:text-blue-700">
+          Contactez-nous
+        </Link>{' '}
+        pour exercer ce droit.
+      </p>
+
+      <h2>Propriété Intellectuelle:</h2>
+      <p>
+        Les contenus de DIX31.com sont sous licences de copyleft, permettant
+        leur utilisation sous conditions. Consultez les termes de ces licences
+        pour comprendre vos droits.
+      </p>
+    </div>
+  )
 }

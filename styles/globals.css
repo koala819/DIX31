@@ -41,7 +41,9 @@
     @apply text-sm font-bold;
   }
 
-  span {
+  span,
+  p,
+  li {
     @apply text-xl font-medium;
   }
 
