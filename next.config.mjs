@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const config = {
+  async redirects() {
+    return [
+      {
+        source: '/atom.xml',
+        destination: '/api/atom',
+        permanent: true,
+      },
+    ]
+  },
   env: {
     CLIENT_URL: process.env.CLIENT_URL,
     GA_TRACKING_ID: process.env.GA_TRACKING_ID,
