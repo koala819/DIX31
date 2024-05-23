@@ -1,28 +1,54 @@
-import { Article } from '@/types/models'
+import { client } from '@/lib/sanity'
 
-import { getClient } from '@/lib/sanity.client'
+async function getPosts() {
+  const query = `*[_type== 'blog'] | order(date desc) {
+    title,
+    date,
+    "currentSlug": slug.current
+  }`
+
+  return await client.fetch(query)
+}
+
+function escapeXml(unsafe: string): string {
+  return unsafe.replace(/[<>&'"]/g, function (c) {
+    switch (c) {
+      case '<':
+        return '&lt;'
+      case '>':
+        return '&gt;'
+      case '&':
+        return '&amp;'
+      case "'":
+        return '&apos;'
+      case '"':
+        return '&quot;'
+      default:
+        return c
+    }
+  })
+}
 
 const generateAtomFeed = async (): Promise<string> => {
-  const client = getClient()
+  const posts: any = await getPosts()
 
-  const query = `*[_type == "article"] {
-      title,
-      url,
-      publishedDate
-    }`
-
-  const articles: Article[] = await client.fetch(query)
   let xml = '<?xml version="1.0" encoding="utf-8"?>'
   xml += '<rss version="2.0">'
   xml += '<channel>'
-  xml += '<title>Your Website Title</title>'
-  xml += '<link>https://yourwebsite.com</link>'
+  xml +=
+    '<title>Conseils Professionnels en Développement Web par DIX31 - Blog Tech France</title>'
+  xml += '<link>https://dix31.com</link>'
 
-  articles.forEach((article) => {
+  posts.slice(0, 3).forEach((article) => {
+    const articleUrl =
+      article.url || `https://dix31.com/blog/${article.currentSlug}`
+    const pubDate = article.date
+      ? new Date(article.date).toUTCString()
+      : 'Invalid Date'
     xml += `<item>`
-    xml += `<title>${article.title}</title>`
-    xml += `<link>${article.url}</link>`
-    xml += `<pubDate>${new Date(article.publishedDate).toUTCString()}</pubDate>`
+    xml += `<title>${escapeXml(article.title)}</title>`
+    xml += `<link>${articleUrl}</link>`
+    xml += `<pubDate>${pubDate}</pubDate>`
     xml += `</item>`
   })
 

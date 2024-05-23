@@ -1,11 +1,5 @@
 import { ReactNode } from 'react'
 
-export type Article = {
-  title: string
-  url: string
-  publishedDate: string
-}
-
 export type Comment = {
   name: string
   title: string
