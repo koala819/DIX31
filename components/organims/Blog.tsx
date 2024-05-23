@@ -66,8 +66,10 @@ export default function Blog({ posts }: { posts: SimpleBlogCardProps[] }) {
   }
 
   return (
-    <div className="container p-1">
-      {selectedTag === null && <BlogHeader firstPosts={mostRecentPosts} />}
+    <div className="container">
+      <div className="pt-1">
+        {selectedTag === null && <BlogHeader firstPosts={mostRecentPosts} />}
+      </div>
       <section className="block lg:flex lg:space-x-2 px-2 lg:p-0 mt-10 mb-10">
         <aside className="w-full lg:w-2/3">
           <BlogBody posts={displayPosts} />
