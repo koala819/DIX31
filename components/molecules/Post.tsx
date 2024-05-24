@@ -81,45 +81,47 @@ export function Post({ post }: { post: fullBlog }) {
   `
 
   return (
-    <div className="p-8 sm:prose-base md:prose-lg">
-      <header className="p-4">
-        <h1 className="font-extrabold text-3xl">{post.title}</h1>
+    <div className="container">
+      <div className="p-8 sm:prose-base md:prose-lg">
+        <header className="p-4">
+          <h1 className="font-extrabold text-3xl">{post.title}</h1>
 
-        <span className="text-gray-500 font-medium">
-          {format(parseISO(post.date), 'dd-MM-yyyy')}
-        </span>
-      </header>
+          <span className="text-gray-500 font-medium">
+            {format(parseISO(post.date), 'dd-MM-yyyy')}
+          </span>
+        </header>
 
-      <div className="w-full flex justify-center">
-        <Image
-          src={
-            post.titleImage
-              ? urlFor(post.titleImage)
-              : urlFor(post.titleImagebyCloudinary)
-          }
-          alt={
-            post.titleImagebyCloudinary
-              ? post.titleImagebyCloudinary.alt
-              : post.title
-          }
-          width={500}
-          height={800}
-          priority
-          className="rounded-lg mt-8 border"
-        />
-      </div>
+        <div className="w-full flex justify-center">
+          <Image
+            src={
+              post.titleImage
+                ? urlFor(post.titleImage)
+                : urlFor(post.titleImagebyCloudinary)
+            }
+            alt={
+              post.titleImagebyCloudinary
+                ? post.titleImagebyCloudinary.alt
+                : post.title
+            }
+            width={500}
+            height={800}
+            priority
+            className="rounded-lg mt-8 border"
+          />
+        </div>
 
-      <div className={richTextStyles}>
-        <PortableText
-          value={post?.content}
-          components={myPortableTextComponents}
-        />
-      </div>
+        <div className={richTextStyles}>
+          <PortableText
+            value={post?.content}
+            components={myPortableTextComponents}
+          />
+        </div>
 
-      <div className="flex items-center justify-center p-8">
-        <Link href="/blog">
-          <Button>Retour</Button>
-        </Link>
+        <div className="flex items-center justify-center p-8">
+          <Link href="/blog">
+            <Button>Retour</Button>
+          </Link>
+        </div>
       </div>
     </div>
   )
