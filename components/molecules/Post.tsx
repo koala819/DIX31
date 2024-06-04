@@ -91,6 +91,18 @@ export function Post({ post }: { post: fullBlog }) {
           </span>
         </header>
 
+        {post.youtubeVideo && post.youtubeVideo.url && (
+          <div className="video-container">
+            <iframe
+              width="560"
+              height="315"
+              src={post.youtubeVideo.url.replace('watch?v=', 'embed/')}
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
+        )}
+
         <div className="w-full flex justify-center">
           <Image
             src={

@@ -20,7 +20,10 @@ export async function generateMetadata({
         smallDescription,
         titleImage,
         titleImagebyCloudinary,
-        date
+        date,
+        youtubeVideo {
+          url
+        }
     }[0]`
     const data = await client.fetch(query)
 
@@ -48,7 +51,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
         content,
         titleImage,
         titleImagebyCloudinary,
-        date
+        date,
+        youtubeVideo {
+          url
+        }
     }[0]`
     if (!query) notFound()
 

@@ -4,6 +4,8 @@ import { schemaTypes } from './schemas'
 
 import { debugSecrets } from '@sanity/preview-url-secret/sanity-plugin-debug-secrets'
 import { visionTool } from '@sanity/vision'
+// import {presentationTool} from 'sanity/presentation'
+// import { visualEditing } from '@sanity/visual-editing'
 import { apiVersion, basePath, dataset, projectId } from 'lib/sanity.api'
 import { locate } from 'plugins/locate'
 // import { pageStructure, singletonPlugin } from 'plugins/settings'
@@ -13,6 +15,9 @@ import { presentationTool } from 'sanity/presentation'
 import { structureTool } from 'sanity/structure'
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE
+// console.log('porjectId', process.env.NEXT_PUBLIC_SANITY_PROJECT_ID)
+// console.log('dataset', process.env.EXT_PUBLIC_SANITY_NEXT_PUBLIC_SANITY_DATASET)
+// console.log('token', process.env.SANITY_API_READ_TOKEN)
 
 export default defineConfig({
   basePath,
@@ -32,6 +37,11 @@ export default defineConfig({
         },
       },
     }),
+    // visualEditing({
+    //   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    //   dataset: process.env.EXT_PUBLIC_SANITY_NEXT_PUBLIC_SANITY_DATASET,
+    //   token: process.env.SANITY_API_READ_TOKEN,
+    // }),
     structureTool(),
     // structureTool({
     //   structure: pageStructure([home, settings]),

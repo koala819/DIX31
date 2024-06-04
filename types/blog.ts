@@ -16,6 +16,7 @@ export interface fullBlog {
   title: string
   titleImage: any
   titleImagebyCloudinary: any
+  youtubeVideo: any
 }
 
 export interface TagCount {

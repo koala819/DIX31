@@ -1,5 +1,6 @@
-import getYouTubeId from 'get-youtube-id'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
+
+import getYouTubeId from 'get-youtube-id'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -52,17 +53,8 @@ export default defineType({
     },
   },
   components: {
-    preview: (props) => {
-      const {
-        // @ts-expect-error
-        url,
-        title,
-        // @ts-expect-error
-        aspectHeight,
-        // @ts-expect-error
-        aspectWidth,
-        renderDefault,
-      } = props
+    preview: (props: any) => {
+      const { url, title, aspectHeight, aspectWidth, renderDefault } = props
       if (!url) {
         return <div>Missing YouTube URL</div>
       }
