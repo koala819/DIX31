@@ -39,18 +39,27 @@ const generateAtomFeed = async (): Promise<string> => {
     '<title>Conseils Professionnels en Développement Web par DIX31 - Blog Tech France</title>'
   xml += '<link>https://dix31.com</link>'
 
-  posts.slice(0, 3).forEach((article) => {
-    const articleUrl =
-      article.url || `https://dix31.com/blog/${article.currentSlug}`
-    const pubDate = article.date
-      ? new Date(article.date).toUTCString()
-      : 'Invalid Date'
-    xml += `<item>`
-    xml += `<title>${escapeXml(article.title)}</title>`
-    xml += `<link>${articleUrl}</link>`
-    xml += `<pubDate>${pubDate}</pubDate>`
-    xml += `</item>`
-  })
+  posts
+    .slice(0, 3)
+    .forEach(
+      (article: {
+        url: string
+        currentSlug: any
+        date: string | number | Date
+        title: string
+      }) => {
+        const articleUrl =
+          article.url || `https://dix31.com/blog/${article.currentSlug}`
+        const pubDate = article.date
+          ? new Date(article.date).toUTCString()
+          : 'Invalid Date'
+        xml += `<item>`
+        xml += `<title>${escapeXml(article.title)}</title>`
+        xml += `<link>${articleUrl}</link>`
+        xml += `<pubDate>${pubDate}</pubDate>`
+        xml += `</item>`
+      },
+    )
 
   xml += '</channel>'
   xml += '</rss>'
