@@ -1,7 +1,12 @@
 import type { Config } from 'tailwindcss'
+import { fontFamily } from 'tailwindcss/defaultTheme'
 
 const config: Config = {
-  content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{ts,tsx}'],
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './ui/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{ts,tsx}',
+  ],
   darkMode: 'class',
   theme: {
     container: {
@@ -48,6 +53,7 @@ const config: Config = {
         },
       },
       borderRadius: {
+        xl: 'calc(var(--radius) + 4px)',
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
@@ -68,12 +74,14 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
+        heading: ['var(--font-heading)', ...fontFamily.sans],
+        body: ['var(--font-body)', ...fontFamily.sans],
       },
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
-    // require('tailwindcss-animate'),
+    // require('@tailwindcss/typography'),
+    require('tailwindcss-animate'),
   ],
 }
 

@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-background font-sans text-foreground text-gray-600 dark:text-gray-200;
+    @apply font-body bg-background text-foreground text-gray-600 dark:text-gray-200;
   }
 
   h1,
@@ -22,15 +22,15 @@
   a,
   li,
   blockquote {
-    @apply font-sans;
+    @apply font-heading;
   }
 
   h1 {
-    @apply mb-6 text-4xl font-bold text-gray-600 dark:text-gray-200 lg:text-6xl;
+    @apply mb-6 text-4xl font-bold text-gray-600 dark:text-gray-200 md:text-6xl;
   }
 
   h2 {
-    @apply mb-5 text-3xl font-bold text-gray-600 dark:text-gray-200 md:text-2xl lg:text-5xl xl:text-6xl;
+    @apply mb-5 text-5xl font-bold text-gray-600 dark:text-gray-200 md:text-6xl;
   }
 
   h3 {
@@ -48,7 +48,7 @@
   }
 
   .container {
-    @apply mx-auto max-w-2xl overflow-hidden p-12 px-4 py-16 shadow-lg dark:bg-gray-800 dark:shadow-gray-700 sm:py-24 lg:max-w-7xl lg:px-8;
+    @apply mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8;
   }
 
   :root {
@@ -102,5 +102,16 @@
 
   .focus\:ring:focus {
     box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.6);
+  }
+}
+
+@layer components {
+  .hire-me-button {
+    --blurAmount: 10px;
+    --duration: 300ms;
+  }
+
+  .hire-me-button:hover .absolute {
+    opacity: 1;
   }
 }

@@ -1,21 +1,27 @@
+import { Analytics } from '@vercel/analytics/react'
 import { Suspense, lazy } from 'react'
 
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import { ThemeProvider } from '@/app/provider'
-import GoogleAnalytics from '@/lib/GoogleAnalytics'
+import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const Navbar = lazy(() => import('@/components/templates/Navbar'))
 const Footer = lazy(() => import('@/components/templates/Footer'))
 
-const inter = Inter({
-  weight: ['400', '700'],
-  style: ['normal'],
+const fontHeading = Inter({
   subsets: ['latin'],
-  variable: '--font-inter',
   display: 'swap',
+  variable: '--font-heading',
+})
+
+const fontBody = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-body',
 })
 
 export const metadata: Metadata = {
@@ -51,7 +57,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body className={`${inter.variable}`}>
+      <body
+        className={cn('antialiased', fontHeading.variable, fontBody.variable)}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -65,8 +73,11 @@ export default function RootLayout({
             <main className="flex-1">
               <div className="w-full px-4 mx-auto mt-6">
                 <div className="flex flex-col min-w-0 break-words w-full mb-6 rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
-                  <GoogleAnalytics />
+                  {/* <GoogleAnalytics /> */}
                   {children}
+                  <SpeedInsights />
+                  <Analytics />
+                  <SpeedInsights />
                 </div>
               </div>
             </main>
