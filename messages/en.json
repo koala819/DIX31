@@ -1,5 +1,8 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
+  "Btn-hire": "Hire-me",
+  "Navbar": {
+    "blog": "Blog",
+    "home": "Home",
+    "projects": "Projects"
   }
 }

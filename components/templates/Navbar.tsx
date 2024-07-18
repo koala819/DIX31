@@ -9,13 +9,18 @@ import Link from 'next/link'
 import HireMeBtn from '@/components/atoms/HireMeBtn'
 import { ModeToggle as Toggle } from '@/components/atoms/Toggle'
 import { Button } from '@/components/ui/button'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet'
 
 import LangSwitcher from '../atoms/LangSwitcher'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const t = useTranslations('HomePage')
+  const t = useTranslations('Navbar')
   function handleNavItemClick() {
     setIsOpen(false)
   }
@@ -25,7 +30,6 @@ export default function Navbar() {
       <Link href="/" className="text-lg font-bold" prefetch={false}>
         Xavier Genolhac
       </Link>
-      <h1>{t('title')}</h1>
       {/* Desktop */}
       <nav className="ml-auto hidden gap-4 md:flex">
         <HireMeBtn />
@@ -34,21 +38,21 @@ export default function Navbar() {
           className="relative transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary after:transition-all after:duration-300 after:ease-in-out hover:after:h-1 data-[active=true]:after:h-1 data-[active=true]:text-primary"
           prefetch={false}
         >
-          Accueil
+          {t('home')}
         </Link>
         <Link
           href="/projects"
           className="relative transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary after:transition-all after:duration-300 after:ease-in-out hover:after:h-1 data-[active=true]:after:h-1 data-[active=true]:text-primary"
           prefetch={false}
         >
-          Projets
+          {t('projects')}
         </Link>
         <Link
           href="/blog"
           className="relative transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary after:transition-all after:duration-300 after:ease-in-out hover:after:h-1 data-[active=true]:after:h-1 data-[active=true]:text-primary"
           prefetch={false}
         >
-          Blog
+          {t('blog')}
         </Link>
         <Toggle />
         <LangSwitcher />
@@ -56,13 +60,18 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div className="ml-auto flex items-center gap-2 md:hidden">
         <HireMeBtn />
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <Sheet
+          open={isOpen}
+          onOpenChange={setIsOpen}
+          aria-label="Navigation menu"
+        >
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="lg:hidden">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
+          <SheetTitle className="sr-only">Navigation menu</SheetTitle>
           <SheetContent side="right">
             <div className="grid gap-2 py-6">
               <Link
@@ -71,7 +80,7 @@ export default function Navbar() {
                 prefetch={false}
                 onClick={handleNavItemClick}
               >
-                Accueil
+                {t('home')}
               </Link>
               <Link
                 href="/projects"
@@ -79,7 +88,7 @@ export default function Navbar() {
                 prefetch={false}
                 onClick={handleNavItemClick}
               >
-                Projet
+                {t('projects')}
               </Link>
               <Link
                 href="/blog"
@@ -87,9 +96,10 @@ export default function Navbar() {
                 prefetch={false}
                 onClick={handleNavItemClick}
               >
-                Blog
+                {t('blog')}
               </Link>
-              <div className="w-full flex justify-center">
+              <div className="w-full flex justify-center space-x-8">
+                <LangSwitcher />
                 <Toggle />
               </div>
             </div>

@@ -1,5 +1,8 @@
 {
-  "HomePage": {
-    "title": "Bonjour le monde !"
+  "Btn-hire": "Engagez-moi",
+  "Navbar": {
+    "blog": "Blog",
+    "home": "Accueil",
+    "projects": "Projets"
   }
 }
