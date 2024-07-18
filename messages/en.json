@@ -1,5 +1,14 @@
 {
   "Btn-hire": "Hire-me",
+  "Hero": {
+    "experience": "Experience",
+    "languages": "Languages",
+    "langues": "French & English",
+    "location": "Location",
+    "stack": "Technical Stack",
+    "title": "Your vision is my mission !",
+    "years": "years"
+  },
   "Navbar": {
     "blog": "Blog",
     "home": "Home",

@@ -1,5 +1,14 @@
 {
   "Btn-hire": "Engagez-moi",
+  "Hero": {
+    "experience": "Expérience",
+    "languages": "Langues",
+    "langues": "Français & Anglais",
+    "location": "Localisation",
+    "stack": "Stack Technique",
+    "title": "Votre vision est ma mission !",
+    "years": "ans"
+  },
   "Navbar": {
     "blog": "Blog",
     "home": "Accueil",

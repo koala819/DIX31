@@ -26,7 +26,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
+    <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 sticky top-0 z-50 bg-background shadow-sm">
       <Link href="/" className="text-lg font-bold" prefetch={false}>
         Xavier Genolhac
       </Link>

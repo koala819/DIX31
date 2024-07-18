@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-body bg-background text-foreground text-gray-600 dark:text-gray-200;
+    @apply bg-background font-body text-foreground text-gray-600 dark:text-gray-200;
   }
 
   h1,
@@ -26,7 +26,7 @@
   }
 
   h1 {
-    @apply mb-6 text-4xl font-bold text-gray-600 dark:text-gray-200 md:text-6xl;
+    @apply mb-6 text-xl font-bold text-gray-600 dark:text-gray-200 md:text-6xl;
   }
 
   h2 {

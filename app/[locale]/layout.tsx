@@ -78,7 +78,7 @@ export default async function RootLayout({
                 <Navbar />
               </Suspense>
               <main className="flex-1">
-                <div className="w-full px-4 mx-auto mt-6">
+                <div className="w-full mx-auto">
                   <div className="flex flex-col min-w-0 break-words w-full mb-6 rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
                     {/* <GoogleAnalytics /> */}
                     {children}
