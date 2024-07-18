@@ -3,6 +3,7 @@
 import { Menu } from 'lucide-react'
 import { useState } from 'react'
 
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 import HireMeBtn from '@/components/atoms/HireMeBtn'
@@ -10,9 +11,11 @@ import { ModeToggle as Toggle } from '@/components/atoms/Toggle'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
+import LangSwitcher from '../atoms/LangSwitcher'
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-
+  const t = useTranslations('HomePage')
   function handleNavItemClick() {
     setIsOpen(false)
   }
@@ -22,6 +25,7 @@ export default function Navbar() {
       <Link href="/" className="text-lg font-bold" prefetch={false}>
         Xavier Genolhac
       </Link>
+      <h1>{t('title')}</h1>
       {/* Desktop */}
       <nav className="ml-auto hidden gap-4 md:flex">
         <HireMeBtn />
@@ -47,6 +51,7 @@ export default function Navbar() {
           Blog
         </Link>
         <Toggle />
+        <LangSwitcher />
       </nav>
       {/* Mobile menu */}
       <div className="ml-auto flex items-center gap-2 md:hidden">

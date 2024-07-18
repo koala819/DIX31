@@ -4,6 +4,7 @@
 /node_modules
 /studio/node_modules
 /.pnp
+/.jampack
 .pnp.js
 pnpm-lock.yaml
 .env.local
