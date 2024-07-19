@@ -13,5 +13,12 @@
     "blog": "Blog",
     "home": "Home",
     "projects": "Projects"
+  },
+  "Profile": {
+    "greeting": "Hi, I'm Xav!",
+    "intro": "I'm a freelance web developer based in France. I improved my passion for coding in 2020 after a 15-year career in telecommunications and IT. Since then, I've immersed myself in the world of modern web development.",
+    "specialty": "My specialty? Creating functional web experiences with React, Next.js, and Tailwind. I'm working with JavaScript and TypeScript, and I particularly enjoy working on full-stack projects.",
+    "learning": "I run a Discord community where we share knowledge and explore best practices in the field together.",
+    "callToAction": "Have an interesting web project? Let's talk about it!"
   }
 }

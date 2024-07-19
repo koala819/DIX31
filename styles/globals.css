@@ -44,7 +44,7 @@
   span,
   p,
   li {
-    @apply text-xl font-medium;
+    @apply text-lg font-medium lg:text-xl;
   }
 
   .container {
