@@ -1,5 +1,9 @@
 {
   "Btn-hire": "Hire-me",
+  "Career": {
+    "title": "Your project needs the best.",
+    "description": "From my experience with leading companies, I transform your ideas into innovative and high-performance web solutions. Trust my expertise to bring your digital ambitions to life."
+  },
   "Hero": {
     "experience": "Experience",
     "languages": "Languages",

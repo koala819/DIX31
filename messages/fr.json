@@ -1,5 +1,9 @@
 {
   "Btn-hire": "Engagez-moi",
+  "Career": {
+    "title": "Votre projet mérite le meilleur.",
+    "description": "Fort de mon expérience avec des entreprises de premier plan, je transforme vos idées en solutions web innovantes et performantes. Faites confiance à mon expertise pour donner vie à vos ambitions digitales."
+  },
   "Hero": {
     "experience": "Expérience",
     "languages": "Langues",
