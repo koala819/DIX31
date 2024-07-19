@@ -7,11 +7,16 @@ import { useTheme } from 'next-themes'
 
 import { Button } from '@/components/ui/button'
 
-export function ModeToggle() {
+export function ModeToggle({
+  handleNavItemClick,
+}: {
+  handleNavItemClick?: () => void
+}) {
   const { theme, setTheme } = useTheme()
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
+    if (handleNavItemClick) handleNavItemClick()
   }
 
   return (

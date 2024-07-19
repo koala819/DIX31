@@ -17,17 +17,35 @@ const Profile = dynamic(() => import('@/components/atoms/Profile'))
 // const CommentList = lazy(() => import('@/components/molecules/CommentList'))
 
 export const metadata: Metadata = {
-  title: 'DIX31 - Création de Sites Web Personnalisés sur mesure à Toulouse',
+  title: 'Xavier - Développeur Web Freelance',
   description:
-    'Spécialiste en création de sites web personnalisés et responsive. Solutions sur mesure pour entreprises. Consultation gratuite.',
+    'Spécialiste en réalisation de projets web personnalisés. Solutions sur mesure pour entreprises et particuliers. Consultation gratuite.',
+  keywords:
+    'développeur web, freelance, projets web, solutions sur mesure, consultation',
   robots: 'index, follow',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/`,
     languages: {
-      'fr-FR': '/fr-FR',
+      'fr-FR': '/fr',
+      'en-US': '/en',
     },
   },
+  openGraph: {
+    title: 'Xavier - Développeur Web Freelance',
+    description:
+      'Spécialiste en réalisation de projets web personnalisés. Solutions sur mesure pour entreprises et particuliers.',
+    type: 'website',
+    locale: 'fr_FR',
+    alternateLocale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Xavier - Développeur Web Freelance',
+    description:
+      'Spécialiste en réalisation de projets web personnalisés. Solutions sur mesure pour entreprises et particuliers.',
+  },
 }
+
 export default async function Page() {
   // const getPosts = cache(async () => {
   //   'use server'

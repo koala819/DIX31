@@ -1,10 +1,11 @@
 'use client'
 
 import { Menu } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import HireMeBtn from '@/components/atoms/HireMeBtn'
 import { ModeToggle as Toggle } from '@/components/atoms/Toggle'
@@ -19,9 +20,21 @@ import {
 import LangSwitcher from '../atoms/LangSwitcher'
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [activeItem, setActiveItem] = useState<string>('home')
+  const pathname = usePathname()
+
   const t = useTranslations('Navbar')
-  function handleNavItemClick() {
+
+  useEffect(() => {
+    // Update activeItem based on the current pathname
+    if (pathname === '/') setActiveItem('home')
+    else if (pathname.startsWith('/projects')) setActiveItem('projects')
+    else if (pathname.startsWith('/blog')) setActiveItem('blog')
+  }, [pathname])
+
+  function handleNavItemClick(item: string) {
+    setActiveItem(item)
     setIsOpen(false)
   }
 
@@ -30,33 +43,43 @@ export default function Navbar() {
       <Link href="/" className="text-lg font-bold" prefetch={false}>
         Xavier Genolhac
       </Link>
+
       {/* Desktop */}
-      <nav className="ml-auto hidden gap-4 md:flex">
+      <nav className="ml-auto hidden gap-4 lg:flex">
         <HireMeBtn />
-        <Link
-          href="/"
-          className="relative transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary after:transition-all after:duration-300 after:ease-in-out hover:after:h-1 data-[active=true]:after:h-1 data-[active=true]:text-primary"
-          prefetch={false}
-        >
-          {t('home')}
-        </Link>
-        <Link
-          href="/projects"
-          className="relative transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary after:transition-all after:duration-300 after:ease-in-out hover:after:h-1 data-[active=true]:after:h-1 data-[active=true]:text-primary"
-          prefetch={false}
-        >
-          {t('projects')}
-        </Link>
-        <Link
-          href="/blog"
-          className="relative transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary after:transition-all after:duration-300 after:ease-in-out hover:after:h-1 data-[active=true]:after:h-1 data-[active=true]:text-primary"
-          prefetch={false}
-        >
-          {t('blog')}
-        </Link>
+        <div className="flex items-center space-x-4">
+          <Link
+            href="/"
+            className="navbar"
+            prefetch={false}
+            data-active={activeItem === 'home'}
+            onClick={() => setActiveItem('home')}
+          >
+            {t('home')}
+          </Link>
+          <Link
+            href="/projects"
+            className="navbar"
+            prefetch={false}
+            data-active={activeItem === 'projects'}
+            onClick={() => setActiveItem('projects')}
+          >
+            {t('projects')}
+          </Link>
+          <Link
+            href="/blog"
+            className="navbar"
+            prefetch={false}
+            data-active={activeItem === 'blog'}
+            onClick={() => setActiveItem('blog')}
+          >
+            {t('blog')}
+          </Link>
+        </div>
         <Toggle />
         <LangSwitcher />
       </nav>
+
       {/* Mobile menu */}
       <div className="ml-auto flex items-center gap-2 md:hidden">
         <HireMeBtn />
@@ -76,31 +99,34 @@ export default function Navbar() {
             <div className="grid gap-2 py-6">
               <Link
                 href="/"
-                className="flex w-full items-center py-2 text-lg font-semibold"
+                className="flex w-full items-center py-2 text-lg font-semibold navbar-mobile-item"
                 prefetch={false}
-                onClick={handleNavItemClick}
+                data-active={activeItem === 'home'}
+                onClick={() => handleNavItemClick('home')}
               >
                 {t('home')}
               </Link>
               <Link
                 href="/projects"
-                className="flex w-full items-center py-2 text-lg font-semibold"
+                className="flex w-full items-center py-2 text-lg font-semibold navbar-mobile-item"
                 prefetch={false}
-                onClick={handleNavItemClick}
+                data-active={activeItem === 'projects'}
+                onClick={() => handleNavItemClick('projects')}
               >
                 {t('projects')}
               </Link>
               <Link
                 href="/blog"
-                className="flex w-full items-center py-2 text-lg font-semibold"
+                className="flex w-full items-center py-2 text-lg font-semibold navbar-mobile-item"
                 prefetch={false}
-                onClick={handleNavItemClick}
+                data-active={activeItem === 'blog'}
+                onClick={() => handleNavItemClick('blog')}
               >
                 {t('blog')}
               </Link>
               <div className="w-full flex justify-center space-x-8">
-                <LangSwitcher />
-                <Toggle />
+                <LangSwitcher handleNavItemClick={() => setIsOpen(false)} />
+                <Toggle handleNavItemClick={() => setIsOpen(false)} />
               </div>
             </div>
           </SheetContent>

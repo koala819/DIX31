@@ -79,7 +79,7 @@ export default async function RootLayout({
               </Suspense>
               <main className="flex-1">
                 <div className="w-full mx-auto">
-                  <div className="flex flex-col min-w-0 break-words w-full mb-6 rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
+                  <div className="flex flex-col min-w-0 break-words w-full rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
                     {/* <GoogleAnalytics /> */}
                     {children}
                     <SpeedInsights />

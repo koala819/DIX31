@@ -26,15 +26,15 @@
   }
 
   h1 {
-    @apply mb-6 text-xl font-bold text-gray-600 dark:text-gray-200 md:text-6xl;
+    @apply text-2xl font-bold text-gray-600 dark:text-gray-200 lg:text-6xl;
   }
 
   h2 {
-    @apply mb-5 text-5xl font-bold text-gray-600 dark:text-gray-200 md:text-6xl;
+    @apply text-2xl font-bold text-gray-600 dark:text-gray-200  lg:text-3xl;
   }
 
   h3 {
-    @apply text-lg font-semibold;
+    @apply text-lg font-bold sm:text-2xl;
   }
 
   h4 {
@@ -48,7 +48,7 @@
   }
 
   .container {
-    @apply mx-auto max-w-2xl px-4 py-16 sm:py-24 lg:max-w-7xl lg:px-8;
+    @apply mx-auto max-w-2xl px-4 py-4 sm:py-8 lg:max-w-7xl lg:px-8;
   }
 
   :root {
@@ -113,5 +113,26 @@
 
   .hire-me-button:hover .absolute {
     opacity: 1;
+  }
+
+  .navbar {
+    @apply relative transition-colors duration-300 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-primary after:transition-all after:duration-300 after:ease-in-out hover:after:h-2 data-[active=true]:text-primary data-[active=true]:after:h-2;
+  }
+
+  .navbar-mobile-item {
+    @apply relative pl-6 transition-colors duration-300;
+  }
+
+  .navbar-mobile-item::after {
+    content: '';
+    @apply absolute left-0 h-full w-1 scale-y-0  bg-primary;
+  }
+
+  .navbar-mobile-item[data-active='true']::after {
+    @apply flex scale-y-100;
+  }
+
+  .navbar-mobile-item[data-active='true'] {
+    @apply text-primary;
   }
 }

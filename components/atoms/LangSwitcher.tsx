@@ -9,7 +9,11 @@ import { usePathname } from 'next/navigation'
 import frFlag from '@/public/images/flags/france.svg'
 import gbFlag from '@/public/images/flags/uk.svg'
 
-const LangSwitcher: React.FC = () => {
+const LangSwitcher = ({
+  handleNavItemClick,
+}: {
+  handleNavItemClick?: () => void
+}) => {
   const pathname = usePathname()
   const locale = useLocale()
   const languages: { [key: string]: { flag: any; alt: string } } = {
@@ -21,6 +25,7 @@ const LangSwitcher: React.FC = () => {
     const newLocale = locale === 'fr' ? 'en' : 'fr'
     const newPath = pathname.replace(`/${locale}`, `/${newLocale}`)
     window.location.href = newPath // Force a full page reload
+    if (handleNavItemClick) handleNavItemClick()
   }
 
   return (
