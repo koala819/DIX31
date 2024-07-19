@@ -6,6 +6,7 @@ import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
 import Career from '@/components/atoms/Career'
+import Opinion from '@/components/atoms/Opinion'
 
 // import { comments } from '@/lib/comments'
 // import { client } from '@/lib/sanity'
@@ -74,6 +75,7 @@ export default async function Page() {
       <Suspense fallback={<div>Chargement ...</div>}>
         <Profile />
         <Career />
+        <Opinion />
         {/* <Blog posts={posts} /> */}
         {/* <Projects /> */}
         {/* <Rates /> */}

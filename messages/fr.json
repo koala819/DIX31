@@ -18,6 +18,9 @@
     "home": "Accueil",
     "projects": "Projets"
   },
+  "Opinion": {
+    "text": "Nous avons eu la chance de réaliser une mission avec Xavier. Très responsable, travail de grande qualité et technique, nous avons été satisfaits et conseillons pour d'autres missions."
+  },
   "Profile": {
     "greeting": "Salut, je suis Xav !",
     "intro": "Développeur web freelance basé en France, j'ai approfondi ma passion pour le code en 2020 après une carrière de 15 ans dans les télécoms et l'informatique. Depuis, je me suis plongé dans l'univers du développement web moderne.",
