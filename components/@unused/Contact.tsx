@@ -16,9 +16,12 @@ import * as yup from 'yup'
 export default function Contact() {
   const [hideForm, setHideForm] = useState(false)
 
-  const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
-    loading: () => <div>Chargement ...</div>,
-  })
+  const WithCustomLoading = dynamic(
+    () => import('@/components/atoms/LoadImage'),
+    {
+      loading: () => <div>Chargement ...</div>,
+    },
+  )
 
   const schema = yup.object().shape({
     email: yup

@@ -70,9 +70,15 @@ export default async function Page() {
   // const posts = await getPosts()
 
   return (
-    <div className="container space-y-12">
+    <main className="container space-y-12">
       <Hero />
-      <Suspense fallback={<div>Chargement ...</div>}>
+      <Suspense
+        fallback={
+          <div role="alert" aria-busy="true">
+            Chargement ...
+          </div>
+        }
+      >
         <Profile />
         <Career />
         <Opinion />
@@ -81,6 +87,6 @@ export default async function Page() {
         {/* <Rates /> */}
         {/* <CommentList comments={comments} /> */}
       </Suspense>
-    </div>
+    </main>
   )
 }

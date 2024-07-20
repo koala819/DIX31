@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { Project } from '@/components/atoms/Project'
+import { Project } from '@/components/@unused/Project'
 
 export const metadata: Metadata = {
   title: 'Gîtes de Thouy - Location de Gîtes dans le Tarn | Projet de DIX31',

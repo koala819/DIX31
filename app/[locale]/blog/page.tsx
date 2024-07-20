@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 import { SimpleBlogCardProps } from '@/types/blog'
 
-import Blog from '@/components/organims/Blog'
+import Blog from '@/components/@unused/oragnisms/Blog'
 
 import { client } from '@/lib/sanity'
 

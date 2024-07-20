@@ -103,6 +103,19 @@
   .focus\:ring:focus {
     box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.6);
   }
+  :focus {
+    outline: 2px solid #005fcc;
+    outline-offset: 2px;
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid #005fcc;
+    outline-offset: 2px;
+  }
 }
 
 @layer components {

@@ -119,9 +119,12 @@ export const Achievements = () => {
     },
   ]
 
-  const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
-    loading: () => <div>Chargement ...</div>,
-  })
+  const WithCustomLoading = dynamic(
+    () => import('@/components/atoms/LoadImage'),
+    {
+      loading: () => <div>Chargement ...</div>,
+    },
+  )
 
   return (
     <div className="container space-y-8">

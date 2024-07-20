@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import Contact from '@/components/molecules/Contact'
+import Contact from '@/components/@unused/Contact'
 
 export const metadata: Metadata = {
   title: 'Contactez DIX31 pour vos Projets de Développement Web en France',

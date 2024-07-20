@@ -5,9 +5,12 @@ import { urlFor } from '@/lib/sanity'
 import { format, parseISO } from 'date-fns'
 
 export default function Blog({ posts }: any) {
-  const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
-    loading: () => <div>Chargement ...</div>,
-  })
+  const WithCustomLoading = dynamic(
+    () => import('@/components/atoms/LoadImage'),
+    {
+      loading: () => <div>Chargement ...</div>,
+    },
+  )
 
   return (
     <>

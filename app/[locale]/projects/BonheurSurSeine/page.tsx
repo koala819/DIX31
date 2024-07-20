@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { Project } from '@/components/atoms/Project'
+import { Project } from '@/components/@unused/Project'
 
 export const metadata: Metadata = {
   title: 'Bonheur Sur Seine - La Communauté de la gyroroue en France | DIX31',

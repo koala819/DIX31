@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { Achievements } from '@/components/atoms/Achievements'
+import { Achievements } from '@/components/@unused/Achievements'
 
 export const metadata: Metadata = {
   title:

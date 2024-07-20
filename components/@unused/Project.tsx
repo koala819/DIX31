@@ -22,9 +22,12 @@ import { Button } from '@/components/ui/button'
 export const Project = ({ realisations }: { realisations: Realisations }) => {
   const [index, setIndex] = useState<number>(-1)
 
-  const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
-    loading: () => <div>Chargement ...</div>,
-  })
+  const WithCustomLoading = dynamic(
+    () => import('@/components/atoms/LoadImage'),
+    {
+      loading: () => <div>Chargement ...</div>,
+    },
+  )
   return (
     <div className="container space-y-32">
       <section className="md:flex items-center justify-center p-4 ">

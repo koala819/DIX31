@@ -58,9 +58,12 @@ export default function Footer() {
       })
   }
 
-  const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
-    loading: () => <div>Chargement ...</div>,
-  })
+  const WithCustomLoading = dynamic(
+    () => import('@/components/atoms/LoadImage'),
+    {
+      loading: () => <div>Chargement ...</div>,
+    },
+  )
 
   const Explore = [
     { label: 'Accueil', href: '/' },

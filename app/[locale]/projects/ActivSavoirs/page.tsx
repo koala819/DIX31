@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { Project } from '@/components/atoms/Project'
+import { Project } from '@/components/@unused/Project'
 
 export const metadata: Metadata = {
   title: "Activ'Savoirs - Site de Formation Professionnelle par DIX31",

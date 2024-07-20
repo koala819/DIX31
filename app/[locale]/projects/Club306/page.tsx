@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { Project } from '@/components/atoms/Project'
+import { Project } from '@/components/@unused/Project'
 
 export const metadata: Metadata = {
   title: 'Club 306 - La Communauté des Passionnés de Peugeot 306 | DIX31',
