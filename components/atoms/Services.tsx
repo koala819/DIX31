@@ -14,21 +14,18 @@ const Services: React.FC = () => {
     },
     {
       icon: <Globe className="w-6 h-6 text-primary" />,
-      title: 'Création de sites web',
-      description:
-        'Conception de sites web ultra-rapides avec un excellent SEO pour mettre en valeur votre contenu.',
+      title: t('Two.title'),
+      description: t('Two.description'),
     },
     {
       icon: <Code className="w-6 h-6 text-primary" />,
-      title: 'Développement en React',
-      description:
-        "Développement d'interfaces utilisateur, architecture, systèmes de build et utilisation de Next.js, avec une attention particulière à l'accessibilité (a11y).",
+      title: t('Three.title'),
+      description: t('Three.description'),
     },
     {
       icon: <Server className="w-6 h-6 text-primary" />,
-      title: 'Développement en Node.js',
-      description:
-        'Création de services web et API, ainsi que des applications en ligne de commande.',
+      title: t('Four.title'),
+      description: t('Four.description'),
     },
   ]
 

@@ -27,5 +27,24 @@
     "specialty": "My specialty? Creating functional web experiences with React, Next.js, and Tailwind. I'm working with JavaScript and TypeScript, and I particularly enjoy working on full-stack projects.",
     "learning": "I run a Discord community where we share knowledge and explore best practices in the field together.",
     "callToAction": "Have an interesting web project? Let's talk about it!"
+  },
+  "Services": {
+    "title": "What I can offer you",
+    "One": {
+      "title": "Robust and secure web applications",
+      "description": "Development of fast, scalable and secure web applications with a solid architecture."
+    },
+    "Two": {
+      "title": "Web design",
+      "description": "High-speed website design with excellent SEO to showcase your content."
+    },
+    "Three": {
+      "title": "React development",
+      "description": "User interface development, architecture, build systems and use of Next.js, with particular attention to accessibility (a11y)."
+    },
+    "Four": {
+      "title": "Node.js development",
+      "description": "Creation of high-performance web services and REST APIs, using best development practices and modern tools."
+    }
   }
 }

@@ -35,16 +35,16 @@
       "description": "Développement d'applications web rapides, évolutives et sécurisées avec une architecture solide."
     },
     "Two": {
-      "title": "Développement de site web",
-      "description": "De nombreux outils et technologies sont disponibles pour le développement de votre site web."
+      "title": "Création de sites web",
+      "description": "Conception de sites web ultra-rapides avec un excellent SEO pour mettre en valeur votre contenu."
     },
     "Three": {
-      "title": "SEO",
-      "description": "Optimisation des moteurs de recherche pour les sites web de qualité."
+      "title": "Développement en React",
+      "description": "Développement d'interfaces utilisateur, architecture, systèmes de build et utilisation de Next.js, avec une attention particulière à l'accessibilité (a11y)."
     },
     "Four": {
-      "title": "SEO",
-      "description": "Optimisation des moteurs de recherche pour les sites web de développement."
+      "title": "Développement en Node.js",
+      "description": "Création de services web et API REST performants, en utilisant les meilleures pratiques de développement et les outils modernes."
     }
   }
 }
