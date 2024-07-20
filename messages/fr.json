@@ -4,6 +4,18 @@
     "title": "Votre projet mérite le meilleur.",
     "description": "Fort de mon expérience avec des entreprises de premier plan, je transforme vos idées en solutions web innovantes et performantes. Faites confiance à mon expertise pour donner vie à vos ambitions digitales."
   },
+  "Contact": {
+    "title": "Parlez-moi de votre projet",
+    "description": "Envoyez-moi un message concernant votre projet et je vous répondrai dans les 48 heures :",
+    "confirmation": "Je vous répondrai d'ici 48h maximum.",
+    "thx": "Merci !",
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Message",
+    "button": "Envoyer un message",
+    "or": "Ou contactez-moi directement :",
+    "phone": "Téléphone :"
+  },
   "Hero": {
     "experience": "Expérience",
     "languages": "Langues",
@@ -81,6 +93,15 @@
       "img": {
         "alt": "Photo du CTO de Loopsider",
         "src": "/images/Joge-Bravo-Bertoglio.png"
+      }
+    },
+    "Pascal": {
+      "text": "Xavier est devenu un développeur fullstack talentueux qui a joué un rôle essentiel dans la création de notre site internet du club. Sa contribution exceptionnelle a transformé notre vision en une réalité numérique époustouflante. De plus, il a su créer un site internet qui non seulement répond à nos besoins, mais qui dépasse largement nos attentes. Sa maîtrise du développement front-end et back-end lui a permis de concevoir une expérience utilisateur fluide et conviviale. Son attitude positive et son dévouement en font un atout précieux pour toute équipe de développement. Nous avons tous pu travailler avec lui et il a su s'adapter à nos différentes approches, demandes, et personnalité. Par conséquent, sa capacité à travailler en équipe a également été un atout précieux, collaborant efficacement avec d'autres membres de l'équipe pour atteindre nos objectifs communs. Le Club306, son staff, et ses membres sont ravi de recommander Xavier pour vos projets. nous ne vous cacherons pas que le travail de Xavier a été crucial dans la mise en place d'une stratégie virtuelle de notre club.",
+      "author": "Pascal BESNARD",
+      "role": "Président du Club306",
+      "img": {
+        "alt": "Photo de Pascal BESNARD",
+        "src": "/images/Pascal BESNARD.jpeg"
       }
     },
     "Sandrine": {

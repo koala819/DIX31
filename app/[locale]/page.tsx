@@ -8,6 +8,7 @@ import dynamic from 'next/dynamic'
 import Career from '@/components/atoms/Career'
 import IdeaToLaunchSteps from '@/components/atoms/IdeaToLaunchSteps'
 import Services from '@/components/atoms/Services'
+import Contact from '@/components/molecules/Contact'
 import Testimonial from '@/components/molecules/Testimonial'
 
 // import { comments } from '@/lib/comments'
@@ -87,6 +88,8 @@ export default async function Page() {
         <Services />
         <Testimonial user="Sandrine" />
         <IdeaToLaunchSteps />
+        <Testimonial user="Pascal" />
+        <Contact />
 
         {/* <Opinion /> */}
         {/* <Blog posts={posts} /> */}
