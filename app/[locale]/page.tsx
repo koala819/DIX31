@@ -6,6 +6,7 @@ import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
 import Career from '@/components/atoms/Career'
+import FAQ from '@/components/atoms/Faq'
 import IdeaToLaunchSteps from '@/components/atoms/IdeaToLaunchSteps'
 import ScrollToContact from '@/components/atoms/ScrollToContact'
 import Services from '@/components/atoms/Services'
@@ -93,6 +94,7 @@ export default async function Page() {
         <Testimonial user="Pascal" />
         <Contact />
         <Testimonial user="Sid" />
+        <FAQ />
 
         {/* <Opinion /> */}
         {/* <Blog posts={posts} /> */}

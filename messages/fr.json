@@ -16,6 +16,33 @@
     "or": "Ou contactez-moi directement :",
     "phone": "Téléphone :"
   },
+  "FAQ": {
+    "title": "Foire aux questions",
+    "One": {
+      "question": "Proposez-vous également des services pour le design ?",
+      "answer": "Absolument ! J'aime une belle interface utilisateur et un design UX efficace et je suis heureux d'aider les clients dans diverses tâches de conception. Discutons de vos besoins spécifiques, et je peux soit vous aider directement, soit vous mettre en relation avec un designer talentueux de mon réseau professionnel pour collaborer sur votre projet."
+    },
+    "Two": {
+      "question": "Quel sera le coût de mon projet ?",
+      "answer": "Je comprends que vous cherchiez un chiffre précis, mais la vérité est que cela varie beaucoup en fonction du projet. La meilleure approche consiste à me contacter en me donnant des détails sur votre projet. Je me ferai un plaisir de vous fournir une proposition gratuite et personnalisée qui définira les coûts en fonction de vos besoins spécifiques."
+    },
+    "Three": {
+      "question": "Quel CMS utilisez-vous ?",
+      "answer": "J'aime particulièrement les solutions headless CMS, surtout Prismic.io. Ils offrent de la flexibilité, des composants intégrés robustes et divers types de données."
+    },
+    "Four": {
+      "question": "Quels frameworks utilisez-vous ?",
+      "answer": "Ma boîte à outils principale comprend React, Next.js et Node.js. Cependant, je crois qu'il faut choisir le bon outil pour le travail. Tous les projets n'ont pas besoin d'un framework, et parfois d'autres solutions peuvent être plus appropriées. La décision revient toujours à évaluer les avantages et les inconvénients en fonction des objectifs et des exigences spécifiques de votre projet."
+    },
+    "Five": {
+      "question": "Quelle est votre taux horaire ?",
+      "answer": "Je travaille généralement sur la base d'un prix fixe pour les projets. Cette approche permet de clarifier les produits à livrer, les coûts et les délais. Elle est avantageuse pour les clients car elle offre une certaine prévisibilité et me motive à travailler efficacement pour livrer votre projet dans les délais. Toutefois, je suis disposé à discuter d'autres arrangements s'ils répondent mieux à vos besoins."
+    },
+    "Six": {
+      "question": "Utilisez-vous TypeScript ?",
+      "answer": "Oui, j'utilise TypeScript dans la plupart de mes projets, en particulier ceux qui sont d'une complexité moyenne à élevée. Pour les projets très simples, je peux opter pour un simple JavaScript. La décision d'utiliser TypeScript est basée sur les exigences, l'échelle et les considérations de maintenance à long terme du projet."
+    }
+  },
   "Hero": {
     "experience": "Expérience",
     "languages": "Langues",

@@ -16,6 +16,33 @@
     "or": "Or contact me directly:",
     "phone": "Phone:"
   },
+  "FAQ": {
+    "title": "Frequently asked questions",
+    "One": {
+      "question": "Do you also offer design services ?",
+      "answer": "Absolutely! I like a beautifully UI and efficient UX design and I'm happy to assist clients with various design tasks. Let's discuss your specific needs, and I can either help you directly or connect you with a talented designer from my professional network to collaborate on your project."
+    },
+    "Two": {
+      "question": "How much will my project cost ?",
+      "answer": "I understand you're looking for a precise figure, but the truth is, it varies greatly depending on the project. The best approach is to reach out to me with details about your project. I'll be glad to provide you with a free, tailored proposal that outlines the costs based on your specific requirements."
+    },
+    "Three": {
+      "question": "Which CMS do you use ?",
+      "answer": "I particularly like headless CMS solutions, especially Prismic.io. They offer flexibility, robust built-in components and diverse data types."
+    },
+    "Four": {
+      "question": "Which frameworks do you use ?",
+      "answer": "My primary toolkit includes React, Next.js, and Node.js. However, I believe in choosing the right tool for the job. Not every project requires a framework, and sometimes other solutions might be more appropriate. The decision always comes down to evaluating the pros and cons against your project's specific goals and requirements."
+    },
+    "Five": {
+      "question": "What's your pricing structure ?",
+      "answer": "I typically work on a fixed-price basis for projects. This approach provides clarity on deliverables, costs, and timelines. It's beneficial for clients as it offers predictability, and it motivates me to work efficiently to deliver your project in a timely manner. However, I'm open to discussing alternative arrangements if they better suit your needs."
+    },
+    "Six": {
+      "question": "Do you use TypeScript?",
+      "answer": "Yes, I implement TypeScript in most of my projects, especially those of moderate to high complexity. For very simple projects, I might opt for plain JavaScript. The decision to use TypeScript is based on the project's requirements, scale, and long-term maintenance considerations."
+    }
+  },
   "Hero": {
     "experience": "Experience",
     "languages": "Languages",

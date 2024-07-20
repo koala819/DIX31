@@ -12,7 +12,7 @@ import '@/styles/globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const Navbar = lazy(() => import('@/components/organims/Navbar'))
-const Footer = lazy(() => import('@/components/@unused/Footer'))
+const Footer = lazy(() => import('@/components/organims/Footer'))
 
 const fontHeading = Inter({
   subsets: ['latin'],
