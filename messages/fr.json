@@ -13,6 +13,35 @@
     "title": "Votre vision est ma mission !",
     "years": "ans"
   },
+  "IdeaToLaunchSteps": {
+    "title": "De l'idée au lancement",
+    "description": "Je vous guiderai à chaque étape du processus, du début de votre idée jusqu'à un lancement réussi et au-delà.",
+    "btn": "Démarrer",
+    "One": {
+      "title": "Décrivez votre projet",
+      "description": "Appel gratuit de 30 minutes pour discuter de votre idée de projet."
+    },
+    "Two": {
+      "title": "Proposition",
+      "description": "Coûts et date de lancement - Vous recevrez une offre à prix fixe et un calendrier de lancement dans un délais de 5 jours ouvrables."
+    },
+    "Three": {
+      "title": "Début du développement",
+      "description": "Des mises à jour régulières sur l'état d'avancement sont fournies au cours du processus de développement."
+    },
+    "Four": {
+      "title": "Retour d'informations et corrections",
+      "description": "Une fois le développement terminé, le projet sera soumis à vos commentaires et à vos ajustements."
+    },
+    "Five": {
+      "title": "Le lancement",
+      "description": "Lorsque tout vous convient, le projet est lancé."
+    },
+    "Six": {
+      "title": "Un soutien continu",
+      "description": "Assistance continue au développement, à la correction des bugs et à la maintenance après le lancement."
+    }
+  },
   "Navbar": {
     "blog": "Blog",
     "home": "Accueil",

@@ -67,7 +67,7 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile menu */}
-      <div className="ml-auto flex items-center gap-2 md:hidden">
+      <div className="ml-auto flex items-center gap-2 lg:hidden">
         <HireMeBtn />
         <Sheet
           open={isOpen}

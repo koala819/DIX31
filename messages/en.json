@@ -13,6 +13,35 @@
     "title": "Your vision is my mission !",
     "years": "years"
   },
+  "IdeaToLaunchSteps": {
+    "title": "Idea to Launch",
+    "description": "I'll guide you through every step of the process, from your initial idea to a successful launch and beyond.",
+    "btn": "Get Started",
+    "One": {
+      "title": "Tell me about your project",
+      "description": "Free 30-minute consultation call to discuss your project idea."
+    },
+    "Two": {
+      "title": "Proposal",
+      "description": "Costs and launch date - Receive a fixed-price offer and launch timeline within 5 working days."
+    },
+    "Three": {
+      "title": "Start development",
+      "description": "Regular progress updates provided during the development process."
+    },
+    "Four": {
+      "title": "Feedback & corrections",
+      "description": "Once development is complete, the project will be handed over for your feedback and adjustments."
+    },
+    "Five": {
+      "title": "Launch",
+      "description": "When everything is to your liking, the project will be launched."
+    },
+    "Six": {
+      "title": "Ongoing support",
+      "description": "Continued assistance with further development, bug fixes, and maintenance after launch."
+    }
+  },
   "Navbar": {
     "blog": "Blog",
     "home": "Home",
