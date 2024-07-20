@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic'
 
 import Career from '@/components/atoms/Career'
 import IdeaToLaunchSteps from '@/components/atoms/IdeaToLaunchSteps'
+import ScrollToContact from '@/components/atoms/ScrollToContact'
 import Services from '@/components/atoms/Services'
 import Contact from '@/components/molecules/Contact'
 import Testimonial from '@/components/molecules/Testimonial'
@@ -74,6 +75,7 @@ export default async function Page() {
 
   return (
     <main className="container space-y-12">
+      <ScrollToContact />
       <Hero />
       <Suspense
         fallback={
@@ -90,6 +92,7 @@ export default async function Page() {
         <IdeaToLaunchSteps />
         <Testimonial user="Pascal" />
         <Contact />
+        <Testimonial user="Sid" />
 
         {/* <Opinion /> */}
         {/* <Blog posts={posts} /> */}

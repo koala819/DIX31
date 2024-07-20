@@ -7,7 +7,7 @@ const HireMeBtn = () => {
   const t = useTranslations()
 
   return (
-    <Link href="/contact">
+    <Link href="/?scrollTo=contact" scroll={false}>
       <Button
         variant="outline"
         className="hire-me-button group relative inline-flex h-12 items-center justify-center rounded-md border border-primary px-4 py-3 text-sm font-medium text-primary shadow transition-all duration-300 hover:text-white hover:font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50 hover:scale-105"
