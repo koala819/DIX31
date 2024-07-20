@@ -27,5 +27,24 @@
     "specialty": "Ma spécialité ? Créer des expériences web fonctionnelles avec React, Next.js et Tailwind. Je travaille avec JavaScript et TypeScript, et j'apprécie particulièrement travailler sur des projets full stack.",
     "learning": "J'anime une communauté Discord où nous partageons nos connaissances et explorons ensemble les meilleures pratiques du métier.",
     "callToAction": "Vous avez un projet web intéressant ? Discutons-en !"
+  },
+  "Services": {
+    "title": "Ce Que Je Vous Offre",
+    "One": {
+      "title": "Applications web robustes et sécurisées",
+      "description": "Développement d'applications web rapides, évolutives et sécurisées avec une architecture solide."
+    },
+    "Two": {
+      "title": "Développement de site web",
+      "description": "De nombreux outils et technologies sont disponibles pour le développement de votre site web."
+    },
+    "Three": {
+      "title": "SEO",
+      "description": "Optimisation des moteurs de recherche pour les sites web de qualité."
+    },
+    "Four": {
+      "title": "SEO",
+      "description": "Optimisation des moteurs de recherche pour les sites web de développement."
+    }
   }
 }

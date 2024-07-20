@@ -2,6 +2,7 @@
 
 import { Moon, Sun } from 'lucide-react'
 import * as React from 'react'
+import { useEffect, useState } from 'react'
 
 import { useTheme } from 'next-themes'
 
@@ -13,6 +14,15 @@ export function ModeToggle({
   handleNavItemClick?: () => void
 }) {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState<boolean>(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')

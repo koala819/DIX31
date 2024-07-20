@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic'
 
 import Career from '@/components/atoms/Career'
 import Opinion from '@/components/atoms/Opinion'
+import Services from '@/components/atoms/Services'
 
 // import { comments } from '@/lib/comments'
 // import { client } from '@/lib/sanity'
@@ -82,6 +83,7 @@ export default async function Page() {
         <Profile />
         <Career />
         <Opinion />
+        <Services />
         {/* <Blog posts={posts} /> */}
         {/* <Projects /> */}
         {/* <Rates /> */}
