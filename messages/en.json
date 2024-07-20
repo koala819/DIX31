@@ -18,9 +18,6 @@
     "home": "Home",
     "projects": "Projects"
   },
-  "Opinion": {
-    "text": "We were lucky to work on a project with Xavier. Very responsible, delivering high-quality and technical work, we were satisfied and recommend him for other projects."
-  },
   "Profile": {
     "greeting": "Hi, I'm Xav!",
     "intro": "I'm a freelance web developer based in France. I improved my passion for coding in 2020 after a 15-year career in telecommunications and IT. Since then, I've immersed myself in the world of modern web development.",
@@ -45,6 +42,26 @@
     "Four": {
       "title": "Node.js development",
       "description": "Creation of high-performance web services and REST APIs, using best development practices and modern tools."
+    }
+  },
+  "Testimonial": {
+    "Joge": {
+      "text": "We were lucky to work on a project with Xavier. Very responsible, delivering high-quality and technical work, we were satisfied and recommend him for other projects.",
+      "author": "Jorge Bravo Bertoglio",
+      "role": "CTO @Loopsider",
+      "img": {
+        "alt": "Loopsider CTO photo",
+        "src": "/images/Joge-Bravo-Bertoglio.png"
+      }
+    },
+    "Sandrine": {
+      "text": "We appreciated his professionalism and motivation. Xavier is a competent technical developer who made himself available when we needed him. It's with obvious confidence that we could entrust him with new missions. His charisma and human qualities are a plus in these working relationships.",
+      "author": "Sandrine PELLISER",
+      "role": "Territory digital animation",
+      "img": {
+        "alt": "Sandrine Pelissier photo",
+        "src": "/images/Sandrine PELLISER.jpeg"
+      }
     }
   }
 }

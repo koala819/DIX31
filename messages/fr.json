@@ -18,9 +18,6 @@
     "home": "Accueil",
     "projects": "Projets"
   },
-  "Opinion": {
-    "text": "Nous avons eu la chance de réaliser une mission avec Xavier. Très responsable, travail de grande qualité et technique, nous avons été satisfaits et conseillons pour d'autres missions."
-  },
   "Profile": {
     "greeting": "Salut, je suis Xav !",
     "intro": "Développeur web freelance basé en France, j'ai approfondi ma passion pour le code en 2020 après une carrière de 15 ans dans les télécoms et l'informatique. Depuis, je me suis plongé dans l'univers du développement web moderne.",
@@ -45,6 +42,26 @@
     "Four": {
       "title": "Développement en Node.js",
       "description": "Création de services web et API REST performants, en utilisant les meilleures pratiques de développement et les outils modernes."
+    }
+  },
+  "Testimonial": {
+    "Joge": {
+      "text": "Nous avons eu la chance de réaliser une mission avec Xavier. Très responsable, travail de grande qualité et technique, nous avons été satisfaits et conseillons pour d'autres missions.",
+      "author": "Jorge Bravo Bertoglio",
+      "role": "CTO @Loopsider",
+      "img": {
+        "alt": "Photo du CTO de Loopsider",
+        "src": "/images/Joge-Bravo-Bertoglio.png"
+      }
+    },
+    "Sandrine": {
+      "text": "Nous avons apprécié son professionnalisme et sa motivation. Xavier est un technicien développeur compétent qui a su se rendre disponible aux moments ou nous en avons eu besoin. C'est avec une confiance évidente que nous pourrions lui confier de nouvelles missions. Son charisme et ses qualités humaines sont un plus dans ces relations de travail.",
+      "author": "Sandrine PELLISER",
+      "role": "Animation numérique de territoire",
+      "img": {
+        "alt": "Photo de Sandrine Pelissier",
+        "src": "/images/Sandrine PELLISER.jpeg"
+      }
     }
   }
 }
