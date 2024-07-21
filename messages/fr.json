@@ -168,6 +168,7 @@
       "description": "Assistance continue au développement, à la correction des bugs et à la maintenance après le lancement."
     }
   },
+  "loading": "Chargement ...",
   "metadata": {
     "home": {
       "title": "Xavier - Développeur Web Freelance | Solutions Web Personnalisées",
@@ -228,7 +229,6 @@
         }
       },
       "link": {
-        "title": "Découvrir le projet",
         "url": "https://www.bonheursurseine.com/"
       }
     },

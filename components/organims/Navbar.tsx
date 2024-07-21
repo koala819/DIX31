@@ -31,9 +31,21 @@ export default function Navbar() {
   ]
 
   useEffect(() => {
-    if (pathname === '/') setActiveItem('home')
-    else if (pathname.startsWith('/projects')) setActiveItem('projects')
-    else if (pathname.startsWith('/blog')) setActiveItem('blog')
+    console.log('Pathname changed:', pathname)
+
+    // Supprimer le préfixe de langue (par exemple, '/fr') du pathname
+    const path = pathname.replace(/^\/[^/]+/, '')
+
+    if (path === '' || path === '/') {
+      setActiveItem('home')
+    } else if (path.startsWith('/projects')) {
+      setActiveItem('projects')
+    } else if (path.startsWith('/blog')) {
+      setActiveItem('blog')
+    } else {
+      // Pour toute autre page, aucun élément n'est actif
+      setActiveItem('')
+    }
   }, [pathname])
 
   function handleNavItemClick(item: string) {

@@ -73,7 +73,7 @@ export default async function Page({
 }: {
   params: { locale: string }
 }) {
-  const t = await getTranslations({ locale, namespace: 'common' })
+  const t = await getTranslations({ locale })
 
   return (
     <main className="container space-y-12">

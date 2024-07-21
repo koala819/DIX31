@@ -37,7 +37,6 @@ export const Achievements = () => {
       },
       link: {
         url: t('Club306.link.url'),
-        title: t('Club306.link.title'),
       },
     },
     {
@@ -62,7 +61,6 @@ export const Achievements = () => {
       },
       link: {
         url: t('BonheurSurSeine.link.url'),
-        title: t('BonheurSurSeine.link.title'),
       },
     },
   ]
