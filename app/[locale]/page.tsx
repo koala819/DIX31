@@ -20,7 +20,7 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'metadata' })
+  const t = await getTranslations({ locale, namespace: 'metadata.home' })
 
   const canonicalUrl = `${process.env.CLIENT_URL}/${locale}`
 

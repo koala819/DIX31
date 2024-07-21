@@ -168,13 +168,25 @@
     }
   },
   "metadata": {
-    "title": "Xavier - Freelance Web Developer | Custom Web Solutions",
-    "description": "Specialist in creating tailored web projects for businesses and individuals. Expertise in development and optimization. Free consultation available.",
-    "keywords": "web developer, freelance, web projects, custom solutions, consultation, React, Next.js, JavaScript, SEO optimization",
-    "ogTitle": "Xavier | Expert Freelance Web Developer - Innovative Web Solutions",
-    "ogDescription": "Create your online presence with customized web solutions. From idea to launch, transform your vision into digital reality.",
-    "twitterTitle": "Xavier | Freelance Web Developer - Your Digital Partner",
-    "twitterDescription": "Tailor-made web solutions to boost your online presence. Expertise in development, design, and SEO."
+    "home": {
+      "title": "Xavier - Freelance Web Developer | Custom Web Solutions",
+      "description": "Specialist in creating tailored web projects for businesses and individuals. Expertise in development and optimization. Free consultation available.",
+      "keywords": "web developer, freelance, web projects, custom solutions, consultation, React, Next.js, JavaScript, SEO optimization",
+      "ogTitle": "Xavier | Expert Freelance Web Developer - Innovative Web Solutions",
+      "ogDescription": "Create your online presence with customized web solutions. From idea to launch, transform your vision into digital reality.",
+      "twitterTitle": "Xavier | Freelance Web Developer - Your Digital Partner",
+      "twitterDescription": "Tailor-made web solutions to boost your online presence. Expertise in development, design, and SEO."
+    },
+    "projects": {
+      "title": "Projects by DIX31: Discover my web development projects",
+      "description": "Explore my projects to see examples of my work in web development, from showcase sites to dynamic web solutions.",
+      "keywords": "web development, projects, realizations, showcase sites, dynamic web solutions, freelance, France",
+
+      "ogTitle": "Projects by DIX31: Discover my web development projects",
+      "ogDescription": "Explore my projects to see examples of my work in web development, from showcase sites to dynamic web solutions.",
+      "twitterTitle": "Projects by DIX31: Discover my web development projects",
+      "twitterDescription": "Explore my projects to see examples of my work in web development, from showcase sites to dynamic web solutions."
+    }
   },
   "Navbar": {
     "blog": "Blog",
@@ -187,6 +199,63 @@
     "specialty": "My specialty? Creating functional web experiences with React, Next.js, and Tailwind. I'm working with JavaScript and TypeScript, and I particularly enjoy working on full-stack projects.",
     "learning": "I run a Discord community where we share knowledge and explore best practices in the field together.",
     "callToAction": "Have an interesting web project? Let's talk about it!"
+  },
+  "Projects": {
+    "title": "My Achievements",
+    "expertise": "Technical expertise :",
+    "btnLink": "Discover the project",
+    "BonheurSurSeine": {
+      "title": "Bonheur Sur Seine - The Wheelers Community",
+      "img": {
+        "src": "/images/Bonheur-Sur-Seine.jpg",
+        "alt": "Screenshot of the Bonheur Sur Seine website showing the home page with a person on a gyroroue."
+      },
+      "description": "As a freelance web developer, I had the pleasure of creating the community website Bonheur Sur Seine, dedicated to enthusiasts wheelers and ecological urban mobility.",
+      "expertise": {
+        "one": "Creating an interactive community platform with NextJS",
+        "two": "Implementation of a wheel scoring and ranking system",
+        "three": "Integration of interactive safety guides and video tutorials",
+        "four": "Optimized performance for a smooth user experience",
+        "five": "Setting up a geolocation system for local events"
+      },
+      "testimonial": {
+        "content": "I'd like to thank Xavier for his professionalism. He listened to my needs and requests, and was able to turn everything we'd discussed into a concrete reality. What's more, he took initiatives that were totally justified and always approved! Well done and thank you Xavier",
+        "author": "Raphael",
+        "role": "Bonheur Sur Seine",
+        "img": {
+          "src": "/images/BonheurSurSeine_logo.png"
+        }
+      },
+      "link": {
+        "url": "https://www.bonheursurseine.com/"
+      }
+    },
+    "Club306": {
+      "title": "Club 306 - A dynamic car community",
+      "img": {
+        "src": "/images/Club-306.jpg",
+        "alt": "Screenshot of the Club 306 website showing the home page with a Peugeot 306 in the background"
+      },
+      "description": "As a freelance web developer, I had the honor of designing and developing the official website of Club 306, the first club in France dedicated to Peugeot 306 enthusiasts.",
+      "expertise": {
+        "one": "Modern web application development with NextJS and TypeScript",
+        "two": "Setting up a serverless architecture with Vercel for optimum performance",
+        "three": "PostgreSQL database integration for efficient data management",
+        "four": "Secure authentication with NextAuth.js",
+        "five": "Creation of a responsive and intuitive members-only user interface"
+      },
+      "testimonial": {
+        "content": "Xavier has become a talented fullstack developer who has played a key role in the creation of our club website. His exceptional contribution has transformed our vision into a breathtaking digital reality.",
+        "author": "Pascal BESNARD",
+        "role": "Club 306 President",
+        "img": {
+          "src": "/images/Pascal-BESNARD.jpeg"
+        }
+      },
+      "link": {
+        "url": "https://club306.fr/"
+      }
+    }
   },
   "Services": {
     "title": "What I can offer you",
@@ -223,7 +292,7 @@
       "role": "Club306 President",
       "img": {
         "alt": "Pascal BESNARD's photo",
-        "src": "/images/Pascal BESNARD.jpeg"
+        "src": "/images/Pascal-BESNARD.jpeg"
       }
     },
     "Sandrine": {

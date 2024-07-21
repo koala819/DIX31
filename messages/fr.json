@@ -169,13 +169,25 @@
     }
   },
   "metadata": {
-    "title": "Xavier - Développeur Web Freelance | Solutions Web Personnalisées",
-    "description": "Spécialiste en réalisation de projets web sur mesure pour entreprises et particuliers. Expertise en développement et optimisation. Consultation gratuite.",
-    "keywords": "développeur web, freelance, projets web, solutions sur mesure, consultation, React, Next.js, JavaScript, optimisation SEO",
-    "ogTitle": "Xavier | Expert Développeur Web Freelance - Solutions Web Innovantes",
-    "ogDescription": "Créez votre présence en ligne avec des solutions web personnalisées. De l'idée au lancement, transformez votre vision en réalité numérique.",
-    "twitterTitle": "Xavier | Développeur Web Freelance - Votre Partenaire Digital",
-    "twitterDescription": "Des solutions web sur mesure pour booster votre présence en ligne. Expertise en développement, design et SEO."
+    "home": {
+      "title": "Xavier - Développeur Web Freelance | Solutions Web Personnalisées",
+      "description": "Spécialiste en réalisation de projets web sur mesure pour entreprises et particuliers. Expertise en développement et optimisation. Consultation gratuite.",
+      "keywords": "développeur web, freelance, projets web, solutions sur mesure, consultation, React, Next.js, JavaScript, optimisation SEO",
+      "ogTitle": "Xavier | Expert Développeur Web Freelance - Solutions Web Innovantes",
+      "ogDescription": "Créez votre présence en ligne avec des solutions web personnalisées. De l'idée au lancement, transformez votre vision en réalité numérique.",
+      "twitterTitle": "Xavier | Développeur Web Freelance - Votre Partenaire Digital",
+      "twitterDescription": "Des solutions web sur mesure pour booster votre présence en ligne. Expertise en développement, design et SEO."
+    },
+    "projects": {
+      "title": "Projets de DIX31 : Découvrez mes Réalisations en Développement Web en France",
+      "description": "Explorez mes projets pour voir des exemples de mes travaux en développement web, des sites vitrines aux solutions web dynamiques.",
+      "keywords": "développement web, projets, réalisations, sites vitrines, solutions web dynamiques, freelance, France",
+
+      "ogTitle": "Projets de DIX31 : Découvrez mes Réalisations en Développement Web en France",
+      "ogDescription": "Explorez mes projets pour voir des exemples de mes travaux en développement web, des sites vitrines aux solutions web dynamiques.",
+      "twitterTitle": "Projets de DIX31 : Découvrez mes Réalisations en Développement Web en France",
+      "twitterDescription": "Explorez mes projets pour voir des exemples de mes travaux en développement web, des sites vitrines aux solutions web dynamiques."
+    }
   },
   "Navbar": {
     "blog": "Blog",
@@ -188,6 +200,64 @@
     "specialty": "Ma spécialité ? Créer des expériences web fonctionnelles avec React, Next.js et Tailwind. Je travaille avec JavaScript et TypeScript, et j'apprécie particulièrement travailler sur des projets full stack.",
     "learning": "J'anime une communauté Discord où nous partageons nos connaissances et explorons ensemble les meilleures pratiques du métier.",
     "callToAction": "Vous avez un projet web intéressant ? Discutons-en !"
+  },
+  "Projects": {
+    "title": "Mes Réalisations",
+    "expertise": "Expertise technique mise en œuvre :",
+    "btnLink": "Découvrir le projet",
+    "BonheurSurSeine": {
+      "title": "Bonheur Sur Seine - La Communauté des Gyroroues",
+      "img": {
+        "src": "/images/Bonheur-Sur-Seine.jpg",
+        "alt": "Capture d'écran du site web Bonheur Sur Seine montrant la page d'accueil avec une personne sur une gyroroue"
+      },
+      "description": "En tant que développeur web freelance, j'ai eu le plaisir de créer le site communautaire Bonheur Sur Seine, dédié aux passionnés de gyroroues et à la mobilité urbaine écologique.",
+      "expertise": {
+        "one": "Création d'une plateforme communautaire interactive avec NextJS",
+        "two": "Implémentation d'un système de scores et de classements des gyroroues",
+        "three": "Intégration de guides de sécurité interactifs et de tutoriels vidéo",
+        "four": "Optimisation des performances pour une expérience utilisateur fluide",
+        "five": "Mise en place d'un système de géolocalisation pour les événements locaux"
+      },
+      "testimonial": {
+        "content": "Merci à Xavier pour son professionnalisme, à l'écoute de mes besoins et de mes demandes, il a su convertir en concret tout ce dont on avait parlé. Avec en plus des prises d'initiatives totalement justifiés et toujours approuvées ! Bravo et Merci Xavier",
+        "author": "Raphael",
+        "role": "Bonheur Sur Seine",
+        "img": {
+          "src": "/images/BonheurSurSeine_logo.png"
+        }
+      },
+      "link": {
+        "title": "Découvrir le projet",
+        "url": "https://www.bonheursurseine.com/"
+      }
+    },
+    "Club306": {
+      "title": "Club 306 - Une Communauté Automobile Dynamique",
+      "img": {
+        "src": "/images/Club-306.jpg",
+        "alt": "Capture d'écran du site web Club 306 montrant la page d'accueil avec une Peugeot 306 en arrière-plan"
+      },
+      "description": "En tant que développeur web freelance, j'ai eu l'honneur de concevoir et développer le site officiel du Club 306, le premier club en France dédié aux passionnés de la Peugeot 306.",
+      "expertise": {
+        "one": "Développement d'une application web moderne avec NextJS et TypeScript",
+        "two": "Mise en place d'une architecture serverless avec Vercel pour des performances optimales",
+        "three": "Intégration d'une base de données PostgreSQL pour une gestion efficace des données",
+        "four": "Implémentation d'authentification sécurisée avec NextAuth.js",
+        "five": "Création d'une interface utilisateur réactive et intuitive réservée aux membres"
+      },
+      "testimonial": {
+        "content": "Xavier est devenu un développeur fullstack talentueux qui a joué un rôle essentiel dans la création de notre site internet du club. Sa contribution exceptionnelle a transformé notre vision en une réalité numérique époustouflante.",
+        "author": "Pascal BESNARD",
+        "role": "Président du Club 306",
+        "img": {
+          "src": "/images/Pascal-BESNARD.jpeg"
+        }
+      },
+      "link": {
+        "url": "https://club306.fr/"
+      }
+    }
   },
   "Services": {
     "title": "Ce Que Je Vous Offre",
@@ -224,7 +294,7 @@
       "role": "Président du Club306",
       "img": {
         "alt": "Photo de Pascal BESNARD",
-        "src": "/images/Pascal BESNARD.jpeg"
+        "src": "/images/Pascal-BESNARD.jpeg"
       }
     },
     "Sandrine": {
