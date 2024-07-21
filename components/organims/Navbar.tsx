@@ -14,8 +14,7 @@ import { ModeToggle as Toggle } from '@/components/atoms/Toggle'
 import { Button } from '@/components/ui/button'
 import {
   Sheet,
-  SheetContent,
-  SheetTitle,
+  SheetContent, // SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
 
@@ -87,7 +86,7 @@ export default function Navbar() {
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetTitle className="sr-only">Navigation menu</SheetTitle>
+          {/* <SheetTitle className="sr-only">Navigation menu</SheetTitle> */}
           <SheetContent side="right">
             <nav className="grid gap-2 py-6">
               <Link

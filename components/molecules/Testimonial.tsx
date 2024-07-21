@@ -16,7 +16,9 @@ const Testimonial = ({ user }: { user: string }) => {
   return (
     <div className="w-full bg-gradient-to-r from-blue-100 to-green-100 dark:from-blue-900 dark:to-green-900 mx-auto px-4 py-12 lg:px-6 xl:px-8 shadow-[inset_0_2px_4px_rgba(0,0,0,0.05)]">
       <div className="flex items-start">
-        <h2 className="mr-4">❝</h2>
+        <span className="text-2xl font-bold text-gray-600 dark:text-gray-200 lg:text-3xl mr-4">
+          ❝
+        </span>
         <p className="flex-1">{t(`${user}.text`)}</p>
       </div>
       <div className="flex items-center mt-8">
@@ -35,7 +37,7 @@ const Testimonial = ({ user }: { user: string }) => {
           />
         </div>
         <div>
-          <h4>{t(`${user}.author`)}</h4>
+          <span className="text-sm font-bold">{t(`${user}.author`)}</span>
           <p className="text-gray-500 text-xs">{t(`${user}.role`)}</p>
         </div>
       </div>

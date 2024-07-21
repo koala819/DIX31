@@ -39,9 +39,9 @@ export default function Hero() {
                 aria-labelledby={`profile-item-${index}`}
               >
                 <div className="flex justify-between items-center lg:flex-col lg:items-start py-2">
-                  <h3 className="text-gray-800 dark:text-gray-200 order-2 lg:order-1 lg:mb-1 text-start">
+                  <p className="text-lg font-bold sm:text-2xl text-gray-800 dark:text-gray-200 order-2 lg:order-1 lg:mb-1 text-start">
                     {item.value}
-                  </h3>
+                  </p>
                   <p className="text-sm text-gray-500 dark:text-gray-400 order-1 lg:order-2">
                     {item.label}
                   </p>

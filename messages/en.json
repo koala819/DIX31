@@ -167,13 +167,22 @@
       "description": "Continued assistance with further development, bug fixes, and maintenance after launch."
     }
   },
+  "metadata": {
+    "title": "Xavier - Freelance Web Developer | Custom Web Solutions",
+    "description": "Specialist in creating tailored web projects for businesses and individuals. Expertise in development and optimization. Free consultation available.",
+    "keywords": "web developer, freelance, web projects, custom solutions, consultation, React, Next.js, JavaScript, SEO optimization",
+    "ogTitle": "Xavier | Expert Freelance Web Developer - Innovative Web Solutions",
+    "ogDescription": "Create your online presence with customized web solutions. From idea to launch, transform your vision into digital reality.",
+    "twitterTitle": "Xavier | Freelance Web Developer - Your Digital Partner",
+    "twitterDescription": "Tailor-made web solutions to boost your online presence. Expertise in development, design, and SEO."
+  },
   "Navbar": {
     "blog": "Blog",
     "home": "Home",
     "projects": "Projects"
   },
   "Profile": {
-    "greeting": "Hi, I'm Xav!",
+    "greeting": "Hi, I'm Xavier !",
     "intro": "I'm a freelance web developer based in France. I improved my passion for coding in 2020 after a 15-year career in telecommunications and IT. Since then, I've immersed myself in the world of modern web development.",
     "specialty": "My specialty? Creating functional web experiences with React, Next.js, and Tailwind. I'm working with JavaScript and TypeScript, and I particularly enjoy working on full-stack projects.",
     "learning": "I run a Discord community where we share knowledge and explore best practices in the field together.",

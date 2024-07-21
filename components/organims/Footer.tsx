@@ -65,7 +65,7 @@ export default function Component() {
             </div>
           </div>
           <div className="grid gap-4">
-            <h4>Services</h4>
+            <span className="text-sm font-bold">Services</span>
             <div className="grid gap-2">
               <Link
                 href="/nextjs-dev"
@@ -91,7 +91,7 @@ export default function Component() {
             </div>
           </div>
           <div className="grid gap-4">
-            <h4>More</h4>
+            <span className="text-sm font-bold">More</span>
             <div className="grid gap-2">
               <Link
                 href="https://github.com/koala819"

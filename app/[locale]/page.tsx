@@ -1,8 +1,7 @@
-import {
-  Suspense, // , cache, lazy
-} from 'react'
+import { Suspense } from 'react'
 
 import { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import dynamic from 'next/dynamic'
 
 import Career from '@/components/atoms/Career'
@@ -13,66 +12,68 @@ import Services from '@/components/atoms/Services'
 import Contact from '@/components/molecules/Contact'
 import Testimonial from '@/components/molecules/Testimonial'
 
-// import { comments } from '@/lib/comments'
-// import { client } from '@/lib/sanity'
-
 const Hero = dynamic(() => import('@/components/atoms/Hero'))
 const Profile = dynamic(() => import('@/components/atoms/Profile'))
 
-// const Blog = lazy(() => import('@/components/atoms/Blog'))
-// const Projects = lazy(() => import('@/components/atoms/StarsProjects'))
-// const Rates = lazy(() => import('@/components/atoms/Rates'))
-// const CommentList = lazy(() => import('@/components/molecules/CommentList'))
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'metadata' })
 
-export const metadata: Metadata = {
-  title: 'Xavier - Développeur Web Freelance',
-  description:
-    'Spécialiste en réalisation de projets web personnalisés. Solutions sur mesure pour entreprises et particuliers. Consultation gratuite.',
-  keywords:
-    'développeur web, freelance, projets web, solutions sur mesure, consultation',
-  robots: 'index, follow',
-  alternates: {
-    canonical: `${process.env.CLIENT_URL}/`,
-    languages: {
-      'fr-FR': '/fr',
-      'en-US': '/en',
+  const canonicalUrl = `${process.env.CLIENT_URL}/${locale}`
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    robots: {
+      index: true,
+      follow: true,
+      nocache: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        noimageindex: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
-  openGraph: {
-    title: 'Xavier - Développeur Web Freelance',
-    description:
-      'Spécialiste en réalisation de projets web personnalisés. Solutions sur mesure pour entreprises et particuliers.',
-    type: 'website',
-    locale: 'fr_FR',
-    alternateLocale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Xavier - Développeur Web Freelance',
-    description:
-      'Spécialiste en réalisation de projets web personnalisés. Solutions sur mesure pour entreprises et particuliers.',
-  },
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'fr-FR': '/fr',
+        'en-US': '/en',
+      },
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      type: 'website',
+      url: canonicalUrl,
+      locale: locale === 'fr' ? 'fr_FR' : 'en_US',
+      alternateLocale: locale === 'fr' ? 'en_US' : 'fr_FR',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+    },
+    other: {
+      'X-Robots-Tag': 'index, follow',
+      publisher: 'Xavier - Développeur Web Freelance',
+    },
+  }
 }
 
-export default async function Page() {
-  // const getPosts = cache(async () => {
-  //   'use server'
-  //   const query = `*[_type == 'blog'] | order(date desc)[0...3] {
-  //     title,
-  //     date,
-  //     smallDescription,
-  //     "currentSlug": slug.current,
-  //     titleImage,
-  //     titleImagebyCloudinary,
-  //     "tag": tag[]->{
-  //       name
-  //     }
-  //   }`
-
-  //   return await client.fetch(query)
-  // })
-
-  // const posts = await getPosts()
+export default async function Page({
+  params: { locale },
+}: {
+  params: { locale: string }
+}) {
+  const t = await getTranslations({ locale, namespace: 'common' })
 
   return (
     <main className="container space-y-12">
@@ -81,7 +82,7 @@ export default async function Page() {
       <Suspense
         fallback={
           <div role="alert" aria-busy="true">
-            Chargement ...
+            {t('loading')}
           </div>
         }
       >
@@ -95,12 +96,6 @@ export default async function Page() {
         <Contact />
         <Testimonial user="Sid" />
         <FAQ />
-
-        {/* <Opinion /> */}
-        {/* <Blog posts={posts} /> */}
-        {/* <Projects /> */}
-        {/* <Rates /> */}
-        {/* <CommentList comments={comments} /> */}
       </Suspense>
     </main>
   )

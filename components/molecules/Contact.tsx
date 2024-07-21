@@ -87,7 +87,7 @@ export default function Contact() {
           <>
             <div className="relative mb-4">
               <Label htmlFor="first_name">
-                <h4>{t('name')}</h4>
+                <h3>{t('name')}</h3>
               </Label>
               <Controller
                 name="first_name"
@@ -114,7 +114,7 @@ export default function Contact() {
             </div>
             <div className="relative mb-4">
               <Label htmlFor="email">
-                <h4>{t('email')}</h4>
+                <h3>{t('email')}</h3>
               </Label>
               <Controller
                 name="email"
@@ -141,7 +141,7 @@ export default function Contact() {
             </div>
             <div className="relative mb-4">
               <Label htmlFor="msg">
-                <h4>{t('message')}</h4>
+                <h3>{t('message')}</h3>
               </Label>
               <Controller
                 name="msg"

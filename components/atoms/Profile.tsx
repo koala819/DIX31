@@ -32,9 +32,9 @@ const Profile = () => {
         className="flex-grow max-w-2xl space-y-4 border-2 border-gray-300 rounded-xl p-4"
         role="contentinfo"
       >
-        <h3 id="profile-heading" className="text-2xl lg:text-3xl font-bold">
+        <h2 id="profile-heading" className="text-2xl lg:text-3xl font-bold">
           {t('greeting')}
-        </h3>
+        </h2>
         <p>{t('intro')}</p>
         <p>{t('specialty')}</p>
         <p>{t('learning')}</p>

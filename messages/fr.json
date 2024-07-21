@@ -168,13 +168,22 @@
       "description": "Assistance continue au développement, à la correction des bugs et à la maintenance après le lancement."
     }
   },
+  "metadata": {
+    "title": "Xavier - Développeur Web Freelance | Solutions Web Personnalisées",
+    "description": "Spécialiste en réalisation de projets web sur mesure pour entreprises et particuliers. Expertise en développement et optimisation. Consultation gratuite.",
+    "keywords": "développeur web, freelance, projets web, solutions sur mesure, consultation, React, Next.js, JavaScript, optimisation SEO",
+    "ogTitle": "Xavier | Expert Développeur Web Freelance - Solutions Web Innovantes",
+    "ogDescription": "Créez votre présence en ligne avec des solutions web personnalisées. De l'idée au lancement, transformez votre vision en réalité numérique.",
+    "twitterTitle": "Xavier | Développeur Web Freelance - Votre Partenaire Digital",
+    "twitterDescription": "Des solutions web sur mesure pour booster votre présence en ligne. Expertise en développement, design et SEO."
+  },
   "Navbar": {
     "blog": "Blog",
     "home": "Accueil",
     "projects": "Projets"
   },
   "Profile": {
-    "greeting": "Salut, je suis Xav !",
+    "greeting": "Bonjour, je suis Xavier !",
     "intro": "Développeur web freelance basé en France, j'ai approfondi ma passion pour le code en 2020 après une carrière de 15 ans dans les télécoms et l'informatique. Depuis, je me suis plongé dans l'univers du développement web moderne.",
     "specialty": "Ma spécialité ? Créer des expériences web fonctionnelles avec React, Next.js et Tailwind. Je travaille avec JavaScript et TypeScript, et j'apprécie particulièrement travailler sur des projets full stack.",
     "learning": "J'anime une communauté Discord où nous partageons nos connaissances et explorons ensemble les meilleures pratiques du métier.",
