@@ -16,6 +16,32 @@
     "or": "Or contact me directly:",
     "phone": "Phone:"
   },
+  "ContentNext": {
+    "title": "Looking for a Next.js Developer?",
+    "intro": "You've come to the right place! My name is Xavier, Fullstack Developer with 4 years of experience, specialized in Next.js. Whether you need a freelance developer for a new project or to improve an existing project, I am at your disposal.",
+    "whyChoose": "Why Choose Next.js for your Project?",
+    "reason1": "1. Next.js is \"just\" React",
+    "reason1Desc": "Next.js integrates seamlessly with React, meaning your application will remain primarily a React application. This gives you access to a large developer community and a vast ecosystem of libraries and modules for React.",
+    "reason2": "2. Proven Technology",
+    "reason2Desc": "Renowned companies such as Netflix, TikTok, Twitch, Nike, and Uber use Next.js for their websites, attesting to its reliability and robustness in production.",
+    "reason3": "3. Significant Time Savings",
+    "reason3Desc": "Setting up a JavaScript development environment can be complex and time-consuming. Next.js simplifies this process, saving you weeks of work by automating complex configurations, reducing development time and costs.",
+    "reason4": "4. Flexibility and Customization",
+    "reason4Desc": "Next.js supports many features out of the box, such as TypeScript. Moreover, the build process is highly customizable, allowing you to adapt the configuration to the specific needs of your project.",
+    "reason5": "5. Clear and Scalable Architecture",
+    "reason5Desc": "With its new App Router and nested layout structure, Next.js 13+ offers a modern and intuitive architecture that facilitates scalability and maintenance. This new routing system allows for more flexible and modular design patterns.",
+    "reason6": "6. Optimized Performance",
+    "reason6Desc": "Next.js provides exceptional performance out of the box, thanks to its server-side rendering and other advanced optimizations. Collaborating with the React and Google Chrome teams, Next.js continues to improve performance over time.",
+    "nextWebsites": "Next.js for Websites",
+    "websitesDesc": "Next.js is ideal for content-rich websites. With static rendering and easy deployment to CDNs, it allows you to create fast and cost-effective sites. For dynamic data, server-side rendering is available on demand, offering optimal SEO performance.",
+    "nextApplications": "Next.js for Web Applications",
+    "applicationsDesc": "Whether your application is centered around forms and database operations or uses sophisticated UI components, Next.js is an excellent option. It improves perceived loading times through server-side rendering and static site generation, while offering great flexibility for client-side rendering.",
+    "hire": "Hire a Freelance Next.js Developer",
+    "hireDesc": "With 4 years of web development experience and a specialization in JavaScript, React, and Next.js, I am ready to help you bring your projects to life. Check out my recent work or contact me today to discuss your needs. I look forward to collaborating with you!",
+    "dispositionLink": "I am at your disposal",
+    "recentWorkLink": "Check out my recent work",
+    "contactLink": "contact me"
+  },
   "FAQ": {
     "title": "Frequently asked questions",
     "One": {
@@ -42,6 +68,12 @@
       "question": "Do you use TypeScript?",
       "answer": "Yes, I implement TypeScript in most of my projects, especially those of moderate to high complexity. For very simple projects, I might opt for plain JavaScript. The decision to use TypeScript is based on the project's requirements, scale, and long-term maintenance considerations."
     }
+  },
+  "Footer": {
+    "nextjs": "Next.js Development",
+    "react": "React Development",
+    "privacy": "Privacy Policy",
+    "mentions": "Terms & Conditions"
   },
   "Hero": {
     "experience": "Experience",

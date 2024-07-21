@@ -3,15 +3,15 @@
 import { useTranslations } from 'next-intl'
 import dynamic from 'next/dynamic'
 
-const WithCustomLoading = dynamic(
-  () => import('@/components/atoms/LoadImage'),
-  {
-    loading: () => <div>Chargement ...</div>,
-  },
-)
-
 const Testimonial = ({ user }: { user: string }) => {
   const t = useTranslations('Testimonial')
+
+  const WithCustomLoading = dynamic(
+    () => import('@/components/atoms/LoadImage'),
+    {
+      loading: () => <div>Chargement ...</div>,
+    },
+  )
 
   return (
     <div className="w-full bg-gradient-to-r from-blue-100 to-green-100 dark:from-blue-900 dark:to-green-900 mx-auto px-4 py-12 lg:px-6 xl:px-8 shadow-[inset_0_2px_4px_rgba(0,0,0,0.05)]">

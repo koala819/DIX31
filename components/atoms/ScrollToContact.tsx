@@ -10,8 +10,13 @@ const ScrollToContact = () => {
   useEffect(() => {
     if (searchParams.get('scrollTo') === 'contact') {
       const contactElement = document.getElementById('contact')
+      const navbarHeight = document.getElementById('navbar')?.offsetHeight || 0
+
       if (contactElement) {
-        contactElement.scrollIntoView({ behavior: 'smooth' })
+        window.scrollTo({
+          top: contactElement.offsetTop - navbarHeight * 2.5,
+          behavior: 'smooth',
+        })
       }
     }
   }, [searchParams])

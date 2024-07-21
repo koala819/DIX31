@@ -68,8 +68,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" aria-labelledby="contact-title">
-      <form onSubmit={handleSubmit(handleSendMail)}>
+    <section aria-labelledby="contact-title">
+      <form id="contact" onSubmit={handleSubmit(handleSendMail)}>
         <h2 id="contact-title" className="pb-2 mb-2">
           {!hideForm ? t('title') : t('thx')}
         </h2>

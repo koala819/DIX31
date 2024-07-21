@@ -16,6 +16,34 @@
     "or": "Ou contactez-moi directement :",
     "phone": "Téléphone :"
   },
+
+  "ContentNext": {
+    "title": "Vous recherchez un développeur Next.js ?",
+    "intro": "Vous êtes au bon endroit ! Je m'appelle Xavier, développeur Fullstack avec 4 ans d'expérience, spécialisé dans Next.js. Que vous ayez besoin d'un développeur freelance pour un nouveau projet ou pour améliorer un projet existant, je suis à votre disposition.",
+    "whyChoose": "Pourquoi choisir Next.js pour votre projet ?",
+    "reason1": "1. Next.js s'appuie sur React",
+    "reason1Desc": "Next.js intègre parfaitement React, ce qui signifie que votre application restera essentiellement une application React. Cela vous permet d'accéder à une large communauté de développeurs et à un vaste écosystème de bibliothèques et de modules pour React.",
+    "reason2": "2. Une technologie éprouvée",
+    "reason2Desc": "Des entreprises de renom telles que Netflix, TikTok, Twitch, Nike et Uber utilisent Next.js pour leurs sites web, attestant de sa fiabilité et de sa robustesse en production.",
+    "reason3": "3. Gain de temps considérable",
+    "reason3Desc": "La configuration d'un environnement de développement JavaScript peut être complexe et chronophage. Next.js simplifie ce processus, vous permettant d'économiser des semaines de travail en automatisant les configurations complexes, ce qui réduit le temps et les coûts de développement.",
+    "reason4": "4. Flexibilité et personnalisation",
+    "reason4Desc": "Next.js prend en charge de nombreuses fonctionnalités dès le départ, comme TypeScript. De plus, le processus de build est hautement personnalisable, permettant d'adapter la configuration aux besoins spécifiques de votre projet.",
+    "reason5": "5. Architecture claire et scalable",
+    "reason5Desc": "Avec son nouveau système de routage App Router et sa structure de mise en page imbriquée, Next.js 13+ offre une architecture moderne et intuitive qui facilite la montée en charge et la maintenance. Ce nouveau système de routage permet des conceptions plus flexibles et modulaires.",
+    "reason6": "6. Performances optimisées",
+    "reason6Desc": "Next.js offre des performances exceptionnelles dès l'installation, grâce à son rendu côté serveur et à d'autres optimisations avancées. En collaborant avec les équipes de React et Google Chrome, Next.js continue d'améliorer ses performances au fil du temps.",
+    "nextWebsites": "Next.js pour les sites web",
+    "websitesDesc": "Next.js est idéal pour les sites riches en contenu. Grâce à son rendu statique et à son déploiement facile sur des CDN, il permet de créer des sites rapides et économiques à héberger. Pour des données dynamiques, le rendu côté serveur est disponible à la demande, offrant des performances SEO optimales.",
+    "nextApplications": "Next.js pour les applications web",
+    "applicationsDesc": "Que votre application soit centrée sur des formulaires et des opérations de base de données ou qu'elle utilise des composants UI sophistiqués, Next.js est une excellente option. Il améliore les temps de chargement perçus grâce à son rendu côté serveur et sa génération de sites statiques, tout en offrant une grande flexibilité pour le rendu côté client.",
+    "hire": "Engagez un développeur freelance Next.js",
+    "hireDesc": "Avec 4 ans d'expérience dans le développement web et une spécialisation en JavaScript, React, et Next.js, je suis prêt à vous aider à concrétiser vos projets. Consultez mes travaux récents ou contactez-moi dès aujourd'hui pour discuter de vos besoins. J'ai hâte de collaborer avec vous !",
+    "dispositionLink": "Je suis à votre disposition",
+    "recentWorkLink": "Consultez mes travaux récents",
+    "contactLink": "contactez-moi"
+  },
+
   "FAQ": {
     "title": "Foire aux questions",
     "One": {
@@ -42,6 +70,12 @@
       "question": "Utilisez-vous TypeScript ?",
       "answer": "Oui, j'utilise TypeScript dans la plupart de mes projets, en particulier ceux qui sont d'une complexité moyenne à élevée. Pour les projets très simples, je peux opter pour un simple JavaScript. La décision d'utiliser TypeScript est basée sur les exigences, l'échelle et les considérations de maintenance à long terme du projet."
     }
+  },
+  "Footer": {
+    "nextjs": "Next.js Développement",
+    "react": "React Développement",
+    "privacy": "Confidentialités",
+    "mentions": "Mentions Légales"
   },
   "Hero": {
     "experience": "Expérience",

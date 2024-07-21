@@ -53,6 +53,7 @@ export default function Navbar() {
 
       {/* Desktop */}
       <nav
+        id="navbar"
         className="ml-auto hidden gap-4 lg:flex"
         aria-label="Main Navigation"
       >

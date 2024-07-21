@@ -3,12 +3,15 @@
 import { Linkedin, Mail } from 'lucide-react'
 import { useMemo } from 'react'
 
+import { useTranslations } from 'next-intl'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
 import HireMeBtn from '@/components/atoms/HireMeBtn'
 
 export default function Component() {
+  const t = useTranslations('Footer')
+
   const WithCustomLoading = dynamic(
     () => import('@/components/atoms/LoadImage'),
     {
@@ -34,7 +37,7 @@ export default function Component() {
     <footer className="bg-gray-100 dark:bg-gray-800 p-6 md:py-12 w-full relative mt-16 md:mt-24">
       <div className="container max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <div className="relative pt-28 md:pt-0">
+          <div className="relative">
             <div className="absolute -top-24 md:-top-36 left-0 w-24 h-24 lg:w-32 lg:h-32">
               {MemoizedImage}
             </div>
@@ -62,27 +65,25 @@ export default function Component() {
             </div>
           </div>
           <div className="grid gap-4">
-            <div className="text-lg font-semibold dark:text-white">
-              Services
-            </div>
+            <h4>Services</h4>
             <div className="grid gap-2">
               <Link
-                href="#"
-                className="text-sm hover:underline dark:text-gray-300"
+                href="/nextjs-dev"
+                className="text-xs hover:underline dark:text-gray-300"
                 prefetch={false}
               >
-                Next.js Development
+                {t('nextjs')}
               </Link>
               <Link
                 href="#"
-                className="text-sm hover:underline dark:text-gray-300"
+                className="text-xs hover:underline dark:text-gray-300"
                 prefetch={false}
               >
-                React Development
+                {t('react')}
               </Link>
               <Link
                 href="#"
-                className="text-sm hover:underline dark:text-gray-300"
+                className="text-xs hover:underline dark:text-gray-300"
                 prefetch={false}
               >
                 Tailwind CSS
@@ -90,28 +91,30 @@ export default function Component() {
             </div>
           </div>
           <div className="grid gap-4">
-            <div className="text-lg font-semibold dark:text-white">More</div>
+            <h4>More</h4>
             <div className="grid gap-2">
               <Link
-                href="#"
-                className="text-sm hover:underline dark:text-gray-300"
+                href="https://github.com/koala819"
+                target="_blank"
+                className="text-xs hover:underline dark:text-gray-300"
                 prefetch={false}
               >
                 GitHub
               </Link>
               <Link
-                href="#"
-                className="text-sm hover:underline dark:text-gray-300"
+                href="/mentions"
+                target="_blank"
+                className="text-xs hover:underline dark:text-gray-300"
                 prefetch={false}
               >
-                YouTube
+                {t('mentions')}
               </Link>
               <Link
-                href="#"
-                className="text-sm hover:underline dark:text-gray-300"
+                href="/protection"
+                className="text-xs hover:underline dark:text-gray-300"
                 prefetch={false}
               >
-                Privacy Policy
+                {t('privacy')}
               </Link>
             </div>
           </div>
