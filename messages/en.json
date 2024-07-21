@@ -70,6 +70,32 @@
     "or": "or",
     "contactLink": "contact me"
   },
+  "ContentTailwind": {
+    "intro": "Looking for a Developer with {years} experience in Tailwind CSS?",
+    "title": "Why Tailwind CSS?",
+    "dispositionLink": "Please contact me to discuss your project.",
+    "whyChoose": "Why Tailwind CSS?",
+    "reason1": "Tailwind CSS is a powerful tool framework",
+    "reason1Desc": "With Tailwind CSS, you can create elegant, customized user interfaces using utility classes, simplifying the design process and improving code maintainability.",
+    "reason2": "Enhanced productivity",
+    "reason2Desc": "Tailwind CSS accelerates development by eliminating the need to create complex style sheets and offering a modular approach to styles.",
+    "reason3Desc": "Tailwind CSS offers extensive customization thanks to its flexible configuration, enabling you to adapt the framework to your project's specific needs.",
+    "reason4": "Easy integration",
+    "reason4Desc": "Tailwind CSS integrates easily with modern tools and development frameworks, making it easy to adopt in a variety of project environments.",
+    "reason5": "Community & support",
+    "reason5Desc": "With an active community and abundant resources, you benefit from invaluable support and a vast library of plugins to extend the functionality of Tailwind CSS.",
+    "reason6": "Enhanced performance",
+    "reason6Desc": "Tailwind CSS is designed for performance right from the start. Its utility classes minimize the CSS code generated and improve page loading times.",
+    "tailwindWebsites": "Tailwind CSS for websites",
+    "websitesDesc": "Tailwind CSS is ideal for creating modern, responsive websites. Thanks to its utility classes, you can design attractive interfaces that are adaptable to all devices.",
+    "tailwindApplications": "Tailwind CSS for web apps",
+    "applicationsDesc": "For web applications, Tailwind CSS provides a solid foundation for elegant, maintainable user interfaces, while making it easy to manage complex styles.",
+    "hire": "Hire a freelance developer with Tailwind CSS",
+    "hireDesc": "If you're interested in using Tailwind CSS for your project, or need assistance with a current project, I'm available to help.",
+    "recentWorkLink": "View my recent work",
+    "contactLink": "contact me",
+    "or": "or"
+  },
   "FAQ": {
     "title": "Frequently asked questions",
     "One": {

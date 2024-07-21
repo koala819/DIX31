@@ -70,7 +70,33 @@
     "or": "ou",
     "contactLink": "me contacter"
   },
-
+  "ContentTailwind": {
+    "intro": "Vous recherchez un Développeur avec {years} ans d'expérience en Tailwind CSS ?",
+    "title": "Pourquoi choisir Tailwind CSS ?",
+    "dispositionLink": "N'hésitez pas à me contacter pour discuter de votre projet.",
+    "whyChoose": "Pourquoi choisir Tailwind CSS ?",
+    "reason1": "Tailwind CSS est un framework utilitaire puissant",
+    "reason1Desc": "Avec Tailwind CSS, vous pouvez créer des interfaces utilisateur élégantes et personnalisées en utilisant des classes utilitaires, ce qui simplifie le processus de conception et améliore la maintenabilité du code.",
+    "reason2": "Productivité accrue",
+    "reason2Desc": "Tailwind CSS accélère le développement en éliminant le besoin de créer des feuilles de style complexes et en offrant une approche modulaire pour les styles.",
+    "reason3": "Flexibilité et personnalisation",
+    "reason3Desc": "Tailwind CSS permet une personnalisation approfondie grâce à sa configuration flexible, ce qui vous permet d'adapter le framework aux besoins spécifiques de votre projet.",
+    "reason4": "Facilité d'intégration",
+    "reason4Desc": "Tailwind CSS s'intègre facilement avec des outils modernes et des frameworks de développement, ce qui facilite son adoption dans divers environnements de projet.",
+    "reason5": "Communauté et support",
+    "reason5Desc": "Avec une communauté active et des ressources abondantes, vous bénéficiez d'un soutien précieux et d'une vaste bibliothèque de plugins pour étendre les fonctionnalités de Tailwind CSS.",
+    "reason6": "Performance améliorée",
+    "reason6Desc": "Tailwind CSS est conçu pour être performant dès le départ. Ses classes utilitaires minimisent le code CSS généré et améliorent les temps de chargement des pages.",
+    "tailwindWebsites": "Tailwind CSS pour les sites web",
+    "websitesDesc": "Tailwind CSS est idéal pour créer des sites web modernes et réactifs. Grâce à ses classes utilitaires, vous pouvez concevoir des interfaces attrayantes et adaptables à tous les appareils.",
+    "tailwindApplications": "Tailwind CSS pour les applications web",
+    "applicationsDesc": "Pour les applications web, Tailwind CSS offre une base solide pour des interfaces utilisateur élégantes et maintenables, tout en facilitant la gestion des styles complexes.",
+    "hire": "Engagez un Développeur Freelance avec Tailwind CSS",
+    "hireDesc": "Si vous êtes intéressé par l'utilisation de Tailwind CSS pour votre projet ou si vous avez besoin d'une assistance sur un projet en cours, je suis disponible pour vous aider.",
+    "recentWorkLink": "Voir mes travaux récents",
+    "contactLink": "me contacter",
+    "or": "ou"
+  },
   "FAQ": {
     "title": "Foire aux questions",
     "One": {
