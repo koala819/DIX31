@@ -75,14 +75,14 @@ export default function Component() {
                 {t('nextjs')}
               </Link>
               <Link
-                href="#"
+                href="/react-dev"
                 className="text-xs hover:underline dark:text-gray-300"
                 prefetch={false}
               >
                 {t('react')}
               </Link>
               <Link
-                href="#"
+                href="/tailwind-dev"
                 className="text-xs hover:underline dark:text-gray-300"
                 prefetch={false}
               >

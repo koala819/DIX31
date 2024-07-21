@@ -16,7 +16,6 @@
     "or": "Ou contactez-moi directement :",
     "phone": "Téléphone :"
   },
-
   "ContentNext": {
     "title": "Vous recherchez un développeur Next.js ?",
     "intro": "Vous êtes au bon endroit ! Je m'appelle Xavier, développeur Fullstack avec {years} ans d'expérience, spécialisé dans Next.js. Que vous ayez besoin d'un développeur freelance pour un nouveau projet ou pour améliorer un projet existant, je suis à votre disposition.",
@@ -41,7 +40,35 @@
     "hireDesc": "Avec 4 ans d'expérience dans le développement web et une spécialisation en JavaScript, React, et Next.js, je suis prêt à vous aider à concrétiser vos projets. Consultez mes travaux récents ou contactez-moi dès aujourd'hui pour discuter de vos besoins. J'ai hâte de collaborer avec vous !",
     "dispositionLink": "Je suis à votre disposition",
     "recentWorkLink": "Consultez mes travaux récents",
+    "or": "ou",
     "contactLink": "contactez-moi"
+  },
+  "ContentReact": {
+    "intro": "Vous recherchez un Développeur React avec {years} ans d'expérience ?",
+    "title": "Pourquoi choisir React ?",
+    "dispositionLink": "N'hésitez pas à me contacter pour discuter de votre projet.",
+    "whyChoose": "Pourquoi choisir React ?",
+    "reason1": "React est la norme pour la création d'interfaces utilisateur",
+    "reason1Desc": "Avec sa popularité croissante, React est devenu un standard de facto pour le développement d'interfaces utilisateur sur le web. Vous aurez accès à une vaste communauté de développeurs et à une technologie largement adoptée.",
+    "reason2": "React est stable et fiable",
+    "reason2Desc": "Développé par Facebook, React est connu pour sa robustesse. Les mises à jour sont testées en profondeur avant leur lancement, garantissant la continuité et la stabilité de votre code.",
+    "reason3": "React est performant",
+    "reason3Desc": "React offre une excellente performance et dispose d'outils de profilage puissants pour identifier et résoudre les problèmes de performance.",
+    "reason4": "React est puissant et flexible",
+    "reason4Desc": "React permet de créer des interfaces utilisateurs complexes avec une API élégante, tout en offrant une grande flexibilité pour répondre à divers besoins.",
+    "reason5": "React possède un écosystème riche",
+    "reason5Desc": "L'écosystème React est vaste, avec de nombreuses bibliothèques et outils qui peuvent accélérer le développement de votre projet.",
+    "reason6": "Une productivité accrue",
+    "reason6Desc": "React simplifie des tâches complexes, ce qui permet aux développeurs d'être plus productifs et de livrer des solutions efficaces plus rapidement.",
+    "reactWebsites": "React pour les sites web",
+    "websitesDesc": "React est parfait pour les sites web, offrant flexibilité et performance. Il permet d'ajouter facilement des composants interactifs et améliore le SEO grâce au rendu statique du HTML.",
+    "reactApplications": "React pour les applications web",
+    "applicationsDesc": "React est idéal pour construire des applications web sophistiquées. Son modèle de composants et ses APIs robustes permettent de créer des SPAs performantes et maintenables.",
+    "hire": "Engagez un Développeur Freelance React",
+    "hireDesc": "Si vous êtes intéressé par l'utilisation de React pour votre projet ou si vous avez besoin d'aide sur un projet en cours, je suis disponible pour vous aider.",
+    "recentWorkLink": "Voir mes travaux récents",
+    "or": "ou",
+    "contactLink": "me contacter"
   },
 
   "FAQ": {
