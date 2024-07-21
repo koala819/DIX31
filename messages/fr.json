@@ -19,7 +19,7 @@
 
   "ContentNext": {
     "title": "Vous recherchez un développeur Next.js ?",
-    "intro": "Vous êtes au bon endroit ! Je m'appelle Xavier, développeur Fullstack avec 4 ans d'expérience, spécialisé dans Next.js. Que vous ayez besoin d'un développeur freelance pour un nouveau projet ou pour améliorer un projet existant, je suis à votre disposition.",
+    "intro": "Vous êtes au bon endroit ! Je m'appelle Xavier, développeur Fullstack avec {years} ans d'expérience, spécialisé dans Next.js. Que vous ayez besoin d'un développeur freelance pour un nouveau projet ou pour améliorer un projet existant, je suis à votre disposition.",
     "whyChoose": "Pourquoi choisir Next.js pour votre projet ?",
     "reason1": "1. Next.js s'appuie sur React",
     "reason1Desc": "Next.js intègre parfaitement React, ce qui signifie que votre application restera essentiellement une application React. Cela vous permet d'accéder à une large communauté de développeurs et à un vaste écosystème de bibliothèques et de modules pour React.",

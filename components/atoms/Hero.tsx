@@ -6,13 +6,10 @@ import { useTranslations } from 'next-intl'
 
 import HireMeBtn from './HireMeBtn'
 
+import { myXP } from '@/lib/calculateXp'
+
 export default function Hero() {
-  const experience = useMemo(() => {
-    const startYear = 2020
-    const currentYear = new Date().getFullYear()
-    const years = currentYear - startYear
-    return years
-  }, [])
+  const experience = useMemo(() => myXP(), [])
 
   const t = useTranslations('Hero')
 
