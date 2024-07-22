@@ -1,7 +1,10 @@
+'use client'
+
 import { PortableText } from '@portabletext/react'
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useParams } from 'next/navigation'
 
 import { fullBlog } from '@/types/blog'
 
@@ -11,10 +14,13 @@ import { urlFor } from '@/lib/sanity'
 import { format, parseISO } from 'date-fns'
 
 export function Post({ post }: { post: fullBlog }) {
-  // getBlogPostMetadata(post.title, post.content)
+  const params = useParams()
+  const locale = params.locale as string
+
+  console.log('check post in POST', post)
+
   const CustomImage = ({ value }: { value: { size: string; alt: string } }) => {
     let width, height
-
     switch (value.size) {
       case 'small':
         width = 100
@@ -80,17 +86,18 @@ export function Post({ post }: { post: fullBlog }) {
   prose-li:ml-4
   `
 
+  const title = locale === 'fr' ? post.titleFr : post.titleEn
+  const content = locale === 'fr' ? post.contentFr : post.contentEn
+
   return (
     <div className="container">
       <div className="p-8 sm:prose-base md:prose-lg">
         <header className="p-4">
-          <h1 className="font-extrabold text-3xl">{post.title}</h1>
-
+          <h1 className="font-extrabold text-3xl">{title}</h1>
           <span className="text-gray-500 font-medium">
             {format(parseISO(post.date), 'dd-MM-yyyy')}
           </span>
         </header>
-
         {post.youtubeVideo && post.youtubeVideo.url && (
           <div className="video-container">
             <iframe
@@ -102,7 +109,6 @@ export function Post({ post }: { post: fullBlog }) {
             ></iframe>
           </div>
         )}
-
         <div className="w-full flex justify-center">
           <Image
             src={
@@ -113,7 +119,7 @@ export function Post({ post }: { post: fullBlog }) {
             alt={
               post.titleImagebyCloudinary
                 ? post.titleImagebyCloudinary.alt
-                : post.title
+                : title
             }
             width={500}
             height={800}
@@ -121,17 +127,12 @@ export function Post({ post }: { post: fullBlog }) {
             className="rounded-lg mt-8 border"
           />
         </div>
-
         <div className={richTextStyles}>
-          <PortableText
-            value={post?.content}
-            components={myPortableTextComponents}
-          />
+          <PortableText value={content} components={myPortableTextComponents} />
         </div>
-
         <div className="flex items-center justify-center p-8">
-          <Link href="/blog">
-            <Button>Retour</Button>
+          <Link href={`/${locale}/blog`}>
+            <Button>{locale === 'fr' ? 'Retour' : 'Back'}</Button>
           </Link>
         </div>
       </div>

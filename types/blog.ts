@@ -9,14 +9,19 @@ export interface SimpleBlogCardProps {
 }
 
 export interface fullBlog {
-  content: any
+  contentFr: any[]
+  contentEn: any[]
   date: string
   slug: string
-  smallDescription: string
-  title: string
+  shortDescriptionFr: string
+  shortDescriptionEn: string
+  titleFr: string
+  titleEn: string
   titleImage: any
   titleImagebyCloudinary: any
-  youtubeVideo: any
+  youtubeVideo?: {
+    url: string
+  }
 }
 
 export interface TagCount {
