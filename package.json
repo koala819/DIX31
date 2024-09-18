@@ -11,7 +11,8 @@
     "lint:fix": "npm run format && npm run lint -- --fix",
     "start": "next start",
     "type-check": "tsc --noEmit",
-    "jampack": "rm -rf ./.next/_jampack && jampack ./.next"
+    "jampack": "rm -rf ./.next/_jampack && jampack ./.next",
+    "migrate": "node -r dotenv/config lib/migrate-to-multilingual.js"
   },
   "prettier": {
     "semi": false,
@@ -49,6 +50,7 @@
     "classnames": "2.5.1",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
+    "dotenv": "^16.4.5",
     "framer-motion": "^11.3.6",
     "get-youtube-id": "1.0.1",
     "gray-matter": "^4.0.3",

@@ -9,32 +9,35 @@ import { BlogFooter } from '@/components/@unused/BlogFooter'
 import { BlogHeader } from '@/components/@unused/BlogHeader'
 import { BlogSlide } from '@/components/@unused/BlogSlide'
 
+import { AnimatePresence, motion } from 'framer-motion'
+
 export default function Blog({ posts }: { posts: SimpleBlogCardProps[] }) {
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
   const [displayPosts, setDisplayPosts] = useState<SimpleBlogCardProps[]>([])
   const [footerPosts, setFooterPosts] = useState<SimpleBlogCardProps[]>([])
   const [tagsCount, setTagsCount] = useState<TagCount>({})
+  const [isLoading, setIsLoading] = useState(true)
 
-  // Déterminer les deux articles les plus récents pour BlogHeader
   const mostRecentPosts = posts
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 2)
 
+  console.log('mostRecentPosts', mostRecentPosts)
+
   useEffect(() => {
+    setIsLoading(true)
     const filteredPosts = selectedTag
       ? posts.filter((post) =>
           post.tag.some((tag: { name: string }) => tag.name === selectedTag),
         )
       : posts
 
-    // Séparer les posts pour BlogBody
     const bodyPosts = selectedTag
       ? filteredPosts.slice(0, 10)
       : filteredPosts
           .filter((post) => !mostRecentPosts.includes(post))
           .slice(0, 10)
 
-    // Séparer les posts pour BlogFooter
     const remainingPosts = selectedTag
       ? filteredPosts.slice(10)
       : filteredPosts
@@ -44,7 +47,6 @@ export default function Blog({ posts }: { posts: SimpleBlogCardProps[] }) {
     setDisplayPosts(bodyPosts)
     setFooterPosts(remainingPosts)
 
-    // Calculer le nombre d'articles par tag
     const count = posts.reduce((acc: TagCount, post: SimpleBlogCardProps) => {
       if (post.tag && post.tag.length > 0) {
         post.tag.forEach((tag: { name: string }) => {
@@ -55,6 +57,8 @@ export default function Blog({ posts }: { posts: SimpleBlogCardProps[] }) {
       return acc
     }, {} as TagCount)
     setTagsCount(count)
+
+    setTimeout(() => setIsLoading(false), 500) // Simulating loading for smooth transition
   }, [selectedTag, posts])
 
   const handleTagClick = (tagName: string) => {
@@ -66,23 +70,77 @@ export default function Blog({ posts }: { posts: SimpleBlogCardProps[] }) {
   }
 
   return (
-    <div className="container">
-      <div className="pt-1">
-        {selectedTag === null && <BlogHeader firstPosts={mostRecentPosts} />}
-      </div>
-      <section className="block lg:flex lg:space-x-2 px-2 lg:p-0 mt-10 mb-10">
-        <aside className="w-full lg:w-2/3">
-          <BlogBody posts={displayPosts} />
-        </aside>
-        <aside className="w-full lg:w-1/3 px-3">
+    <motion.div
+      className="container mx-auto px-4 py-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <AnimatePresence>
+        {selectedTag === null && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+          >
+            <BlogHeader firstPosts={mostRecentPosts} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <div className="flex flex-col lg:flex-row gap-8 mt-10">
+        <motion.aside
+          className="w-full lg:w-1/4 order-2 lg:order-1"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <BlogSlide
             tags={tagsCount}
             onTagClick={handleTagClick}
             onReset={handleReset}
           />
-        </aside>
-      </section>
-      <BlogFooter posts={footerPosts} />
-    </div>
+        </motion.aside>
+
+        <motion.section
+          className="w-full lg:w-3/4 order-1 lg:order-2"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <AnimatePresence>
+            {isLoading ? (
+              <motion.div
+                className="flex justify-center items-center h-64"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <div className="loader"></div>
+              </motion.div>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <BlogBody posts={displayPosts} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.section>
+      </div>
+
+      <motion.div
+        className="mt-16"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        <BlogFooter posts={footerPosts} />
+      </motion.div>
+    </motion.div>
   )
 }
