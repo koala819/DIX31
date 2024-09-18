@@ -38,8 +38,7 @@ export default function Blog({ posts }: any) {
                       ? post.titleImagebyCloudinary.alt
                       : post.title
                   }
-                  layout="fill"
-                  objectFit="cover"
+                  fill
                   className="object-cover"
                 />
                 <Link

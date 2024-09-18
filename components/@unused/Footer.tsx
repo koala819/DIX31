@@ -161,15 +161,11 @@ export default function Footer() {
               src="/images/Footer_logo.png"
               alt="DIX31 logo"
               className="object-fill rounded-none block dark:hidden"
-              width={250}
-              height={50}
             />
             <WithCustomLoading
               src="/images/Footer_dark_logo.png"
               alt="DIX31 logo"
               className="object-fill rounded-none hidden dark:block"
-              width={250}
-              height={50}
             />
           </picture>
 

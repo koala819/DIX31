@@ -45,7 +45,7 @@ const Career = () => {
             <WithCustomLoading
               src={image.src}
               alt={image.alt}
-              layout="fill"
+              fill
               className="object-contain transition-transform duration-300 hover:scale-105"
               sizes="(max-width: 768px) 160px, 192px"
               priority

@@ -82,7 +82,6 @@ export default async function RootLayout({
                   <div className="flex flex-col min-w-0 break-words w-full rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
                     {/* <GoogleAnalytics /> */}
                     {children}
-                    <SpeedInsights />
                     <Analytics />
                     <SpeedInsights />
                   </div>

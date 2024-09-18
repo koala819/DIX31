@@ -30,7 +30,7 @@ const Testimonial = ({ user }: { user: string }) => {
                 : '/images/Amandine Werlé.jpeg'
             }
             alt={t(`${user}.img.alt`) || ''}
-            layout="fill"
+            fill
             className="rounded-full object-cover"
             sizes="(max-width: 768px) 96px, 112px"
             priority

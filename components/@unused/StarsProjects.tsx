@@ -77,8 +77,6 @@ export default function Projets() {
               <WithCustomLoading
                 alt={project.picture.alt}
                 src={project.picture.src}
-                width={700}
-                height={400}
               />
             </picture>
 

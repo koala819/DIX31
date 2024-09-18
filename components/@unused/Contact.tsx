@@ -77,8 +77,7 @@ export default function Contact() {
       <div className="w-full md:w-1/3 relative h-96 md:h-auto">
         <WithCustomLoading
           alt="DIX31 pour vous accompagner"
-          layout="fill"
-          objectFit="cover"
+          fill
           src="/images/Xavier-DIX31.jpg"
         />
       </div>

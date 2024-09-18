@@ -3,22 +3,16 @@ import Image from 'next/image'
 export default function LoadImage({
   alt,
   className,
-  height,
-  layout,
-  objectFit,
+  fill,
   priority,
   src,
-  width,
   sizes,
 }: {
   alt: string
   className?: string
-  height?: number
-  layout?: string
-  objectFit?: string
+  fill?: boolean
   priority?: boolean
   src: string
-  width?: number
   sizes?: string
 }) {
   const shimmer = (w: number, h: number) => `
@@ -43,15 +37,12 @@ export default function LoadImage({
   return (
     <Image
       alt={alt}
-      className={`rounded-3xl ${className}`}
-      height={height}
-      layout={layout}
-      objectFit={objectFit}
+      className={`rounded-3xl ${className || ''}`}
+      fill={fill}
       placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
       priority={priority}
       src={src}
-      width={width}
-      sizes={sizes ? `${sizes}px` : undefined}
+      sizes={sizes ? sizes : undefined}
     />
   )
 }

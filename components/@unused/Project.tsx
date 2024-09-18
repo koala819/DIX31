@@ -39,8 +39,6 @@ export const Project = ({ realisations }: { realisations: Realisations }) => {
           <WithCustomLoading
             alt={realisations.picture.alt}
             src={realisations.picture.src}
-            width={500}
-            height={500}
           />
         </picture>
       </section>

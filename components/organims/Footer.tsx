@@ -24,7 +24,7 @@ export default function Component() {
       <WithCustomLoading
         src="/images/Xavier-GENOLHAC.jpg"
         alt="Photo de Xavier"
-        layout="fill"
+        fill
         className="rounded-xl object-cover border-4 border-white dark:border-gray-800 shadow-lg"
         sizes="(max-width: 768px) 96px, 128px"
         priority
