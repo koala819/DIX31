@@ -34,7 +34,7 @@ export default function Component() {
   )
 
   return (
-    <footer className="bg-gray-100 dark:bg-gray-800 p-6 md:py-12 w-full relative mt-16 md:mt-24">
+    <footer className="bg-gray-100 dark:bg-gray-800 p-6 md:py-12 w-full relative">
       <div className="container max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="relative">
