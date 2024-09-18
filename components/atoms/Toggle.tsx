@@ -2,16 +2,31 @@
 
 import { Moon, Sun } from 'lucide-react'
 import * as React from 'react'
+import { useEffect, useState } from 'react'
 
 import { useTheme } from 'next-themes'
 
 import { Button } from '@/components/ui/button'
 
-export function ModeToggle() {
+export function ModeToggle({
+  handleNavItemClick,
+}: {
+  handleNavItemClick?: () => void
+}) {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState<boolean>(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
+    if (handleNavItemClick) handleNavItemClick()
   }
 
   return (

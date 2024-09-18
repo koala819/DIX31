@@ -1,5 +1,9 @@
+import createNextIntlPlugin from 'next-intl/plugin'
+
+const withNextIntl = createNextIntlPlugin()
+
 /** @type {import('next').NextConfig} */
-const config = {
+const nextConfig = {
   async redirects() {
     return [
       {
@@ -63,4 +67,4 @@ const config = {
   swcMinify: true,
 }
 
-export default config
+export default withNextIntl(nextConfig)

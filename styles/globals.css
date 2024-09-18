@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-background font-sans text-foreground text-gray-600 dark:text-gray-200;
+    @apply bg-background font-body leading-relaxed text-foreground text-gray-600  dark:text-gray-200;
   }
 
   h1,
@@ -22,19 +22,19 @@
   a,
   li,
   blockquote {
-    @apply font-sans;
+    @apply font-heading;
   }
 
   h1 {
-    @apply mb-6 text-4xl font-bold text-gray-600 dark:text-gray-200 lg:text-6xl;
+    @apply text-2xl font-bold text-gray-600 dark:text-gray-200 lg:text-6xl;
   }
 
   h2 {
-    @apply mb-5 text-3xl font-bold text-gray-600 dark:text-gray-200 md:text-2xl lg:text-5xl xl:text-6xl;
+    @apply text-2xl font-bold text-gray-600 dark:text-gray-200  lg:text-3xl;
   }
 
   h3 {
-    @apply text-lg font-semibold;
+    @apply text-lg font-bold sm:text-2xl;
   }
 
   h4 {
@@ -44,11 +44,11 @@
   span,
   p,
   li {
-    @apply text-xl font-medium;
+    @apply text-lg font-medium lg:text-xl;
   }
 
   .container {
-    @apply mx-auto max-w-2xl overflow-hidden p-12 px-4 py-16 shadow-lg dark:bg-gray-800 dark:shadow-gray-700 sm:py-24 lg:max-w-7xl lg:px-8;
+    @apply mx-auto max-w-2xl px-4 py-4 sm:py-8 lg:max-w-7xl lg:px-8;
   }
 
   :root {
@@ -72,6 +72,9 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+    --navbar-height: 5rem;
+    --navbar-bg-color: rgba(255, 255, 255, 0.9);
+    --navbar-shadow: 0 2px 4px rgba(2, 1, 1, 0.1);
   }
 
   .dark {
@@ -94,6 +97,7 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+    --navbar-bg-color: rgba(17, 24, 39, 0.9);
   }
 
   .focus\:outline-none:focus {
@@ -102,5 +106,48 @@
 
   .focus\:ring:focus {
     box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.6);
+  }
+  :focus {
+    outline: 2px solid #005fcc;
+    outline-offset: 2px;
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid #005fcc;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .hire-me-button {
+    --blurAmount: 10px;
+    --duration: 300ms;
+  }
+
+  .hire-me-button:hover .absolute {
+    opacity: 1;
+  }
+
+  .navbar-height {
+    height: var(--navbar-height);
+  }
+
+  .pt-navbar {
+    padding-top: var(--navbar-height);
+  }
+
+  .link {
+    @apply text-blue-600 underline transition-colors duration-200 hover:text-blue-800;
+    @apply dark:text-blue-400 dark:hover:text-blue-300;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 4rem; /* Vous pouvez ajuster la hauteur pour mobile si nécessaire */
   }
 }

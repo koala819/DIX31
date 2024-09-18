@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
@@ -8,178 +9,129 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from '@/components/ui/card'
 
 export const Achievements = () => {
+  const t = useTranslations('Projects')
+
   const projects = [
     {
-      insideLink: '/projects/Club306',
-      title: 'Club 306',
+      title: t('Club306.title'),
       picture: {
-        src: '/images/Club-306.jpg',
-        alt: 'Club 306 website',
+        src: t('Club306.img.src'),
+        alt: t('Club306.img.alt'),
       },
-      description:
-        'Rejoignez la communauté des passionnés de la Peugeot 306. Notre site offre un\n' +
-        "espace dynamique pour partager, célébrer et découvrir l'héritage de ce véhicule\n" +
-        'emblématique.',
-      avis:
-        'Xavier est devenu un développeur fullstack talentueux qui a joué un rôle' +
-        ' essentiel dans la création de notre site internet du club. Sa contribution' +
-        ' exceptionnelle a transformé notre vision en une réalité numérique époustouflante.' +
-        ' De plus, il a su créer un site internet qui non seulement répond à nos besoins, mais' +
-        ' qui dépasse largement nos attentes. Sa maîtrise du développement front-end et back-end' +
-        ' lui a permis de concevoir une expérience utilisateur fluide et conviviale.' +
-        ' ' +
-        'Son attitude positive et son dévouement en font un atout précieux pour toute équipe' +
-        " de développement. Nous avons tous pu travailler avec lui et il a su s'adapter à nos différentes" +
-        ' approches, demandes, et personnalité. Par conséquent, sa capacité à travailler en équipe a' +
-        " également été un atout précieux, collaborant efficacement avec d'autres membres de l'équipe" +
-        ' pour atteindre nos objectifs communs.' +
-        ' ' +
-        'Le Club306, son staff, et ses membres sont ravi de recommander Xavier pour vos projets. Nous' +
-        " ne vous cacherons pas que le travail de Xavier a été crucial dans la mise en place d'une" +
-        ' stratégie virtuelle de notre club.',
-      proprietaire: 'Pascal',
-      avatar: '/images/Pascal BESNARD.jpeg',
+      description: t('Club306.description'),
+      expertise: [
+        t('Club306.expertise.one'),
+        t('Club306.expertise.two'),
+        t('Club306.expertise.three'),
+        t('Club306.expertise.four'),
+        t('Club306.expertise.five'),
+      ],
+      testimonial: {
+        content: t('Club306.testimonial.content'),
+        author: t('Club306.testimonial.author'),
+        role: t('Club306.testimonial.role'),
+        avatar: t('Club306.testimonial.img.src') || '',
+      },
       link: {
-        name: 'Linkedin',
-        url: 'https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390',
+        url: t('Club306.link.url'),
       },
     },
     {
-      insideLink: '/projects/BonheurSurSeine',
-      title: 'Bonheur Sur Seine',
+      title: t('BonheurSurSeine.title'),
       picture: {
-        src: '/images/Bonheur-Sur-Seine.jpg',
-        alt: 'Bonheur Sur Seine website',
+        src: t('BonheurSurSeine.img.src'),
+        alt: t('BonheurSurSeine.img.alt'),
       },
-      description:
-        "Plongez dans l'univers des gyroroues avec Bonheur Sur Seine. Ce site\n" +
-        'communautaire met en avant la mobilité urbaine écologique et vous engage avec des\n' +
-        'scores interactifs et des guides de sécurité.',
-      avis: 'Xavier est une personne sérieuse, compétente qui a su réaliser ce projet avec brio.',
-      proprietaire: 'Raphael',
-      avatar: '/images/BonheurSurSeine_logo.png',
+      description: t('BonheurSurSeine.description'),
+      expertise: [
+        t('BonheurSurSeine.expertise.one'),
+        t('BonheurSurSeine.expertise.two'),
+        t('BonheurSurSeine.expertise.three'),
+        t('BonheurSurSeine.expertise.four'),
+        t('BonheurSurSeine.expertise.five'),
+      ],
+      testimonial: {
+        content: t('BonheurSurSeine.testimonial.content'),
+        author: t('BonheurSurSeine.testimonial.author'),
+        role: t('BonheurSurSeine.testimonial.role'),
+        avatar: t('BonheurSurSeine.testimonial.img.src'),
+      },
       link: {
-        name: 'Youtube',
-        url: 'https://www.youtube.com/watch?v=zh5neo3xsa0',
-      },
-    },
-    {
-      insideLink: '/projects/Thouy',
-      title: 'Thouy',
-      picture: {
-        src: '/images/Thouy.jpg',
-        alt: 'Gîtes de Thouy website',
-      },
-      description:
-        'Vivez le Tarn comme jamais auparavant. Les Gîtes de Thouy vous offrent un\n' +
-        'hébergement charmant et pratique, avec une réservation en ligne simplifiée pour\n' +
-        'une escapade parfaite.',
-      avis:
-        'Nous avons apprécié son professionnalisme et sa motivation. Xavier' +
-        ' est un technicien développeur compétent qui a su se rendre' +
-        " disponible aux moments ou nous en avons eu besoin. C'est avec" +
-        ' une confiance évidente que nous pourrions lui confier de nouvelles' +
-        ' missions. Son charisme et ses qualités humaines sont un plus dans' +
-        ' ces relations de travail.',
-      proprietaire: 'Sandrine',
-      avatar: '/images/Sandrine PELLISER.jpeg',
-      link: {
-        name: 'Linkedin',
-        url: 'https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390',
-      },
-    },
-    {
-      insideLink: '/projects/ActivSavoirs',
-      title: "Activ'Savoirs",
-      picture: {
-        src: '/images/ActivSavoirs.jpg',
-        alt: 'ActivSavoirs website',
-      },
-      description:
-        "Un portail éducatif sur mesure, Activ'Savoirs simplifie l'accès à la formation" +
-        'professionnelle continue. Explorez des cours dans divers domaines et avancez dans' +
-        'votre carrière professionnelle.',
-      avis:
-        "Si vous recherchez un prestataire qui conjugue professionnalisme, sens avéré de l'écoute et une véritable dimenssion humaine pour " +
-        'la création de votre futur site internet je vous recommande dans ce cas les services de Xavier Genolhac. ' +
-        "Ainsi, je voulais partager avec vous mon expérience client car Xavier a réalisé le nouveau site internet de mon entreprise Activ' Savoirs. " +
-        'Il est très sérieux, particuliérement fiable et animé par un véritable souci de la satisfaction de son client. ' +
-        "Cerise sur le gateau ses prestations sont d'un excellent rapport qualité/prix " +
-        "Consultez le sans réserve et je suis convaincu que vous viendrez enrichir ses recommandations car il le mérite à plus d'un égard.",
-      proprietaire: 'Vincent',
-      avatar: '/images/Vincent DECLERCQ.jpeg',
-      link: {
-        name: 'Linkedin',
-        url: 'https://www.linkedin.com/in/xavier%F0%9F%92%BB-genolhac-79a98390',
+        url: t('BonheurSurSeine.link.url'),
       },
     },
   ]
 
-  const WithCustomLoading = dynamic(() => import('@/lib/LoadImage'), {
-    loading: () => <div>Chargement ...</div>,
-  })
+  const WithCustomLoading = dynamic(
+    () => import('@/components/atoms/LoadImage'),
+    {
+      loading: () => <p aria-busy="true">Chargement de l&apos;image...</p>,
+    },
+  )
 
   return (
     <div className="container space-y-8">
+      <h1 className="text-3xl font-bold mb-8">{t('title')}</h1>
       {projects.map((project) => (
         <Card
           key={project.title}
-          className="shadow-lg shadow-gray-600 lg:flex lg:flex-col rounded-2xl border p-8"
+          className="shadow-lg shadow-gray-600 rounded-2xl border p-8"
         >
           <CardHeader>
-            <CardTitle>{project.title}</CardTitle>
-            <CardDescription className="dark:text-white">
+            <h2 className="mb-4">{project.title}</h2>
+            <CardDescription className="dark:text-white text-lg">
               {project.description}
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <WithCustomLoading
-                alt={project.picture.alt}
-                className="rounded-lg object-cover"
-                height={300}
-                width={500}
-                src={project.picture.src}
-              />
+              <div>
+                <WithCustomLoading
+                  alt={project.picture.alt}
+                  className="rounded-lg object-cover w-full h-auto"
+                  height={300}
+                  width={500}
+                  src={project.picture.src}
+                />
+              </div>
               <div className="space-y-4">
-                <blockquote className="text-lg italic">
-                  {project.avis}
-                  <div className="mt-4 flex items-center space-x-4 text-sm">
-                    <div>
-                      {project.avis !== '' && (
-                        <div className="font-medium">
-                          <WithCustomLoading
-                            src={project.avatar || ''}
-                            alt={`Photo de ${project.proprietaire}`}
-                            width={50}
-                            height={50}
-                            className="rounded-full"
-                          />
-                          {project.proprietaire}
-                        </div>
-                      )}
-                      <Link
-                        className="hover:underline"
-                        href={project.link.url}
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        Découvrir son avis sur {project.link.name}
-                      </Link>
-                    </div>
-                  </div>
-                </blockquote>
+                <h3>{t('expertise')}</h3>
+                <ul className="list-disc pl-5 space-y-2">
+                  {project.expertise.map((item, index) => (
+                    <li key={index}>
+                      <span className="text-base">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
+            <div className="mt-8">
+              <blockquote className="text-lg italic border-l-4 border-gray-300 pl-4">
+                {project.testimonial.content}
+                <footer className="mt-2 flex items-center">
+                  <WithCustomLoading
+                    src={project.testimonial.avatar || ''}
+                    alt={`Photo de ${project.testimonial.author}`}
+                    width={50}
+                    height={50}
+                    className="rounded-full mr-4"
+                  />
+                  <div>
+                    <strong>{project.testimonial.author}</strong>
+                    <br />
+                    <span className="text-sm">{project.testimonial.role}</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
           </CardContent>
-          <CardFooter className="flex justify-center">
-            <Link href={project.insideLink}>
+          <CardFooter className="flex justify-center mt-4">
+            <Link href={project.link.url} target="_blank">
               <Button className="dark:bg-blue-900 dark:text-white">
-                Explorer
+                {t('btnLink')}
               </Button>
             </Link>
           </CardFooter>

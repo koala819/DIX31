@@ -1,17 +1,22 @@
-export default {
+const blogSchema = {
   name: 'blog',
   type: 'document',
   title: 'Blog',
   fields: [
     {
-      name: 'title',
+      name: 'titleFr',
       type: 'string',
-      title: "Titre de l'article du blog",
+      title: 'Titre (Français)',
     },
     {
-      name: 'tag',
+      name: 'titleEn',
+      type: 'string',
+      title: 'Title (English)',
+    },
+    {
+      name: 'tags',
       type: 'array',
-      title: 'Tag',
+      title: 'Tags',
       of: [{ type: 'reference', to: [{ type: 'tag' }] }],
     },
     {
@@ -19,7 +24,8 @@ export default {
       type: 'slug',
       title: 'Slug',
       options: {
-        source: 'title',
+        source: (doc: { titleEn: string; titleFr: string }) =>
+          `${doc.titleEn} ${doc.titleFr}`,
         maxLength: 96,
       },
     },
@@ -51,16 +57,20 @@ export default {
         },
       ],
     },
-
     {
-      name: 'smallDescription',
+      name: 'shortDescriptionFr',
       type: 'text',
-      title: 'Description',
+      title: 'Courte Description (Français)',
     },
     {
-      name: 'content',
+      name: 'shortDescriptionEn',
+      type: 'text',
+      title: 'Small Description (English)',
+    },
+    {
+      name: 'contentFr',
       type: 'array',
-      title: 'Contenu',
+      title: 'Contenu (Français)',
       of: [
         { type: 'block' },
         {
@@ -112,5 +122,62 @@ export default {
         },
       ],
     },
+    {
+      name: 'contentEn',
+      type: 'array',
+      title: 'Content (English)',
+      of: [
+        { type: 'block' },
+        {
+          name: 'youtubeVideo',
+          title: 'YouTube Video',
+          type: 'youtubeVideo',
+        },
+        {
+          name: 'cloudinaryImage',
+          title: 'Cloudinary Image',
+          type: 'cloudinaryImage',
+        },
+        {
+          type: 'image',
+          options: {
+            hotspot: true, // Optional, for enabling hotspot functionality on images
+          },
+          fields: [
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+            },
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alternative Text',
+              description: 'Important for SEO and accessibility.',
+              validation: (Rule: any) =>
+                Rule.error(
+                  'You must fill out the alternative text.',
+                ).required(),
+            },
+            {
+              name: 'size',
+              type: 'string',
+              title: 'Image Size',
+              description: 'Choose a size for the image',
+              options: {
+                list: [
+                  { title: 'Small', value: 'small' },
+                  { title: 'Medium', value: 'medium' },
+                  { title: 'Large', value: 'large' },
+                ],
+                layout: 'radio', // You can change the type of interface here (e.g., 'dropdown')
+              },
+            },
+          ],
+        },
+      ],
+    },
   ],
 }
+
+export default blogSchema

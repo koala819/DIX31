@@ -1,0 +1,320 @@
+{
+  "Btn-hire": "Engagez-moi",
+  "Career": {
+    "title": "Votre projet mérite le meilleur.",
+    "description": "Fort de mon expérience avec des entreprises de premier plan, je transforme vos idées en solutions web innovantes et performantes. Faites confiance à mon expertise pour donner vie à vos ambitions digitales."
+  },
+  "Contact": {
+    "title": "Parlez-moi de votre projet",
+    "description": "Envoyez-moi un message concernant votre projet et je vous répondrai dans les 48 heures :",
+    "confirmation": "Je vous répondrai d'ici 48h maximum.",
+    "thx": "Merci !",
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Message",
+    "button": "Envoyer un message",
+    "or": "Ou contactez-moi directement :",
+    "phone": "Téléphone :"
+  },
+  "ContentNext": {
+    "title": "Vous recherchez un développeur Next.js ?",
+    "intro": "Vous êtes au bon endroit ! Je m'appelle Xavier, développeur Fullstack avec {years} ans d'expérience, spécialisé dans Next.js. Que vous ayez besoin d'un développeur freelance pour un nouveau projet ou pour améliorer un projet existant, je suis à votre disposition.",
+    "whyChoose": "Pourquoi choisir Next.js pour votre projet ?",
+    "reason1": "Next.js s'appuie sur React",
+    "reason1Desc": "Next.js intègre parfaitement React, ce qui signifie que votre application restera essentiellement une application React. Cela vous permet d'accéder à une large communauté de développeurs et à un vaste écosystème de bibliothèques et de modules pour React.",
+    "reason2": "Une technologie éprouvée",
+    "reason2Desc": "Des entreprises de renom telles que Netflix, TikTok, Twitch, Nike et Uber utilisent Next.js pour leurs sites web, attestant de sa fiabilité et de sa robustesse en production.",
+    "reason3": "Gain de temps considérable",
+    "reason3Desc": "La configuration d'un environnement de développement JavaScript peut être complexe et chronophage. Next.js simplifie ce processus, vous permettant d'économiser des semaines de travail en automatisant les configurations complexes, ce qui réduit le temps et les coûts de développement.",
+    "reason4": "Flexibilité et personnalisation",
+    "reason4Desc": "Next.js prend en charge de nombreuses fonctionnalités dès le départ, comme TypeScript. De plus, le processus de build est hautement personnalisable, permettant d'adapter la configuration aux besoins spécifiques de votre projet.",
+    "reason5": "Architecture claire et scalable",
+    "reason5Desc": "Avec son nouveau système de routage App Router et sa structure de mise en page imbriquée, Next.js 13+ offre une architecture moderne et intuitive qui facilite la montée en charge et la maintenance. Ce nouveau système de routage permet des conceptions plus flexibles et modulaires.",
+    "reason6": "Performances optimisées",
+    "reason6Desc": "Next.js offre des performances exceptionnelles dès l'installation, grâce à son rendu côté serveur et à d'autres optimisations avancées. En collaborant avec les équipes de React et Google Chrome, Next.js continue d'améliorer ses performances au fil du temps.",
+    "nextWebsites": "Next.js pour les sites web",
+    "websitesDesc": "Next.js est idéal pour les sites riches en contenu. Grâce à son rendu statique et à son déploiement facile sur des CDN, il permet de créer des sites rapides et économiques à héberger. Pour des données dynamiques, le rendu côté serveur est disponible à la demande, offrant des performances SEO optimales.",
+    "nextApplications": "Next.js pour les applications web",
+    "applicationsDesc": "Que votre application soit centrée sur des formulaires et des opérations de base de données ou qu'elle utilise des composants UI sophistiqués, Next.js est une excellente option. Il améliore les temps de chargement perçus grâce à son rendu côté serveur et sa génération de sites statiques, tout en offrant une grande flexibilité pour le rendu côté client.",
+    "hire": "Engagez un développeur freelance Next.js",
+    "hireDesc": "Avec 4 ans d'expérience dans le développement web et une spécialisation en JavaScript, React, et Next.js, je suis prêt à vous aider à concrétiser vos projets. Consultez mes travaux récents ou contactez-moi dès aujourd'hui pour discuter de vos besoins. J'ai hâte de collaborer avec vous !",
+    "dispositionLink": "Je suis à votre disposition",
+    "recentWorkLink": "Consultez mes travaux récents",
+    "or": "ou",
+    "contactLink": "contactez-moi"
+  },
+  "ContentReact": {
+    "intro": "Vous recherchez un Développeur React avec {years} ans d'expérience ?",
+    "title": "Pourquoi choisir React ?",
+    "dispositionLink": "N'hésitez pas à me contacter pour discuter de votre projet.",
+    "whyChoose": "Pourquoi choisir React ?",
+    "reason1": "React est la norme pour la création d'interfaces utilisateur",
+    "reason1Desc": "Avec sa popularité croissante, React est devenu un standard de facto pour le développement d'interfaces utilisateur sur le web. Vous aurez accès à une vaste communauté de développeurs et à une technologie largement adoptée.",
+    "reason2": "React est stable et fiable",
+    "reason2Desc": "Développé par Facebook, React est connu pour sa robustesse. Les mises à jour sont testées en profondeur avant leur lancement, garantissant la continuité et la stabilité de votre code.",
+    "reason3": "React est performant",
+    "reason3Desc": "React offre une excellente performance et dispose d'outils de profilage puissants pour identifier et résoudre les problèmes de performance.",
+    "reason4": "React est puissant et flexible",
+    "reason4Desc": "React permet de créer des interfaces utilisateurs complexes avec une API élégante, tout en offrant une grande flexibilité pour répondre à divers besoins.",
+    "reason5": "React possède un écosystème riche",
+    "reason5Desc": "L'écosystème React est vaste, avec de nombreuses bibliothèques et outils qui peuvent accélérer le développement de votre projet.",
+    "reason6": "Une productivité accrue",
+    "reason6Desc": "React simplifie des tâches complexes, ce qui permet aux développeurs d'être plus productifs et de livrer des solutions efficaces plus rapidement.",
+    "reactWebsites": "React pour les sites web",
+    "websitesDesc": "React est parfait pour les sites web, offrant flexibilité et performance. Il permet d'ajouter facilement des composants interactifs et améliore le SEO grâce au rendu statique du HTML.",
+    "reactApplications": "React pour les applications web",
+    "applicationsDesc": "React est idéal pour construire des applications web sophistiquées. Son modèle de composants et ses APIs robustes permettent de créer des SPAs performantes et maintenables.",
+    "hire": "Engagez un Développeur Freelance React",
+    "hireDesc": "Si vous êtes intéressé par l'utilisation de React pour votre projet ou si vous avez besoin d'aide sur un projet en cours, je suis disponible pour vous aider.",
+    "recentWorkLink": "Voir mes travaux récents",
+    "or": "ou",
+    "contactLink": "me contacter"
+  },
+  "ContentTailwind": {
+    "intro": "Vous recherchez un Développeur avec {years} ans d'expérience en Tailwind CSS ?",
+    "title": "Pourquoi choisir Tailwind CSS ?",
+    "dispositionLink": "N'hésitez pas à me contacter pour discuter de votre projet.",
+    "whyChoose": "Pourquoi choisir Tailwind CSS ?",
+    "reason1": "Tailwind CSS est un framework utilitaire puissant",
+    "reason1Desc": "Avec Tailwind CSS, vous pouvez créer des interfaces utilisateur élégantes et personnalisées en utilisant des classes utilitaires, ce qui simplifie le processus de conception et améliore la maintenabilité du code.",
+    "reason2": "Productivité accrue",
+    "reason2Desc": "Tailwind CSS accélère le développement en éliminant le besoin de créer des feuilles de style complexes et en offrant une approche modulaire pour les styles.",
+    "reason3": "Flexibilité et personnalisation",
+    "reason3Desc": "Tailwind CSS permet une personnalisation approfondie grâce à sa configuration flexible, ce qui vous permet d'adapter le framework aux besoins spécifiques de votre projet.",
+    "reason4": "Facilité d'intégration",
+    "reason4Desc": "Tailwind CSS s'intègre facilement avec des outils modernes et des frameworks de développement, ce qui facilite son adoption dans divers environnements de projet.",
+    "reason5": "Communauté et support",
+    "reason5Desc": "Avec une communauté active et des ressources abondantes, vous bénéficiez d'un soutien précieux et d'une vaste bibliothèque de plugins pour étendre les fonctionnalités de Tailwind CSS.",
+    "reason6": "Performance améliorée",
+    "reason6Desc": "Tailwind CSS est conçu pour être performant dès le départ. Ses classes utilitaires minimisent le code CSS généré et améliorent les temps de chargement des pages.",
+    "tailwindWebsites": "Tailwind CSS pour les sites web",
+    "websitesDesc": "Tailwind CSS est idéal pour créer des sites web modernes et réactifs. Grâce à ses classes utilitaires, vous pouvez concevoir des interfaces attrayantes et adaptables à tous les appareils.",
+    "tailwindApplications": "Tailwind CSS pour les applications web",
+    "applicationsDesc": "Pour les applications web, Tailwind CSS offre une base solide pour des interfaces utilisateur élégantes et maintenables, tout en facilitant la gestion des styles complexes.",
+    "hire": "Engagez un Développeur Freelance avec Tailwind CSS",
+    "hireDesc": "Si vous êtes intéressé par l'utilisation de Tailwind CSS pour votre projet ou si vous avez besoin d'une assistance sur un projet en cours, je suis disponible pour vous aider.",
+    "recentWorkLink": "Voir mes travaux récents",
+    "contactLink": "me contacter",
+    "or": "ou"
+  },
+  "FAQ": {
+    "title": "Foire aux questions",
+    "One": {
+      "question": "Proposez-vous également des services pour le design ?",
+      "answer": "Absolument ! J'aime une belle interface utilisateur et un design UX efficace et je suis heureux d'aider les clients dans diverses tâches de conception. Discutons de vos besoins spécifiques, et je peux soit vous aider directement, soit vous mettre en relation avec un designer talentueux de mon réseau professionnel pour collaborer sur votre projet."
+    },
+    "Two": {
+      "question": "Quel sera le coût de mon projet ?",
+      "answer": "Je comprends que vous cherchiez un chiffre précis, mais la vérité est que cela varie beaucoup en fonction du projet. La meilleure approche consiste à me contacter en me donnant des détails sur votre projet. Je me ferai un plaisir de vous fournir une proposition gratuite et personnalisée qui définira les coûts en fonction de vos besoins spécifiques."
+    },
+    "Three": {
+      "question": "Quel CMS utilisez-vous ?",
+      "answer": "J'aime particulièrement les solutions headless CMS, surtout Prismic.io. Ils offrent de la flexibilité, des composants intégrés robustes et divers types de données."
+    },
+    "Four": {
+      "question": "Quels frameworks utilisez-vous ?",
+      "answer": "Ma boîte à outils principale comprend React, Next.js et Node.js. Cependant, je crois qu'il faut choisir le bon outil pour le travail. Tous les projets n'ont pas besoin d'un framework, et parfois d'autres solutions peuvent être plus appropriées. La décision revient toujours à évaluer les avantages et les inconvénients en fonction des objectifs et des exigences spécifiques de votre projet."
+    },
+    "Five": {
+      "question": "Quelle est votre taux horaire ?",
+      "answer": "Je travaille généralement sur la base d'un prix fixe pour les projets. Cette approche permet de clarifier les produits à livrer, les coûts et les délais. Elle est avantageuse pour les clients car elle offre une certaine prévisibilité et me motive à travailler efficacement pour livrer votre projet dans les délais. Toutefois, je suis disposé à discuter d'autres arrangements s'ils répondent mieux à vos besoins."
+    },
+    "Six": {
+      "question": "Utilisez-vous TypeScript ?",
+      "answer": "Oui, j'utilise TypeScript dans la plupart de mes projets, en particulier ceux qui sont d'une complexité moyenne à élevée. Pour les projets très simples, je peux opter pour un simple JavaScript. La décision d'utiliser TypeScript est basée sur les exigences, l'échelle et les considérations de maintenance à long terme du projet."
+    }
+  },
+  "Footer": {
+    "nextjs": "Next.js Développement",
+    "react": "React Développement",
+    "tailwind": "Tailwind CSS",
+    "privacy": "Confidentialités",
+    "mentions": "Mentions Légales"
+  },
+  "Hero": {
+    "experience": "Expérience",
+    "languages": "Langues",
+    "langues": "Français & Anglais",
+    "location": "Localisation",
+    "stack": "Stack Technique",
+    "title": "Votre vision est ma mission !",
+    "years": "ans"
+  },
+  "IdeaToLaunchSteps": {
+    "title": "De l'idée au lancement",
+    "description": "Je vous guiderai à chaque étape du processus, du début de votre idée jusqu'à un lancement réussi et au-delà.",
+    "btn": "Démarrer",
+    "One": {
+      "title": "Décrivez votre projet",
+      "description": "Appel gratuit de 30 minutes pour discuter de votre idée de projet."
+    },
+    "Two": {
+      "title": "Proposition",
+      "description": "Coûts et date de lancement - Vous recevrez une offre à prix fixe et un calendrier de lancement dans un délais de 5 jours ouvrables."
+    },
+    "Three": {
+      "title": "Début du développement",
+      "description": "Des mises à jour régulières sur l'état d'avancement sont fournies au cours du processus de développement."
+    },
+    "Four": {
+      "title": "Retour d'informations et corrections",
+      "description": "Une fois le développement terminé, le projet sera soumis à vos commentaires et à vos ajustements."
+    },
+    "Five": {
+      "title": "Le lancement",
+      "description": "Lorsque tout vous convient, le projet est lancé."
+    },
+    "Six": {
+      "title": "Un soutien continu",
+      "description": "Assistance continue au développement, à la correction des bugs et à la maintenance après le lancement."
+    }
+  },
+  "loading": "Chargement ...",
+  "metadata": {
+    "home": {
+      "title": "Xavier - Développeur Web Freelance | Solutions Web Personnalisées",
+      "description": "Spécialiste en réalisation de projets web sur mesure pour entreprises et particuliers. Expertise en développement et optimisation. Consultation gratuite.",
+      "keywords": "développeur web, freelance, projets web, solutions sur mesure, consultation, React, Next.js, JavaScript, optimisation SEO",
+      "ogTitle": "Xavier | Expert Développeur Web Freelance - Solutions Web Innovantes",
+      "ogDescription": "Créez votre présence en ligne avec des solutions web personnalisées. De l'idée au lancement, transformez votre vision en réalité numérique.",
+      "twitterTitle": "Xavier | Développeur Web Freelance - Votre Partenaire Digital",
+      "twitterDescription": "Des solutions web sur mesure pour booster votre présence en ligne. Expertise en développement, design et SEO."
+    },
+    "projects": {
+      "title": "Projets de DIX31 : Découvrez mes Réalisations en Développement Web en France",
+      "description": "Explorez mes projets pour voir des exemples de mes travaux en développement web, des sites vitrines aux solutions web dynamiques.",
+      "keywords": "développement web, projets, réalisations, sites vitrines, solutions web dynamiques, freelance, France",
+
+      "ogTitle": "Projets de DIX31 : Découvrez mes Réalisations en Développement Web en France",
+      "ogDescription": "Explorez mes projets pour voir des exemples de mes travaux en développement web, des sites vitrines aux solutions web dynamiques.",
+      "twitterTitle": "Projets de DIX31 : Découvrez mes Réalisations en Développement Web en France",
+      "twitterDescription": "Explorez mes projets pour voir des exemples de mes travaux en développement web, des sites vitrines aux solutions web dynamiques."
+    }
+  },
+  "Navbar": {
+    "blog": "Blog",
+    "home": "Accueil",
+    "projects": "Projets"
+  },
+  "Profile": {
+    "greeting": "Bonjour, je suis Xavier !",
+    "intro": "Développeur web freelance basé en France, j'ai approfondi ma passion pour le code en 2020 après une carrière de 15 ans dans les télécoms et l'informatique. Depuis, je me suis plongé dans l'univers du développement web moderne.",
+    "specialty": "Ma spécialité ? Créer des expériences web fonctionnelles avec React, Next.js et Tailwind. Je travaille avec JavaScript et TypeScript, et j'apprécie particulièrement travailler sur des projets full stack.",
+    "learning": "J'anime une communauté Discord où nous partageons nos connaissances et explorons ensemble les meilleures pratiques du métier.",
+    "callToAction": "Vous avez un projet web intéressant ? Discutons-en !"
+  },
+  "Projects": {
+    "title": "Mes Réalisations",
+    "expertise": "Expertise technique mise en œuvre :",
+    "btnLink": "Découvrir le projet",
+    "BonheurSurSeine": {
+      "title": "Bonheur Sur Seine - La Communauté des Gyroroues",
+      "img": {
+        "src": "/images/Bonheur-Sur-Seine.jpg",
+        "alt": "Capture d'écran du site web Bonheur Sur Seine montrant la page d'accueil avec une personne sur une gyroroue"
+      },
+      "description": "En tant que développeur web freelance, j'ai eu le plaisir de créer le site communautaire Bonheur Sur Seine, dédié aux passionnés de gyroroues et à la mobilité urbaine écologique.",
+      "expertise": {
+        "one": "Création d'une plateforme communautaire interactive avec NextJS",
+        "two": "Implémentation d'un système de scores et de classements des gyroroues",
+        "three": "Intégration de guides de sécurité interactifs et de tutoriels vidéo",
+        "four": "Optimisation des performances pour une expérience utilisateur fluide",
+        "five": "Mise en place d'un système de géolocalisation pour les événements locaux"
+      },
+      "testimonial": {
+        "content": "Merci à Xavier pour son professionnalisme, à l'écoute de mes besoins et de mes demandes, il a su convertir en concret tout ce dont on avait parlé. Avec en plus des prises d'initiatives totalement justifiés et toujours approuvées ! Bravo et Merci Xavier",
+        "author": "Raphael",
+        "role": "Bonheur Sur Seine",
+        "img": {
+          "src": "/images/BonheurSurSeine_logo.png"
+        }
+      },
+      "link": {
+        "url": "https://www.bonheursurseine.com/"
+      }
+    },
+    "Club306": {
+      "title": "Club 306 - Une Communauté Automobile Dynamique",
+      "img": {
+        "src": "/images/Club-306.jpg",
+        "alt": "Capture d'écran du site web Club 306 montrant la page d'accueil avec une Peugeot 306 en arrière-plan"
+      },
+      "description": "En tant que développeur web freelance, j'ai eu l'honneur de concevoir et développer le site officiel du Club 306, le premier club en France dédié aux passionnés de la Peugeot 306.",
+      "expertise": {
+        "one": "Développement d'une application web moderne avec NextJS et TypeScript",
+        "two": "Mise en place d'une architecture serverless avec Vercel pour des performances optimales",
+        "three": "Intégration d'une base de données PostgreSQL pour une gestion efficace des données",
+        "four": "Implémentation d'authentification sécurisée avec NextAuth.js",
+        "five": "Création d'une interface utilisateur réactive et intuitive réservée aux membres"
+      },
+      "testimonial": {
+        "content": "Xavier est devenu un développeur fullstack talentueux qui a joué un rôle essentiel dans la création de notre site internet du club. Sa contribution exceptionnelle a transformé notre vision en une réalité numérique époustouflante.",
+        "author": "Pascal BESNARD",
+        "role": "Président du Club 306",
+        "img": {
+          "src": "/images/Pascal-BESNARD.jpeg"
+        }
+      },
+      "link": {
+        "url": "https://club306.fr/"
+      }
+    }
+  },
+  "Services": {
+    "title": "Ce Que Je Vous Offre",
+    "One": {
+      "title": "Applications web robustes et sécurisées",
+      "description": "Développement d'applications web rapides, évolutives et sécurisées avec une architecture solide."
+    },
+    "Two": {
+      "title": "Création de sites web",
+      "description": "Conception de sites web ultra-rapides avec un excellent SEO pour mettre en valeur votre contenu."
+    },
+    "Three": {
+      "title": "Développement en React",
+      "description": "Développement d'interfaces utilisateur, architecture, systèmes de build et utilisation de Next.js, avec une attention particulière à l'accessibilité (a11y)."
+    },
+    "Four": {
+      "title": "Développement en Node.js",
+      "description": "Création de services web et API REST performants, en utilisant les meilleures pratiques de développement et les outils modernes."
+    }
+  },
+  "Testimonial": {
+    "Joge": {
+      "text": "Nous avons eu la chance de réaliser une mission avec Xavier. Très responsable, travail de grande qualité et technique, nous avons été satisfaits et conseillons pour d'autres missions.",
+      "author": "Jorge Bravo Bertoglio",
+      "role": "CTO @Loopsider",
+      "img": {
+        "alt": "Photo du CTO de Loopsider",
+        "src": "/images/Joge-Bravo-Bertoglio.png"
+      }
+    },
+    "Pascal": {
+      "text": "Xavier est devenu un développeur fullstack talentueux qui a joué un rôle essentiel dans la création de notre site internet du club. Sa contribution exceptionnelle a transformé notre vision en une réalité numérique époustouflante. De plus, il a su créer un site internet qui non seulement répond à nos besoins, mais qui dépasse largement nos attentes. Sa maîtrise du développement front-end et back-end lui a permis de concevoir une expérience utilisateur fluide et conviviale. Son attitude positive et son dévouement en font un atout précieux pour toute équipe de développement. Nous avons tous pu travailler avec lui et il a su s'adapter à nos différentes approches, demandes, et personnalité. Par conséquent, sa capacité à travailler en équipe a également été un atout précieux, collaborant efficacement avec d'autres membres de l'équipe pour atteindre nos objectifs communs. Le Club306, son staff, et ses membres sont ravi de recommander Xavier pour vos projets. nous ne vous cacherons pas que le travail de Xavier a été crucial dans la mise en place d'une stratégie virtuelle de notre club.",
+      "author": "Pascal BESNARD",
+      "role": "Président du Club306",
+      "img": {
+        "alt": "Photo de Pascal BESNARD",
+        "src": "/images/Pascal-BESNARD.jpeg"
+      }
+    },
+    "Sandrine": {
+      "text": "Nous avons apprécié son professionnalisme et sa motivation. Xavier est un technicien développeur compétent qui a su se rendre disponible aux moments ou nous en avons eu besoin. C'est avec une confiance évidente que nous pourrions lui confier de nouvelles missions. Son charisme et ses qualités humaines sont un plus dans ces relations de travail.",
+      "author": "Sandrine PELLISER",
+      "role": "Animation numérique de territoire",
+      "img": {
+        "alt": "Photo de Sandrine Pelissier",
+        "src": "/images/Sandrine PELLISER.jpeg"
+      }
+    },
+    "Sid": {
+      "text": "Xavier est toujours très professionnel, sérieux et motivé dans ses tâches. Un plus dans une équipe!",
+      "author": "Sid-Ahmed CHICKH-BLED",
+      "role": "CEO & Co-Founder @ KillBills",
+      "img": {
+        "alt": "Photo de Sid-Ahmed CHICKH-BLED",
+        "src": "/images/Sid-Ahmed CHICKH-BLED.jpeg"
+      }
+    }
+  }
+}
