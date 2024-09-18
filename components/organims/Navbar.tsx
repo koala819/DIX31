@@ -1,26 +1,24 @@
 'use client'
 
-import { Menu } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { Menu, X } from 'lucide-react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import NavbarLinks from '@/components//molecules/NavbarLinks'
 import HireMeBtn from '@/components/atoms/HireMeBtn'
 import LangSwitcher from '@/components/atoms/LangSwitcher'
+import NavbarItem from '@/components/atoms/NavbarItem'
 import { ModeToggle as Toggle } from '@/components/atoms/Toggle'
 import { Button } from '@/components/ui/button'
-import {
-  Sheet,
-  SheetContent, // SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet'
+
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [activeItem, setActiveItem] = useState<string>('home')
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeItem, setActiveItem] = useState('home')
+  const [scrollPosition, setScrollPosition] = useState(0)
   const pathname = usePathname()
   const t = useTranslations('Navbar')
 
@@ -30,115 +28,149 @@ export default function Navbar() {
     { name: 'blog', href: '/blog', label: t('blog') },
   ]
 
+  const handleScroll = useCallback(() => {
+    setScrollPosition(window.scrollY)
+  }, [])
+
   useEffect(() => {
-    console.log('Pathname changed:', pathname)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [handleScroll])
 
-    // Supprimer le préfixe de langue (par exemple, '/fr') du pathname
-    const path = pathname.replace(/^\/[^/]+/, '')
+  const determineActiveItem = useCallback((path: string) => {
+    const cleanPath = path.replace(/^\/[^/]+/, '')
+    if (cleanPath === '' || cleanPath === '/') return 'home'
+    if (cleanPath.startsWith('/projects')) return 'projects'
+    if (cleanPath.startsWith('/blog')) return 'blog'
+    return ''
+  }, [])
 
-    if (path === '' || path === '/') {
-      setActiveItem('home')
-    } else if (path.startsWith('/projects')) {
-      setActiveItem('projects')
-    } else if (path.startsWith('/blog')) {
-      setActiveItem('blog')
-    } else {
-      // Pour toute autre page, aucun élément n'est actif
-      setActiveItem('')
-    }
-  }, [pathname])
+  useEffect(() => {
+    setActiveItem(determineActiveItem(pathname))
+  }, [pathname, determineActiveItem])
 
-  function handleNavItemClick(item: string) {
-    setActiveItem(item)
-    setIsOpen(false)
-  }
+  const handleNavItemClick = useCallback(
+    (item: React.SetStateAction<string>) => {
+      setActiveItem(item)
+      setIsOpen(false)
+    },
+    [],
+  )
 
   return (
-    <header
-      className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 sticky top-0 z-50 bg-background shadow-sm"
-      role="banner"
+    <motion.header
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent navbar-height"
+      style={{
+        backgroundColor:
+          scrollPosition > 50 ? 'var(--navbar-bg-color)' : undefined,
+        boxShadow: scrollPosition > 50 ? 'var(--navbar-shadow)' : 'none',
+      }}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: 'spring', stiffness: 100, damping: 20 }}
     >
-      <Link href="/" className="text-lg font-bold" prefetch={false}>
-        Xavier Genolhac
-      </Link>
+      <div className="container mx-auto px-4 py-4 flex items-center justify-between h-full">
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Link
+            href="/"
+            className="text-2xl font-bold text-gray-800 dark:text-white"
+            prefetch={false}
+          >
+            Xavier Genolhac
+          </Link>
+        </motion.div>
 
-      {/* Desktop */}
-      <nav
-        id="navbar"
-        className="ml-auto hidden gap-4 lg:flex"
-        aria-label="Main Navigation"
-      >
-        <HireMeBtn />
-        <NavbarLinks
-          links={links}
-          activeItem={activeItem}
-          onClick={handleNavItemClick}
-        />
-        <Toggle />
-        <LangSwitcher />
-      </nav>
+        {/* Desktop Navigation */}
+        <nav id="navbar" className="hidden md:flex items-center space-x-8">
+          <HireMeBtn /> {/* Moved back to the beginning for prominence */}
+          {links.map((link) => (
+            <NavbarItem
+              key={link.name}
+              href={link.href}
+              label={link.label}
+              isActive={activeItem === link.name}
+              onClick={() => handleNavItemClick(link.name)}
+            />
+          ))}
+          <LangSwitcher />
+          <Toggle />
+        </nav>
 
-      {/* Mobile menu */}
-      <div className="ml-auto flex items-center gap-2 lg:hidden">
-        <HireMeBtn />
-        <Sheet
-          open={isOpen}
-          onOpenChange={setIsOpen}
-          aria-label="Navigation menu"
-        >
-          <SheetTrigger asChild>
-            <Button
-              variant="outline"
-              size="icon"
-              className="lg:hidden"
-              aria-haspopup="true"
-              aria-expanded={isOpen}
-            >
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle navigation menu</span>
-            </Button>
-          </SheetTrigger>
-          {/* <SheetTitle className="sr-only">Navigation menu</SheetTitle> */}
-          <SheetContent side="right">
-            <nav className="grid gap-2 py-6">
-              <Link
-                href="/"
-                className="flex w-full items-center py-2 text-lg font-semibold navbar-mobile-item"
-                prefetch={false}
-                data-active={activeItem === 'home'}
-                onClick={() => handleNavItemClick('home')}
-                aria-current={activeItem === 'home' ? 'page' : undefined}
+        {/* Mobile Navigation */}
+        <div className="md:hidden flex items-center space-x-4">
+          <HireMeBtn /> {/* Added here for mobile view */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={isOpen ? 'close' : 'open'}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
               >
-                {t('home')}
-              </Link>
-              <Link
-                href="/projects"
-                className="flex w-full items-center py-2 text-lg font-semibold navbar-mobile-item"
-                prefetch={false}
-                data-active={activeItem === 'projects'}
-                onClick={() => handleNavItemClick('projects')}
-                aria-current={activeItem === 'projects' ? 'page' : undefined}
-              >
-                {t('projects')}
-              </Link>
-              <Link
-                href="/blog"
-                className="flex w-full items-center py-2 text-lg font-semibold navbar-mobile-item"
-                prefetch={false}
-                data-active={activeItem === 'blog'}
-                onClick={() => handleNavItemClick('blog')}
-                aria-current={activeItem === 'home' ? 'page' : undefined}
-              >
-                {t('blog')}
-              </Link>
-              <div className="w-full flex justify-center space-x-8">
-                <LangSwitcher handleNavItemClick={() => setIsOpen(false)} />
-                <Toggle handleNavItemClick={() => setIsOpen(false)} />
-              </div>
-            </nav>
-          </SheetContent>
-        </Sheet>
+                {isOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </Button>
+        </div>
       </div>
-    </header>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="fixed inset-0 bg-white dark:bg-gray-900 z-40"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="container mx-auto px-4 py-8">
+              <nav className="flex flex-col space-y-6">
+                {links.map((link) => (
+                  <motion.div
+                    key={link.name}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      delay: links.indexOf(link) * 0.1,
+                    }}
+                  >
+                    <NavbarItem
+                      href={link.href}
+                      label={link.label}
+                      isActive={activeItem === link.name}
+                      onClick={() => handleNavItemClick(link.name)}
+                    />
+                  </motion.div>
+                ))}
+                <motion.div
+                  className="flex justify-between items-center"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: (links.length + 1) * 0.1,
+                  }}
+                >
+                  <LangSwitcher handleNavItemClick={() => setIsOpen(false)} />
+                  <Toggle handleNavItemClick={() => setIsOpen(false)} />
+                </motion.div>
+              </nav>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   )
 }

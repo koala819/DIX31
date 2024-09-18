@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-background font-body text-foreground text-gray-600 dark:text-gray-200;
+    @apply bg-background font-body leading-relaxed text-foreground text-gray-600  dark:text-gray-200;
   }
 
   h1,
@@ -72,6 +72,9 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+    --navbar-height: 5rem;
+    --navbar-bg-color: rgba(255, 255, 255, 0.9);
+    --navbar-shadow: 0 2px 4px rgba(2, 1, 1, 0.1);
   }
 
   .dark {
@@ -94,6 +97,7 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+    --navbar-bg-color: rgba(17, 24, 39, 0.9);
   }
 
   .focus\:outline-none:focus {
@@ -128,24 +132,22 @@
     opacity: 1;
   }
 
-  .navbar {
-    @apply relative transition-colors duration-300 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-primary after:transition-all after:duration-300 after:ease-in-out hover:after:h-2 data-[active=true]:text-primary data-[active=true]:after:h-2;
+  .navbar-height {
+    height: var(--navbar-height);
   }
 
-  .navbar-mobile-item {
-    @apply relative pl-6 transition-colors duration-300;
+  .pt-navbar {
+    padding-top: var(--navbar-height);
   }
 
-  .navbar-mobile-item::after {
-    content: '';
-    @apply absolute left-0 h-full w-1 scale-y-0  bg-primary;
+  .link {
+    @apply text-blue-600 underline transition-colors duration-200 hover:text-blue-800;
+    @apply dark:text-blue-400 dark:hover:text-blue-300;
   }
+}
 
-  .navbar-mobile-item[data-active='true']::after {
-    @apply flex scale-y-100;
-  }
-
-  .navbar-mobile-item[data-active='true'] {
-    @apply text-primary;
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 4rem; /* Vous pouvez ajuster la hauteur pour mobile si nécessaire */
   }
 }

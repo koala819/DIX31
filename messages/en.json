@@ -126,6 +126,7 @@
   "Footer": {
     "nextjs": "Next.js Development",
     "react": "React Development",
+    "tailwind": "Tailwind CSS",
     "privacy": "Privacy Policy",
     "mentions": "Terms & Conditions"
   },

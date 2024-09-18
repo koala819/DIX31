@@ -20,7 +20,7 @@ export default function FAQ() {
   ]
 
   return (
-    <div className="w-full max-w-3xl mx-auto mt-8 px-4 sm:px-6 lg:px-8">
+    <div className="w-full  mx-auto mt-8 ">
       <h2 className="text-3xl font-bold mb-6 text-center dark:text-gray-100">
         {t('title')}
       </h2>

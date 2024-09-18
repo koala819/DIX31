@@ -41,10 +41,7 @@ export default function IdeaToLaunchSteps() {
   ]
 
   return (
-    <section
-      className="bg-background text-foreground"
-      aria-labelledby="idea-to-launch-title"
-    >
+    <section className="text-foreground" aria-labelledby="idea-to-launch-title">
       <div className="container mx-auto px-4 py-12 lg:px-6 lg:py-16">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
           <header className="space-y-4">
