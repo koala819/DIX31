@@ -92,6 +92,8 @@ export const Achievements = () => {
                 <WithCustomLoading
                   alt={project.picture.alt}
                   className="rounded-lg object-cover w-full h-auto"
+                  height={300}
+                  width={500}
                   src={project.picture.src}
                 />
               </div>
@@ -113,6 +115,8 @@ export const Achievements = () => {
                   <WithCustomLoading
                     src={project.testimonial.avatar || ''}
                     alt={`Photo de ${project.testimonial.author}`}
+                    width={50}
+                    height={50}
                     className="rounded-full mr-4"
                   />
                   <div>

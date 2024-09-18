@@ -7,6 +7,8 @@ export default function LoadImage({
   priority,
   src,
   sizes,
+  height,
+  width,
 }: {
   alt: string
   className?: string
@@ -14,6 +16,8 @@ export default function LoadImage({
   priority?: boolean
   src: string
   sizes?: string
+  height?: number
+  width?: number
 }) {
   const shimmer = (w: number, h: number) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -42,6 +46,8 @@ export default function LoadImage({
       placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
       priority={priority}
       src={src}
+      height={height}
+      width={width}
       sizes={sizes ? sizes : undefined}
     />
   )
