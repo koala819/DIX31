@@ -19,7 +19,7 @@ import { TagCount, TagIconMap } from '@/types/blog'
 
 import { Button } from '@/components/ui/button'
 
-// import { Button } from '@/components/ui/button'
+import { motion } from 'framer-motion'
 
 export function BlogSlide({
   tags,
@@ -48,30 +48,66 @@ export function BlogSlide({
   }
 
   return (
-    <div className="mb-4">
-      <header className="flex items-center justify-between w-full">
-        <h5 className="font-bold text-lg uppercase px-1 my-2">Mots clés</h5>
-        <Button color="primary" onClick={onReset} className="mr-2">
+    <motion.div
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4"
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <header className="flex items-center justify-between mb-4">
+        <h5 className="font-bold text-lg text-gray-800 dark:text-white">
+          Mots clés
+        </h5>
+        <Button
+          onClick={onReset}
+          className="text-sm bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded transition duration-300"
+        >
           Réinitialiser
         </Button>
       </header>
-
-      <ul>
+      <motion.ul
+        variants={{
+          hidden: { opacity: 0 },
+          show: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.1,
+            },
+          },
+        }}
+        initial="hidden"
+        animate="show"
+      >
         {Object.entries(tags).map(([tagName, articleCount]) => (
-          <li
+          <motion.li
             key={tagName}
-            className="px-1 py-4 hover:border-b hover:border-t hover:border-primary transition duration-300"
+            variants={{
+              hidden: { opacity: 0, x: -20 },
+              show: { opacity: 1, x: 0 },
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => onTagClick(tagName)}
+            className="py-2 px-3 mb-2 rounded-md cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300"
           >
-            <section className="flex items-center cursor-pointer">
-              {tagIcons[tagName] || <span className="inline-block h-4 w-4" />}
-              <text className="font-bold ml-2">{tagName}</text>
-              <span className="ml-auto">{articleCount} articles</span>
-              <i className="bx bx-right-arrow-alt ml-1" />
-            </section>
-          </li>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <span className="text-blue-500 mr-2">
+                  {tagIcons[tagName] || (
+                    <span className="inline-block h-4 w-4" />
+                  )}
+                </span>
+                <span className="font-medium text-gray-700 dark:text-gray-300">
+                  {tagName}
+                </span>
+              </div>
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                {articleCount}
+              </span>
+            </div>
+          </motion.li>
         ))}
-      </ul>
-    </div>
+      </motion.ul>
+    </motion.div>
   )
 }
