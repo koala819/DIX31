@@ -1,11 +1,20 @@
 export interface SimpleBlogCardProps {
-  title: string
+  titleFr: string
+  titleEn: string
   date: string
-  smallDescription: string
+  shortDescriptionFr: string | null
+  shortDescriptionEn: string | null
   currentSlug: string
-  titleImage: any
-  titleImagebyCloudinary: any
-  tag: any
+  titleImage: {
+    _type: 'image'
+    alt: string
+    asset: {
+      _ref: string
+      _type: 'reference'
+    }
+  } | null
+  titleImagebyCloudinary: any // Ajustez le type selon la structure réelle
+  tags: { name: string }[] | null
 }
 
 export interface fullBlog {

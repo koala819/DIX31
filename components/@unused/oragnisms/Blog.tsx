@@ -11,24 +11,29 @@ import { BlogSlide } from '@/components/@unused/BlogSlide'
 
 import { AnimatePresence, motion } from 'framer-motion'
 
-export default function Blog({ posts }: { posts: SimpleBlogCardProps[] }) {
+interface BlogProps {
+  posts: SimpleBlogCardProps[]
+  locale: string
+}
+
+export default function Blog({ posts, locale }: BlogProps) {
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
   const [displayPosts, setDisplayPosts] = useState<SimpleBlogCardProps[]>([])
   const [footerPosts, setFooterPosts] = useState<SimpleBlogCardProps[]>([])
   const [tagsCount, setTagsCount] = useState<TagCount>({})
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState<boolean>(true)
 
   const mostRecentPosts = posts
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 2)
 
-  console.log('mostRecentPosts', mostRecentPosts)
+  // console.log('mostRecentPosts', mostRecentPosts)
 
   useEffect(() => {
     setIsLoading(true)
     const filteredPosts = selectedTag
       ? posts.filter((post) =>
-          post.tag.some((tag: { name: string }) => tag.name === selectedTag),
+          post.tags?.some((tag: { name: string }) => tag.name === selectedTag),
         )
       : posts
 
@@ -48,8 +53,8 @@ export default function Blog({ posts }: { posts: SimpleBlogCardProps[] }) {
     setFooterPosts(remainingPosts)
 
     const count = posts.reduce((acc: TagCount, post: SimpleBlogCardProps) => {
-      if (post.tag && post.tag.length > 0) {
-        post.tag.forEach((tag: { name: string }) => {
+      if (post.tags && post.tags.length > 0) {
+        post.tags.forEach((tag: { name: string }) => {
           const tagName = tag.name
           acc[tagName] = (acc[tagName] || 0) + 1
         })
@@ -84,7 +89,7 @@ export default function Blog({ posts }: { posts: SimpleBlogCardProps[] }) {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
           >
-            <BlogHeader firstPosts={mostRecentPosts} />
+            <BlogHeader firstPosts={mostRecentPosts} locale={locale} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -126,7 +131,7 @@ export default function Blog({ posts }: { posts: SimpleBlogCardProps[] }) {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <BlogBody posts={displayPosts} />
+                <BlogBody posts={displayPosts} locale={locale} />
               </motion.div>
             )}
           </AnimatePresence>
@@ -139,7 +144,7 @@ export default function Blog({ posts }: { posts: SimpleBlogCardProps[] }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
       >
-        <BlogFooter posts={footerPosts} />
+        <BlogFooter posts={footerPosts} locale={locale} />
       </motion.div>
     </motion.div>
   )

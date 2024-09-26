@@ -1,4 +1,8 @@
 {
+  "BlogSlide": {
+    "keywords": "Mots clés",
+    "reset": "Réinitialiser"
+  },
   "Btn-hire": "Engagez-moi",
   "Career": {
     "title": "Votre projet mérite le meilleur.",
@@ -171,6 +175,10 @@
   },
   "loading": "Chargement ...",
   "metadata": {
+    "blog": {
+      "title": "Blog Tech France - Conseils Professionnels en Développement Web par DIX31",
+      "description": "Lisez le blog de DIX31 pour des insights uniques sur le développement web, des astuces de codage, des tendances du marché, et des études de cas détaillées."
+    },
     "home": {
       "title": "Xavier - Développeur Web Freelance | Solutions Web Personnalisées",
       "description": "Spécialiste en réalisation de projets web sur mesure pour entreprises et particuliers. Expertise en développement et optimisation. Consultation gratuite.",

@@ -15,6 +15,8 @@ import { MdComputer } from 'react-icons/md'
 import { SiHackaday } from 'react-icons/si'
 import { TiLightbulb } from 'react-icons/ti'
 
+import { useTranslations } from 'next-intl'
+
 import { TagCount, TagIconMap } from '@/types/blog'
 
 import { Button } from '@/components/ui/button'
@@ -31,6 +33,8 @@ export function BlogSlide({
   onTagClick: (tagName: string) => void
   onReset: () => void
 }) {
+  const t = useTranslations('BlogSlide')
+
   const tagIcons: TagIconMap = {
     android: <FaAndroid />,
     BestPracticesIT: <HiMiniHandThumbUp />,
@@ -56,13 +60,13 @@ export function BlogSlide({
     >
       <header className="flex items-center justify-between mb-4">
         <h5 className="font-bold text-lg text-gray-800 dark:text-white">
-          Mots clés
+          {t('keywords')}
         </h5>
         <Button
           onClick={onReset}
           className="text-sm bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded transition duration-300"
         >
-          Réinitialiser
+          {t('reset')}
         </Button>
       </header>
       <motion.ul

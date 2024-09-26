@@ -1,4 +1,8 @@
 {
+  "BlogSlide": {
+    "keywords": "Keywords",
+    "reset": "Reset"
+  },
   "Btn-hire": "Hire-me",
   "Career": {
     "title": "Your project needs the best.",
@@ -170,6 +174,10 @@
   },
   "loading": "Loading ...",
   "metadata": {
+    "blog": {
+      "title": "Blog French Tech - Professional Web Development Advice by DIX31",
+      "description": "Read the DIX31 blog for unique web development insights, coding tips, market trends, and detailed case studies."
+    },
     "home": {
       "title": "Xavier - Freelance Web Developer | Custom Web Solutions",
       "description": "Specialist in creating tailored web projects for businesses and individuals. Expertise in development and optimization. Free consultation available.",
