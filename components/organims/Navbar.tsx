@@ -59,10 +59,9 @@ export default function Navbar() {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent navbar-height"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-sm navbar-height"
       style={{
-        backgroundColor:
-          scrollPosition > 50 ? 'var(--navbar-bg-color)' : undefined,
+        backgroundColor: `var(--navbar-bg-color)`,
         boxShadow: scrollPosition > 50 ? 'var(--navbar-shadow)' : 'none',
       }}
       initial={{ y: -100 }}
@@ -97,7 +96,7 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center space-x-4">
+        <div className="md:hidden flex items-center space-x-4 z-[900]">
           <HireMeBtn /> {/* Added here for mobile view */}
           <Button
             variant="ghost"
@@ -128,13 +127,16 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-white dark:bg-gray-900 z-40"
+            className="fixed inset-0"
+            style={{
+              backgroundColor: 'var(--navbar-bg-color-solid)',
+            }}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="container mx-auto px-4 py-8">
+            <div className="container mx-auto px-4 py-8 bg-white dark:bg-gray-900">
               <nav className="flex flex-col space-y-6">
                 {links.map((link) => (
                   <motion.div
