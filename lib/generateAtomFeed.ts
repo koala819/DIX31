@@ -1,12 +1,12 @@
 import { client } from '@/lib/sanity'
 
 async function getPosts() {
-  const query = `*[_type== 'blog'] | order(date desc) {
-    title,
+  const query = `*[_type == 'blog'] | order(date desc) {
+    titleEn,
     date,
-    "currentSlug": slug.current
+    "currentSlug": slug.current,
+    shortDescriptionEn
   }`
-
   return await client.fetch(query)
 }
 
@@ -31,39 +31,38 @@ function escapeXml(unsafe: string): string {
 
 const generateAtomFeed = async (): Promise<string> => {
   const posts: any = await getPosts()
-
   let xml = '<?xml version="1.0" encoding="utf-8"?>'
-  xml += '<rss version="2.0">'
-  xml += '<channel>'
-  xml +=
-    '<title>Conseils Professionnels en Développement Web par DIX31 - Blog Tech France</title>'
-  xml += '<link>https://dix31.com</link>'
+  xml += '<feed xmlns="http://www.w3.org/2005/Atom">'
+  xml += '<title>Professional Web Development Tips by DIX31 - Tech Blog</title>'
+  xml += '<link href="https://dix31.com/en"/>'
+  xml += '<updated>' + new Date().toISOString() + '</updated>'
+  xml += '<id>https://dix31.com/en/</id>'
 
   posts
-    .slice(0, 3)
+    .slice(0, 5)
     .forEach(
       (article: {
-        url: string
-        currentSlug: any
+        currentSlug: string
         date: string | number | Date
-        title: string
+        titleEn: string
+        shortDescriptionEn: string
       }) => {
-        const articleUrl =
-          article.url || `https://dix31.com/blog/${article.currentSlug}`
+        const articleUrl = `https://dix31.com/en/blog/${article.currentSlug}`
         const pubDate = article.date
-          ? new Date(article.date).toUTCString()
-          : 'Invalid Date'
-        xml += `<item>`
-        xml += `<title>${escapeXml(article.title)}</title>`
-        xml += `<link>${articleUrl}</link>`
-        xml += `<pubDate>${pubDate}</pubDate>`
-        xml += `</item>`
+          ? new Date(article.date).toISOString()
+          : new Date().toISOString()
+
+        xml += '<entry>'
+        xml += `<title>${escapeXml(article.titleEn)}</title>`
+        xml += `<link href="${articleUrl}"/>`
+        xml += `<id>${articleUrl}</id>`
+        xml += `<updated>${pubDate}</updated>`
+        xml += `<summary>${escapeXml(article.shortDescriptionEn || '')}</summary>`
+        xml += '</entry>'
       },
     )
 
-  xml += '</channel>'
-  xml += '</rss>'
-
+  xml += '</feed>'
   return xml
 }
 
