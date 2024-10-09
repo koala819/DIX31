@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Link from 'next/link'
 
 import { SimpleBlogCardProps } from '@/types/blog'
@@ -65,7 +65,7 @@ export function BlogFooter({
                         ? post.titleFr
                         : post.titleEn
                   }
-                  fill
+                  layout="fill"
                   // objectFit="cover"
                   className="transition-transform duration-300 hover:scale-105"
                 />

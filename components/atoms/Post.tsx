@@ -1,30 +1,13 @@
 'use client'
 
 import { PortableText } from '@portabletext/react'
-import {
-  ArrowLeft,
-  Facebook,
-  Link as LinkIcon,
-  Share2,
-  Twitter,
-} from 'lucide-react'
 import React, { useState } from 'react'
 
-import Link from 'next/link'
 import { useParams } from 'next/navigation'
 
 import { fullBlog } from '@/types/blog'
 
-import { Button } from '@/components/ui/button'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog'
-
+import { PostFooter } from './PostFooter'
 import { PostHeader } from './PostHeader'
 import { PostTableOfContents } from './PostTableOfContents'
 import { myPortableTextComponents } from './myPortableTextComponents'
@@ -122,97 +105,12 @@ export function Post({ post }: { post: fullBlog }) {
               />
             </div>
 
-            <footer className="mt-12 pt-6 border-t border-gray-200 dark:border-gray-700">
-              <div className="flex justify-between items-center">
-                <Link
-                  href={`/${locale}/blog`}
-                  className="focus:outline-none focus:ring"
-                >
-                  <Button
-                    variant="outline"
-                    className="flex items-center space-x-2 hover:bg-blue-50 dark:hover:bg-blue-900 transition-colors duration-300"
-                  >
-                    <ArrowLeft className="w-4 h-4" />
-                    <span>
-                      {locale === 'fr'
-                        ? 'Retour aux articles'
-                        : 'Back to articles'}
-                    </span>
-                  </Button>
-                </Link>
-                <Dialog
-                  open={isShareDialogOpen}
-                  onOpenChange={setIsShareDialogOpen}
-                >
-                  <DialogTrigger asChild>
-                    <Button
-                      variant="outline"
-                      className="flex items-center space-x-2 hover:bg-blue-50 dark:hover:bg-blue-900 transition-colors duration-300"
-                    >
-                      <Share2 className="w-4 h-4" />
-                      <span>{locale === 'fr' ? 'Partager' : 'Share'}</span>
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>
-                        {locale === 'fr'
-                          ? 'Partager cet article'
-                          : 'Share this article'}
-                      </DialogTitle>
-                      <DialogDescription>
-                        {locale === 'fr'
-                          ? 'Choisissez une option de partage'
-                          : 'Choose a sharing option'}
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="flex flex-col space-y-4 mt-4">
-                      <Button
-                        onClick={() =>
-                          navigator.clipboard.writeText(window.location.href)
-                        }
-                        className="flex items-center justify-center space-x-2"
-                      >
-                        <LinkIcon className="w-4 h-4" />
-                        <span>
-                          {locale === 'fr' ? 'Copier le lien' : 'Copy link'}
-                        </span>
-                      </Button>
-                      <Button
-                        onClick={() =>
-                          window.open(
-                            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                              window.location.href,
-                            )}`,
-                            '_blank',
-                            'noopener,noreferrer',
-                          )
-                        }
-                        className="flex items-center justify-center space-x-2 bg-[#1877F2] hover:bg-[#166FE5]"
-                      >
-                        <Facebook className="w-4 h-4" />
-                        <span>Facebook</span>
-                      </Button>
-                      <Button
-                        onClick={() =>
-                          window.open(
-                            `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-                              window.location.href,
-                            )}&text=${encodeURIComponent(title)}`,
-                            '_blank',
-                            'noopener,noreferrer',
-                          )
-                        }
-                        className="flex items-center justify-center space-x-2 bg-[#1DA1F2] hover:bg-[#1A91DA]"
-                      >
-                        <Twitter className="w-4 h-4" />
-                        <span>Twitter</span>
-                      </Button>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              </div>
-            </footer>
+            <PostFooter
+              locale={locale}
+              title={title}
+              isShareDialogOpen={isShareDialogOpen}
+              setIsShareDialogOpen={setIsShareDialogOpen}
+            />
           </article>
         </main>
 

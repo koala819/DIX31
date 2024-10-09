@@ -29,7 +29,7 @@ function escapeXml(unsafe: string): string {
       default:
         return c
     }
-  })
+  });
 }
 
 const generateAtomFeed = async (): Promise<string> => {

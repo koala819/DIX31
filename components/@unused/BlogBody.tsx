@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Link from 'next/link'
 
 import { SimpleBlogCardProps } from '@/types/blog'
@@ -87,7 +87,7 @@ export function BlogBody({
                               ? post.titleFr
                               : post.titleEn
                         }
-                        fill
+                        layout="fill"
                         className="object-cover rounded absolute top-0 left-0"
                       />
                     </div>

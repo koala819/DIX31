@@ -1,6 +1,6 @@
 import { Calendar, Clock } from 'lucide-react'
 
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 import { motion } from 'framer-motion'
 

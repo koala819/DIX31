@@ -3,7 +3,7 @@
 import React from 'react'
 
 import { useLocale } from 'next-intl'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { usePathname } from 'next/navigation'
 
 import frFlag from '@/public/images/flags/france.svg'

@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Link from 'next/link'
 
 import { SimpleBlogCardProps } from '@/types/blog'
@@ -66,7 +66,7 @@ export function BlogHeader({
                       ? post.titleFr
                       : post.titleEn
                 }
-                fill
+                layout="fill"
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-95" />
