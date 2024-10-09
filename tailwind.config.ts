@@ -79,10 +79,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    // require('@tailwindcss/typography'),
-    require('tailwindcss-animate'),
-  ],
+  plugins: [require('@tailwindcss/typography'), require('tailwindcss-animate')],
 }
 
 module.exports = config

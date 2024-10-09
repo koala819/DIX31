@@ -39,7 +39,11 @@ const LangSwitcher = ({
         width={30}
         height={30}
         alt={languages[locale].alt}
-        className="rounded-"
+        style={{
+          maxWidth: '100%',
+          height: 'auto',
+        }}
+        className="rounded-sm"
       />
     </button>
   )

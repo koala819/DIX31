@@ -57,18 +57,5 @@ export default async function Page({
 
   if (!post) notFound()
 
-  // const localizedPost: fullBlog = {
-  //   ...post,
-  //   title: {
-  //     [params.locale]: post.title[params.locale],
-  //   },
-  //   content: {
-  //     [params.locale]: post.content[params.locale],
-  //   },
-  //   smallDescription: {
-  //     [params.locale]: post.smallDescription[params.locale],
-  //   },
-  // }
-
   return <Post post={post} />
 }
