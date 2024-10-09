@@ -7,7 +7,10 @@ async function getPosts() {
     "currentSlug": slug.current,
     shortDescriptionEn
   }`
-  return await client.fetch(query)
+  const params = {
+    cacheBuster: new Date().getTime(),
+  }
+  return await client.fetch(query, params)
 }
 
 function escapeXml(unsafe: string): string {
