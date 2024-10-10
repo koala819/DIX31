@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react'
 
 import { SimpleBlogCardProps, TagCount } from '@/types/blog'
 
-import { BlogBody } from '@/components/atoms/BLOG/BlogBody'
-import { BlogFooter } from '@/components/atoms/BLOG/BlogFooter'
-import { BlogHeader } from '@/components/atoms/BLOG/BlogHeader'
-import { BlogSlide } from '@/components/atoms/BLOG/BlogSlide'
+import { BlogBody } from '@/components/BLOG/atoms/BlogBody'
+import { BlogFooter } from '@/components/BLOG/atoms/BlogFooter'
+import { BlogHeader } from '@/components/BLOG/atoms/BlogHeader'
+import { BlogSlide } from '@/components/BLOG/atoms/BlogSlide'
 
 import { AnimatePresence, motion } from 'framer-motion'
 

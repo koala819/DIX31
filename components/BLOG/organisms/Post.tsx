@@ -7,10 +7,10 @@ import { useParams } from 'next/navigation'
 
 import { fullBlog } from '@/types/blog'
 
-import { PostHeader } from '@/components/atoms/PostHeader'
-import { PostTableOfContents } from '@/components/atoms/PostTableOfContents'
-import { CustomPortanleTextComponents } from '@/components/molecules/CustomPortableTextComponents'
-import { PostFooter } from '@/components/molecules/PostFooter'
+import { PostHeader } from '@/components/BLOG/atoms/PostHeader'
+import { PostTableOfContents } from '@/components/BLOG/atoms/PostTableOfContents'
+import { CustomPortanleTextComponents } from '@/components/BLOG/molecules/CustomPortableTextComponents'
+import { PostFooter } from '@/components/BLOG/molecules/PostFooter'
 
 import { urlFor } from '@/lib/sanity'
 import { format, parseISO } from 'date-fns'

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 
 import { fullBlog } from '@/types/blog'
 
-import { Post } from '@/components/organims/Post'
+import { Post } from '@/components/BLOG/organisms/Post'
 
 import { client } from '@/lib/sanity'
 

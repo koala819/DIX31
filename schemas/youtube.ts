@@ -1,4 +1,4 @@
-import { YouTubePreview } from '@/components/atoms/YouTubePreview'
+import { YouTubePreview } from '@/components/BLOG/atoms/YouTubePreview'
 
 import { PlayIcon } from '@sanity/icons'
 import { defineField, defineType } from 'sanity'

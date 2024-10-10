@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 
 import { useTranslations } from 'next-intl'
-import Image from "next/legacy/image"
+import Image from 'next/legacy/image'
 import Link from 'next/link'
 
 import { myXP } from '@/lib/calculateXp'

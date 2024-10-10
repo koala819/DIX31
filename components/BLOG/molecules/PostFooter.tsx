@@ -3,7 +3,7 @@ import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { ShareDialog } from '@/components/atoms/ShareDialog'
+import { ShareDialog } from '@/components/BLOG/atoms/ShareDialog'
 import { Button } from '@/components/ui/button'
 
 interface PostFooterProps {
