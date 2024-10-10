@@ -1,42 +1,30 @@
-'use client'
-
 import { Moon, Sun } from 'lucide-react'
-import * as React from 'react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { useTheme } from 'next-themes'
 
 import { Button } from '@/components/ui/button'
 
-export function ModeToggle({
-  handleNavItemClick,
-}: {
-  handleNavItemClick?: () => void
-}) {
+export function ModeToggle() {
   const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState<boolean>(false)
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
-
-  const toggleTheme = () => {
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode)
     setTheme(theme === 'dark' ? 'light' : 'dark')
-    if (handleNavItemClick) handleNavItemClick()
   }
 
   return (
-    <Button variant="outline" size="icon" onClick={toggleTheme}>
-      {theme === 'dark' ? (
-        <Moon className="h-[1.2rem] w-[1.2rem] transition-all" />
+    <Button
+      variant="outline"
+      onClick={toggleDarkMode}
+      className=" p-2 bg-gray-200 dark:bg-gray-800 rounded-full shadow-lg"
+    >
+      {isDarkMode ? (
+        <Sun className="w-6 h-6 text-yellow-500" />
       ) : (
-        <Sun className="h-[1.2rem] w-[1.2rem] transition-all" />
+        <Moon className="w-6 h-6 text-gray-700" />
       )}
-      <span className="sr-only">Toggle theme</span>
     </Button>
   )
 }
