@@ -76,7 +76,7 @@ const blogSchema = {
         {
           name: 'youtubeVideo',
           title: 'YouTube Video',
-          type: 'youtubeVideo',
+          type: 'youtube',
         },
         {
           name: 'cloudinaryImage',
@@ -131,7 +131,7 @@ const blogSchema = {
         {
           name: 'youtubeVideo',
           title: 'YouTube Video',
-          type: 'youtubeVideo',
+          type: 'youtube',
         },
         {
           name: 'cloudinaryImage',

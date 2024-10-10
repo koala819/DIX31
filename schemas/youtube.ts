@@ -1,19 +1,26 @@
-// schemas/video.ts
-export default {
-  name: 'youtubeVideo',
-  title: 'YouTube Video',
+import { YouTubePreview } from '@/components/atoms/YouTubePreview'
+
+import { PlayIcon } from '@sanity/icons'
+import { defineField, defineType } from 'sanity'
+
+const youtube = defineType({
+  name: 'youtube',
   type: 'object',
+  title: 'YouTube Embed',
+  icon: PlayIcon,
   fields: [
-    {
+    defineField({
       name: 'url',
-      title: 'URL',
       type: 'url',
-      validation: (Rule: any) =>
-        Rule.uri({
-          scheme: ['http', 'https'],
-          allowRelative: false,
-          message: 'Must be a valid YouTube URL',
-        }),
-    },
+      title: 'YouTube video URL',
+    }),
   ],
-}
+  preview: {
+    select: { title: 'url' },
+  },
+  components: {
+    preview: YouTubePreview,
+  },
+})
+
+export default youtube

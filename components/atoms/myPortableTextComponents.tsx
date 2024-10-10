@@ -1,5 +1,5 @@
 import { PortableTextReactComponents } from '@portabletext/react'
-import React from 'react'
+import YouTubePlayer from 'react-player/youtube'
 
 import CustomImage from './CustomImage'
 
@@ -11,5 +11,10 @@ export const myPortableTextComponents: Partial<PortableTextReactComponents> = {
   types: {
     image: CustomImage,
     cloudinaryImage: CustomImage,
+    youtube: ({ value }) => (
+      <div className="my-8 aspect-w-16 aspect-h-9">
+        <YouTubePlayer url={value.url} width="100%" height="100%" />
+      </div>
+    ),
   },
 }
