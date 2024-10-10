@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { Achievements } from '@/components/atoms/Achievements'
+import { Projects } from '@/components/atoms/Projects'
 
 import { createMetadata } from '@/lib/utils'
 
@@ -16,6 +16,6 @@ export async function generateMetadata({
   })
 }
 
-export default function Page() {
-  return <Achievements />
+export default function ProjectsPage() {
+  return <Projects />
 }

@@ -11,7 +11,7 @@ import {
   CardHeader,
 } from '@/components/ui/card'
 
-export const Achievements = () => {
+export const Projects = () => {
   const t = useTranslations('Projects')
 
   const projects = [
