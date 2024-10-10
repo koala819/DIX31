@@ -1,5 +1,3 @@
-import React from 'react'
-
 const LegalItem = ({ label, value }: { label: string; value: any }) => {
   return (
     <li className="flex flex-col sm:flex-row sm:justify-between">

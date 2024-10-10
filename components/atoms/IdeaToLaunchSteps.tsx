@@ -1,5 +1,4 @@
 import { Calendar, Code, File, Reply, Rocket, Wrench } from 'lucide-react'
-import React from 'react'
 
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'

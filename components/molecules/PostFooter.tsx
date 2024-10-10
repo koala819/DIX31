@@ -3,9 +3,8 @@ import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+import { ShareDialog } from '@/components/atoms/ShareDialog'
 import { Button } from '@/components/ui/button'
-
-import { ShareDialog } from './ShareDialog'
 
 interface PostFooterProps {
   locale: string

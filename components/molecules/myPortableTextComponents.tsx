@@ -1,7 +1,7 @@
 import { PortableTextReactComponents } from '@portabletext/react'
 import YouTubePlayer from 'react-player/youtube'
 
-import CustomImage from './CustomImage'
+import CustomImage from '@/components/atoms/CustomImage'
 
 export const myPortableTextComponents: Partial<PortableTextReactComponents> = {
   block: {
