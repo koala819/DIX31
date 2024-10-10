@@ -9,8 +9,8 @@ import { fullBlog } from '@/types/blog'
 
 import { PostHeader } from '@/components/atoms/PostHeader'
 import { PostTableOfContents } from '@/components/atoms/PostTableOfContents'
+import { CustomPortanleTextComponents } from '@/components/molecules/CustomPortableTextComponents'
 import { PostFooter } from '@/components/molecules/PostFooter'
-import { myPortableTextComponents } from '@/components/molecules/myPortableTextComponents'
 
 import { urlFor } from '@/lib/sanity'
 import { format, parseISO } from 'date-fns'
@@ -67,7 +67,7 @@ export function Post({ post }: { post: fullBlog }) {
             <div className="prose prose-lg lg:prose-xl dark:prose-invert mx-auto">
               <PortableText
                 value={content}
-                components={myPortableTextComponents}
+                components={CustomPortanleTextComponents}
               />
             </div>
 

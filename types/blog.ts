@@ -28,7 +28,7 @@ export interface fullBlog {
   titleEn: string
   titleImage: any
   titleImagebyCloudinary: any
-  youtubeVideo?: {
+  youtube?: {
     url: string
   }
 }

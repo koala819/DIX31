@@ -74,7 +74,7 @@ const blogSchema = {
       of: [
         { type: 'block' },
         {
-          name: 'youtubeVideo',
+          name: 'youtube',
           title: 'YouTube Video',
           type: 'youtube',
         },
@@ -129,7 +129,7 @@ const blogSchema = {
       of: [
         { type: 'block' },
         {
-          name: 'youtubeVideo',
+          name: 'youtube',
           title: 'YouTube Video',
           type: 'youtube',
         },

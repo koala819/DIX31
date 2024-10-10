@@ -4,12 +4,12 @@ import { Flex, Text } from '@sanity/ui'
 import type { PreviewProps } from 'sanity'
 
 export function YouTubePreview(props: PreviewProps) {
-  const { title: url } = props
+  const { title } = props
 
   return (
     <Flex padding={3} align="center" justify="center">
-      {typeof url === 'string' ? (
-        <YouTubePlayer url={url} />
+      {typeof title === 'string' ? (
+        <YouTubePlayer url={title} />
       ) : (
         <Text>Add a YouTube URL</Text>
       )}
