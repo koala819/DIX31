@@ -12,6 +12,8 @@ import Services from '@/components/atoms/Services'
 import Contact from '@/components/molecules/Contact'
 import Testimonial from '@/components/molecules/Testimonial'
 
+import { createMetadata } from '@/lib/utils'
+
 const Hero = dynamic(() => import('@/components/atoms/Hero'))
 const Profile = dynamic(() => import('@/components/atoms/Profile'))
 
@@ -20,52 +22,11 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'metadata.home' })
-
-  const canonicalUrl = `${process.env.CLIENT_URL}/${locale}`
-
-  return {
-    title: t('title'),
-    description: t('description'),
-    keywords: t('keywords'),
-    robots: {
-      index: true,
-      follow: true,
-      nocache: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        noimageindex: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'fr-FR': '/fr',
-        'en-US': '/en',
-      },
-    },
-    openGraph: {
-      title: t('ogTitle'),
-      description: t('ogDescription'),
-      type: 'website',
-      url: canonicalUrl,
-      locale: locale === 'fr' ? 'fr_FR' : 'en_US',
-      alternateLocale: locale === 'fr' ? 'en_US' : 'fr_FR',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: t('twitterTitle'),
-      description: t('twitterDescription'),
-    },
-    other: {
-      'X-Robots-Tag': 'index, follow',
-      publisher: 'Xavier - Développeur Web Freelance',
-    },
-  }
+  return createMetadata({
+    locale,
+    namespace: 'metadata.home',
+    path: '/',
+  })
 }
 
 export default async function Page({

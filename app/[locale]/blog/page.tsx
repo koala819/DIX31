@@ -1,31 +1,22 @@
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
 
 import { SimpleBlogCardProps } from '@/types/blog'
 
 import Blog from '@/components/@unused/oragnisms/Blog'
 
 import { client } from '@/lib/sanity'
+import { createMetadata } from '@/lib/utils'
 
 export async function generateMetadata({
   params: { locale },
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'metadata.blog' })
-  const canonicalUrl = `${process.env.CLIENT_URL}/${locale}/blog`
-
-  return {
-    title: t('title'),
-    description: t('description'),
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'fr-FR': '/fr',
-        'en-US': '/en',
-      },
-    },
-  }
+  return createMetadata({
+    locale,
+    namespace: 'metadata.blog',
+    path: '/projects',
+  })
 }
 
 async function getPosts() {

@@ -94,8 +94,8 @@ export async function createMetadata({
       },
       twitter: {
         card: 'summary_large_image',
-        title: t('twitterTitle'),
-        description: t('twitterDescription'),
+        title: t('twitterTitle') || '',
+        description: t('twitterDescription') || '',
         ...(imagePath && {
           images: [`${process.env.CLIENT_URL}/${imagePath}`],
         }),
