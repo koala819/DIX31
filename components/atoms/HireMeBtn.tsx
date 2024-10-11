@@ -1,12 +1,13 @@
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
+
+import { Link } from '@/i18n/routing'
 
 const HireMeBtn = () => {
   const t = useTranslations()
   return (
-    <Link href="/?scrollTo=contact" scroll={false} className="inline-block">
+    <Link href="/?scrollTo=contact" className="inline-block">
       <Button
         variant="outline"
         className="group relative inline-flex h-12 items-center justify-center rounded-md border border-primary px-4 py-3 text-sm font-medium text-primary shadow transition-all duration-300 hover:text-white hover:font-bold focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:scale-105 overflow-hidden"

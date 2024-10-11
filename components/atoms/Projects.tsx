@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl'
 import dynamic from 'next/dynamic'
-import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -10,6 +9,8 @@ import {
   CardFooter,
   CardHeader,
 } from '@/components/ui/card'
+
+import { Link } from '@/i18n/routing'
 
 export const Projects = () => {
   const t = useTranslations('Projects')

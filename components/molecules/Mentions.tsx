@@ -1,10 +1,9 @@
 'use client'
 
-import Link from 'next/link'
-
 import LegalCard from '@/components/atoms/LegalCard'
 import LegalItem from '@/components/atoms/LegalItem'
 
+import { Link } from '@/i18n/routing'
 import { motion } from 'framer-motion'
 
 const fadeInUp = {
@@ -82,7 +81,7 @@ export default function Page() {
             rectification et de suppression de vos données.
             <p>
               <Link
-                href="/contact"
+                href="/?scrollTo=contact"
                 className="text-primary hover:underline inline-flex items-center"
               >
                 Contactez-moi

@@ -5,10 +5,11 @@ import { useMemo } from 'react'
 
 import { useTranslations } from 'next-intl'
 import dynamic from 'next/dynamic'
-import Link from 'next/link'
 
+import FooterLink from '@/components/atoms/FooterLink'
 import HireMeBtn from '@/components/atoms/HireMeBtn'
-import MenuLink from '@/components/atoms/MenuLink'
+
+import { Link } from '@/i18n/routing'
 
 export default function Footer() {
   const t = useTranslations('Footer')
@@ -79,9 +80,9 @@ export default function Footer() {
             </h3>
             <div className="grid gap-2">
               {['nextjs', 'react', 'tailwind'].map((service) => (
-                <MenuLink key={service} href={`/${service}-dev`}>
+                <FooterLink key={service} href={`/${service}-dev`}>
                   {t(service)}
-                </MenuLink>
+                </FooterLink>
               ))}
             </div>
           </div>
@@ -90,13 +91,13 @@ export default function Footer() {
               More
             </h3>
             <div className="grid gap-2">
-              <MenuLink href="https://github.com/koala819" external>
+              <FooterLink href="https://github.com/koala819" external>
                 GitHub
-              </MenuLink>
+              </FooterLink>
               {['mentions', 'privacy'].map((page) => (
-                <MenuLink key={page} href={`/${page}`}>
+                <FooterLink key={page} href={`/${page}`}>
                   {t(page)}
-                </MenuLink>
+                </FooterLink>
               ))}
             </div>
           </div>

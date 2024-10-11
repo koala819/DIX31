@@ -15,7 +15,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
-export default function Contact() {
+export default function Contact({ id }: { id?: string }) {
   const [hideForm, setHideForm] = useState(false)
 
   const t = useTranslations('Contact')

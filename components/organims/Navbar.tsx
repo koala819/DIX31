@@ -1,10 +1,9 @@
 'use client'
 
 import { Menu, X } from 'lucide-react'
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import HireMeBtn from '@/components/atoms/HireMeBtn'
@@ -13,6 +12,7 @@ import NavbarItem from '@/components/atoms/NavbarItem'
 import { ModeToggle as Toggle } from '@/components/atoms/Toggle'
 import { Button } from '@/components/ui/button'
 
+import { Link } from '@/i18n/routing'
 import { AnimatePresence, motion } from 'framer-motion'
 
 export default function Navbar() {

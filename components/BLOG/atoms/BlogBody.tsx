@@ -1,5 +1,4 @@
 import Image from 'next/legacy/image'
-import Link from 'next/link'
 
 import { SimpleBlogCardProps } from '@/types/blog'
 
@@ -11,6 +10,7 @@ import {
 } from '@/components/ui/accordion'
 import { Badge } from '@/components/ui/badge'
 
+import { Link } from '@/i18n/routing'
 import { urlFor } from '@/lib/sanity'
 import { format, parseISO } from 'date-fns'
 import { enUS, fr } from 'date-fns/locale'

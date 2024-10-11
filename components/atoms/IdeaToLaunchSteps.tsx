@@ -1,7 +1,10 @@
 import { Calendar, Code, File, Reply, Rocket, Wrench } from 'lucide-react'
 
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
+
+import { Link } from '@/i18n/routing'
 
 export default function IdeaToLaunchSteps() {
   const t = useTranslations('IdeaToLaunchSteps')
@@ -76,12 +79,11 @@ export default function IdeaToLaunchSteps() {
             </div>
             <div className="flex flex-col gap-2 sm:flex-row">
               <Link
-                href="#"
-                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                prefetch={false}
-                aria-label={t('btn')}
+                href="/?scrollTo=contact"
+                scroll={false}
+                className="inline-block"
               >
-                {t('btn')}
+                <Button>{t('btn')}</Button>
               </Link>
             </div>
           </div>

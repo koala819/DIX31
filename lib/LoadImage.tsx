@@ -1,4 +1,4 @@
-import Image from "next/legacy/image"
+import Image, { StaticImageData } from 'next/legacy/image'
 
 export default function LoadImage({
   alt,
@@ -14,8 +14,8 @@ export default function LoadImage({
   alt: string
   className?: string
   height?: number
-  layout?: string
-  objectFit?: string
+  layout?: any
+  objectFit?: any
   priority?: boolean
   src: string
   width?: number
@@ -40,6 +40,11 @@ export default function LoadImage({
       ? Buffer.from(str).toString('base64')
       : window.btoa(str)
 
+  const placeholderImage: StaticImageData = {
+    src: `data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`,
+    height: 475,
+    width: 700,
+  }
   return (
     <Image
       alt={alt}
@@ -47,7 +52,7 @@ export default function LoadImage({
       height={height}
       layout={layout}
       objectFit={objectFit}
-      placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
+      placeholder={placeholderImage ? 'blur' : undefined}
       priority={priority}
       src={src}
       width={width}

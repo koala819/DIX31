@@ -8,7 +8,8 @@ const ScrollToContact = () => {
   const searchParams = useSearchParams()
 
   useEffect(() => {
-    if (searchParams.get('scrollTo') === 'contact') {
+    const scrollTo = searchParams.get('scrollTo')
+    if (scrollTo === 'contact') {
       const contactElement = document.getElementById('contact')
       const navbarHeight = document.getElementById('navbar')?.offsetHeight || 0
 

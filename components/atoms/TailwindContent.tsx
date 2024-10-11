@@ -4,8 +4,8 @@ import { useMemo } from 'react'
 
 import { useTranslations } from 'next-intl'
 import Image from 'next/legacy/image'
-import Link from 'next/link'
 
+import { Link } from '@/i18n/routing'
 import { myXP } from '@/lib/calculateXp'
 import { motion } from 'framer-motion'
 
@@ -37,12 +37,12 @@ const TailwindContent: React.FC = () => {
         />
         <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
         <p className="text-xl text-muted-foreground">{introWithXp}</p>
-        <Link
+        <a
           href="/?scrollTo=contact"
           className="inline-block mt-4 px-6 py-3 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
         >
           {t('dispositionLink')}
-        </Link>
+        </a>
       </motion.div>
 
       <motion.section {...fadeInUp} className="mb-16">
@@ -81,15 +81,15 @@ const TailwindContent: React.FC = () => {
         <h2 className="text-3xl font-semibold mb-4">{t('hire')}</h2>
         <p className="text-lg mb-6 text-muted-foreground">{t('hireDesc')}</p>
         <div className="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center items-center">
-          <Link
-            className="w-full sm:w-auto inline-block px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg font-semibold"
+          <a
             href="/?scrollTo=contact"
+            className="w-full sm:w-auto inline-block px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg font-semibold"
           >
             {t('contactLink')}
-          </Link>
+          </a>
           <Link
-            className="w-full sm:w-auto inline-block px-6 py-3 bg-accent text-accent-foreground rounded-full hover:bg-accent/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 border border-accent-foreground/10"
             href="/projects"
+            className="w-full sm:w-auto inline-block px-6 py-3 bg-accent text-accent-foreground rounded-full hover:bg-accent/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 border border-accent-foreground/10"
           >
             {t('recentWorkLink')}
           </Link>

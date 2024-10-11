@@ -1,8 +1,8 @@
 import Image from 'next/legacy/image'
-import Link from 'next/link'
 
 import { SimpleBlogCardProps } from '@/types/blog'
 
+import { Link } from '@/i18n/routing'
 import { urlFor } from '@/lib/sanity'
 import { format, parseISO } from 'date-fns'
 import { enUS, fr } from 'date-fns/locale'

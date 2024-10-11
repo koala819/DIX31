@@ -1,9 +1,8 @@
 import { ArrowRight } from 'lucide-react'
-import React from 'react'
 
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 
-const MenuLink = ({
+const FooterLink = ({
   href,
   children,
   external = false,
@@ -26,4 +25,4 @@ const MenuLink = ({
   )
 }
 
-export default MenuLink
+export default FooterLink

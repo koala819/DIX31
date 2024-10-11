@@ -54,7 +54,7 @@ export default async function Page({
         <Testimonial user="Sandrine" />
         <IdeaToLaunchSteps />
         <Testimonial user="Pascal" />
-        <Contact />
+        <Contact id="contact" />
         <Testimonial user="Sid" />
         <FAQ />
       </Suspense>

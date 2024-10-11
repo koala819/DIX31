@@ -1,7 +1,5 @@
 'use client'
 
-import Link from 'next/link'
-
 import LegalCard from '@/components/atoms/LegalCard'
 import LegalItem from '@/components/atoms/LegalItem'
 
@@ -48,12 +46,12 @@ export default function Privacy() {
               <LegalItem
                 label="Email"
                 value={
-                  <Link
-                    href="mailto:contact@dix31.com"
+                  <a
+                    href="/?scrollTo=contact"
                     className="text-primary hover:underline"
                   >
                     contact@dix31.com
-                  </Link>
+                  </a>
                 }
               />
             </ul>
@@ -120,12 +118,12 @@ export default function Privacy() {
           <p className="text-muted-foreground">
             Vous pouvez retirer votre consentement à tout moment pour les
             données non essentielles à mes services, en me contactant à{' '}
-            <Link
-              href="mailto:contact@dix31.com"
+            <a
+              href="/?scrollTo=contact"
               className="text-primary hover:underline"
             >
               contact@dix31.com
-            </Link>
+            </a>
           </p>
         </LegalCard>
       </motion.section>
