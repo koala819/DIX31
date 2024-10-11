@@ -12,7 +12,7 @@ export const CustomPortanleTextComponents: Partial<PortableTextReactComponents> 
     types: {
       image: CustomImage,
       cloudinaryImage: CustomImage,
-      youtubeVideo: ({ value }) => {
+      youtube: ({ value }) => {
         return (
           <div className="my-8 aspect-w-16 aspect-h-9 flex justify-center">
             <YouTubePlayer url={value.url} />
