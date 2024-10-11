@@ -65,10 +65,12 @@ export function Post({ post }: { post: fullBlog }) {
 
           <article className="lg:w-3/4">
             <div className="prose prose-lg lg:prose-xl dark:prose-invert mx-auto">
-              <PortableText
-                value={content}
-                components={CustomPortanleTextComponents}
-              />
+              {content && (
+                <PortableText
+                  value={content}
+                  components={CustomPortanleTextComponents}
+                />
+              )}
             </div>
 
             <PostFooter

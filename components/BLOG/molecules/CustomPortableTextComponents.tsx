@@ -1,7 +1,13 @@
 import { PortableTextReactComponents } from '@portabletext/react'
-import YouTubePlayer from 'react-player/youtube'
+
+import dynamic from 'next/dynamic'
 
 import CustomImage from '@/components/atoms/CustomImage'
+
+const YouTubePlayer = dynamic(() => import('react-player/youtube'), {
+  ssr: false,
+  loading: () => <p>Chargement de la vidéo...</p>,
+})
 
 export const CustomPortanleTextComponents: Partial<PortableTextReactComponents> =
   {
