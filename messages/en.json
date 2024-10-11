@@ -176,7 +176,9 @@
   "metadata": {
     "blog": {
       "title": "Blog French Tech - Professional Web Development Advice by DIX31",
-      "description": "Read the DIX31 blog for unique web development insights, coding tips, market trends, and detailed case studies."
+      "description": "Read the DIX31 blog for unique web development insights, coding tips, market trends, and detailed case studies.",
+      "keywords": "web development, tech blog, DIX31, professional advice, coding tips, web trends, case studies, French Tech",
+      "ogTitle": "DIX31 Tech Blog | Web Development Expertise"
     },
     "home": {
       "title": "Xavier - Freelance Web Developer | Custom Web Solutions",
