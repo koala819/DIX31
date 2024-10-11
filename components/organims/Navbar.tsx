@@ -165,8 +165,8 @@ export default function Navbar() {
                     delay: (links.length + 1) * 0.1,
                   }}
                 >
-                  <LangSwitcher handleNavItemClick={() => setIsOpen(false)} />
-                  <Toggle handleNavItemClick={() => setIsOpen(false)} />
+                  <LangSwitcher />
+                  <Toggle />
                 </motion.div>
               </nav>
             </div>
