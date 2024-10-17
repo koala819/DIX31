@@ -179,7 +179,10 @@
       "title": "Blog Tech France - Conseils Professionnels en Développement Web par DIX31",
       "description": "Lisez le blog de DIX31 pour des insights uniques sur le développement web, des astuces de codage, des tendances du marché, et des études de cas détaillées.",
       "keywords": "développement web, blog tech, DIX31, conseils professionnels, astuces de codage, tendances web, études de cas",
-      "ogTitle": "Blog Tech DIX31 | Expertise en Développement Web"
+      "ogTitle": "Blog Tech DIX31 | Expertise en Développement Web",
+      "ogDescription": "Plongez dans l'univers du développement et des innovations technologiques avec DIX31. Nous proposons des articles approfondis, des ressources pour développeurs, et des analyses sur les dernières tendances tech.",
+      "twitterTitle": "Astuces Dev & Actu Tech | Boostez vos Compétences avec DIX31",
+      "twitterDescription": "Découvrez des articles, tutoriels et astuces sur le développement web, la programmation et les dernières tendances technologiques. Restez à jour avec DIX31"
     },
     "home": {
       "title": "Xavier - Développeur Web Freelance | Solutions Web Personnalisées",

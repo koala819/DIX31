@@ -178,7 +178,10 @@
       "title": "Blog French Tech - Professional Web Development Advice by DIX31",
       "description": "Read the DIX31 blog for unique web development insights, coding tips, market trends, and detailed case studies.",
       "keywords": "web development, tech blog, DIX31, professional advice, coding tips, web trends, case studies, French Tech",
-      "ogTitle": "DIX31 Tech Blog | Web Development Expertise"
+      "ogTitle": "DIX31 Tech Blog | Web Development Expertise",
+      "ogDescription": "Dive into the world of development and technological innovation with DIX31. We offer in-depth articles, developer resources and analysis of the latest tech trends.",
+      "twitterTitle": "Dev Tips & Tech News | Boost your Skills with DIX31",
+      "twitterDescription": "Discover articles, tutorials and tips on web development, programming and the latest technology trends. Stay up to date with DIX31"
     },
     "home": {
       "title": "Xavier - Freelance Web Developer | Custom Web Solutions",
