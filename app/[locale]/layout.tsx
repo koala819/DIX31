@@ -4,7 +4,9 @@ import { Suspense, lazy } from 'react'
 import { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
+import { VisualEditing } from 'next-sanity'
 import { Inter } from 'next/font/google'
+import { draftMode } from 'next/headers'
 
 import { ThemeProvider } from '@/app/provider'
 import { cn } from '@/lib/utils'
@@ -66,6 +68,14 @@ export default async function RootLayout({
       <body
         className={cn('antialiased', fontHeading.variable, fontBody.variable)}
       >
+        {draftMode().isEnabled && (
+          <a
+            className="fixed right-0 bottom-0 bg-blue-500 text-white p-4 m-4"
+            href="/api/draft-mode/disable"
+          >
+            Disable preview mode
+          </a>
+        )}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -81,6 +91,7 @@ export default async function RootLayout({
                 <div className="w-full mx-auto">
                   <div className="flex flex-col min-w-0 break-words w-full rounded-lg bg-gray-50 dark:bg-slate-800 border-0 pb-16 md:pb-24">
                     {children}
+                    {draftMode().isEnabled && <VisualEditing />}
                     <SpeedInsights />
                     <Analytics />
                   </div>

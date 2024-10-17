@@ -1,6 +1,6 @@
 'use client'
 
-import { resolveLocations } from './plugins/resolveLocations'
+// import { resolveLocations } from './plugins/resolveLocations'
 import { schemaTypes } from './schemas'
 
 import { codeInput } from '@sanity/code-input'
@@ -36,10 +36,15 @@ export default defineConfig({
     presentationTool({
       // locate,
       // Modifié : remplacement de 'locate' par 'resolve.locations'
-      resolve: {
-        locations: resolveLocations,
+      // resolve: {
+      //   locations: resolveLocations,
+      // },
+      previewUrl: {
+        previewMode: {
+          enable: '/api/draft-mode/enable',
+        },
       },
-      previewUrl: SANITY_STUDIO_PREVIEW_URL,
+      // previewUrl: SANITY_STUDIO_PREVIEW_URL,
       // previewUrl: {
       //   previewMode: {
       //     enable: '/api/draft',
