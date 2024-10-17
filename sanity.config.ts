@@ -1,5 +1,6 @@
 'use client'
 
+import { resolveLocations } from './plugins/resolveLocations'
 import { schemaTypes } from './schemas'
 
 import { codeInput } from '@sanity/code-input'
@@ -8,7 +9,7 @@ import { visionTool } from '@sanity/vision'
 // import {presentationTool} from 'sanity/presentation'
 // import { visualEditing } from '@sanity/visual-editing'
 import { apiVersion, basePath, dataset, projectId } from 'lib/sanity.api'
-import { locate } from 'plugins/locate'
+// import { locate } from 'plugins/locate'
 // import { pageStructure, singletonPlugin } from 'plugins/settings'
 import { defineConfig } from 'sanity'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
@@ -33,7 +34,11 @@ export default defineConfig({
 
   plugins: [
     presentationTool({
-      locate,
+      // locate,
+      // Modifié : remplacement de 'locate' par 'resolve.locations'
+      resolve: {
+        locations: resolveLocations,
+      },
       previewUrl: SANITY_STUDIO_PREVIEW_URL,
       // previewUrl: {
       //   previewMode: {
