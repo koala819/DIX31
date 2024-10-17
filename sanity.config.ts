@@ -2,6 +2,7 @@
 
 import { schemaTypes } from './schemas'
 
+import { codeInput } from '@sanity/code-input'
 import { debugSecrets } from '@sanity/preview-url-secret/sanity-plugin-debug-secrets'
 import { visionTool } from '@sanity/vision'
 // import {presentationTool} from 'sanity/presentation'
@@ -31,18 +32,21 @@ export default defineConfig({
   plugins: [
     presentationTool({
       locate,
-      previewUrl: {
-        previewMode: {
-          enable: '/api/draft',
-        },
-      },
+      previewUrl: SANITY_STUDIO_PREVIEW_URL,
+      // previewUrl: {
+      //   previewMode: {
+      //     enable: '/api/draft',
+      //   },
+      // },
     }),
+    codeInput(),
     // visualEditing({
     //   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
     //   dataset: process.env.EXT_PUBLIC_SANITY_NEXT_PUBLIC_SANITY_DATASET,
     //   token: process.env.SANITY_API_READ_TOKEN,
     // }),
     structureTool(),
+
     // structureTool({
     //   structure: pageStructure([home, settings]),
     // }),

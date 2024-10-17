@@ -1,3 +1,5 @@
+import { CodeInput } from '@sanity/code-input'
+
 const blogSchema = {
   name: 'blog',
   type: 'document',
@@ -120,6 +122,22 @@ const blogSchema = {
             },
           ],
         },
+        {
+          type: 'code',
+          options: {
+            language: 'javascript',
+            languageAlternatives: [
+              { title: 'JavaScript', value: 'javascript' },
+              { title: 'TypeScript', value: 'typescript' },
+              { title: 'JSX', value: 'jsx' },
+              { title: 'TSX', value: 'tsx' },
+              { title: 'Markdown', value: 'markdown' },
+              { title: 'HTML', value: 'html' },
+              { title: 'CSS', value: 'css' },
+            ],
+            withFilename: false,
+          },
+        },
       ],
     },
     {
@@ -174,6 +192,22 @@ const blogSchema = {
               },
             },
           ],
+        },
+        {
+          type: 'code',
+          options: {
+            language: 'javascript',
+            languageAlternatives: [
+              { title: 'JavaScript', value: 'javascript' },
+              { title: 'TypeScript', value: 'typescript' },
+              { title: 'JSX', value: 'jsx' },
+              { title: 'TSX', value: 'tsx' },
+              { title: 'Markdown', value: 'markdown' },
+              { title: 'HTML', value: 'html' },
+              { title: 'CSS', value: 'css' },
+            ],
+            withFilename: false,
+          },
         },
       ],
     },
