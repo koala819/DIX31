@@ -16,6 +16,8 @@ import { presentationTool } from 'sanity/presentation'
 import { structureTool } from 'sanity/structure'
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE
+const SANITY_STUDIO_PREVIEW_URL =
+  process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000'
 // console.log('porjectId', process.env.NEXT_PUBLIC_SANITY_PROJECT_ID)
 // console.log('dataset', process.env.EXT_PUBLIC_SANITY_NEXT_PUBLIC_SANITY_DATASET)
 // console.log('token', process.env.SANITY_API_READ_TOKEN)
