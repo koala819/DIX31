@@ -1,4 +1,10 @@
 {
+  "Blog": {
+    "title": "Our Articles",
+    "subtitle": "Discover our latest articles on web development and technology",
+    "searchPlaceholder": "Search articles...",
+    "readTime": "min read"
+  },
   "BlogSlide": {
     "keywords": "Keywords",
     "reset": "Reset"

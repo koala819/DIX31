@@ -1,3 +1,19 @@
+export interface Article {
+  id: number
+  title: string
+  excerpt: string | null
+  coverImage: string
+  date: string
+  categories: string[]
+  readTime: number
+  currentSlug: string
+}
+
+export interface BlogGridProps {
+  articles: Article[]
+  locale: string
+}
+
 export interface SimpleBlogCardProps {
   titleFr: string
   titleEn: string
@@ -15,6 +31,7 @@ export interface SimpleBlogCardProps {
   } | null
   titleImagebyCloudinary: any // Ajustez le type selon la structure réelle
   tags: { name: string }[] | null
+  contentFr: any
 }
 
 export interface fullBlog {
