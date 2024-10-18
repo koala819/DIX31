@@ -10,15 +10,20 @@ const ScrollToContact = () => {
   useEffect(() => {
     const scrollTo = searchParams.get('scrollTo')
     if (scrollTo === 'contact') {
-      const contactElement = document.getElementById('contact')
-      const navbarHeight = document.getElementById('navbar')?.offsetHeight || 0
+      setTimeout(() => {
+        const contactElement = document.getElementById('contact')
 
-      if (contactElement) {
-        window.scrollTo({
-          top: contactElement.offsetTop - navbarHeight * 2.5,
-          behavior: 'smooth',
-        })
-      }
+        if (contactElement) {
+          window.scrollTo({
+            top: contactElement.offsetTop - 90,
+            behavior: 'smooth',
+          })
+        } else {
+          console.error(
+            "Contact element not found. Make sure the ID 'contact' exists in your HTML.",
+          )
+        }
+      }, 500)
     }
   }, [searchParams])
 

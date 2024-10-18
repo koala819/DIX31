@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes'
 
 import { Button } from '@/components/ui/button'
 
-export function ModeToggle() {
+export function ModeToggle({ isScrolled }: { isScrolled?: boolean }) {
   const { theme, setTheme } = useTheme()
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
 
@@ -21,9 +21,13 @@ export function ModeToggle() {
       className=" p-2 bg-gray-200 dark:bg-gray-800 rounded-full shadow-lg"
     >
       {isDarkMode ? (
-        <Sun className="w-6 h-6 text-yellow-500" />
+        <Sun
+          className={` text-yellow-500 ${isScrolled ? 'w-4 h-4' : 'w-6 h-6'}`}
+        />
       ) : (
-        <Moon className="w-6 h-6 text-gray-700" />
+        <Moon
+          className={` text-gray-700 ${isScrolled ? 'w-4 h-4' : 'w-6 h-6'}`}
+        />
       )}
     </Button>
   )

@@ -14,7 +14,7 @@ type LanguageInfo = {
   alt: string
 }
 
-const LangSwitcher: React.FC = () => {
+const LangSwitcher = ({ isScrolled }: { isScrolled?: boolean }) => {
   const pathname = usePathname()
   const locale = useLocale() as Language
 
@@ -37,8 +37,8 @@ const LangSwitcher: React.FC = () => {
     >
       <Image
         src={languages[locale].flag}
-        width={30}
-        height={30}
+        width={isScrolled ? 25 : 30}
+        height={isScrolled ? 25 : 30}
         alt={languages[locale].alt}
         className="rounded-sm"
       />
