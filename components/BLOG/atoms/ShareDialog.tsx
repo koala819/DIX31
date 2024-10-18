@@ -1,11 +1,5 @@
-import {
-  Check,
-  Facebook,
-  Link as LinkIcon,
-  Share2,
-  Twitter,
-} from 'lucide-react'
-import React from 'react'
+import { Check, Copy, Facebook, Share2, Twitter, X } from 'lucide-react'
+import { useState } from 'react'
 import toast from 'react-hot-toast'
 
 import { Button } from '@/components/ui/button'
@@ -17,23 +11,20 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog'
 
+import { motion } from 'framer-motion'
+
 interface ShareDialogProps {
   locale: string
-  isOpen: boolean
-  // eslint-disable-next-line no-unused-vars
-  onOpenChange: (open: boolean) => void
   title: string
   url: string
 }
 
 export const ShareDialog: React.FC<ShareDialogProps> = ({
   locale,
-  isOpen,
-  onOpenChange,
   title,
   url,
 }) => {
-  const [copied, setCopied] = React.useState<boolean>(false)
+  const [copied, setCopied] = useState(false)
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(url)
@@ -44,11 +35,10 @@ export const ShareDialog: React.FC<ShareDialogProps> = ({
 
   const shareOptions = [
     {
-      name: locale === 'fr' ? 'Copier ' : 'Copy Link',
-      icon: copied ? Check : LinkIcon,
+      name: locale === 'fr' ? 'Copier' : 'Copy',
+      icon: copied ? Check : Copy,
       onClick: copyToClipboard,
-      className:
-        'bg-gray-300 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200',
+      color: '#10B981',
     },
     {
       name: 'Facebook',
@@ -59,7 +49,7 @@ export const ShareDialog: React.FC<ShareDialogProps> = ({
           '_blank',
           'noopener,noreferrer',
         ),
-      className: 'bg-[#1877F2] hover:bg-[#166FE5] text-white',
+      color: '#1877F2',
     },
     {
       name: 'Twitter',
@@ -70,41 +60,48 @@ export const ShareDialog: React.FC<ShareDialogProps> = ({
           '_blank',
           'noopener,noreferrer',
         ),
-      className: 'bg-[#1DA1F2] hover:bg-[#1A91DA] text-white',
+      color: '#1DA1F2',
     },
   ]
 
   return (
-    <Dialog open={isOpen} onOpenChange={onOpenChange}>
+    <Dialog>
       <DialogTrigger asChild>
-        <Button
-          variant="outline"
-          className="flex items-center space-x-2 bg-blue-500 text-white hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 transition-colors duration-300"
-        >
+        <Button variant="outline" className="flex items-center space-x-2">
           <Share2 className="w-4 h-4" />
           <span className="font-medium">
             {locale === 'fr' ? 'Partager' : 'Share'}
           </span>
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle className="text-xl font-semibold mb-2">
-            {locale === 'fr' ? 'Partager cet article' : 'Share this article'}
+      <DialogContent className="sm:max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-xl">
+        <DialogHeader className="flex items-center justify-between">
+          <DialogTitle className="text-2xl font-bold text-gray-800 dark:text-white">
+            {locale === 'fr' ? 'Partager' : 'Share'}
           </DialogTitle>
         </DialogHeader>
-        <div className="grid grid-cols-3 gap-4 mt-4">
+        <div className="flex justify-center space-x-6 mt-6">
           {shareOptions.map((option) => (
-            <Button
+            <motion.button
               key={option.name}
               onClick={option.onClick}
-              className={`flex space-x-1 items-center justify-center  ${option.className}`}
-              // className={`flex flex-col items-center justify-center p-4 rounded-lg transition-colors duration-300 ${option.className}`}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex flex-col items-center focus:outline-none"
             >
-              <option.icon className="w-6 h-6 mb-2" />
-
-              <span className="text-sm">{option.name}</span>
-            </Button>
+              <div
+                className="w-16 h-16 rounded-full flex items-center justify-center mb-2"
+                style={{ backgroundColor: `${option.color}20` }}
+              >
+                <option.icon
+                  className="w-8 h-8"
+                  style={{ color: option.color }}
+                />
+              </div>
+              <span className="text-sm text-gray-600 dark:text-gray-300">
+                {option.name}
+              </span>
+            </motion.button>
           ))}
         </div>
       </DialogContent>

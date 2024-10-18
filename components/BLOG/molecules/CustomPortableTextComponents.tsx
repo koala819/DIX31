@@ -10,7 +10,7 @@ const YouTubePlayer = dynamic(() => import('react-player/youtube'), {
   loading: () => <p>Chargement de la vidéo...</p>,
 })
 
-export const CustomPortanleTextComponents: Partial<PortableTextReactComponents> =
+export const CustomPortableTextComponents: Partial<PortableTextReactComponents> =
   {
     block: {
       h2: ({ children }) => <h2 id={children?.toString()}>{children}</h2>,

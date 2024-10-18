@@ -46,7 +46,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ code, language }) => {
         showLineNumbers={true}
         wrapLines={true}
         customStyle={{
-          fontSize: '0.115rem', // Légèrement plus petit que text-sm
+          fontSize: '0.115rem',
           lineHeight: '1.5',
           padding: '1em',
           borderRadius: '0.375rem',
@@ -59,7 +59,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ code, language }) => {
         }}
         codeTagProps={{
           style: {
-            fontSize: '0.215rem',
+            fontSize: '0.95rem',
             lineHeight: '1.8',
             whiteSpace: 'pre-wrap',
             wordBreak: 'break-all',
