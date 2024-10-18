@@ -45,7 +45,8 @@
     "dispositionLink": "Je suis à votre disposition",
     "recentWorkLink": "Consultez mes travaux récents",
     "or": "ou",
-    "contactLink": "contactez-moi"
+    "contactLink": "contactez-moi",
+    "loading": "Chargement ..."
   },
   "ContentReact": {
     "intro": "Vous recherchez un Développeur React avec {years} ans d'expérience ?",
