@@ -7,50 +7,6 @@
     @apply border-border;
   }
 
-  /* body {
-    @apply bg-background font-body leading-relaxed text-foreground text-gray-600  dark:text-gray-200;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  span,
-  a,
-  li,
-  blockquote {
-    @apply font-heading;
-  }
-
-  h1 {
-    @apply text-2xl font-bold text-gray-600 dark:text-gray-200 lg:text-6xl;
-  }
-
-  h2 {
-    @apply text-2xl font-bold text-gray-600 dark:text-gray-200  lg:text-3xl;
-  }
-
-  h3 {
-    @apply text-lg font-bold sm:text-2xl;
-  }
-
-  h4 {
-    @apply text-sm font-bold;
-  }
-
-  span,
-  p,
-  li {
-    @apply text-lg font-medium lg:text-xl;
-  }
-
-  .container {
-    @apply mx-auto max-w-2xl px-4 py-4 sm:py-8 lg:max-w-7xl lg:px-8;
-  } */
-
   body {
     @apply bg-background font-body text-base leading-normal text-foreground;
   }
@@ -61,33 +17,29 @@
   h4,
   h5,
   h6 {
-    @apply font-heading font-bold leading-tight;
+    @apply font-heading font-normal leading-tight;
   }
 
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    @apply text-xxl sm:text-xxxl leading-tight;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl;
+    @apply sm:text-xxl text-xl sm:font-normal;
   }
 
   h3 {
-    @apply text-xl md:text-2xl lg:text-3xl;
-  }
-
-  h4 {
-    @apply text-lg md:text-xl;
+    @apply sm:text-xl;
   }
 
   p,
   span,
   li {
-    @apply text-base md:text-lg;
+    @apply text-text-2;
   }
 
   .container {
-    @apply mx-auto px-4 py-4 sm:py-6 lg:py-8;
+    @apply mx-auto mt-12 w-full max-w-[1024px];
   }
 
   :root {
@@ -114,6 +66,13 @@
     --navbar-height: 5rem;
     --navbar-bg-color: rgba(255, 255, 255, 0.9);
     --navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --text-1: 0 0% 0%;
+    --text-2: 0 0% 40%;
+    --text-3: 0 0% 60%;
+    --border-1: 0 0% 85%;
+    --border-2: 0 0% 90%;
+    --bg-1: 0 0% 100%;
+    --bg-2: 0 0% 95%;
   }
 
   .dark {
@@ -138,6 +97,13 @@
     --ring: 224.3 76.3% 48%;
     --navbar-bg-color: rgba(17, 24, 39, 0.9);
     --navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --text-1: 0 0% 100%;
+    --text-2: 0 0% 80%;
+    --text-3: 0 0% 60%;
+    --border-1: 0 0% 20%;
+    --border-2: 0 0% 15%;
+    --bg-1: 0 0% 0%;
+    --bg-2: 0 0% 10%;
   }
 
   .focus\:outline-none:focus {

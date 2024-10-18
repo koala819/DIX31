@@ -66,7 +66,11 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={cn('antialiased', fontHeading.variable, fontBody.variable)}
+        className={cn(
+          'antialiased bg-background text-foreground',
+          fontHeading.variable,
+          fontBody.variable,
+        )}
       >
         {draftMode().isEnabled && (
           <a
@@ -83,10 +87,10 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
+            <Suspense fallback={<div className="navbar-height" />}>
+              <Navbar />
+            </Suspense>
             <div className="min-h-screen flex flex-col">
-              <Suspense fallback={<div className="navbar-height"></div>}>
-                <Navbar />
-              </Suspense>
               <main className="flex-1 pt-navbar">
                 <div className="w-full mx-auto">
                   <div className="flex flex-col min-w-0 break-words w-full rounded-lg bg-gray-50 dark:bg-slate-800 border-0 pb-16 md:pb-24">
