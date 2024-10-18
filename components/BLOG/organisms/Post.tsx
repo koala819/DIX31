@@ -12,7 +12,7 @@ import { PostTableOfContents } from '@/components/BLOG/atoms/PostTableOfContents
 import { CustomPortanleTextComponents } from '@/components/BLOG/molecules/CustomPortableTextComponents'
 import { PostFooter } from '@/components/BLOG/molecules/PostFooter'
 
-import { urlFor } from '@/lib/sanity'
+import { urlFor } from '@/lib/Blog/sanity/client'
 import { format, parseISO } from 'date-fns'
 import { enUS, fr } from 'date-fns/locale'
 

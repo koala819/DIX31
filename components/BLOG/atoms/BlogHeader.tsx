@@ -3,7 +3,7 @@ import Image from 'next/legacy/image'
 import { SimpleBlogCardProps } from '@/types/blog'
 
 import { Link } from '@/i18n/routing'
-import { urlFor } from '@/lib/sanity'
+import { urlFor } from '@/lib/Blog/sanity/client'
 import { format, parseISO } from 'date-fns'
 import { enUS, fr } from 'date-fns/locale'
 import { motion } from 'framer-motion'

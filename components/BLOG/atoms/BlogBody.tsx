@@ -11,7 +11,7 @@ import {
 import { Badge } from '@/components/ui/badge'
 
 import { Link } from '@/i18n/routing'
-import { urlFor } from '@/lib/sanity'
+import { urlFor } from '@/lib/Blog/sanity/client'
 import { format, parseISO } from 'date-fns'
 import { enUS, fr } from 'date-fns/locale'
 import { motion } from 'framer-motion'

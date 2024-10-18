@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import Image from 'next/legacy/image'
 
-import { urlFor } from '@/lib/sanity'
+import { urlFor } from '@/lib/Blog/sanity/client'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const CustomImage = ({ value }: { value: any }) => {

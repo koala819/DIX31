@@ -4,7 +4,7 @@ import { SimpleBlogCardProps } from '@/types/blog'
 
 import Blog from '@/components/BLOG/organisms/Blog'
 
-import { client } from '@/lib/sanity'
+import { sanityFetch } from '@/lib/Blog/sanity/client'
 import { createMetadata } from '@/lib/utils'
 
 export async function generateMetadata({
@@ -31,7 +31,7 @@ async function getPosts() {
     titleImagebyCloudinary,
     "tags": tags[]->{ name }
   }`
-  return await client.fetch(query)
+  return await sanityFetch({ query })
 }
 
 export default async function Page({ params: { locale } }: any) {

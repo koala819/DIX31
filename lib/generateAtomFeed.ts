@@ -1,6 +1,7 @@
-import { client } from '@/lib/sanity'
+import { getClient } from '@/lib/Blog/sanity/client'
 
 async function getPosts() {
+  const client = getClient()
   const query = `*[_type == 'blog'] | order(date desc) {
     titleEn,
     date,
@@ -29,7 +30,7 @@ function escapeXml(unsafe: string): string {
       default:
         return c
     }
-  });
+  })
 }
 
 const generateAtomFeed = async (): Promise<string> => {

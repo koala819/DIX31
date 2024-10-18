@@ -5,7 +5,7 @@ import { fullBlog } from '@/types/blog'
 
 import { Post } from '@/components/BLOG/organisms/Post'
 
-import { client } from '@/lib/sanity'
+import { sanityFetch } from '@/lib/Blog/sanity/client'
 
 async function getSlug(slug: string) {
   const query = `*[_type == 'blog' && slug.current == '${slug}'] {
@@ -23,7 +23,7 @@ async function getSlug(slug: string) {
       url
     }
   }[0]`
-  const data = await client.fetch(query)
+  const data = await sanityFetch({ query })
   if (!data) notFound()
   return data
 }

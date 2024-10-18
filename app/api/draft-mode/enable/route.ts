@@ -1,4 +1,3 @@
-// ./src/app/api/draft-mode/enable/route.ts
 import { draftMode } from 'next/headers'
 import { NextRequest, NextResponse } from 'next/server'
 
