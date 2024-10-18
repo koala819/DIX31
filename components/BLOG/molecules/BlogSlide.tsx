@@ -57,31 +57,25 @@ export function BlogSlide({
         animate="show"
       >
         {sortedTags.map(([tagName, articleCount]) => {
-          const specialTags = ['SEO', 'IA', 'DIX31']
-
-          const normalizedTag = specialTags.includes(tagName)
-            ? tagName
-            : tagName.charAt(0).toUpperCase() + tagName.slice(1).toLowerCase()
-
           return (
             <motion.li
-              key={normalizedTag}
+              key={tagName}
               variants={{
                 hidden: { opacity: 0, x: -20 },
                 show: { opacity: 1, x: 0 },
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => onTagClick(normalizedTag)}
+              onClick={() => onTagClick(tagName)}
               className="py-2 px-3 mb-2 rounded-md cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <span className="text-blue-500 mr-2">
-                    <TagIcons tag={normalizedTag} />
+                    <TagIcons tag={tagName} />
                   </span>
                   <span className="font-medium text-gray-700 dark:text-gray-300">
-                    {normalizedTag}
+                    {tagName}
                   </span>
                 </div>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
