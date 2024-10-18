@@ -21,6 +21,10 @@ export function BlogSlide({
 }) {
   const t = useTranslations('BlogSlide')
 
+  const sortedTags = Object.entries(tags).sort(([tagA], [tagB]) => {
+    return tagA.localeCompare(tagB)
+  })
+
   return (
     <motion.div
       className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4"
@@ -52,33 +56,41 @@ export function BlogSlide({
         initial="hidden"
         animate="show"
       >
-        {Object.entries(tags).map(([tagName, articleCount]) => (
-          <motion.li
-            key={tagName}
-            variants={{
-              hidden: { opacity: 0, x: -20 },
-              show: { opacity: 1, x: 0 },
-            }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => onTagClick(tagName)}
-            className="py-2 px-3 mb-2 rounded-md cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <span className="text-blue-500 mr-2">
-                  <TagIcons tag={tagName} />
-                </span>
-                <span className="font-medium text-gray-700 dark:text-gray-300">
-                  {tagName}
+        {sortedTags.map(([tagName, articleCount]) => {
+          const specialTags = ['SEO', 'IA', 'DIX31']
+
+          const normalizedTag = specialTags.includes(tagName)
+            ? tagName
+            : tagName.charAt(0).toUpperCase() + tagName.slice(1).toLowerCase()
+
+          return (
+            <motion.li
+              key={normalizedTag}
+              variants={{
+                hidden: { opacity: 0, x: -20 },
+                show: { opacity: 1, x: 0 },
+              }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => onTagClick(normalizedTag)}
+              className="py-2 px-3 mb-2 rounded-md cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300"
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <span className="text-blue-500 mr-2">
+                    <TagIcons tag={normalizedTag} />
+                  </span>
+                  <span className="font-medium text-gray-700 dark:text-gray-300">
+                    {normalizedTag}
+                  </span>
+                </div>
+                <span className="text-sm text-gray-500 dark:text-gray-400">
+                  {articleCount}
                 </span>
               </div>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                {articleCount}
-              </span>
-            </div>
-          </motion.li>
-        ))}
+            </motion.li>
+          )
+        })}
       </motion.ul>
     </motion.div>
   )

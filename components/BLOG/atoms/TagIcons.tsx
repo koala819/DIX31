@@ -1,11 +1,11 @@
 import {
+  CodeXml,
   Computer,
   Cpu,
   Network,
   Newspaper,
   Search,
   Smile,
-  Terminal,
   Wrench,
 } from 'lucide-react'
 import { GrAndroid } from 'react-icons/gr'
@@ -15,7 +15,7 @@ import { TagIconMap } from '@/types/blog'
 const tagIcons: TagIconMap = {
   Actus: <Newspaper />,
   Android: <GrAndroid />,
-  Dev: <Terminal />,
+  Dev: <CodeXml />,
   DIX31: <Computer />,
   Hack: <Network />,
   Humour: <Smile />,
