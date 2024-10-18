@@ -7,7 +7,7 @@ import { SimpleBlogCardProps, TagCount } from '@/types/blog'
 import { BlogBody } from '@/components/BLOG/atoms/BlogBody'
 import { BlogFooter } from '@/components/BLOG/atoms/BlogFooter'
 import { BlogHeader } from '@/components/BLOG/atoms/BlogHeader'
-import { BlogSlide } from '@/components/BLOG/atoms/BlogSlide'
+import { BlogSlide } from '@/components/BLOG/molecules/BlogSlide'
 
 import { AnimatePresence, motion } from 'framer-motion'
 

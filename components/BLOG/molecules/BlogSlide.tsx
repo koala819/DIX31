@@ -1,24 +1,10 @@
 'use client'
 
-import { AiOutlineCodeSandbox } from 'react-icons/ai'
-import { BsFillEmojiSmileUpsideDownFill } from 'react-icons/bs'
-import {
-  FaAndroid,
-  FaGithub,
-  FaJsSquare,
-  FaRobot,
-  FaSearch,
-} from 'react-icons/fa'
-import { HiMiniHandThumbUp } from 'react-icons/hi2'
-import { IoMdRocket } from 'react-icons/io'
-import { MdComputer } from 'react-icons/md'
-import { SiHackaday } from 'react-icons/si'
-import { TiLightbulb } from 'react-icons/ti'
-
 import { useTranslations } from 'next-intl'
 
-import { TagCount, TagIconMap } from '@/types/blog'
+import { TagCount } from '@/types/blog'
 
+import TagIcons from '@/components/BLOG/atoms/TagIcons'
 import { Button } from '@/components/ui/button'
 
 import { motion } from 'framer-motion'
@@ -34,22 +20,6 @@ export function BlogSlide({
   onReset: () => void
 }) {
   const t = useTranslations('BlogSlide')
-
-  const tagIcons: TagIconMap = {
-    android: <FaAndroid />,
-    BestPracticesIT: <HiMiniHandThumbUp />,
-    IA: <FaRobot />,
-    DIX31: <MdComputer />,
-    git: <FaGithub />,
-    Github: <FaGithub />,
-    hack: <SiHackaday />,
-    humour: <BsFillEmojiSmileUpsideDownFill />,
-    IT: <AiOutlineCodeSandbox />,
-    JS: <FaJsSquare />,
-    SEO: <FaSearch />,
-    StarterPack: <IoMdRocket />,
-    tips: <TiLightbulb />,
-  }
 
   return (
     <motion.div
@@ -97,9 +67,7 @@ export function BlogSlide({
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <span className="text-blue-500 mr-2">
-                  {tagIcons[tagName] || (
-                    <span className="inline-block h-4 w-4" />
-                  )}
+                  <TagIcons tag={tagName} />
                 </span>
                 <span className="font-medium text-gray-700 dark:text-gray-300">
                   {tagName}
