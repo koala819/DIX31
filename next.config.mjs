@@ -7,8 +7,18 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/atom.xml',
-        destination: '/api/atom',
+        source: '/rss.xml',
+        destination: '/api/rss',
+        permanent: true,
+      },
+      {
+        source: '/feed',
+        destination: '/api/rss',
+        permanent: true,
+      },
+      {
+        source: '/feed.xml',
+        destination: '/api/rss',
         permanent: true,
       },
     ]
