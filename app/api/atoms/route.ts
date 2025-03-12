@@ -7,7 +7,7 @@ export async function GET() {
     const xml = await generateAtomFeed()
     return new NextResponse(xml, {
       headers: {
-        'Content-Type': 'application/xml',
+        'Content-Type': 'application/json',
       },
     })
   } catch (error) {
