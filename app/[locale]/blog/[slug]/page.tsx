@@ -84,7 +84,7 @@ export async function generateMetadata({
     title: title,
     description: description ? description.substring(0, 147) + '...' : '',
     alternates: {
-      canonical: `${process.env.CLIENT_URL}/${params.locale}/blog/${params.slug}`,
+      canonical: `${process.env.NEXT_PUBLIC_CLIENT_URL}/${params.locale}/blog/${params.slug}`,
     },
   }
 }

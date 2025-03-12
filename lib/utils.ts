@@ -36,7 +36,7 @@ export async function createMetadata({
   try {
     fileStats = await getFileStats(path)
     const t = await getTranslations({ locale, namespace })
-    const canonicalUrl = `${process.env.CLIENT_URL}/${locale}${path}`
+    const canonicalUrl = `${process.env.NEXT_PUBLIC_CLIENT_URL}/${locale}${path}`
 
     // Fonction pour formater les dates
     const formatDate = (date: string | Date | undefined) => {
@@ -83,7 +83,7 @@ export async function createMetadata({
         locale: locale === 'fr' ? 'fr_FR' : 'en_US',
         alternateLocale: locale === 'fr' ? 'en_US' : 'fr_FR',
         ...(imagePath && {
-          images: [`${process.env.CLIENT_URL}/${imagePath}`],
+          images: [`${process.env.NEXT_PUBLIC_CLIENT_URL}/${imagePath}`],
         }),
         ...(fileStats && {
           publishedTime: fileStats.dateCreated.toISOString(),
@@ -97,7 +97,7 @@ export async function createMetadata({
         title: t('twitterTitle') || '',
         description: t('twitterDescription') || '',
         ...(imagePath && {
-          images: [`${process.env.CLIENT_URL}/${imagePath}`],
+          images: [`${process.env.NEXT_PUBLIC_CLIENT_URL}/${imagePath}`],
         }),
       },
     }

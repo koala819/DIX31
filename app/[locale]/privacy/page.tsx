@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     'Découvrez comment DIX31.com protège et gère vos données personnelles. Lisez notre politique de confidentialité détaillée ici.',
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/protection`,
+    canonical: `${process.env.NEXT_PUBLIC_CLIENT_URL}/protection`,
   },
 }
 

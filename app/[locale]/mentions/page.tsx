@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Consultez les mentions légales de DIX31.com pour des informations sur notre politique de confidentialité, les cookies, et la propriété intellectuelle.',
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/mentions`,
+    canonical: `${process.env.NEXT_PUBLIC_CLIENT_URL}/mentions`,
   },
 }
 const Page = () => {

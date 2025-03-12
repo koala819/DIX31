@@ -29,7 +29,7 @@ const fontBody = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`${process.env.CLIENT_URL}`),
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_CLIENT_URL}`),
   alternates: {
     canonical: '/',
     languages: {

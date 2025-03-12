@@ -53,7 +53,7 @@ export default function Contact({ id }: { id?: string }) {
       body: JSON.stringify(data),
     }
 
-    fetch(`${process.env.CLIENT_URL}/api/mail`, options)
+    fetch(`${process.env.NEXT_PUBLIC_CLIENT_URL}/api/mail`, options)
       .then((response: any) => {
         if (response.status === 200) {
           toast.success('Votre message a bien été envoyé')
