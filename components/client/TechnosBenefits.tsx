@@ -8,7 +8,7 @@ const fadeInUp = {
   transition: { duration: 0.6 },
 }
 
-export default function NextjsBenefits({
+export default function TechnosBenefits({
   title,
   reasons,
 }: {

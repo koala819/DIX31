@@ -1,9 +1,9 @@
 import React from 'react'
 
-import ReactContent from '@/components/atoms/ReactContent'
+import ReactPage from '@/components/molecules/ReactPage'
 
 const Page = () => {
-  return <ReactContent />
+  return <ReactPage />
 }
 
 export default Page

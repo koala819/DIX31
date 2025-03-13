@@ -8,7 +8,7 @@ const fadeInUp = {
   transition: { duration: 0.6 },
 }
 
-export default function NextjsServices({
+export default function TechnoServices({
   websitesTitle,
   websitesDesc,
   appsTitle,

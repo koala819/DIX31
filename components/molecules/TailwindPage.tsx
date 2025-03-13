@@ -7,9 +7,9 @@ import TechnoServices from '@/components/client/TechnosServices'
 
 import { myXP } from '@/lib/calculateXp'
 
-export default function NextjsPage() {
+const TailwindPage: React.FC = () => {
   const experience = myXP()
-  const t = useTranslations('ContentNext')
+  const t = useTranslations('ContentTailwind')
   const introWithXp = t('intro', { years: experience })
 
   return (
@@ -18,8 +18,8 @@ export default function NextjsPage() {
         title={t('title')}
         intro={introWithXp}
         ctaText={t('dispositionLink')}
-        picture="/images/Nextjs.svg"
-        alt="Next.js logo"
+        picture="/images/Tailwindcss.svg"
+        alt="Tailwind CSS logo"
       />
 
       <TechnosBenefits
@@ -31,9 +31,9 @@ export default function NextjsPage() {
       />
 
       <TechnoServices
-        websitesTitle={t('nextWebsites')}
+        websitesTitle={t('tailwindWebsites')}
         websitesDesc={t('websitesDesc')}
-        appsTitle={t('nextApplications')}
+        appsTitle={t('tailwindApplications')}
         appsDesc={t('applicationsDesc')}
       />
 
@@ -46,3 +46,5 @@ export default function NextjsPage() {
     </div>
   )
 }
+
+export default TailwindPage

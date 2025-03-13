@@ -4,14 +4,18 @@ import Image from 'next/legacy/image'
 
 import { motion } from 'framer-motion'
 
-export default function NextjsHeader({
+export default function TechnosHeader({
   title,
   intro,
   ctaText,
+  picture,
+  alt,
 }: {
   title: string
   intro: string
   ctaText: string
+  picture: string
+  alt: string
 }) {
   return (
     <motion.div
@@ -21,10 +25,10 @@ export default function NextjsHeader({
       transition={{ duration: 0.5 }}
     >
       <Image
-        alt="Next.js logo"
+        alt={alt}
         width={200}
         height={200}
-        src="/images/Nextjs.svg"
+        src={picture}
         className="mx-auto mb-8"
       />
       <h1 className="text-4xl font-bold mb-4">{title}</h1>

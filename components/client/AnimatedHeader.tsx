@@ -1,8 +1,17 @@
 'use client'
 
+// components/privacy/AnimatedHeader.tsx
 import { motion } from 'framer-motion'
 
-export default function MentionsAnimated() {
+interface AnimatedHeaderProps {
+  title: string
+  subtitle: string
+}
+
+export default function AnimatedHeader({
+  title,
+  subtitle,
+}: AnimatedHeaderProps) {
   return (
     <motion.div
       className="text-center mb-16"
@@ -11,10 +20,10 @@ export default function MentionsAnimated() {
       transition={{ duration: 0.8 }}
     >
       <h1 className="text-4xl font-extrabold text-primary sm:text-5xl lg:text-6xl">
-        Mentions Légales
+        {title}
       </h1>
       <p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
-        Transparence et conformité au cœur de mes services
+        {subtitle}
       </p>
     </motion.div>
   )

@@ -9,7 +9,7 @@ const fadeInUp = {
   transition: { duration: 0.6 },
 }
 
-export default function NextjsContact({
+export default function TechnosContact({
   title,
   description,
   contactText,

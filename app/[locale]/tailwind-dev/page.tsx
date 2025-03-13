@@ -1,7 +1,7 @@
-import TailwindContent from '@/components/atoms/TailwindContent'
+import TailwindPage from '@/components/molecules/TailwindPage'
 
 const Page = () => {
-  return <TailwindContent />
+  return <TailwindPage />
 }
 
 export default Page
