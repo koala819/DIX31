@@ -61,6 +61,8 @@ const nextConfig = {
       { hostname: 'korben.info' },
       { hostname: 'images.unsplash.com' },
       { hostname: 'randomuser.me' },
+      { hostname: 'unsplash.com' },
+      { hostname: 'media2.giphy.com' },
     ],
   },
   typescript: {

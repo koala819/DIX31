@@ -2,19 +2,18 @@ import { Analytics } from '@vercel/analytics/react'
 import { Suspense } from 'react'
 
 import { Metadata } from 'next'
-import {NextIntlClientProvider, hasLocale} from 'next-intl';
-import {notFound} from 'next/navigation';
-import {routing} from '@/i18n/routing';
-
+import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { VisualEditing } from 'next-sanity'
 import { Inter } from 'next/font/google'
 import { draftMode } from 'next/headers'
+import { notFound } from 'next/navigation'
 
 import { FooterWrapper } from '@/components/client/FooterWrapper'
 import { NavbarWrapper } from '@/components/client/NavbarWrapper'
 import { ThemeProviderWrapper } from '@/components/client/ThemeProviderWrapper'
 
+import { routing } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -62,17 +61,16 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{locale: string}>;
+  params: Promise<{ locale: string }>
 }) {
   const messages = await getMessages()
   const isDraftMode = draftMode().isEnabled
 
   // Ensure that the incoming `locale` is valid
-  const {locale} = await params;
+  const { locale } = await params
   if (!hasLocale(routing.locales, locale)) {
-    notFound();
+    notFound()
   }
-
 
   return (
     <html lang={locale} suppressHydrationWarning>

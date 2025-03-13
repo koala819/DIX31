@@ -21,11 +21,11 @@
   }
 
   h1 {
-    @apply text-xxl sm:text-xxxl leading-tight;
+    @apply text-xxl leading-tight sm:text-xxxl;
   }
 
   h2 {
-    @apply sm:text-xxl text-xl sm:font-normal;
+    @apply text-xl sm:text-xxl sm:font-normal;
   }
 
   h3 {
