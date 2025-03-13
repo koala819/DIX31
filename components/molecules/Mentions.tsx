@@ -3,7 +3,7 @@
 import LegalCard from '@/components/atoms/LegalCard'
 import LegalItem from '@/components/atoms/LegalItem'
 
-import { Link } from '@/i18n/routing'
+import { Link } from '@/i18n/navigation'
 import { motion } from 'framer-motion'
 
 const fadeInUp = {

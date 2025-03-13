@@ -1,5 +1,5 @@
 import Image from 'next/legacy/image'
-import { Link } from '@/i18n/routing'
+import { Link } from '@/i18n/navigation'
 import { getImageUrl } from '@/lib/Blog/sanity/client' // Importer la fonction globale getImageUrl
 
 interface SimilarPostsListProps {

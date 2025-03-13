@@ -10,7 +10,7 @@ import {
   CardHeader,
 } from '@/components/ui/card'
 
-import { Link } from '@/i18n/routing'
+import { Link } from '@/i18n/navigation'
 
 export const Projects = () => {
   const t = useTranslations('Projects')

@@ -13,7 +13,7 @@ import { ModeToggle as Toggle } from '@/components/atoms/Toggle'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
-import { Link } from '@/i18n/routing'
+import { Link } from '@/i18n/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 
 export default function Navbar() {

@@ -12,7 +12,7 @@ import { BlogGridProps } from '@/types/blog'
 import CategoryFilter from '@/components/BLOG/atoms/CategoryFilter'
 import { Button } from '@/components/ui/button'
 
-import { Link } from '@/i18n/routing'
+import { Link } from '@/i18n/navigation'
 import { format, parseISO } from 'date-fns'
 import { enUS, fr } from 'date-fns/locale'
 

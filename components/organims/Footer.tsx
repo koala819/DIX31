@@ -1,7 +1,7 @@
 import { Linkedin, Mail } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import FooterLink from '@/components/atoms/FooterLink'
-import { Link } from '@/i18n/routing'
+import { Link } from '@/i18n/navigation'
 import DynamicLoadImage from '@/components/client/DynamicLoadImage'
 import  HireMeBtn  from '@/components/client/HireMeBtn'
 

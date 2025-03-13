@@ -14,7 +14,7 @@ import SimilarPostsList from '@/components/BLOG/atoms/SimilarPostsList'
 import { CustomPortableTextComponents } from '@/components/BLOG/molecules/CustomPortableTextComponents'
 import { Button } from '@/components/ui/button'
 
-import { Link } from '@/i18n/routing'
+import { Link } from '@/i18n/navigation'
 import { estimateReadTime } from '@/lib/Blog/utils'
 import { format, parseISO } from 'date-fns'
 import { enUS, fr } from 'date-fns/locale'

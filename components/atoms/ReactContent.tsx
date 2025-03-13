@@ -5,7 +5,7 @@ import { useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/legacy/image'
 
-import { Link } from '@/i18n/routing'
+import { Link } from '@/i18n/navigation'
 import { myXP } from '@/lib/calculateXp'
 import { motion } from 'framer-motion'
 
