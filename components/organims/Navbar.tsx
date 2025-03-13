@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 
-import HireMeBtn from '@/components/atoms/HireMeBtn'
+import HireMeBtn from '@/components/client/HireMeBtn'
 import LangSwitcher from '@/components/atoms/LangSwitcher'
 import NavbarItem from '@/components/atoms/NavbarItem'
 import { ModeToggle as Toggle } from '@/components/atoms/Toggle'

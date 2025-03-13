@@ -1,41 +1,12 @@
-'use client'
-
 import { Linkedin, Mail } from 'lucide-react'
-import { useMemo } from 'react'
-
 import { useTranslations } from 'next-intl'
-import dynamic from 'next/dynamic'
-
 import FooterLink from '@/components/atoms/FooterLink'
-import HireMeBtn from '@/components/atoms/HireMeBtn'
-
 import { Link } from '@/i18n/routing'
+import DynamicLoadImage from '@/components/client/DynamicLoadImage'
+import  HireMeBtn  from '@/components/client/HireMeBtn'
 
 export default function Footer() {
   const t = useTranslations('Footer')
-
-  const WithCustomLoading = dynamic(
-    () => import('@/components/atoms/LoadImage'),
-    {
-      loading: () => (
-        <div className="w-24 h-24 lg:w-32 lg:h-32 bg-gray-300 animate-pulse rounded-xl"></div>
-      ),
-    },
-  )
-
-  const MemoizedImage = useMemo(
-    () => (
-      <WithCustomLoading
-        src="/images/Xavier-GENOLHAC.jpg"
-        alt="Photo de Xavier"
-        fill
-        className="rounded-xl object-cover border-4 border-white dark:border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105"
-        sizes="(max-width: 768px) 96px, 128px"
-        priority
-      />
-    ),
-    [],
-  )
 
   return (
     <footer className="bg-gray-300 dark:bg-gray-900 pt-16 w-full relative">
@@ -43,7 +14,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="relative">
             <div className="absolute -top-32 left-0 w-24 h-24 lg:w-32 lg:h-32">
-              {MemoizedImage}
+              <DynamicLoadImage
+                src="/images/Xavier-GENOLHAC.jpg"
+                alt="Photo de Xavier"
+                fill
+                className="rounded-xl object-cover border-4 border-white dark:border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105"
+                sizes="(max-width: 768px) 96px, 128px"
+                priority
+              />
             </div>
             <div className="grid gap-4 mt-16">
               <div>

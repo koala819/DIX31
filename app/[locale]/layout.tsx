@@ -1,5 +1,5 @@
 import { Analytics } from '@vercel/analytics/react'
-import { Suspense, lazy } from 'react'
+import { Suspense } from 'react'
 
 import { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
@@ -8,13 +8,13 @@ import { VisualEditing } from 'next-sanity'
 import { Inter } from 'next/font/google'
 import { draftMode } from 'next/headers'
 
-import { ThemeProvider } from '@/app/provider'
+import { FooterWrapper } from '@/components/client/FooterWrapper'
+import { NavbarWrapper } from '@/components/client/NavbarWrapper'
+import { ThemeProviderWrapper } from '@/components/client/ThemeProviderWrapper'
+
 import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-
-const Navbar = lazy(() => import('@/components/organims/Navbar'))
-const Footer = lazy(() => import('@/components/organims/Footer'))
 
 const fontHeading = Inter({
   subsets: ['latin'],
@@ -62,6 +62,7 @@ export default async function RootLayout({
   params: { locale: string }
 }) {
   const messages = await getMessages()
+  const isDraftMode = draftMode().isEnabled
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -72,7 +73,7 @@ export default async function RootLayout({
           fontBody.variable,
         )}
       >
-        {draftMode().isEnabled && (
+        {isDraftMode && (
           <a
             className="fixed right-0 bottom-0 bg-blue-500 text-white p-4 m-4"
             href="/api/draft-mode/disable"
@@ -80,33 +81,31 @@ export default async function RootLayout({
             Disable preview mode
           </a>
         )}
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+
+        <ThemeProviderWrapper>
           <NextIntlClientProvider messages={messages}>
             <Suspense fallback={<div className="navbar-height" />}>
-              <Navbar />
+              <NavbarWrapper />
             </Suspense>
+
             <div className="min-h-screen flex flex-col">
               <main className="flex-1 pt-navbar">
                 <div className="w-full mx-auto">
                   <div className="flex flex-col min-w-0 break-words w-full rounded-lg bg-gray-50 dark:bg-slate-800 border-0 pb-16 md:pb-24">
                     {children}
-                    {draftMode().isEnabled && <VisualEditing />}
+                    {isDraftMode && <VisualEditing />}
                     <SpeedInsights />
                     <Analytics />
                   </div>
                 </div>
               </main>
+
               <Suspense fallback={<div>Chargement ...</div>}>
-                <Footer />
+                <FooterWrapper />
               </Suspense>
             </div>
           </NextIntlClientProvider>
-        </ThemeProvider>
+        </ThemeProviderWrapper>
       </body>
     </html>
   )

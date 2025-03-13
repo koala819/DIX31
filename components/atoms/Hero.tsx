@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 
 import { useTranslations } from 'next-intl'
 
-import HireMeBtn from './HireMeBtn'
+import HireMeBtn from '../client/HireMeBtn'
 
 import { myXP } from '@/lib/calculateXp'
 
