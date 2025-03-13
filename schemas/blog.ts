@@ -1,5 +1,3 @@
-import { CodeInput } from '@sanity/code-input'
-
 const blogSchema = {
   name: 'blog',
   type: 'document',
