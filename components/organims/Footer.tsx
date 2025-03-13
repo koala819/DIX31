@@ -1,12 +1,16 @@
 import { Linkedin, Mail } from 'lucide-react'
+
 import { useTranslations } from 'next-intl'
+
 import FooterLink from '@/components/atoms/FooterLink'
-import { Link } from '@/i18n/navigation'
 import DynamicLoadImage from '@/components/client/DynamicLoadImage'
-import  HireMeBtn  from '@/components/client/HireMeBtn'
+import HireMeBtn from '@/components/client/HireMeBtn'
+
+import { Link } from '@/i18n/navigation'
 
 export default function Footer() {
   const t = useTranslations('Footer')
+  const t2 = useTranslations()
 
   return (
     <footer className="bg-gray-300 dark:bg-gray-900 pt-16 w-full relative">
@@ -33,7 +37,7 @@ export default function Footer() {
                 </p>
               </div>
               <div className="flex items-center space-x-4">
-                <HireMeBtn />
+                <HireMeBtn buttonText={t2('Btn-hire')} />
                 <Link
                   href="mailto:contact@dix31.com"
                   className="text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-300"

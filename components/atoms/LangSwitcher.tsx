@@ -1,32 +1,36 @@
 'use client'
 
 import { useLocale } from 'next-intl'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+
+import DynamicLoadImage from '@/components/client/DynamicLoadImage'
 
 import frFlag from '@/public/images/flags/france.svg'
 import gbFlag from '@/public/images/flags/uk.svg'
 
 type Language = 'fr' | 'en'
-
 type LanguageInfo = {
-  flag: typeof frFlag | typeof gbFlag
+  flag: string
   alt: string
 }
 
-const LangSwitcher = ({ isScrolled }: { isScrolled?: boolean }) => {
+interface LangSwitcherProps {
+  isScrolled?: boolean
+}
+
+export default function LangSwitcher({ isScrolled }: LangSwitcherProps) {
   const pathname = usePathname()
   const locale = useLocale() as Language
 
   const languages: Record<Language, LanguageInfo> = {
-    fr: { flag: gbFlag, alt: 'UK flag' },
-    en: { flag: frFlag, alt: 'Drapeau français' },
+    fr: { flag: gbFlag.src, alt: 'UK flag' },
+    en: { flag: frFlag.src, alt: 'Drapeau français' },
   }
 
   const toggleLanguage = () => {
     const newLocale: Language = locale === 'en' ? 'fr' : 'en'
     const newPath = pathname.replace(`/${locale}`, `/${newLocale}`)
-    window.location.href = newPath // Force a full page reload
+    window.location.href = newPath // Force un rechargement complet de la page
   }
 
   return (
@@ -35,7 +39,7 @@ const LangSwitcher = ({ isScrolled }: { isScrolled?: boolean }) => {
       className="focus:outline-none transition-transform duration-200 hover:scale-110"
       title={locale === 'en' ? 'Passer en français' : 'Switch to English'}
     >
-      <Image
+      <DynamicLoadImage
         src={languages[locale].flag}
         width={isScrolled ? 25 : 30}
         height={isScrolled ? 25 : 30}
@@ -45,5 +49,3 @@ const LangSwitcher = ({ isScrolled }: { isScrolled?: boolean }) => {
     </button>
   )
 }
-
-export default LangSwitcher

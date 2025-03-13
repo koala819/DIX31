@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 
 import { useTranslations } from 'next-intl'
 
-import HireMeBtn from '../client/HireMeBtn'
+import HireMeBtn from '@/components/client/HireMeBtn'
 
 import { myXP } from '@/lib/calculateXp'
 
@@ -12,6 +12,7 @@ export default function Hero() {
   const experience = useMemo(() => myXP(), [])
 
   const t = useTranslations('Hero')
+  const t2 = useTranslations()
 
   const profileItems = [
     { label: t('experience'), value: `${experience} ${t('years')}` },
@@ -30,7 +31,7 @@ export default function Hero() {
         aria-labelledby="hero-section"
       >
         <div className="grid lg:grid-cols-[auto_1fr] items-center gap-6">
-          <HireMeBtn />
+          <HireMeBtn buttonText={t2('Btn-hire')} />
           <div className="grid lg:grid-cols-4 gap-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 transition-all duration-300">
             {profileItems.map((item, index) => (
               <article
