@@ -1,23 +1,21 @@
 import React from 'react'
 
-import Image from 'next/image'
 import Link from 'next/link'
+
+import DynamicLoadImage from '@/components/client/DynamicLoadImage'
 
 const NotFound = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 px-4 py-10">
       <div className="max-w-2xl w-full text-center">
-        {/* <div className="mb-8 flex justify-center"> */}
         <div className="my-8 relative h-64 rounded-lg overflow-hidden shadow-xl">
-          <Image
+          <DynamicLoadImage
             src="https://images.unsplash.com/photo-1494995971821-13e351803d47"
             alt="Alone"
             fill
-            style={{ objectFit: 'cover' }}
-            className="transition-transform hover:scale-105 duration-300"
+            className="object-cover transition-transform hover:scale-105 duration-300"
           />
         </div>
-        {/* </div> */}
 
         <h1 className="text-5xl md:text-7xl font-bold text-gray-800 dark:text-white mb-6">
           <span className="text-blue-500">404</span>
@@ -62,11 +60,11 @@ const NotFound = () => {
         </ul>
 
         <div className="my-8 relative h-64 rounded-lg overflow-hidden shadow-xl">
-          <Image
+          <DynamicLoadImage
             src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmh6aWhkbzJ0OWJtM2RzOHZ3NnE5NjI1cDRoNnNrOXdnbGoyZmF4ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6heBQSjt2IoA8/giphy.gif"
-            fill
+            fill={true}
             alt="Person looking confused"
-            className="h-64 rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg object-cover"
           />
         </div>
 

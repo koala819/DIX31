@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { Projects } from '@/components/atoms/Projects'
+import ProjectsContainer from '@/components/organims/ProjectsContainer'
 
 import { createMetadata } from '@/lib/utils'
 
@@ -17,5 +17,5 @@ export async function generateMetadata({
 }
 
 export default function ProjectsPage() {
-  return <Projects />
+  return <ProjectsContainer />
 }

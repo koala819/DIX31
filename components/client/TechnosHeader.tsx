@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/legacy/image'
+import DynamicLoadImage from '@/components/client/DynamicLoadImage'
 
 import { motion } from 'framer-motion'
 
@@ -24,13 +24,15 @@ export default function TechnosHeader({
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <Image
-        alt={alt}
-        width={200}
-        height={200}
-        src={picture}
-        className="mx-auto mb-8"
-      />
+      <div className="mx-auto mb-8 w-[200px] h-[200px] relative">
+        <DynamicLoadImage
+          alt={alt}
+          fill
+          src={picture}
+          className="mx-auto"
+          priority={true} // Ajout de priority car c'est une image dans la partie visible
+        />
+      </div>
       <h1 className="text-4xl font-bold mb-4">{title}</h1>
       <p className="text-xl text-muted-foreground">{intro}</p>
       <a
