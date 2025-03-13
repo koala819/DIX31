@@ -34,10 +34,48 @@ const blogSchema = {
       type: 'datetime',
       title: 'Date',
     },
+    // {
+    //   name: 'titleImagebyCloudinary',
+    //   title: 'Image Titre avec Cloudinary',
+    //   type: 'cloudinaryImage',
+    // },
+    // {
+    //   name: 'titleImage',
+    //   type: 'image',
+    //   title: 'Image du titre',
+    //   options: {
+    //     hotspot: true,
+    //   },
+    //   fields: [
+    //     {
+    //       name: 'alt',
+    //       type: 'string',
+    //       title: 'Texte Alternatif',
+    //       description: 'Important pour le SEO et l’accessibilité.',
+    //       validation: (Rule: any) =>
+    //         Rule.error('Vous devez remplir le texte alternatif.').required(),
+    //     },
+    //   ],
+    // },
+    {
+      name: 'imageSource',
+      type: 'string',
+      title: 'Source d\'image',
+      description: 'Choisissez la source de l\'image à utiliser',
+      options: {
+        list: [
+          { title: 'Cloudinary', value: 'cloudinary' },
+          { title: 'Unsplash', value: 'unsplash' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'unsplash', // Par défaut, utiliser Unsplash
+    },
     {
       name: 'titleImagebyCloudinary',
       title: 'Image Titre avec Cloudinary',
       type: 'cloudinaryImage',
+      hidden: ({ parent }: { parent: { imageSource: string } }) => parent?.imageSource !== 'cloudinary',
     },
     {
       name: 'titleImage',
@@ -46,12 +84,13 @@ const blogSchema = {
       options: {
         hotspot: true,
       },
+      hidden: ({ parent }: { parent: { imageSource: string } }) => parent?.imageSource !== 'unsplash',
       fields: [
         {
           name: 'alt',
           type: 'string',
           title: 'Texte Alternatif',
-          description: 'Important pour le SEO et l’accessibilité.',
+          description: "Important pour le SEO et l'accessibilité.",
           validation: (Rule: any) =>
             Rule.error('Vous devez remplir le texte alternatif.').required(),
         },

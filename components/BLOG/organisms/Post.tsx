@@ -15,20 +15,20 @@ import { CustomPortableTextComponents } from '@/components/BLOG/molecules/Custom
 import { Button } from '@/components/ui/button'
 
 import { Link } from '@/i18n/routing'
-import { urlFor } from '@/lib/Blog/sanity/client'
 import { estimateReadTime } from '@/lib/Blog/utils'
 import { format, parseISO } from 'date-fns'
 import { enUS, fr } from 'date-fns/locale'
 
 interface PostProps {
-  post: fullBlog
+  post: fullBlog & {
+    coverImage?: string; // Nouvelle propriété ajoutée par notre transformation
+  }
   similarPosts: {
     currentSlug: string
     titleFr: string
     titleEn: string
     date: string
-    titleImage: any
-    titleImagebyCloudinary: any
+    coverImage?: string; // Nouvelle propriété ajoutée par notre transformation
   }[]
 }
 
@@ -52,7 +52,7 @@ export const Post: React.FC<PostProps> = ({ post, similarPosts }) => {
     <div className="min-h-screen">
       <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
         <PostHeader
-          titleImage={urlFor(post.titleImagebyCloudinary)}
+          titleImage={post.coverImage || '/images/default_product.png'} // Utiliser la propriété coverImage au lieu de urlFor
           title={title}
           shortDescription={shortDescription}
           date={formatDate(post.date)}

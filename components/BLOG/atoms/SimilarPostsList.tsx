@@ -1,6 +1,6 @@
 import Image from 'next/legacy/image'
-
 import { Link } from '@/i18n/routing'
+import { getImageUrl } from '@/lib/Blog/sanity/client' // Importer la fonction globale getImageUrl
 
 interface SimilarPostsListProps {
   locale: string
@@ -13,8 +13,10 @@ type Post = {
   titleFr: string
   titleEn: string
   date: string
-  titleImage: any
-  titleImagebyCloudinary: any
+  titleImage?: any
+  titleImagebyCloudinary?: any
+  imageSource?: string  // Nouvelle propriété
+  coverImage?: string   // Nouvelle propriété optionnelle qui pourrait être présente
 }
 
 const SimilarPostsList: React.FC<SimilarPostsListProps> = ({
@@ -22,14 +24,15 @@ const SimilarPostsList: React.FC<SimilarPostsListProps> = ({
   locale,
   formatDate,
 }) => {
-  const getImageUrl = (post: Post) => {
-    if (post.titleImagebyCloudinary?.url) {
-      return post.titleImagebyCloudinary.url
+  // Fonction pour obtenir l'URL de l'image
+  // Si coverImage existe déjà (prétraitée), l'utiliser
+  // Sinon, utiliser la fonction getImageUrl
+  const getPostImageUrl = (post: Post) => {
+    if (post.coverImage) {
+      return post.coverImage;
     }
-    if (post.titleImage) {
-      return post.titleImage
-    }
-    return '/placeholder-image.jpg' // Assurez-vous d'avoir une image par défaut
+
+    return getImageUrl(post);
   }
 
   return (
@@ -42,7 +45,7 @@ const SimilarPostsList: React.FC<SimilarPostsListProps> = ({
           >
             <div className="flex-shrink-0 w-16 h-16 relative">
               <Image
-                src={getImageUrl(similarPost)}
+                src={getPostImageUrl(similarPost)}
                 alt={similarPost.titleFr || similarPost.titleEn}
                 layout="fill"
                 objectFit="cover"

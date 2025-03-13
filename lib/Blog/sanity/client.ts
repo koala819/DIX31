@@ -1,7 +1,5 @@
 'server-only'
-
 import { type QueryParams, createClient } from 'next-sanity'
-
 import { apiVersion, basePath, dataset, projectId } from '@/lib/Blog/sanity/api'
 import imageUrlBuilder from '@sanity/image-url'
 
@@ -31,10 +29,36 @@ export function getClient(preview?: { token: string }) {
 
 const builder = imageUrlBuilder(client)
 
+// Fonction pour obtenir l'URL d'image en fonction de la source choisie
+export function getImageUrl(blog: any): string {
+  if (!blog) {
+    return '/images/default_product.png'
+  }
+
+  try {
+    // Si la source d'image est Cloudinary et qu'une image Cloudinary existe
+    if (blog.imageSource === 'cloudinary' && blog.titleImagebyCloudinary) {
+      return blog.titleImagebyCloudinary.url || '/images/default_product.png'
+    }
+
+    // Sinon, utiliser l'image Sanity par défaut
+    if (blog.titleImage) {
+      return builder.image(blog.titleImage).url()
+    }
+
+    // Si aucune des deux images n'est disponible, revenir à l'image par défaut
+    return '/images/default_product.png'
+  } catch (error) {
+    console.error('Erreur lors de la récupération de l\'URL de l\'image:', error)
+    return '/images/default_product.png'
+  }
+}
+
 export function urlFor(source: any) {
   if (!source) {
     return '/images/default_product.png'
   }
+
   try {
     return source._type === 'cloudinaryImage'
       ? source.url

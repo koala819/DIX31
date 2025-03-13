@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-
 import { Article, SimpleBlogCardProps } from '@/types/blog'
-
 import Blog from '@/components/BLOG/molecules/Blog'
-
 import { sanityFetch } from '@/lib/Blog/sanity/client'
 import { estimateReadTime } from '@/lib/Blog/utils'
 import { createMetadata } from '@/lib/utils'
+import { getImageUrl } from '@/lib/Blog/sanity/client' // Importer la nouvelle fonction
 
 export async function generateMetadata({
   params: { locale },
@@ -30,6 +28,7 @@ async function getPosts() {
     "currentSlug": slug.current,
     titleImage,
     titleImagebyCloudinary,
+    imageSource,
     "tags": tags[]->{ name },
     contentFr
   }`
@@ -55,8 +54,8 @@ function transformPostsToArticles(
           : post.shortDescriptionFr ||
             post.shortDescriptionEn ||
             'No description available',
-      coverImage:
-        post.titleImagebyCloudinary?.url || '/images/default-cover.jpg',
+      // Utiliser la nouvelle fonction getImageUrl pour déterminer quelle image afficher
+      coverImage: getImageUrl(post) || '/images/default-cover.jpg',
       date: post.date || new Date().toISOString().split('T')[0],
       categories: post.tags?.map((tag) => tag.name) || ['Uncategorized'],
       readTime: post.contentFr ? estimateReadTime(post.contentFr) : 0,
