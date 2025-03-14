@@ -29,7 +29,7 @@ export default function ProfileClient({
           fill
           className="rounded-xl object-cover border-2 border-gray-300"
           sizes="(max-width: 768px) 160px, 192px"
-          priority
+          belowFold={true}
         />
       </div>
       <div

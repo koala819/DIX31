@@ -9,6 +9,7 @@ export default function LoadImage({
   sizes,
   height,
   width,
+  loading = 'eager',
 }: {
   alt: string
   className?: string
@@ -18,6 +19,7 @@ export default function LoadImage({
   sizes?: string
   height?: number
   width?: number
+  loading?: 'eager' | 'lazy'
 }) {
   const shimmer = (w: number, h: number) => `
     <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -52,6 +54,7 @@ export default function LoadImage({
       priority={priority}
       src={src}
       sizes={sizes}
+      loading={loading}
       {...imageProps}
     />
   )
