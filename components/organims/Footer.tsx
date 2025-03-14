@@ -23,8 +23,8 @@ export default function Footer() {
                 alt="Photo de Xavier"
                 fill
                 className="rounded-xl object-cover border-4 border-white dark:border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105"
-                sizes="(max-width: 768px) 96px, 128px"
-                priority
+                sizes="128px"
+                belowFold={true}
               />
             </div>
             <div className="grid gap-4 mt-16">

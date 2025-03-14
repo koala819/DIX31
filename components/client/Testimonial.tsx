@@ -30,8 +30,8 @@ export default function TestimonialClient({
             alt={testimonial.imgAlt}
             fill
             className="rounded-full object-cover"
-            sizes="(max-width: 768px) 96px, 112px"
-            priority
+            sizes="128px"
+            belowFold={true}
           />
         </div>
         <div>

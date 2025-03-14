@@ -39,7 +39,7 @@ export default function CareerClient({
               fill
               className="object-contain transition-transform duration-300 hover:scale-105"
               sizes="(max-width: 768px) 160px, 192px"
-              priority
+              belowFold={true}
             />
             <figcaption id={`image-${index}-caption`} className="sr-only">
               {image.alt}
