@@ -81,8 +81,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
-        heading: ['var(--font-heading)', ...fontFamily.sans],
-        body: ['var(--font-body)', ...fontFamily.sans],
+        heading: ['var(--font-inter)'],
+        body: ['var(--font-inter)'],
       },
       fontSize: {
         base: '1rem',

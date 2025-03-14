@@ -18,16 +18,11 @@ import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
-const fontHeading = Inter({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-heading',
-})
-
-const fontBody = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-body',
+  variable: '--font-sans',
+  weight: ['400', '500', '700'], // Specify only the weights you need
 })
 
 export const metadata: Metadata = {
@@ -77,8 +72,7 @@ export default async function RootLayout({
       <body
         className={cn(
           'antialiased bg-background text-foreground',
-          fontHeading.variable,
-          fontBody.variable,
+          inter.variable,
         )}
       >
         {isDraftMode && (
