@@ -1,14 +1,16 @@
 import { Suspense } from 'react'
+
 import { useTranslations } from 'next-intl'
-import Career from '@/components/atoms/Career'
-import FAQ from '@/components/atoms/Faq'
-import IdeaToLaunchSteps from '@/components/atoms/IdeaToLaunchSteps'
-import Services from '@/components/atoms/Services'
-import Contact from '@/components/molecules/Contact'
-import Testimonial from '@/components/molecules/Testimonial'
+
 import { ScrollToSection } from '@/components/client/ScrollToSection'
-import { DynamicHero } from '@/components/client/Hero'
-import { DynamicProfile } from '@/components/client/Profile'
+import CareerWrapper from '@/components/molecules/WrapperCareer'
+import ContactWrapper from '@/components/molecules/WrapperContact'
+import FAQWrapper from '@/components/molecules/WrapperFAQ'
+import HeroWrapper from '@/components/molecules/WrapperHero'
+import IdeaToLaunchStepsWrapper from '@/components/molecules/WrapperIdeaToLaunchSteps'
+import ProfileWrapper from '@/components/molecules/WrapperProfile'
+import ServicesWrapper from '@/components/molecules/WrapperServices'
+import TestimonialWrapper from '@/components/molecules/WrapperTestimonial'
 
 export const Homepage = () => {
   const t = useTranslations('ContentNext')
@@ -17,7 +19,15 @@ export const Homepage = () => {
     <main className="container space-y-12">
       <ScrollToSection />
 
-      <DynamicHero />
+      <Suspense
+        fallback={
+          <div role="alert" aria-busy="true">
+            {t('loading')}
+          </div>
+        }
+      >
+        <HeroWrapper />
+      </Suspense>
 
       <Suspense
         fallback={
@@ -26,26 +36,26 @@ export const Homepage = () => {
           </div>
         }
       >
-        <DynamicProfile />
+        <ProfileWrapper />
       </Suspense>
 
-      <Career />
+      <CareerWrapper />
 
-      <Testimonial user="Joge" />
+      <TestimonialWrapper user="Joge" />
 
-      <Services />
+      <ServicesWrapper />
 
-      <Testimonial user="Sandrine" />
+      <TestimonialWrapper user="Sandrine" />
 
-      <IdeaToLaunchSteps />
+      <IdeaToLaunchStepsWrapper />
 
-      <Testimonial user="Pascal" />
+      <TestimonialWrapper user="Pascal" />
 
-      <Contact id="contact" />
+      <ContactWrapper id="contact" />
 
-      <Testimonial user="Sid" />
+      <TestimonialWrapper user="Sid" />
 
-      <FAQ />
+      <FAQWrapper />
     </main>
   )
 }

@@ -1,39 +1,30 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
-import dynamic from 'next/dynamic'
+import DynamicLoadImage from './DynamicLoadImage'
 
-const WithCustomLoading = dynamic(
-  () => import('@/components/atoms/LoadImage'),
-  {
-    loading: () => <div>Chargement ...</div>,
-  },
-)
+interface CareerClientProps {
+  translations: {
+    title: string
+    description: string
+  }
+  companies: Array<{
+    src: string
+    alt: string
+  }>
+}
 
-const Career = () => {
-  const t = useTranslations('Career')
-
-  const companies = [
-    { src: '/images/KillBills.jpeg', alt: 'Logo de KillBils' },
-    { src: '/images/LoopSider.jpeg', alt: 'Logo de Loopsider' },
-    { src: '/images/Sopra-Steria.png', alt: 'Logo de Sopra Steria' },
-    { src: '/images/Airbus.webp', alt: 'Logo de Airbus' },
-    {
-      src: '/images/Mosquee-Colomiers.jpg',
-      alt: 'Logo de la mosquée de Colomiers',
-    },
-    {
-      src: '/images/BonheurSurSeine_logo.png',
-      alt: 'Logo de Bonheur Sur Seine',
-    },
-  ]
+export default function CareerClient({
+  translations,
+  companies,
+}: CareerClientProps) {
+  const t = translations
 
   return (
     <section aria-labelledby="career-heading" className="career-section">
       <header>
-        <h2 id="career-heading">{t('title')}</h2>
+        <h2 id="career-heading">{t.title}</h2>
       </header>
-      <p>{t('description')}</p>
+      <p>{t.description}</p>
       <div className="flex flex-col lg:flex-row flex-wrap w-full items-center justify-center p-4 rounded-lg gap-4 mt-8">
         {companies.map((image, index) => (
           <figure
@@ -42,7 +33,7 @@ const Career = () => {
             role="group"
             aria-labelledby={`image-${index}-caption`}
           >
-            <WithCustomLoading
+            <DynamicLoadImage
               src={image.src}
               alt={image.alt}
               fill
@@ -59,5 +50,3 @@ const Career = () => {
     </section>
   )
 }
-
-export default Career

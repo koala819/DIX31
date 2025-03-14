@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl'
+'use client'
 
 import {
   Accordion,
@@ -8,21 +8,21 @@ import {
 } from '@/components/ui/accordion'
 import { Card, CardContent } from '@/components/ui/card'
 
-export default function FAQ() {
-  const t = useTranslations('FAQ')
-  const faqData = [
-    { question: t('One.question'), answer: t('One.answer') },
-    { question: t('Two.question'), answer: t('Two.answer') },
-    { question: t('Three.question'), answer: t('Three.answer') },
-    { question: t('Four.question'), answer: t('Four.answer') },
-    { question: t('Five.question'), answer: t('Five.answer') },
-    { question: t('Six.question'), answer: t('Six.answer') },
-  ]
+interface FAQItem {
+  question: string
+  answer: string
+}
 
+interface FAQClientProps {
+  title: string
+  faqData: FAQItem[]
+}
+
+export default function FAQClient({ title, faqData }: FAQClientProps) {
   return (
-    <div className="w-full  mx-auto mt-8 ">
+    <div className="w-full mx-auto mt-8">
       <h2 className="text-3xl font-bold mb-6 text-center dark:text-gray-100">
-        {t('title')}
+        {title}
       </h2>
       <Card className="overflow-hidden bg-white dark:bg-gray-800 shadow-lg">
         <Accordion type="single" collapsible className="w-full">

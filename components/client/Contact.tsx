@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 
-import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
@@ -15,10 +14,24 @@ import { Textarea } from '@/components/ui/textarea'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
-export default function Contact({ id }: { id?: string }) {
-  const [hideForm, setHideForm] = useState(false)
+interface ContactFormProps {
+  id?: string
+  translations: {
+    title: string
+    thx: string
+    description: string
+    confirmation: string
+    name: string
+    email: string
+    message: string
+    button: string
+    or: string
+    phone: string
+  }
+}
 
-  const t = useTranslations('Contact')
+export default function ContactForm({ id, translations }: ContactFormProps) {
+  const [hideForm, setHideForm] = useState(false)
 
   const schema = yup.object().shape({
     email: yup
@@ -67,11 +80,13 @@ export default function Contact({ id }: { id?: string }) {
       })
   }
 
+  const t = translations
+
   return (
     <section aria-labelledby="contact-title">
-      <form id="contact" onSubmit={handleSubmit(handleSendMail)}>
+      <form id={id} onSubmit={handleSubmit(handleSendMail)}>
         <h2 id="contact-title" className="pb-2 mb-2">
-          {!hideForm ? t('title') : t('thx')}
+          {!hideForm ? t.title : t.thx}
         </h2>
         {!hideForm && (
           <div className="h-1 rounded overflow-hidden">
@@ -81,13 +96,13 @@ export default function Contact({ id }: { id?: string }) {
         <p
           className={`${!hideForm ? 'leading-relaxed mb-5 mt-2' : 'text-center'}`}
         >
-          {!hideForm ? t('description') : t('confirmation')}
+          {!hideForm ? t.description : t.confirmation}
         </p>
         {!hideForm && (
           <>
             <div className="relative mb-4">
               <Label htmlFor="first_name">
-                <h3>{t('name')}</h3>
+                <h3>{t.name}</h3>
               </Label>
               <Controller
                 name="first_name"
@@ -114,7 +129,7 @@ export default function Contact({ id }: { id?: string }) {
             </div>
             <div className="relative mb-4">
               <Label htmlFor="email">
-                <h3>{t('email')}</h3>
+                <h3>{t.email}</h3>
               </Label>
               <Controller
                 name="email"
@@ -141,7 +156,7 @@ export default function Contact({ id }: { id?: string }) {
             </div>
             <div className="relative mb-4">
               <Label htmlFor="msg">
-                <h3>{t('message')}</h3>
+                <h3>{t.message}</h3>
               </Label>
               <Controller
                 name="msg"
@@ -164,12 +179,12 @@ export default function Contact({ id }: { id?: string }) {
               )}
             </div>
             <div className="flex justify-center items-center">
-              <Button color="primary" type="submit" aria-label={t('button')}>
-                {t('button')}
+              <Button color="primary" type="submit" aria-label={t.button}>
+                {t.button}
               </Button>
             </div>
             <div className="mt-8 border-t pt-8">
-              <h3>{t('or')}</h3>
+              <h3>{t.or}</h3>
               <div className="flex flex-col sm:flex-row justify-between">
                 <div className="mb-2 sm:mb-0">
                   <span className="font-medium">E-mail:</span>
@@ -181,7 +196,7 @@ export default function Contact({ id }: { id?: string }) {
                   </Link>
                 </div>
                 <div>
-                  <span className="font-medium">{t('phone')}</span>
+                  <span className="font-medium">{t.phone}</span>
                   <Link
                     href="tel:+33 676293024"
                     className="ml-1 text-blue-600 hover:underline"
