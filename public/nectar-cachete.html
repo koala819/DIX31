@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz sur Le Nectar Cacheté</title>
+
+    <!-- Tailwind & DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet" />
+
+    <style>
+      .form-container {
+        max-width: 800px;
+        min-height: 450px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-green {
+        background-color: #10914f;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-green:hover {
+        background-color: #0e7a42;
+      }
+
+      .progress-bar {
+        height: 8px;
+        background-color: #e5e7eb;
+        border-radius: 9999px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+      }
+
+      .progress {
+        height: 100%;
+        background-color: #10914f;
+        transition: width 0.3s;
+      }
+
+      .option-box {
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        background-color: #f9fafb;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .option-box:hover {
+        background-color: #e5f7ed;
+      }
+
+      .option-box.selected {
+        background-color: #d1fae5;
+        border: 1px solid #10914f;
+      }
+
+      .result-correct {
+        background-color: #d1fae5;
+        color: #047857;
+        padding: 0.5rem;
+        border-radius: 0.375rem;
+      }
+
+      .result-incorrect {
+        background-color: #fee2e2;
+        color: #b91c1c;
+        padding: 0.5rem;
+        border-radius: 0.375rem;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 p-4">
+    <div class="form-container">
+      <!-- En-tête -->
+      <header class="text-center mb-6">
+        <img
+          src="https://lh5.googleusercontent.com/d6qm0mxR4wRPxz3QA5DtqZskOP1TVL6NKi06_ZD3fm7c7pNjHFK3tCxgpvsxshLAHIkivDmiZVb_f2ErHI06SBbvr16_9bZ5s1BeCAxVtW-bqZ07vR0pM5ZYD_O-ntDnzzSZ6Sh-icA=w796"
+          alt="Le nectar cacheté"
+          class="mx-auto mb-4 rounded-lg shadow-md" />
+
+        <h1 class="text-2xl font-bold text-green-700 mb-2">
+          Quiz sur Le Nectar Cacheté
+        </h1>
+        <p class="text-gray-600 text-sm">
+          Avant la naissance du Prophète Muhammad ﷺ, le monde traverse des
+          bouleversements majeurs. En Arabie, les tribus vivent dans une société
+          marquée par le polythéisme et les superstitions, connue sous le nom de
+          "Jahiliyyah". Le climat désertique et aride forge le caractère
+          résilient des habitants. C'est dans ce contexte difficile que naîtra
+          le Prophète ﷺ, porteur d'un message de paix et de justice. Préparez
+          vous à découvrir cette époque fascinante et à tester vos connaissances
+          avec ce quiz inspiré du livre "Le Nectar Cacheté".
+        </p>
+      </header>
+
+      <!-- Conteneur du quiz -->
+      <div id="quiz-container">
+        <!-- Barre de progression -->
+        <div class="progress-bar">
+          <div class="progress" id="progress-bar" style="width: 0%"></div>
+        </div>
+        <p class="text-center text-sm text-gray-500 mb-6">
+          Question <span id="current-question">1</span> sur
+          <span id="total-questions">16</span>
+        </p>
+
+        <!-- Conteneur pour la question -->
+        <div id="question-container" class="mb-6">
+          <!-- La question sera insérée ici -->
+        </div>
+
+        <!-- Options de réponse -->
+        <div id="options-container" class="mb-6">
+          <!-- Les options seront insérées ici -->
+        </div>
+
+        <!-- Message d'erreur -->
+        <div
+          id="error-message"
+          class="bg-red-100 text-red-700 p-3 rounded-lg mb-4 text-sm hidden">
+          Cette question est obligatoire. Veuillez fournir une réponse.
+        </div>
+
+        <!-- Boutons de navigation -->
+        <div class="flex justify-between mt-8">
+          <button
+            id="prev-button"
+            class="px-4 py-2 bg-gray-200 text-gray-700 rounded hidden">
+            ← Précédent
+          </button>
+          <button id="next-button" class="btn-green ml-auto">Suivant →</button>
+        </div>
+      </div>
+
+      <!-- Résultats (cachés au début) -->
+      <div id="results-container" class="hidden">
+        <div class="flex items-center justify-center mb-6">
+          <div
+            class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center">
+            <div id="score-display" class="text-green-700 text-3xl font-bold">
+              0/15
+            </div>
+          </div>
+        </div>
+
+        <h2
+          id="score-message"
+          class="text-2xl font-bold text-center text-green-700 mb-2">
+          Continuez à apprendre !
+        </h2>
+
+        <p class="text-center text-gray-600 mb-6">
+          Vous avez obtenu
+          <span id="score-percentage" class="font-bold text-green-700">0</span>%
+          de bonnes réponses.
+        </p>
+
+        <div id="answers-summary" class="bg-gray-50 p-5 rounded-xl mb-6">
+          <h3 class="font-semibold text-lg mb-4 text-gray-700">
+            Vos réponses :
+          </h3>
+          <!-- Le résumé des réponses sera inséré ici -->
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <button
+            id="restart-button"
+            class="px-4 py-2 border border-green-700 text-green-700 rounded hover:bg-green-50">
+            ↺ Recommencer
+          </button>
+
+          <button
+            id="print-button"
+            class="px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800">
+            🖨️ Imprimer les résultats
+          </button>
+
+          <a
+            href="https://www.sana-shop.com/fr/la-biographie-du-prophete/168-le-nectar-cachete.html"
+            target="_blank"
+            class="px-4 py-2 bg-amber-500 text-white rounded hover:bg-amber-600 text-center">
+            📚 Acheter le livre
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Citation en bas de page -->
+    <div class="text-center mt-6 text-gray-500 text-xs italic">
+      « Le meilleur d'entre vous est celui qui apprend le Coran et l'enseigne. »
+      <br />
+      - Prophète Muhammad ﷺ
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Données du quiz
+        const questions = [
+          {
+            id: 1,
+            text: "Plongeons dans une époque de bouleversements et de ténèbres, juste avant l'aube de la naissance du Prophète Muhammad ﷺ.",
+            type: 'info',
+            hasImage: true,
+            imageUrl:
+              'https://lh5.googleusercontent.com/JoRQ5fYRowubXAn1b9LwT9rdho7wskw6z2NipPlkZYVYFm5rRC_uy5PFUbrlegPJOny3SQpYMP_mQXhsAQHECT7wH3Ur1A_dXzll8dMmoU7PTOkyFrymCd9zcJbODo7Lmzyz7ajc6N8=w5377',
+            imageAlt: "L'époque de la Jahiliyyah",
+            required: false,
+          },
+          {
+            id: 2,
+            text: "Les Arabes de la Péninsule Arabique avaient coutume d'adorer les Idoles. Comment a été introduite l'adoration des statues à la Mecque ?",
+            type: 'radio',
+            options: [
+              "Par les Romains lorsqu'ils conquirent l'Arabie",
+              'Suite au voyage de Amr ibn Louhay en Syrie',
+              "Par les Perses lorsqu'ils conquirent l'Arabie",
+            ],
+            correctAnswer: 'Suite au voyage de Amr ibn Louhay en Syrie',
+            required: true,
+          },
+          {
+            id: 3,
+            text: 'Quelle fut la 1ère statue introduite dans la Kaaba ?',
+            type: 'radio',
+            options: ['Al Lâat', 'Houbal', 'Al Uzza'],
+            correctAnswer: 'Houbal',
+            required: true,
+          },
+          {
+            id: 4,
+            text: "Combien d'idoles se trouvaient autour de la Kaaba ?",
+            type: 'radio',
+            options: ['150', '280', '360'],
+            correctAnswer: '360',
+            required: true,
+          },
+          {
+            id: 5,
+            text: 'Les filles étaient enterrées vivantes pendant la période pré islamique. Pourquoi ?',
+            type: 'radio',
+            options: [
+              'Par crainte de la pauvreté',
+              'Par tradition',
+              'Pour limiter la population',
+            ],
+            correctAnswer: 'Par crainte de la pauvreté',
+            required: true,
+          },
+          {
+            id: 6,
+            text: 'Sous quel nom était connue la famille du Prophète Muhammad ﷺ ?',
+            type: 'radio',
+            options: ['Les Omeyyades', 'Les Qurayshites', 'Les Hâchimites'],
+            correctAnswer: 'Les Hâchimites',
+            required: true,
+          },
+          {
+            id: 7,
+            text: "Qui voulait détruire la Mecque avec son armée d'éléphants ?",
+            type: 'radio',
+            options: ['Nimrod', 'Abraha', 'Pharaon'],
+            correctAnswer: 'Abraha',
+            required: true,
+          },
+          {
+            id: 8,
+            text: "Quels étaient les 2 empires majeurs de l'époque ?",
+            type: 'radio',
+            options: [
+              'Les empires Persans et Romains',
+              'Les empires Romains et Byzantins',
+              'Les empires Persans et Mongols',
+            ],
+            correctAnswer: 'Les empires Persans et Romains',
+            required: true,
+          },
+          {
+            id: 9,
+            text: 'Durant quel mois naquit le Prophète Muhammad ﷺ ?',
+            type: 'radio',
+            options: ['Ramadan', 'Muharram', "Rabi' al Awwal"],
+            correctAnswer: "Rabi' al Awwal",
+            hasBeforeInfo: true,
+            beforeInfoText:
+              "Dans ce monde de débauche et de ténèbres, une lumière éclatante perce l'obscurité : le Prophète Muhammad ﷺ vient de naître, porteur d'un message divin destiné à guider l'humanité vers la vérité et la justice.",
+            beforeInfoImageUrl:
+              'https://placeholder.pics/svg/400x150/10914F-FFFFFF/10914F/naissance-du-prophete',
+            beforeInfoImageAlt: 'Naissance du Prophète',
+            required: true,
+          },
+          {
+            id: 10,
+            text: 'Comment se prénommaient les parents du Prophète Muhammad ﷺ ?',
+            type: 'radio',
+            options: [
+              'Abou Talib et Fatima',
+              'Hashim et Mariam',
+              'AbdAllah et Amina',
+            ],
+            correctAnswer: 'AbdAllah et Amina',
+            required: true,
+          },
+          {
+            id: 11,
+            text: 'A quel endroit décéda le père du Prophète Muhammad ﷺ ?',
+            type: 'radio',
+            options: ['À La Mecque', 'À Yathrib', 'À Taïf'],
+            correctAnswer: 'À Yathrib',
+            required: true,
+          },
+          {
+            id: 12,
+            text: 'Combien de jours après sa naissance fut circoncis le Prophète Muhammad ﷺ ?',
+            type: 'radio',
+            options: ['3 jours', '7 jours', '10 jours'],
+            correctAnswer: '7 jours',
+            required: true,
+          },
+          {
+            id: 13,
+            text: 'Pourquoi est ce que le Prophète Muhammad ﷺ avait une Nourrice ?',
+            type: 'radio',
+            options: [
+              'Cela coûtait moins cher',
+              "Parce qu'il était orphelin",
+              "Pour renforcer la santé et apprendre l'arabe pur",
+            ],
+            correctAnswer: "Pour renforcer la santé et apprendre l'arabe pur",
+            required: true,
+          },
+          {
+            id: 14,
+            text: 'Comment se prénommait la Nourrice du Prophète Muhammad ﷺ ?',
+            type: 'radio',
+            options: ['Halima', 'Asma', 'Amina'],
+            correctAnswer: 'Halima',
+            required: true,
+          },
+          {
+            id: 15,
+            text: 'Quel évènement poussa la nourrisse à rendre le Prophète Muhammad ﷺ à sa Mère ?',
+            type: 'radio',
+            options: [
+              'La nourrisse était tombé malade',
+              'Jibril ouvrit la poitrine du Prophète ﷺ et en sortit une impureté',
+              'Des brigands menaçaient le village',
+            ],
+            correctAnswer:
+              'Jibril ouvrit la poitrine du Prophète ﷺ et en sortit une impureté',
+            required: true,
+          },
+          {
+            id: 16,
+            text: 'Quel âge avait le Prophète ﷺ lorsque sa Mère décéda ?',
+            type: 'radio',
+            options: ['2 ans', '6 ans', '10 ans'],
+            correctAnswer: '6 ans',
+            required: true,
+          },
+          {
+            id: 17,
+            text: 'Qui prit en charge le Prophète après la mort de sa Mère ?',
+            type: 'radio',
+            options: ['Abou Talib', 'Abdoul-Moutalib', 'Abou Lahab'],
+            correctAnswer: 'Abdoul-Moutalib',
+            required: true,
+          },
+          {
+            id: 18,
+            text: "Lorsque le Grand Père du Prophète ﷺ décéda à son tour, qui s'occupa de lui ?",
+            type: 'radio',
+            options: ['Abou Talib', 'Al Abbas', 'Abou Houraira'],
+            correctAnswer: 'Abou Talib',
+            required: true,
+          },
+          {
+            id: 19,
+            text: 'Quel signe physique de la Prophétie portait le Prophète ﷺ ?',
+            type: 'radio',
+            options: [
+              'Une tache de naissance sur le front',
+              'Une lumière sur le visage (Noor)',
+              "Le sceau de la Prophétie sous l'épaule",
+            ],
+            correctAnswer: "Le sceau de la Prophétie sous l'épaule",
+            required: true,
+          },
+          {
+            id: 20,
+            text: 'Quel était le métier du Prophète ﷺ durant sa jeunesse ?',
+            type: 'radio',
+            options: ['Eleveur de chameau', 'Commerçant', 'Berger'],
+            correctAnswer: 'Berger',
+            required: true,
+          },
+          {
+            id: 21,
+            text: 'Une fois adulte, le Prophète ﷺ fit du commerce. Pour le compte de qui commerça-t-il en allant en Syrie ?',
+            type: 'radio',
+            options: ['Abou Talib', 'Khadija (rad)', 'Al Abbas'],
+            correctAnswer: 'Khadija (rad)',
+            required: true,
+          },
+          {
+            id: 22,
+            text: "Quel âge avait le Prophète ﷺ et Khadija (rad) lorsqu'ils se marièrent ?",
+            type: 'radio',
+            options: [
+              'Il avait 20 ans et elle 30 ans',
+              'Il avait 25 ans et elle 40 ans',
+              'Il avait 30 ans et elle 40 ans',
+            ],
+            correctAnswer: 'Il avait 25 ans et elle 40 ans',
+            required: true,
+          },
+          {
+            id: 23,
+            text: "Combien d'enfants eurent ils ensemble ?",
+            type: 'radio',
+            options: [
+              '4 garçons et 2 filles',
+              '3 garçons et 3 filles',
+              '2 garçons et 4 filles',
+            ],
+            correctAnswer: '2 garçons et 4 filles',
+            required: true,
+          },
+          {
+            id: 24,
+            text: 'Comment se prénommaient les enfants du Prophète ﷺ et de Khadija (rad) ?',
+            type: 'radio',
+            options: [
+              'Qasim, Zaynab, Ruqayyah, Aicha, Fatima, Ali',
+              'Omar, Zaynab, Ruqayyah, Abdrahman, Fatima, Abdullah',
+              'Qasim, Zaynab, Ruqayyah, Oum Kaltoum, Fatima, Abdullah',
+            ],
+            correctAnswer:
+              'Qasim, Zaynab, Ruqayyah, Oum Kaltoum, Fatima, Abdullah',
+            required: true,
+          },
+          {
+            id: 25,
+            text: 'Lequel de leurs enfants vécut le plus longtemps ?',
+            type: 'radio',
+            options: ['Zaynab', 'Ruqayyah', 'Fatima'],
+            correctAnswer: 'Fatima',
+            required: true,
+          },
+          {
+            id: 26,
+            text: 'Quel évènement se produisit lorsque le Prophète eu 35 ans ?',
+            type: 'radio',
+            options: [
+              "La 1ère venue de l'Ange Jibril",
+              'La reconstruction de la Kaaba par les Quraishites',
+              "Une guerre entre les Quraishites et d'autres tribus arabes",
+            ],
+            correctAnswer: 'La reconstruction de la Kaaba par les Quraishites',
+            required: true,
+          },
+          {
+            id: 27,
+            text: "Avant qu'il ne reçoive la Prophétie, que se passait il lorsque le Prophète ﷺ voulait goûter aux plaisirs de ce bas monde ?",
+            type: 'radio',
+            options: [
+              "Sa famille l'en empêchait",
+              "Il s'endormait",
+              'Il tombait malade',
+            ],
+            correctAnswer: "Il s'endormait",
+            required: true,
+          },
+          {
+            id: 28,
+            text: 'Quel était le surnom du Prophète ﷺ avant la Révélation ?',
+            type: 'radio',
+            options: ['Al Sadiq', 'Al Amin', 'Al Rashid'],
+            correctAnswer: 'Al Amin',
+            required: true,
+          },
+          {
+            id: 29,
+            text: "Quelle était l'une des principales occupations du Prophète ﷺ avant la Révélation ?",
+            type: 'radio',
+            options: [
+              "Voyager à travers l'Arabie",
+              'Régler les conflits à la Mecque',
+              'Méditer seul sur la montagne de la lumière (Jabal Nour)',
+            ],
+            correctAnswer:
+              'Méditer seul sur la montagne de la lumière (Jabal Nour)',
+            required: true,
+          },
+          {
+            id: 30,
+            text: 'À quel âge le Prophète ﷺ reçut il la Révélation ?',
+            type: 'radio',
+            options: ['40 ans', '45 ans', '50 ans'],
+            correctAnswer: '40 ans',
+            required: true,
+          },
+          {
+            id: 31,
+            text: 'Qui apparut au Prophète ﷺ durant la révélation ?',
+            type: 'radio',
+            options: ["L'Ange Mikail", "L'Ange Israfil", "L'Ange Jibril"],
+            correctAnswer: "L'Ange Jibril",
+            required: true,
+          },
+          {
+            id: 32,
+            text: 'A quel endroit eu lieu la Révélation ?',
+            type: 'radio',
+            options: [
+              'Dans la Kaaba',
+              'Dans la Grotte Hira',
+              'Dans la maison du Prophète ﷺ',
+            ],
+            correctAnswer: 'Dans la Grotte Hira',
+            required: true,
+          },
+          {
+            id: 33,
+            text: 'Quelle est la traduction des 1ers versets du Coran que le Prophète ﷺ reçu en révélation ?',
+            type: 'radio',
+            options: [
+              'Dis : Il est Allah, Unique...',
+              'Louange à Allah, Seigneur des mondes...',
+              'Lis au nom de ton Seigneur qui a créé…',
+            ],
+            correctAnswer: 'Lis au nom de ton Seigneur qui a créé…',
+            required: true,
+          },
+          {
+            id: 34,
+            text: 'Quelle personne le Prophète ﷺ alla t-il retrouver en premier après avoir reçu la Révélation ?',
+            type: 'radio',
+            options: [
+              'Son ami Abu Bakr (rad)',
+              'Sa femme Khadija (rad)',
+              'Son oncle Abu Lahab',
+            ],
+            correctAnswer: 'Sa femme Khadija (rad)',
+            required: true,
+          },
+          {
+            id: 35,
+            text: 'Pourquoi y a t-il eut une pause de quelques jours après la première Révélation ?',
+            type: 'radio',
+            options: [
+              'Pour que le Prophète ramène de quoi noter',
+              "Pour que le Prophète retrouve l'envie de vivre",
+              'Pour que le Prophète consulte les Qurayshites',
+            ],
+            correctAnswer: "Pour que le Prophète retrouve l'envie de vivre",
+            required: true,
+          },
+        ];
+
+        // Variables d'état
+        let currentQuestionIndex = 0;
+        let answers = {};
+
+        // Sélecteurs DOM
+        const quizContainer = document.getElementById('quiz-container');
+        const resultsContainer = document.getElementById('results-container');
+        const questionContainer = document.getElementById('question-container');
+        const optionsContainer = document.getElementById('options-container');
+        const progressBar = document.getElementById('progress-bar');
+        const currentQuestionElement =
+          document.getElementById('current-question');
+        const totalQuestionsElement =
+          document.getElementById('total-questions');
+        const prevButton = document.getElementById('prev-button');
+        const nextButton = document.getElementById('next-button');
+        const errorMessage = document.getElementById('error-message');
+        const restartButton = document.getElementById('restart-button');
+        const printButton = document.getElementById('print-button');
+
+        // Initialisation
+        totalQuestionsElement.textContent = questions.length;
+        loadQuestion(currentQuestionIndex);
+
+        // Gestion des événements
+        nextButton.addEventListener('click', function () {
+          const currentQuestion = questions[currentQuestionIndex];
+
+          // Pour les questions d'info, on passe simplement à la suivante
+          if (currentQuestion.type === 'info') {
+            goToNextQuestion();
+            return;
+          }
+
+          // Validation pour les champs obligatoires
+          if (currentQuestion.required && !answers[currentQuestion.id]) {
+            errorMessage.classList.remove('hidden');
+            return;
+          }
+
+          errorMessage.classList.add('hidden');
+          goToNextQuestion();
+        });
+
+        prevButton.addEventListener('click', function () {
+          currentQuestionIndex--;
+          loadQuestion(currentQuestionIndex);
+          updateUI();
+        });
+
+        restartButton.addEventListener('click', function () {
+          answers = {};
+          currentQuestionIndex = 0;
+          quizContainer.classList.remove('hidden');
+          resultsContainer.classList.add('hidden');
+          loadQuestion(currentQuestionIndex);
+          updateUI();
+        });
+
+        printButton.addEventListener('click', function () {
+          window.print();
+        });
+
+        // Fonctions
+        function loadQuestion(index) {
+          const question = questions[index];
+
+          // Afficher l'info avant la question 9 si nécessaire
+          if (question.hasBeforeInfo) {
+            const infoHtml = `
+            <div class="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg mb-6 border-l-4 border-green-700">
+              <p class="text-gray-700">${question.beforeInfoText}</p>
+              <img src="${question.beforeInfoImageUrl}" alt="${question.beforeInfoImageAlt}" class="mx-auto mt-4 rounded-lg shadow-sm">
+            </div>
+          `;
+            questionContainer.innerHTML = infoHtml;
+          }
+
+          // Afficher la question
+          let questionHtml = '';
+
+          if (question.type === 'info') {
+            questionHtml = `
+            <div class="text-center">
+              <h2 class="text-xl font-semibold mb-5">${question.text}</h2>
+              ${
+                question.hasImage
+                  ? `<img src="${question.imageUrl}" alt="${question.imageAlt}" class="mx-auto rounded-lg shadow-lg">`
+                  : ''
+              }
+            </div>
+          `;
+            optionsContainer.innerHTML = '';
+          } else {
+            questionHtml = `<h2 class="text-xl font-semibold mb-3">${
+              question.text
+            }${
+              question.required
+                ? '<span class="text-red-500 ml-1">*</span>'
+                : ''
+            }</h2>`;
+
+            if (question.hasBeforeImage) {
+              questionHtml += `<img src="${question.beforeImageUrl}" alt="${question.beforeImageAlt}" class="mx-auto mb-5 rounded-lg shadow-md">`;
+            }
+
+            // Préparer les options
+            let optionsHtml = '';
+
+            if (question.type === 'radio') {
+              question.options.forEach((option, i) => {
+                const isSelected = answers[question.id] === option;
+                optionsHtml += `
+                <div class="option-box ${
+                  isSelected ? 'selected' : ''
+                }" data-value="${option}">
+                  <label class="flex items-center cursor-pointer">
+                    <input type="radio" name="question-${
+                      question.id
+                    }" value="${option}" class="mr-3" ${
+                  isSelected ? 'checked' : ''
+                }>
+                    <span>${option}</span>
+                  </label>
+                </div>
+              `;
+              });
+            }
+
+            optionsContainer.innerHTML = optionsHtml;
+
+            // Ajouter les écouteurs d'événements aux options
+            const optionBoxes =
+              optionsContainer.querySelectorAll('.option-box');
+            optionBoxes.forEach((box) => {
+              box.addEventListener('click', function () {
+                const value = this.getAttribute('data-value');
+                answers[question.id] = value;
+
+                // Mettre à jour l'affichage
+                optionBoxes.forEach((b) => b.classList.remove('selected'));
+                this.classList.add('selected');
+                this.querySelector('input').checked = true;
+
+                errorMessage.classList.add('hidden');
+              });
+            });
+          }
+
+          questionContainer.innerHTML = questionHtml;
+        }
+
+        function goToNextQuestion() {
+          if (currentQuestionIndex < questions.length - 1) {
+            currentQuestionIndex++;
+            loadQuestion(currentQuestionIndex);
+            updateUI();
+          } else {
+            showResults();
+          }
+        }
+
+        function updateUI() {
+          // Mettre à jour le numéro de la question
+          currentQuestionElement.textContent = currentQuestionIndex + 1;
+
+          // Mettre à jour la barre de progression
+          const progress =
+            ((currentQuestionIndex + 1) / questions.length) * 100;
+          progressBar.style.width = `${progress}%`;
+
+          // Afficher/masquer le bouton précédent
+          if (currentQuestionIndex > 0) {
+            prevButton.classList.remove('hidden');
+          } else {
+            prevButton.classList.add('hidden');
+          }
+
+          // Mettre à jour le texte du bouton suivant
+          if (currentQuestionIndex < questions.length - 1) {
+            nextButton.textContent = 'Suivant →';
+          } else {
+            nextButton.textContent = 'Terminer';
+          }
+        }
+
+        function showResults() {
+          quizContainer.classList.add('hidden');
+          resultsContainer.classList.remove('hidden');
+
+          // Calculer le score
+          let score = 0;
+          let total = 0;
+
+          questions.forEach((question) => {
+            if (question.type !== 'info') {
+              total++;
+              if (answers[question.id] === question.correctAnswer) {
+                score++;
+              }
+            }
+          });
+
+          const percentage = Math.round((score / total) * 100);
+
+          // Mettre à jour l'affichage du score
+          document.getElementById(
+            'score-display'
+          ).textContent = `${score}/${total}`;
+          document.getElementById('score-percentage').textContent = percentage;
+
+          // Message en fonction du score
+          let message = 'Continuez à apprendre !';
+          if (percentage >= 80) {
+            message = 'Excellent !';
+          } else if (percentage >= 60) {
+            message = 'Bien joué !';
+          }
+          document.getElementById('score-message').textContent = message;
+
+          // Générer le résumé des réponses
+          let summaryHtml = '';
+
+          questions.forEach((question) => {
+            if (question.type !== 'info') {
+              const userAnswer = answers[question.id] || 'Pas de réponse';
+              const isCorrect = userAnswer === question.correctAnswer;
+
+              summaryHtml += `
+              <div class="mb-5 pb-5 border-b border-gray-200 last:border-0 last:mb-0 last:pb-0">
+                <p class="font-medium text-gray-800 mb-2">${question.text}</p>
+                <p class="${
+                  isCorrect ? 'result-correct' : 'result-incorrect'
+                }">${userAnswer}</p>
+                ${
+                  !isCorrect
+                    ? `<p class="mt-2 text-green-700 font-medium">Bonne réponse: ${question.correctAnswer}</p>`
+                    : ''
+                }
+              </div>
+            `;
+            }
+          });
+
+          document.getElementById('answers-summary').innerHTML = summaryHtml;
+        }
+      });
+    </script>
+  </body>
+</html>

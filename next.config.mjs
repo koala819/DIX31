@@ -63,6 +63,7 @@ const nextConfig = {
       { hostname: 'randomuser.me' },
       { hostname: 'unsplash.com' },
       { hostname: 'media2.giphy.com' },
+      { hostname: 'lh5.googleusercontent.com' },
     ],
   },
   typescript: {
